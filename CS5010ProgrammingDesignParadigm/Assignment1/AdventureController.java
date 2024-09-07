@@ -1,6 +1,16 @@
 import java.io.InputStream;
 import java.util.Scanner;
 
+/**
+ * @author Erdun E
+ * Date:Sep 7th, 2024
+ * Course: CS5010 Programming Design Paradigm
+ * Program: Assignment 1
+ *
+ * This class controls the model and the view while making sure the program runs appropriately
+ *
+ */
+
 public class AdventureController {
 
     AdventureModel model;
@@ -16,11 +26,7 @@ public class AdventureController {
     public void createAdventure() {
         boolean quit = false;
         while (!quit) {
-            /*
-            * Write an algorithm in create Adventure()
-            * to determine whether the input is a verb or noun or invalid,
-            * and return an exception if invalid.
-            */
+
             view.welcomeMessage();
 
             String userName = in.nextLine();
@@ -29,6 +35,24 @@ public class AdventureController {
             view.backgroundMessage();
 
             view.situation_1();
+            view.verbMenu();
+            model.ifVerbIsValid();
+            view.nounMenu();
+            model.ifNounIsValid();
+
+            view.situation_2();
+            view.verbMenu();
+            model.ifVerbIsValid();
+            view.nounMenu();
+            model.ifNounIsValid();
+
+            view.situation_3();
+            view.verbMenu();
+            model.ifVerbIsValid();
+            view.nounMenu();
+            model.ifNounIsValid();
+
+            view.situation_4();
             view.verbMenu();
             model.ifVerbIsValid();
             view.nounMenu();

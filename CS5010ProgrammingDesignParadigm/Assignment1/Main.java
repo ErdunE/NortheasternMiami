@@ -1,3 +1,12 @@
+/**
+ * @author Erdun E
+ * Date:Sep 7th, 2024
+ * Course: CS5010 Programming Design Paradigm
+ * Program: Assignment 1
+ *
+ * main method to run the program
+ *
+ */
 public class Main {
 
     public static void main(String[] args) {

@@ -1,3 +1,15 @@
+/**
+ * @author Erdun E
+ * Date:Sep 7th, 2024
+ * Course: CS5010 Programming Design Paradigm
+ * Program: Assignment 1
+ *
+ * Model for Assignment 1,
+ * include storage of Verb and Noun, get user input, determine validation of verb and noun and if they are matched which input from user
+ *
+ *
+ */
+
 enum Verb{
     walk,unlock,talk,grab,take;
 }
