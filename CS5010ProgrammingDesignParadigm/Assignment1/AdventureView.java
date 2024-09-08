@@ -51,7 +51,7 @@ public class AdventureView {
     }
 
     public void endMessage(){
-        System.out.println("In the end, you reach to campus and start the CS 5010 on time.");
-        System.out.print("Congrats!!!");
+        System.out.println("In the end, you reach to campus and start the CS 5010 on time :) .");
+        System.out.print("Congrats:P!!!");
     }
 }
