@@ -1,3 +1,4 @@
+
 import java.io.InputStream;
 import java.util.Scanner;
 
@@ -22,7 +23,7 @@ public class AdventureController {
         this.view = view;
         AdventureController.in = new Scanner(in);
     }
-
+    // This method runs the program as expected so that the user can start the adventure
     public void createAdventure() {
         boolean quit = false;
         while (!quit) {

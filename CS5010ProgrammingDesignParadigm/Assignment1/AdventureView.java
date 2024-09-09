@@ -14,22 +14,25 @@ public class AdventureView {
     public AdventureView() {
 
     }
+    // verb menu, list all verbs for user
     public void verbMenu(){
         for(Verb allVerbs : Verb.values()){
             System.out.println(allVerbs);
         }
     }
+    // verb menu, list all nouns for user
     public void nounMenu(){
         for(Noun allNouns : Noun.values()){
             System.out.println(allNouns);
         }
     }
+    // just for fun
     public void showUserName(String userName) {
         System.out.println("Hi " + userName);
     }
-    public void display() {
 
-    }
+
+    // Welcome message. background message, situations message and ending message
     public void welcomeMessage(){
         System.out.println("Welcome to the adventure of going to school.");
         System.out.println("Please enter your name: ");
