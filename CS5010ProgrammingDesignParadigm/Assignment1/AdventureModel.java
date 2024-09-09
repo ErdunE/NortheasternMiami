@@ -10,11 +10,12 @@
  *
  */
 
+// initial the verb and nouns
 enum Verb{
-    walk,unlock,talk,grab,take;
+    walk,unlock,talk,grab,take
 }
 enum Noun{
-    road,field,bag,iphone,friend,subway,uber;
+    road,field,bag,iphone,friend,subway,uber
 }
 public class AdventureModel {
 
@@ -22,7 +23,9 @@ public class AdventureModel {
     private String inputVerb;
     private String inputNoun;
 
-    public String getUserName(){
+    // get user's name, verb and noun
+    // then set them into the memory
+    public String getUserName() {
         return this.userName;
     }
     public void setUserName(String userName){
@@ -41,24 +44,34 @@ public class AdventureModel {
         this.inputNoun = inputNoun;
     }
 
+    // determine if the ver is valid or not
     public void ifVerbIsValid(){
         boolean verbIsValid = false;
-        w1:while(!verbIsValid){
+
+        /*
+        the while loop will keep running until:
+        1. user decide to quit the program
+        2. user enter a valid verb
+         */
+
+        while(!verbIsValid){
+            // get user input verb and save
             String inputVerb = AdventureController.in.nextLine();
             setInputVerb(inputVerb);
             int count = 0;
             int size = Verb.values().length;
-            // System.out.println(size);
+            // compare user input and existing ver list one by one
             for(Verb allverb : Verb.values()){
+                // exit program
                 if(inputVerb.equals("stop")) {
-                    break w1;
+                    System.exit(0);
+                // invalid input
                 } else if (!inputVerb.equals(allverb.name())) {
-                    // System.out.println("Please enter a valid verb or 'stop' to stop the adventure.");
                     count++;
-                    // System.out.println(count);
                     if(count == size){
                         System.out.println("Please enter a valid verb or 'stop' to stop the adventure.");
                     }
+                // valid input
                 }else{
                     verbIsValid = true;
                 }
@@ -67,6 +80,7 @@ public class AdventureModel {
         System.out.println("You decided to " + inputVerb + ", and then choose the noun:");
     }
 
+    // almost same as ifVerbIsValid
     public void ifNounIsValid(){
         boolean nounIsValid = false;
         w1:while(!nounIsValid) {
@@ -74,17 +88,16 @@ public class AdventureModel {
             setInputNoun(inputNoun);
             int count = 0;
             int size = Noun.values().length;
-            // System.out.println(size);
             for (Noun allnoun : Noun.values()) {
                 if (inputNoun.equals("stop")) {
-                    break w1;
+                    System.exit(0);
                 } else if (!inputNoun.equals(allnoun.name())) {
                     count++;
-                    // System.out.println(count);
                     if (count == size) {
                         System.out.println("Please enter a valid noun or 'stop' to stop the adventure.");
                     }
                 } else {
+                    // determine if verb and noun matched or keep prompts for the initial input
                     boolean userInputNoun = ifVerbNoneMatched();
                     if(userInputNoun){
                         nounIsValid = true;
@@ -96,6 +109,7 @@ public class AdventureModel {
         }
     }
 
+    // determine if user input verb and noun is matched and meaningful
     public boolean ifVerbNoneMatched(){
         boolean verbNoneMatched = true;
         if(inputVerb.equals("walk") && inputNoun.equals("road")) {
