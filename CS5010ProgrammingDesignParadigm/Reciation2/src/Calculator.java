@@ -3,6 +3,8 @@
 //and should pass priority to all its classes.
 
 import Operations.*;
+
+
 public class Calculator {
     int a;
     int b;
@@ -16,6 +18,12 @@ public class Calculator {
     //The operation's methods can then be used by Calculator
     //depending on what computation you want to do.
 
+    static Add add = new Add();
+    static Subtract subtract = new Subtract();
+    static Multiply multiply = new Multiply();
+    static Divide divide = new Divide();
+
+
     public Calculator(int a, int b, char computation){
         this.a = a;
         this.b = b;
@@ -23,5 +31,26 @@ public class Calculator {
     }
 
 
+    public static int run(char computation, int a, int b){
+        int result = 0;
+        switch(computation){
+            case '+':
+                result = add.compute(a,b);
+                break;
+            case '-':
+                result = subtract.compute(a,b);
+                break;
+            case '*':
+                result = multiply.compute(a,b);
+                break;
+            case '/':
+                result = divide.compute(a,b);
+                break;
 
+            default:
+                System.out.println("Invalid computation");
+        }
+        return result;
+
+    }
 }

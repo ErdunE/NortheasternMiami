@@ -7,5 +7,9 @@ package Operations;
  * Remember that your division class needs a try/catch block
  * to handle a "divide by zero" exception.
  */
-public class Divide {
+public class Divide implements Computable{
+    @Override
+    public int compute(int a, int b) throws ArithmeticException {
+        return a / b;
+    }
 }

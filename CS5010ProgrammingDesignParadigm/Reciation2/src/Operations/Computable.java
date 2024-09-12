@@ -7,7 +7,5 @@ package Operations;
  *    and takes the two integer attributes as parameters
  */
 public interface Computable {
-
-
-
+    public int compute(int a, int b);
 }
