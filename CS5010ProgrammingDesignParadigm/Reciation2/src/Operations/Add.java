@@ -5,5 +5,9 @@ package Operations;
  * integers as parameters. It will return those integers
  * as the sum of them.
  */
-public class Add {
+public class Add implements Computable{
+    @Override
+    public int compute(int a, int b) {
+        return a + b;
+    }
 }

@@ -4,5 +4,9 @@ package Operations;
  * integers as parameters. It will return those integers
  * as the multiplication of them.
  */
-public class Multiply {
+public class Multiply implements Computable{
+    @Override
+    public int compute(int a, int b) {
+        return a * b;
+    }
 }

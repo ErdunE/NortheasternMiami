@@ -4,5 +4,9 @@ package Operations;
  * integers as parameters. It will return those integers
  * as the difference between them.
  */
-public class Subtract {
+public class Subtract implements Computable {
+    @Override
+    public int compute(int a, int b) {
+        return a - b;
+    }
 }
