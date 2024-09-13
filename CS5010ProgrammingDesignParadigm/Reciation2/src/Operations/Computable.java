@@ -1,10 +1,11 @@
 package Operations;
-
 /**
- * This interface needs the following:
- * A) Two integer attributes
- * B) A method that returns an integer
- *    and takes the two integer attributes as parameters
+ *
+ * @author Erdun E
+ * @version 9/13/2024
+ *
+ * computable interface, two integer attributes and a method that returns an integer and take the two integer attributes as parameters
+ *
  */
 public interface Computable {
     public int compute(int a, int b);

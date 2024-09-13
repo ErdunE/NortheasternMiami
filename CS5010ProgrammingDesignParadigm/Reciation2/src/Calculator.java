@@ -1,28 +1,26 @@
-//This import line uses an asterisk to let Calculator know
-//that it needs everything in the Operations folder,
-//and should pass priority to all its classes.
-
+/**
+ *
+ * @author Erdun E
+ * @version 9/13/2024
+ * @param computation, save the operator input by the user
+ * @param a, number 1
+ * @param b, number 2
+ * @return result of calculated
+ *
+ * Method of calculate
+ *
+ */
 import Operations.*;
-
 
 public class Calculator {
     int a;
     int b;
     char computation;
-    //I have given you the three attributes that you will need
-    //in the Calculator's construction.
-    //But remember that you need to call your operations.
-    //It might be good to add them as attributes of this class as well
-    //and generate them as objects inside Calculator
-    //so that they exist before the program is running.
-    //The operation's methods can then be used by Calculator
-    //depending on what computation you want to do.
 
     static Add add = new Add();
     static Subtract subtract = new Subtract();
     static Multiply multiply = new Multiply();
     static Divide divide = new Divide();
-
 
     public Calculator(int a, int b, char computation){
         this.a = a;
@@ -30,26 +28,34 @@ public class Calculator {
         this.computation = computation;
     }
 
-
+    // Determine the calculation symbol and return the result after calculation
     public static int run(char computation, int a, int b){
+        // set variable, result
         int result = 0;
+        // determine the computation
         switch(computation){
             case '+':
+                // call add class
                 result = add.compute(a,b);
                 break;
             case '-':
+                // call subtract class
                 result = subtract.compute(a,b);
                 break;
             case '*':
+                // call multiply class
                 result = multiply.compute(a,b);
                 break;
             case '/':
+                // call divide class
                 result = divide.compute(a,b);
                 break;
 
+            // If user input invalid, return
             default:
                 System.out.println("Invalid computation");
         }
+        // return result of calculated
         return result;
 
     }

@@ -1,9 +1,11 @@
 package Operations;
-
 /**
- * This class implements Computable, and will take two
- * integers as parameters. It will return those integers
- * as the sum of them.
+ *
+ * @author Erdun E
+ * @version 9/13/2024
+ *
+ * Method of Add, Call the computable interface and override it
+ *
  */
 public class Add implements Computable{
     @Override
