@@ -1,8 +1,11 @@
 package Operations;
 /**
- * This class implements Computable, and will take two
- * integers as parameters. It will return those integers
- * as the difference between them.
+ *
+ * @author Erdun E
+ * @version 9/13/2024
+ *
+ * Method of Subtract, Call the computable interface and override it
+ *
  */
 public class Subtract implements Computable {
     @Override
