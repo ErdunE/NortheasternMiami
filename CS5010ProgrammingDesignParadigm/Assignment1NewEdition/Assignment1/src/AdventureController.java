@@ -16,9 +16,9 @@ public class AdventureController {
         adventureView.welcomeMessage();
         String userName = scanner.nextLine();
         adventureView.backgroundMessage(userName);
-        // sleepForUserRead(10000);
+        sleepForUserRead(10000);
         adventureView.introMessage();
-        // sleepForUserRead(20000);
+        sleepForUserRead(20000);
         adventureView.askUserIfStart();
         boolean start = false;
         while (!start) {
@@ -32,7 +32,7 @@ public class AdventureController {
                         adventureView.exitMessage();
                     }
                     handleInput(input);
-                    // sleepForUserRead(5000);
+                    sleepForUserRead(5000);
                 }
                 start = true;
             }else{
