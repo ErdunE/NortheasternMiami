@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fd6f27dc-9c53-4ab8-9729-d8ea629a4130" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assignment1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdventureController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdventureModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdventureView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ErdunE"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ErdunE/NortheasternMiami.git",
+    "accountId": "4b16f5c4-6ed5-4a0c-9207-eb8904cdcccb"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2mFrBbDQwR6yTwkN7jR67hJsuqy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/erdune/Desktop/NortheasternMiami/CS5010ProgrammingDesignParadigm/Assignment1NewEdition/Assignment1/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Assignment1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd6f27dc-9c53-4ab8-9729-d8ea629a4130" name="Changes" comment="" />
+      <created>1726683033180</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726683033180</updated>
+      <workItem from="1726683034155" duration="43103000" />
+    </task>
+    <task id="LOCAL-00001" summary="CS5010 Assignment 1 New Version">
+      <option name="closed" value="true" />
+      <created>1726777753510</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726777753510</updated>
+    </task>
+    <task id="LOCAL-00002" summary="CS5010 Assignment 1 Version 1.1">
+      <option name="closed" value="true" />
+      <created>1726802001078</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726802001078</updated>
+    </task>
+    <task id="LOCAL-00003" summary="CS5010 Recitation 3">
+      <option name="closed" value="true" />
+      <created>1726802026410</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726802026410</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CS5010 Recitation 3">
+      <option name="closed" value="true" />
+      <created>1726802057835</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726802057835</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Re-start the sleep feature for improve user reading experience">
+      <option name="closed" value="true" />
+      <created>1726802415428</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726802415428</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CS5010 Assignment 1 New Version" />
+    <MESSAGE value="CS5010 Assignment 1 Version 1.1" />
+    <MESSAGE value="CS5010 Recitation 3" />
+    <MESSAGE value="Re-start the sleep feature for improve user reading experience" />
+    <option name="LAST_COMMIT_MESSAGE" value="Re-start the sleep feature for improve user reading experience" />
+  </component>
+</project>
