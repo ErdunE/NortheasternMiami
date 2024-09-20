@@ -1,11 +1,11 @@
 public class AdventureModel {
 
     // verb and noun library
-    enum Verbs {
-        EAT, TAKE, OPEN, WALK, ARRIVE;
+    public enum Verbs {
+        EAT, TAKE, OPEN, WALK, ARRIVE
     }
-    enum Nouns {
-        BREAKFAST, LIGHT, BAG, ROAD, SCHOOL, WATER, SHOES, LAPTOP;
+    public enum Nouns {
+        BREAKFAST, LIGHT, BAG, ROAD, SCHOOL, WATER, SHOES, LAPTOP
     }
 
     // scenario state and adventure logic
