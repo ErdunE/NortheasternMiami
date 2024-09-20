@@ -3,7 +3,7 @@ public class Main {
 
         AdventureModel model = new AdventureModel();
         AdventureView view = new AdventureView();
-        AdventureController controller = new AdventureController();
+        AdventureController controller = new AdventureController(model, view);
 
         controller.run();
 

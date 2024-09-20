@@ -1,26 +1,47 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class AdventureController {
     private final AdventureModel adventureModel;
     private final AdventureView adventureView;
     private final Scanner scanner;
 
-    public AdventureController() {
+    public AdventureController(AdventureModel model, AdventureView view) {
         this.adventureModel = new AdventureModel();
         this.adventureView = new AdventureView();
         this.scanner = new Scanner(System.in);
     }
 
     public void run() {
-        while(!adventureModel.isArrivedSchool()){
-            adventureView.displayCurrentScenarioState(adventureModel);
-            adventureView.displayAvailableActions();
-            String input = scanner.nextLine();
-            if(input.equalsIgnoreCase("quit")){
-                System.out.println("Goodbye! Adventure Exited.");
-                System.exit(0);
+        adventureView.welcomeMessage();
+        String userName = scanner.nextLine();
+        adventureView.backgroundMessage(userName);
+        // sleepForUserRead(10000);
+        adventureView.introMessage();
+        // sleepForUserRead(20000);
+        adventureView.askUserIfStart();
+        boolean start = false;
+        while (!start) {
+            String startButton = scanner.nextLine().toLowerCase();
+            if (startButton.equals("start")) {
+                while(!adventureModel.isArrivedSchool()){
+                    adventureView.displayCurrentScenarioState(adventureModel);
+                    adventureView.displayAvailableActions();
+                    String input = scanner.nextLine().toLowerCase();
+                    if(input.equals("quit")){
+                        adventureView.exitMessage();
+                    }
+                    handleInput(input);
+                    // sleepForUserRead(5000);
+                }
+                start = true;
+            }else{
+                if(startButton.equals("quit")){
+                    adventureView.exitMessage();
+                }
+                System.out.println("Invalid input. Try to enter 'start' to begin your journey again.");
+                System.out.println("Or enter 'quit' to quit.");
             }
-            handleInput(input);
         }
     }
 
@@ -127,88 +148,163 @@ public class AdventureController {
         }
     }
     private void provideGuidance(AdventureModel.Verbs verb, AdventureModel.Nouns noun) {
+        String guidance = null;
+        boolean leftHome = adventureModel.isOnRoad() || adventureModel.isArrivedSchool();
         switch (verb) {
             case EAT:
                 if(noun == AdventureModel.Nouns.BREAKFAST){
                     if(!adventureModel.isLightOn()){
-                        adventureView.displayGuidance("It's too dark to see, how about try to turn on the light before having breakfast?");
+                        guidance = "It's too dark to see, how about try to turn on the light before having breakfast?";
+                    } else if (leftHome) {
+                        guidance = "You've already had breakfast, and you're feeling full right now.";
                     } else if (adventureModel.isEaten()) {
-                        adventureView.displayGuidance("You've already had breakfast, how about try to grab the stuffs and take shoes?");
+                        guidance = "You've already had breakfast, how about try to grab the stuffs and take shoes?";
                     } else {
-                        adventureView.displayGuidance("You're feeling hungry, how about enjoy your breakfast first?");
+                        guidance = "You're feeling hungry, how about enjoy your breakfast first?";
                     }
                 }
                 break;
             case TAKE:
                 if(noun == AdventureModel.Nouns.BAG){
                     if(!adventureModel.isLightOn()){
-                        adventureView.displayGuidance("It's too dark to see, how about turn on the light before grabbing your bag?");
+                        guidance = "It's too dark to see, how about turn on the light before grabbing your bag?";
                     } else if (!adventureModel.isEaten()) {
-                        adventureView.displayGuidance("You are hungry now, how about have breakfast before taking your bag and leaving?");
+                        guidance = "You are hungry now, how about have breakfast before taking your bag and leaving?";
                     } else if (!adventureModel.isTakenWater() || !adventureModel.isTakenLaptop()) {
                         String missingItems = "";
                         if(!adventureModel.isTakenWater()){
-                            missingItems += "water, ";
+                            missingItems += "water ";
                         }
                         if(!adventureModel.isTakenLaptop()){
-                            missingItems += "laptop, ";
+                            missingItems += "laptop ";
                         }
-                        adventureView.displayGuidance("Before leaving, make sure to take your " + missingItems + "and your bag.");
+                        guidance = "Before leaving, make sure to take your " + missingItems;
                     } else if (!adventureModel.isTakenShoes()) {
-                        adventureView.displayGuidance("Don't forget put your shoes on before leave home.");
+                        guidance = "Don't forget put your shoes on before leave home.";
+                    } else if (adventureModel.isTakenBag()) {
+                        guidance = "You double-checked to be sure you had your bag with you. Yes, you did.";
                     }
                 } else if (noun == AdventureModel.Nouns.SHOES) {
                     if(!adventureModel.isLightOn()){
-                        adventureView.displayGuidance("It's too dark to see, how about turn on the light before wear shoes?");
+                        guidance = "It's too dark to see, how about turn on the light before wear shoes?";
                     } else if (!adventureModel.isEaten()) {
-                        adventureView.displayGuidance("You are hungry now, how about have breakfast before wear shoes?");
+                        guidance = "You are hungry now, how about have breakfast before wear shoes?";
+                    } else if (adventureModel.isTakenShoes()) {
+                        guidance = "Your new AJ1 is on your foot.";
                     }
                 } else if (noun == AdventureModel.Nouns.WATER) {
                     if(!adventureModel.isLightOn()){
-                        adventureView.displayGuidance("It's too dark to see, how about turn on the light before grabbing the water bottle?");
+                        guidance = "It's too dark to see, how about turn on the light before grabbing the water bottle?";
                     } else if (!adventureModel.isEaten()) {
-                        adventureView.displayGuidance("You are hungry now, how about have breakfast before grabbing the water bottle and leaving?");
+                        guidance = "You are hungry now, how about have breakfast before grabbing the water bottle and leaving?";
                     } else if (!adventureModel.isTakenBag() || !adventureModel.isTakenLaptop()) {
                         String missingItems = "";
                         if(!adventureModel.isTakenBag()){
-                            missingItems += "bag, ";
+                            missingItems += "bag";
                         }
                         if(!adventureModel.isTakenLaptop()){
-                            missingItems += "laptop, ";
+                            missingItems += "laptop";
                         }
-                        adventureView.displayGuidance("Before leaving, make sure to take your " + missingItems + "and your water bottle.");
+                        guidance = "Before leaving, make sure to take your " + missingItems;
                     } else if (!adventureModel.isTakenShoes()) {
-                        adventureView.displayGuidance("Don't forget put your shoes on before leave home.");
+                        guidance = "Don't forget put your shoes on before leave home.";
+                    } else if (adventureModel.isTakenWater()) {
+                        guidance = "You double-checked to be sure you had your water bottle with you. Yes, you did.";
                     }
                 } else if (noun == AdventureModel.Nouns.LAPTOP) {
                     if(!adventureModel.isLightOn()){
-                        adventureView.displayGuidance("It's too dark to see, how about turn on the light before grabbing the laptop?");
+                        guidance = "It's too dark to see, how about turn on the light before grabbing the laptop?";
                     } else if (!adventureModel.isEaten()) {
-                        adventureView.displayGuidance("You are hungry now, how about have breakfast before grabbing the laptop and leaving?");
+                        guidance = "You are hungry now, how about have breakfast before grabbing the laptop and leaving?";
                     } else if (!adventureModel.isTakenBag() || !adventureModel.isTakenWater()) {
                         String missingItems = "";
                         if(!adventureModel.isTakenBag()){
-                            missingItems += "bag, ";
+                            missingItems += "bag";
                         }
                         if(!adventureModel.isTakenWater()){
-                            missingItems += "water, ";
+                            missingItems += "water";
                         }
-                        adventureView.displayGuidance("Before leaving, make sure to take your " + missingItems + "and your laptop");
+                        guidance = "Before leaving, make sure to take your " + missingItems;
                     } else if (!adventureModel.isTakenShoes()) {
-                        adventureView.displayGuidance("Don't forget put your shoes on before leave home.");
+                        guidance = "Don't forget put your shoes on before leave home.";
+                    } else if (adventureModel.isTakenLaptop()) {
+                        guidance = "You double-checked to be sure you had your laptop with you. Yes, you did.";
                     }
                 }
                 break;
             case OPEN:
                 if (noun == AdventureModel.Nouns.LIGHT) {
-                    adventureView.displayGuidance("It's too dark around, how about try to open the light?");
+                    if(!adventureModel.isLightOn()){
+                        guidance = "It's too dark around, how about try to open the light?";
+                    } else if (leftHome) {
+                        guidance = "You forgot to turn off the light, but it's too late to go back now.";
+                    } else if (adventureModel.isLightOn()) {
+                        guidance = "The light has been turned on.";
+                    }
                 }
                 break;
             case WALK:
+                if(noun == AdventureModel.Nouns.ROAD){
+                    if(!adventureModel.isLightOn()){
+                        guidance = "It's too dark to see, how about turn on the light before heading out";
+                    } else if (!adventureModel.isEaten()) {
+                        guidance = "You are hungry now, how about have breakfast before heading out?";
+                    } else if (!adventureModel.isTakenBag() || !adventureModel.isTakenLaptop() || !adventureModel.isTakenWater()) {
+                        String missingItems = "";
+                        if(!adventureModel.isTakenBag()){
+                            missingItems += "bag";
+                        }
+                        if(!adventureModel.isTakenLaptop()){
+                            missingItems += "laptop";
+                        }
+                        if(!adventureModel.isTakenWater()){
+                            missingItems += "water";
+                        }
+                        guidance = "Before heading out, make sure to take your " + missingItems;
+                    } else if (!adventureModel.isTakenShoes()) {
+                        guidance = "Don't forget put your shoes on before heading out.";
+                    } else if (adventureModel.isOnRoad()){
+                        guidance = "You've been reached to campus.";
+                    }
+                }
                 break;
             case ARRIVE:
+                if (noun == AdventureModel.Nouns.SCHOOL) {
+                    if(!adventureModel.isLightOn()){
+                        guidance = "It's too dark to see, how about turn on the light before heading out";
+                    } else if (!adventureModel.isEaten()) {
+                        guidance = "You are hungry now, how about have breakfast before heading out?";
+                    } else if (!adventureModel.isTakenBag() || !adventureModel.isTakenLaptop() || !adventureModel.isTakenWater()) {
+                        String missingItems = "";
+                        if(!adventureModel.isTakenBag()){
+                            missingItems += "bag, ";
+                        }
+                        if(!adventureModel.isTakenLaptop()){
+                            missingItems += "laptop, ";
+                        }
+                        if(!adventureModel.isTakenWater()){
+                            missingItems += "water";
+                        }
+                        guidance = "Before heading out, make sure to take your " + missingItems + ".";
+                    } else if (!adventureModel.isTakenShoes()) {
+                        guidance = "Don't forget put your shoes on before heading out.";
+                    } else if (!adventureModel.isOnRoad()) {
+                        guidance = "You haven't left home yet.";
+                    }
+                }
                 break;
-
+        }
+        if (guidance != null) {
+            adventureView.displayGuidance(guidance);
+        } else {
+            adventureView.displayError("Sorry, the object " + noun + " is not valid with the action " + verb + " in this adventure. Please try to other objects.");
+        }
+    }
+    private void sleepForUserRead(int milliseconds){
+        try{
+            Thread.sleep(milliseconds);
+        }catch(InterruptedException e){
+            System.err.println("Sleep interrupted" + e.getMessage());
         }
     }
 }
