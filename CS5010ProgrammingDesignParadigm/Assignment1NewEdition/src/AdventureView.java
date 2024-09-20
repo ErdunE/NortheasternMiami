@@ -1,6 +1,7 @@
 public class AdventureView {
 
     public void welcomeMessage() {
+        welcomeImage();
         System.out.println("Welcome to the Adventure of Go to Campus, before start the adventure, please enter your nickname:");
     }
     public void backgroundMessage(String userName){
@@ -111,5 +112,76 @@ public class AdventureView {
     public void exitMessage() {
         System.out.println("Goodbye! Adventure Exited.");
         System.exit(0);
+    }
+
+    public void welcomeImage(){
+        String[] w = {
+                "*       * ",
+                "*       * ",
+                "*   *   * ",
+                "*  * *  * ",
+                "* *   * * ",
+                "**     ** "
+        };
+        String[] e = {
+                "******* ",
+                "*       ",
+                "*****   ",
+                "*       ",
+                "*       ",
+                "******* "
+        };
+        String[] l = {
+                "*       ",
+                "*       ",
+                "*       ",
+                "*       ",
+                "*       ",
+                "******* "
+        };
+        String[] c = {
+                "  *****  ",
+                " *       ",
+                "*        ",
+                "*        ",
+                " *       ",
+                "  *****  "
+        };
+        String[] o = {
+                "  *****  ",
+                " *     * ",
+                "*       *",
+                "*       *",
+                " *     * ",
+                "  *****  "
+        };
+        String[] m = {
+                "*     * ",
+                "**   ** ",
+                "* * * * ",
+                "*  *  * ",
+                "*     * ",
+                "*     * "
+        };
+        String[] exclamation = {
+                "  *  ",
+                "  *  ",
+                "  *  ",
+                "  *  ",
+                "     ",
+                "  *  "
+        };
+
+        for(int i = 0; i < 6; i ++){
+            System.out.print(w[i] + " ");
+            System.out.print(e[i] + " ");
+            System.out.print(l[i] + " ");
+            System.out.print(c[i] + " ");
+            System.out.print(o[i] + " ");
+            System.out.print(m[i] + " ");
+            System.out.print(e[i] + " ");
+            System.out.print(exclamation[i]);
+            System.out.println();
+        }
     }
 }
