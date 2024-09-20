@@ -93,15 +93,19 @@ public class AdventureModel {
                 if(!isLightOn){
                     return false;
                 }
+                if(!isEaten){
+                    return false;
+                }
                 switch (noun){
                     case BAG:
-                        return isTakenBag;
+                        return !isTakenBag;
                     case SHOES:
-                        return isTakenShoes;
+                        return !isTakenShoes;
                     case WATER:
-                        return isTakenWater;
+                        return !isTakenWater;
                     case LAPTOP:
-                        return isTakenLaptop;
+                        return !isTakenLaptop;
+                    default: return false;
                 }
             case OPEN:
                 return noun == Nouns.LIGHT && !isLightOn;
