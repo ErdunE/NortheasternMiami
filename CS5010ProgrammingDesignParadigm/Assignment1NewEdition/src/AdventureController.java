@@ -1,5 +1,15 @@
 import java.util.Scanner;
 
+/**
+ * @author Erdun E
+ * Date:Sep 20th, 2024
+ * Course: CS5010 Programming Design Paradigm
+ * Program: Assignment 1
+ *
+ * This class controls the model and the view while making sure the program runs appropriately
+ *
+ */
+
 public class AdventureController {
     private final AdventureModel adventureModel;
     private final AdventureView adventureView;
@@ -11,6 +21,9 @@ public class AdventureController {
         this.scanner = new Scanner(System.in);
     }
 
+    // This method runs the program as expected
+    // So user could get the intended result
+    // before each step, there has sleep time for reading context
     public void run() {
         adventureView.welcomeMessage();
         String userName = scanner.nextLine();
@@ -31,7 +44,7 @@ public class AdventureController {
                         adventureView.exitMessage();
                     }
                     handleInput(input);
-                    sleepForUserRead(3000);
+                    sleepForUserRead(2000);
                 }
                 start = true;
             }else{
@@ -44,18 +57,20 @@ public class AdventureController {
         }
     }
 
+    // This method to handle the user's input, and get back to user
     private void handleInput(String input) {
-
+        // Preprocess input to recognize potential verbs and nouns
         String[] words = preprocessUserInput(input);
 
+        // Return error message if the verb or noun or all are missing
         if (words[0] == null || words[1] == null) {
             adventureView.displayError("I couldn't quite catch that. You need to specify both an action and an object.");
             return;
         }
 
+        // Validate user input or return error
         AdventureModel.Verbs verb;
         AdventureModel.Nouns noun;
-
         try {
             verb = AdventureModel.Verbs.valueOf(words[0]);
             noun = AdventureModel.Nouns.valueOf(words[1]);
@@ -64,12 +79,15 @@ public class AdventureController {
             return;
         }
 
+        // Check if action is appropriate and provide guidance if not
         if(AdventureModel.isValidAction(verb, noun)){
             executeAction(verb, noun);
         }else{
             provideGuidance(verb, noun);
         }
     }
+
+    // This method to extract verbs and nouns from user input
     private String[] preprocessUserInput(String input){
         input = input.toLowerCase().replaceAll("[^a-zA-Z\\s]", "");
         String[] words = input.split("\\s+");
@@ -90,6 +108,8 @@ public class AdventureController {
         }
         return new String[]{verb, noun};
     }
+
+    // Determine if it is a valid verb
     private boolean isVerb(String word){
         try{
             AdventureModel.Verbs.valueOf(word.toUpperCase());
@@ -98,6 +118,8 @@ public class AdventureController {
             return false;
         }
     }
+
+    // Determine if it is a valid noun
     private boolean isNoun(String word){
         try{
             AdventureModel.Nouns.valueOf(word.toUpperCase());
@@ -106,6 +128,8 @@ public class AdventureController {
             return false;
         }
     }
+
+    // When the user input and judged valid and successful, get back to user
     private void executeAction(AdventureModel.Verbs verb, AdventureModel.Nouns noun) {
         switch (verb) {
             case EAT:
@@ -143,21 +167,31 @@ public class AdventureController {
             case ARRIVE:
                 adventureModel.setArrivedSchool(true);
                 adventureView.displaySuccess("You arrived the campus, and seat in the CS5010 classroom on time, adventure ends!");
+                adventureView.congratsImage();
                 break;
         }
     }
+
+    // When the user input and judged valid but unsuccessful, get guidance back to user
     private void provideGuidance(AdventureModel.Verbs verb, AdventureModel.Nouns noun) {
         String guidance = null;
+        // Check if the user is on the road or at school
         boolean leftHome = adventureModel.isOnRoad() || adventureModel.isArrivedSchool();
+
         switch (verb) {
             case EAT:
+                // User input verb and noun is validated but logic wrong
                 if(noun == AdventureModel.Nouns.BREAKFAST){
+                    // Check if light on
                     if(!adventureModel.isLightOn()){
                         guidance = "It's too dark to see, how about try to turn on the light before having breakfast?";
+                    // Check if left home
                     } else if (leftHome) {
                         guidance = "You've already had breakfast, and you're feeling full right now.";
+                    // Check if eat breakfast already
                     } else if (adventureModel.isEaten()) {
                         guidance = "You've already had breakfast, how about try to grab the stuffs and take shoes?";
+                    // In other cases, first guide the user to eat breakfast first
                     } else {
                         guidance = "You're feeling hungry, how about enjoy your breakfast first?";
                     }
@@ -199,10 +233,10 @@ public class AdventureController {
                     } else if (!adventureModel.isTakenBag() || !adventureModel.isTakenLaptop()) {
                         String missingItems = "";
                         if(!adventureModel.isTakenBag()){
-                            missingItems += "bag";
+                            missingItems += "bag ";
                         }
                         if(!adventureModel.isTakenLaptop()){
-                            missingItems += "laptop";
+                            missingItems += "laptop ";
                         }
                         guidance = "Before leaving, make sure to take your " + missingItems;
                     } else if (!adventureModel.isTakenShoes()) {
@@ -218,10 +252,10 @@ public class AdventureController {
                     } else if (!adventureModel.isTakenBag() || !adventureModel.isTakenWater()) {
                         String missingItems = "";
                         if(!adventureModel.isTakenBag()){
-                            missingItems += "bag";
+                            missingItems += "bag ";
                         }
                         if(!adventureModel.isTakenWater()){
-                            missingItems += "water";
+                            missingItems += "water ";
                         }
                         guidance = "Before leaving, make sure to take your " + missingItems;
                     } else if (!adventureModel.isTakenShoes()) {
@@ -251,13 +285,13 @@ public class AdventureController {
                     } else if (!adventureModel.isTakenBag() || !adventureModel.isTakenLaptop() || !adventureModel.isTakenWater()) {
                         String missingItems = "";
                         if(!adventureModel.isTakenBag()){
-                            missingItems += "bag";
+                            missingItems += "bag ";
                         }
                         if(!adventureModel.isTakenLaptop()){
-                            missingItems += "laptop";
+                            missingItems += "laptop ";
                         }
                         if(!adventureModel.isTakenWater()){
-                            missingItems += "water";
+                            missingItems += "water ";
                         }
                         guidance = "Before heading out, make sure to take your " + missingItems;
                     } else if (!adventureModel.isTakenShoes()) {
@@ -293,12 +327,15 @@ public class AdventureController {
                 }
                 break;
         }
+        // If there have guidance, return the guidance, if not e.g eat light, return the verb and noun is invalid
         if (guidance != null) {
             adventureView.displayGuidance(guidance);
         } else {
             adventureView.displayError("Sorry, the object " + noun + " is not valid with the action " + verb + " in this adventure. Please try to other objects.");
         }
     }
+
+    // Set up sleep time for user reading context
     private void sleepForUserRead(int milliseconds){
         try{
             Thread.sleep(milliseconds);
