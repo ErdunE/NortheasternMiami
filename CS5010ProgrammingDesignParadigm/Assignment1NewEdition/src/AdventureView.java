@@ -1,9 +1,23 @@
+/**
+ * @author Erdun E
+ * Date:Sep 20th, 2024
+ * Course: CS5010 Programming Design Paradigm
+ * Program: Assignment 1
+ *
+ * View for Assignment 1,
+ * include the menu of verb and noun and all outputs of the situations.
+ *
+ *
+ */
 public class AdventureView {
 
+    // Welcome message, and ask user nickname to improve interaction
     public void welcomeMessage() {
         welcomeImage();
         System.out.println("Welcome to the Adventure of Go to Campus, before start the adventure, please enter your nickname:");
     }
+
+    // Adventure background, who you are, where you are, and what is the goal, what is the challenge
     public void backgroundMessage(String userName){
         String background = "Hola! " + userName + ", you are a NEU MSCS student living in Miami right now. " +
                             "\nEvery Wednesday, your adventure begins at the comfort of your home, " +
@@ -16,6 +30,7 @@ public class AdventureView {
         System.out.println("-------------------------------------------------------------------");
     }
 
+    // Adventure introduction, some basic logic to guide user
     public void introMessage() {
         System.out.println("The morning sunlight streams through the gaps in your curtains, and");
         System.out.println("your alarm clock rings, signaling the start of a new day. You get out");
@@ -47,6 +62,7 @@ public class AdventureView {
         System.out.println("-------------------------------------------------------------------");
     }
 
+    // Ask user if would like to start the adventure
     public void askUserIfStart(){
         System.out.println("Are you ready to start the adventure???????");
         System.out.println("Please enter 'start' to begin your journey!!!");
@@ -92,8 +108,6 @@ public class AdventureView {
         System.out.println("********************************************************************");
     }
 
-
-
     // Display success message
     public void displaySuccess(String message) {
         System.out.println("Great! " + message);
@@ -105,15 +119,19 @@ public class AdventureView {
         System.out.println("Try something like 'take water' or 'eat breakfast'.");
     }
 
+    // Display guidance message
     public void displayGuidance(String guidance) {
         System.out.println(guidance);
     }
 
+    // Display exit message and exit
     public void exitMessage() {
         System.out.println("Goodbye! Adventure Exited.");
+        goodbyeImage();
         System.exit(0);
     }
 
+    // Display ASCII art “welcome”
     public void welcomeImage(){
         String[] w = {
                 "*       * ",
@@ -180,6 +198,188 @@ public class AdventureView {
             System.out.print(o[i] + " ");
             System.out.print(m[i] + " ");
             System.out.print(e[i] + " ");
+            System.out.print(exclamation[i]);
+            System.out.println();
+        }
+    }
+    // Display ASCII art “goodbye”
+    public void goodbyeImage(){
+        String[] g = {
+                "  *****  ",
+                " *       ",
+                "*        ",
+                "*   ***  ",
+                " *    *  ",
+                "  *****  "
+        };
+
+        String[] o = {
+                "  *****  ",
+                " *     * ",
+                "*       *",
+                "*       *",
+                " *     * ",
+                "  *****  "
+        };
+
+        String[] d = {
+                "*****   ",
+                "*    *  ",
+                "*     * ",
+                "*     * ",
+                "*    *  ",
+                "*****   "
+        };
+
+        String[] b = {
+                "*****   ",
+                "*    *  ",
+                "*    *  ",
+                "*****   ",
+                "*    *  ",
+                "*****   "
+        };
+
+        String[] y = {
+                "*     * ",
+                " *   *  ",
+                "  * *   ",
+                "   *    ",
+                "   *    ",
+                "   *    "
+        };
+
+        String[] e = {
+                "******* ",
+                "*       ",
+                "*****   ",
+                "*       ",
+                "*       ",
+                "******* "
+        };
+
+        String[] exclamation = {
+                "  *  ",
+                "  *  ",
+                "  *  ",
+                "  *  ",
+                "     ",
+                "  *  "
+        };
+
+        for(int i = 0; i < 6; i ++){
+            System.out.print(g[i] + " ");
+            System.out.print(o[i] + " ");
+            System.out.print(o[i] + " ");
+            System.out.print(d[i] + " ");
+            System.out.print(b[i] + " ");
+            System.out.print(y[i] + " ");
+            System.out.print(e[i] + " ");
+            System.out.print(exclamation[i]);
+            System.out.println();
+        }
+    }
+    // Display ASCII art “congrats”
+    public void congratsImage(){
+        String[] c = {
+                "  *****  ",
+                " *     * ",
+                "*        ",
+                "*        ",
+                "*        ",
+                " *     * ",
+                "  *****  "
+        };
+
+        String[] o = {
+                "  *****  ",
+                " *     * ",
+                "*       *",
+                "*       *",
+                "*       *",
+                " *     * ",
+                "  *****  "
+        };
+
+        String[] n = {
+                "*     * ",
+                "**    * ",
+                "* *   * ",
+                "*  *  * ",
+                "*   * * ",
+                "*    ** ",
+                "*     * "
+        };
+
+        String[] g = {
+                "  *****  ",
+                " *     * ",
+                "*        ",
+                "*   **** ",
+                "*      * ",
+                " *     * ",
+                "  *****  "
+        };
+
+        String[] r = {
+                "*****   ",
+                "*    *  ",
+                "*    *  ",
+                "*****   ",
+                "*   *   ",
+                "*    *  ",
+                "*     * "
+        };
+
+        String[] a = {
+                "   *    ",
+                "  * *   ",
+                " *   *  ",
+                "******* ",
+                "*     * ",
+                "*     * ",
+                "*     * "
+        };
+
+        String[] t = {
+                "*******",
+                "   *   ",
+                "   *   ",
+                "   *   ",
+                "   *   ",
+                "   *   ",
+                "   *   "
+        };
+
+        String[] s = {
+                " ***** ",
+                "*      ",
+                "*      ",
+                " ***** ",
+                "      *",
+                "      *",
+                " ***** "
+        };
+
+        String[] exclamation = {
+                "  *  ",
+                "  *  ",
+                "  *  ",
+                "  *  ",
+                "  *  ",
+                "     ",
+                "  *  "
+        };
+
+        for(int i = 0; i < 7; i ++){
+            System.out.print(c[i] + " ");
+            System.out.print(o[i] + " ");
+            System.out.print(n[i] + " ");
+            System.out.print(g[i] + " ");
+            System.out.print(r[i] + " ");
+            System.out.print(a[i] + " ");
+            System.out.print(t[i] + " ");
+            System.out.print(s[i] + " ");
             System.out.print(exclamation[i]);
             System.out.println();
         }

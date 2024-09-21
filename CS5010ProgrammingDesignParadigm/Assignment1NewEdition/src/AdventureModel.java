@@ -1,6 +1,15 @@
+/**
+ * @author Erdun E
+ * Date:Sep 20th, 2024
+ * Course: CS5010 Programming Design Paradigm
+ * Program: Assignment 1
+ *
+ * Model for Assignment 1, include storage of Verb and Noun, and program logic and states.
+ *
+ */
 public class AdventureModel {
 
-    // verb and noun library
+    // Verb and Noun library
     public enum Verbs {
         EAT, TAKE, OPEN, WALK, ARRIVE
     }
@@ -8,7 +17,7 @@ public class AdventureModel {
         BREAKFAST, LIGHT, BAG, ROAD, SCHOOL, WATER, SHOES, LAPTOP
     }
 
-    // scenario state and adventure logic
+    // Scenario state and adventure logic
     private static boolean isLightOn;
     private static boolean isEaten;
     private static boolean isTakenBag;
@@ -29,7 +38,7 @@ public class AdventureModel {
         isTakenLaptop = false;
     }
 
-    // determine the current scenario state
+    // Determine the current scenario state
     public boolean isLightOn() {
         return isLightOn;
     }
@@ -55,7 +64,7 @@ public class AdventureModel {
         return isArrivedSchool;
     }
 
-    // update the current scenario state
+    // Update the current scenario state
     public void setLightOn(boolean lightOn) {
         isLightOn = lightOn;
     }
@@ -81,18 +90,21 @@ public class AdventureModel {
         isArrivedSchool = arrivedSchool;
     }
 
-    // determine the user action is valid on current state
+    // Determine the user action is valid on current state
     public static boolean isValidAction(Verbs verb, Nouns noun){
         switch(verb){
             case EAT:
+                // Must turn on light before eat breakfast
                 if(!isLightOn){
                     return false;
                 }
                 return noun == Nouns.BREAKFAST && !isEaten;
             case TAKE:
+                // Must turn on light before take bag, shoes, water, and laptop
                 if(!isLightOn){
                     return false;
                 }
+                // Must eat breakfast before take bag, shoes, water, and laptop
                 if(!isEaten){
                     return false;
                 }
@@ -110,8 +122,10 @@ public class AdventureModel {
             case OPEN:
                 return noun == Nouns.LIGHT && !isLightOn;
             case WALK:
+                // Walk road must before eat breaking and take everything
                 return noun == Nouns.ROAD && isTakenBag && isEaten && isTakenShoes && isTakenLaptop && isTakenWater;
             case ARRIVE:
+                // Arrive road must after walk road
                 return noun == Nouns.SCHOOL && isOnRoad;
             default:
                 return false;
