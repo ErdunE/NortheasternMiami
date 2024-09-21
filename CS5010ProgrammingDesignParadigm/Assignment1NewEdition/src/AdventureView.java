@@ -4,9 +4,7 @@
  * Course: CS5010 Programming Design Paradigm
  * Program: Assignment 1
  *
- * View for Assignment 1,
- * include the menu of verb and noun and all outputs of the situations.
- *
+ * View for Assignment 1, include the menu of verb and noun and all outputs of the situations.
  *
  */
 public class AdventureView {
