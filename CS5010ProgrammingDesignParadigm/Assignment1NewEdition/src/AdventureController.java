@@ -2,12 +2,15 @@ import java.util.Scanner;
 
 /**
  * @author Erdun E
- * Date:Sep 20th, 2024
+ * @version 1.1
+ * @since 2024-09-29
  * Course: CS5010 Programming Design Paradigm
  * Program: Assignment 1
  *
- * This class controls the model and the view while making sure the program runs appropriately
- *
+ * AdventureController class is responsible for handling the user inputs and interacting with
+ * the AdventureModel and AdventureView to execute the game logic and display results.
+ * This class processes user actions (verbs and nouns) and determines the game's response
+ * based on the current state stored in the AdventureModel.
  */
 
 public class AdventureController {
