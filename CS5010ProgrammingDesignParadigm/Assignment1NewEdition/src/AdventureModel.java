@@ -1,23 +1,35 @@
 /**
  * @author Erdun E
- * Date:Sep 20th, 2024
+ * @version 1.1
+ * @since 2024-09-29
  * Course: CS5010 Programming Design Paradigm
  * Program: Assignment 1
  *
- * Model for Assignment 1, include storage of Verb and Noun, and program logic and states.
+ * AdventureModel class represents the model in the MVC pattern.
+ * It holds the state of the game, including the player's actions and the scenario.
+ *
+ * This class also contains enums representing the possible verbs (actions) and nouns (objects)
  *
  */
 public class AdventureModel {
 
-    // Verb and Noun library
+    /**
+     * Enum representing the possible actions (verbs) that the player can perform.
+     */
     public enum Verbs {
         EAT, TAKE, OPEN, WALK, ARRIVE
     }
+
+    /**
+     * Enum representing the possible objects (nouns) that the player can interact with.
+     */
     public enum Nouns {
         BREAKFAST, LIGHT, BAG, ROAD, SCHOOL, WATER, SHOES, LAPTOP
     }
 
-    // Scenario state and adventure logic
+    /**
+     * Scenario state and adventure logic
+     */
     private static boolean isLightOn;
     private static boolean isEaten;
     private static boolean isTakenBag;
@@ -27,6 +39,9 @@ public class AdventureModel {
     private static boolean isTakenLaptop;
     private boolean isArrivedSchool;
 
+    /**
+     * Constructor initializes the state of the game. All state variables are set to false by default.
+     */
     public AdventureModel(){
         isLightOn = false;
         isEaten = false;

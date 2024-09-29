@@ -1,10 +1,13 @@
 /**
  * @author Erdun E
- * Date:Sep 20th, 2024
+ * @version 1.1
+ * @since 2024-09-29
  * Course: CS5010 Programming Design Paradigm
  * Program: Assignment 1
  *
- * View for Assignment 1, include the menu of verb and noun and all outputs of the situations.
+ * AdventureView class represents the view in the MVC pattern.
+ * It is responsible for displaying information to the player and gathering input from the player.
+ * This class provides methods for message, states, error, success, guidance and exit etc.
  *
  */
 public class AdventureView {
