@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
 
-    // Test calculator
+    // Test call computation with operations
     @Test
     public void testCalculatorAdd() {
         assertEquals(10, Calculator.run('+', 9, 1), "9 + 1 added should equal to 10");
@@ -26,11 +26,10 @@ public class CalculatorTest {
         assertEquals(9, Calculator.run('/', 9, 1), "9 / 1 divided should equal to 9");
     }
 
+    // Test special cases
     @Test
     public void testCalculatorDivideByZero() {
-        assertThrows(ArithmeticException.class, () -> {
-            Calculator.run('/', 9, 0);
-        }, "Division by zero should throw ArithmeticException");
+        assertThrows(ArithmeticException.class, () -> {Calculator.run('/', 9, 0);}, "Division by zero should throw ArithmeticException");
     }
 
     @Test
