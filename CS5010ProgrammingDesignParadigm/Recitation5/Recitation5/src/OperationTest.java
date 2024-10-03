@@ -71,6 +71,7 @@ public class OperationTest {
         assertEquals(-9,multiply.compute(9, -1), "9 * -1 multiplied should equal to -9");
     }
 
+    // Test divide operation
     @Test
     public void testDividePositiveNumber(){
         assertEquals(9, divide.compute(9, 1), "9 / 1 divided should equal to 9");
