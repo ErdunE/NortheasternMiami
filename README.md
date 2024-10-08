@@ -1,5 +1,6 @@
 # NortheasternMiami
 Assignment, homework, and everything in Northeastern University Miami
+## Course
 ### 2024 Fall
 [CS 5010 Programming Design Paradigm](https://github.com/ErdunE/NortheasternMiami/tree/main/CS5010ProgrammingDesignParadigm)  
 [CS 5800 Algorithm](https://github.com/ErdunE/NortheasternMiami/tree/main/CS5800Algorithm)
@@ -8,3 +9,10 @@ Assignment, homework, and everything in Northeastern University Miami
 ### 2025 Spring
 ### 2024 Fall
 ### 2025 Spring
+## Other Course
+### 2024 Fall
+[GLI](https://github.com/ErdunE/NortheasternMiami/tree/main/GLI)
+[NEU Miami Student Ambassador](https://github.com/ErdunE/NortheasternMiami/tree/main/NEU%20Miami%20Student%20Ambassador)
+## Coop
+### Coop Preparation Course
+[Khoury Graduate Career Preparation course](https://github.com/ErdunE/NortheasternMiami/tree/main/Coop)
