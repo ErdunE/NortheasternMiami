@@ -7,17 +7,20 @@ import java.util.Map;
 
 /**
  * WMC
- *
+ * 3, getInventoryController, getStock, constructor
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 2, Ingredient, InventorController
  * RFC
- *
+ * 5
+ * 3 internal, constructor， getInventoryController, getStock
+ * 2 external, HashMap, InventoryController
  * LCOM
- *
+ * Low, all methods to manage stock and its controller,
+ * So they are cohesive
  */
 
 public class InventorySystem {
