@@ -5,17 +5,19 @@ import java.util.List;
 
 /**
  * WMC
- *
+ * 3, constructor, getRecipeController, getRecipes
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 1 RecipeController
  * RFC
- *
+ * 5
+ * 3 internal, constructor, getRecipeController, getRecipes
+ * 2 external, ArrayList, RecipeController
  * LCOM
- *
+ * Low, all method manage the recipe library, make the class cohesive
  */
 
 public class RecipeLibrary {
