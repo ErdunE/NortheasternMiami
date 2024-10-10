@@ -5,17 +5,19 @@ import recipe.RecipeLibrary;
 
 /**
  * WMC
- *
+ * 2, constructor, getProductionController
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 1 productionController
  * RFC
- *
+ * 3
+ * 2 internal, constructor, getProductionController
+ * 1 external, getProductionController
  * LCOM
- *
+ * Low, all methods focus on managing the production system
  */
 
 public class ProductionSystem {
