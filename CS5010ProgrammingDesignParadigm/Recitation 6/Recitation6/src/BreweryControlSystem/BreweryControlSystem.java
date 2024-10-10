@@ -6,17 +6,21 @@ import recipe.RecipeLibrary;
 
 /**
  * WMC
- *
+ * 2, main, constructor
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 3, ProductionSystem, InventorySystem, RecipeLibrary
  * RFC
- *
+ * 12,
+ * 2 internal, constructor, main,
+ * 10 external, 10 scenarios
  * LCOM
- *
+ * Low, cohesive because it manages the coordination of subsystems.
+ * All methods work towards the same goal of controlling production,
+ * inventory, and recipes.
  */
 
 
