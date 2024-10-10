@@ -6,17 +6,19 @@ import java.util.Map;
 
 /**
  * WMC
- *
+ * 5, constructor, getName, getInstructions, getIngredients, setInstructions
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 0
  * RFC
- *
+ * 5
+ * 5 internal. constructor, getName, getInstructions, getIngredients, setInstructions
+ * 0 external
  * LCOM
- *
+ * Low, all methods relate to recipe management, make the class cohesive
  */
 
 public class Recipe {
