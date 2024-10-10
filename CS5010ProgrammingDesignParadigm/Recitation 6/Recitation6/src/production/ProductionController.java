@@ -6,17 +6,23 @@ import recipe.RecipeLibrary;
 
 /**
  * WMC
- *
+ * 9， constructor, createBatch, monitorBatch, bottleBatch,
+ * scheduleTransfer, transferBatch, cleanContainer,
+ * recordDailyReading, createVat
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 3, InventorySystem, RecipeLibrary, Recipe
  * RFC
- *
+ * 11,
+ * 9 internal, constructor, createBatch, monitorBatch, bottleBatch, scheduleTransfer
+ * transferBatch, cleanContainer, recordDailyReading, createVat
+ * 2 external, getRecipe, checkStock
  * LCOM
- *
+ * Medium. Manage multiple production task, such as(create batch, monitoring, transfer, etc.)
+ * So making it less cohesive
  */
 
 public class ProductionController {
