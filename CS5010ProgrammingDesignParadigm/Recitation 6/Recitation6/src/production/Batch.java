@@ -4,17 +4,20 @@ import recipe.Recipe;
 
 /**
  * WMC
- *
+ * 6, getBatchID, getRecipe, getSize, getStatus, updateStatus, constructor
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 1, Recipe
  * RFC
- *
+ * 6
+ * 6 internal, Constructor， getBatchID, getRecipe, getSize, getStatus, updateStatus
+ * 0 external
  * LCOM
- *
+ * Low, all methods work with batch-related data (ID, recipe, size, status),
+ * making the class cohesive.
  */
 
 public class Batch {
