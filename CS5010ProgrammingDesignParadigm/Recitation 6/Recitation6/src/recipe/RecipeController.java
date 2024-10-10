@@ -5,17 +5,19 @@ import java.util.Map;
 
 /**
  * WMC
- *
+ * 3, constructor, createRecipe, getRecipe
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 2, RecipeLibrary, Recipe
  * RFC
- *
+ * 5
+ * 3 internal, constructor, createRecipe, getRecipe
+ * 2 external, recipeLibrary.getRecipes, recipeLibrary.getRecipes().add
  * LCOM
- *
+ * Low, all methods manage recipes within the recipe library, make the class cohesive
  */
 
 public class RecipeController {
