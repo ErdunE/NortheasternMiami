@@ -4,17 +4,21 @@ import recipe.Recipe;
 
 /**
  * WMC
- *
+ * 3, addIngredientToInventory, checkStock, constructor
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 2, InventorySystem, Recipe
  * RFC
- *
+ * 7,
+ * 3 internal, constructor, addIngredientToInventory, checkStock
+ * 4 external, inventorySystem.getStock, inventorySystem.getStock.put,
+ * inventorySystem.getStock.getOrDefault, recipe.getIngredients
  * LCOM
- *
+ * Low, all methods are related to managing inventory operations
+ * So they are cohesive
  */
 
 public class InventoryController {
