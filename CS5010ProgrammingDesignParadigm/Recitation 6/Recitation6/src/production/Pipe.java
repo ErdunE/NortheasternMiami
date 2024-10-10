@@ -2,17 +2,20 @@ package production;
 
 /**
  * WMC
- *
+ * 6, getSourceVat, getDestinationVat, getStatus, setStatus, openPipe, closePipe
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 0
  * RFC
- *
+ * 6
+ * 6 internal constructor, getSourceVat, getDestinationVat, getStatus, setStatus,
+ * openPipe, closePipe
+ * 0 external
  * LCOM
- *
+ * Low, all methods work together to manage the pipe's state and operations.
  */
 
 public class Pipe {
