@@ -2,17 +2,19 @@ package production;
 
 /**
  * WMC
- *
+ * 5, Constructor, getID, getCapacity, getStatus, setStatus
  * DIT
- *
+ * 1
  * NOC
- *
+ * 0
  * CBO
- *
+ * 0
  * RFC
- *
+ * 5
+ * 5 internal, constructor, getId, getCapacity, getStatus, setStatus
+ * 0 external
  * LCOM
- *
+ * Low, all methods relate to ma manging a vat, make the class cohesive
  */
 
 public class Vat {
