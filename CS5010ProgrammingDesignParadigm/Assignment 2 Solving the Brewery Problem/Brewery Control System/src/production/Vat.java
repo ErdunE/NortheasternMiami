@@ -1,44 +1,65 @@
 package production;
 
 /**
- * WMC
- * 5, Constructor, getID, getCapacity, getStatus, setStatus
- * DIT
- * 1
- * NOC
- * 0
- * CBO
- * 0
- * RFC
- * 5
- * 5 internal, constructor, getId, getCapacity, getStatus, setStatus
- * 0 external
- * LCOM
- * Low, all methods relate to ma manging a vat, make the class cohesive
+ * The Vat class represents a storage container in the Brewery Control System.
+ * Vats are used to store or process beverage batches during production. Each
+ * vat has a unique ID, a specific capacity, and a status indicating whether
+ * it is empty or in use.
+ *
+ * @author Erdun
+ * @version 1.2
+ * @since 10/15/2024
  */
-
 public class Vat {
-    private int batchId;
+    private int vatId;
     private int capacity;
     private String status;
 
-    public Vat(int batchId, int capacity) {
-        this.batchId = batchId;
+    /**
+     * Constructor for Vat class.
+     *
+     * @param vatId unique identifier for the vat.
+     * @param capacity The total capacity of the vat.
+     */
+    public Vat(int vatId, int capacity) {
+        this.vatId = vatId;
         this.capacity = capacity;
         this.status = "This Vat is Empty.";
     }
 
+    /**
+     * Returns the Vat id.
+     *
+     * @return The ID of the vat.
+     */
     public int getId() {
-        return batchId;
+        return vatId;
     }
+
+    /**
+     * Returns the capacity of the vat.
+     *
+     * @return The capacity of the vat.
+     */
     public int getCapacity() {
         return capacity;
     }
+
+    /**
+     * Returns the current status of the vat.
+     *
+     * @return The current status of the vat.
+     */
     public String getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    /**
+     * Updates the status of the vat to a new value.
+     *
+     * @param status The new status to set for the vat (e.g., "In Use", "Cleaned", "Empty").
+     */
+    public void updateStatus(String status) {
         this.status = status;
     }
 }

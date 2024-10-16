@@ -1,47 +1,46 @@
 package recipe;
 
 import inventory.Ingredient;
-
 import java.util.Map;
 
 /**
- * WMC
- * 5, constructor, getName, getInstructions, getIngredients, setInstructions
- * DIT
- * 1
- * NOC
- * 0
- * CBO
- * 0
- * RFC
- * 5
- * 5 internal. constructor, getName, getInstructions, getIngredients, setInstructions
- * 0 external
- * LCOM
- * Low, all methods relate to recipe management, make the class cohesive
+ * The Recipe class represents a recipe used in the Brewery Control System for producing beer.
+ * Each recipe has a name and a list of ingredients with their corresponding quantities.
+ *
+ * @author Erdun
+ * @version 1.3
+ * @since 10/15/2024
  */
-
 public class Recipe {
     private String recipeName;
-    private String instructions;
     private Map<Ingredient, Integer> ingredients;
 
+    /**
+     * Constructor for Recipe class.
+     *
+     * @param recipeName The name of the recipe.
+     * @param ingredients A map containing the ingredients required for this recipe and quantities.
+     */
     public Recipe(String recipeName, Map<Ingredient, Integer> ingredients) {
         this.recipeName = recipeName;
         this.ingredients = ingredients;
-        this.instructions = "Default instructions";
     }
 
+    /**
+     * Returns the name of the recipe.
+     *
+     * @return The name of the recipe.
+     */
     public String getName() {
         return recipeName;
     }
-    public String getInstructions() {
-        return instructions;
-    }
+
+    /**
+     * Returns the map of ingredients required for this recipe.
+     *
+     * @return A map of Ingredient and their required quantities.
+     */
     public Map<Ingredient, Integer> getIngredients() {
         return ingredients;
-    }
-    public void setInstructions(String instructions) {
-        this.instructions = instructions;
     }
 }
