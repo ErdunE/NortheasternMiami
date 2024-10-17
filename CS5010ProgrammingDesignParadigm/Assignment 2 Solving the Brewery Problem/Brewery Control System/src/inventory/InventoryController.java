@@ -10,7 +10,7 @@ import java.util.Map;
  * to fulfill a production batch.
  *
  * @author Erdun E
- * @version 1.3
+ * @version 1.4
  * @since 10/15/2024
  */
 
@@ -41,6 +41,17 @@ public class InventoryController {
         System.out.println("Enter the quantity of the ingredient:");
         int quantity = scanner.nextInt();
         scanner.nextLine(); // consume newline
+
+        // Check if the ingredient already exists in the stock
+        for (Ingredient ingredient : inventorySystem.getStock().keySet()) {
+            if (ingredient.getName().equalsIgnoreCase(name)) {
+                // If found, update the quantity
+                int currentQuantity = inventorySystem.getStock().get(ingredient);
+                inventorySystem.getStock().put(ingredient, currentQuantity + quantity);
+                System.out.println("Updated " + name + " quantity to " + (currentQuantity + quantity));
+                return;
+            }
+        }
 
         // Create a new Ingredient object with the specified name and quantity
         Ingredient ingredient = new Ingredient(name, quantity);
