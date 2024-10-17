@@ -18,7 +18,7 @@ import java.util.Scanner;
  * </p>
  *
  * @author Erdun E
- * @version 1.3
+ * @version 1.4
  * @since 10/15/2024
  */
 
@@ -77,7 +77,7 @@ public class MenuHandler {
                     System.exit(0);
                 default:
                     // Display invalid message
-                    System.out.println("Invalid command. Please try again.");
+                    System.out.println("Invalid command. Please select a valid option from the menu.");
             }
         } while (true);
     }
@@ -141,7 +141,7 @@ public class MenuHandler {
                     System.exit(0);
                 default:
                     // Display invalid message
-                    System.out.println("Invalid command. Please try again.");
+                    System.out.println("Invalid command. Please select a valid option from the menu.");
             }
         } while (true);
     }
@@ -179,7 +179,7 @@ public class MenuHandler {
                     System.exit(0);
                 default:
                     // Display invalid message
-                    System.out.println("Invalid command. Please try again.");
+                    System.out.println("Invalid command. Please select a valid option from the menu.");
             }
         } while (true);
     }
@@ -217,7 +217,7 @@ public class MenuHandler {
                     System.exit(0);
                 default:
                     // Display invalid message
-                    System.out.println("Invalid command. Please try again.");
+                    System.out.println("Invalid command. Please select a valid option from the menu.");
             }
         } while (true);
     }
