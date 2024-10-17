@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Brewery Control System. It interacts with the RecipeLibrary to store and retrieve recipes.
  *
  * @author Erdun
- * @version 1.3
+ * @version 1.4
  * @since 10/15/2024
  */
 public class RecipeController {
@@ -31,40 +31,79 @@ public class RecipeController {
      * @param scanner A  Scanner to take input from the user.
      */
     public void createRecipe(Scanner scanner) {
-        // Capture the recipe name from user input
+        // Prompt the user to enter the recipe name
         System.out.println("Enter the name of the recipe:");
         String recipeName = scanner.nextLine();
 
         // Capture the number of ingredients
-        System.out.println("Enter the number of ingredients:");
-        int ingredientCount = scanner.nextInt();
+        int ingredientCount;
+        // Loop to ensure the user enters a valid positive integer for the number of ingredients
+        while (true) {
+            System.out.println("Enter the number of ingredients (positive integer):");
+            if (scanner.hasNextInt()) {
+                // Read the number of ingredients
+                ingredientCount = scanner.nextInt();
+                // Exit loop if valid positive integer is entered
+                if (ingredientCount > 0) {
+                    break;
+                }
+                else {
+                    System.out.println("The number of ingredients must be positive.");
+                }
+            } else {
+                System.out.println("Invalid input. Please enter a valid integer.");
+                scanner.next();
+            }
+        }
         scanner.nextLine();
 
         // Initialize a map to store ingredients and their quantities
         Map<Ingredient, Integer> ingredients = new HashMap<>();
 
-        // Loop to capture each ingredient's name and quantity
+        // Loop through each ingredient based on the specified ingredient count
         for (int i = 1; i <= ingredientCount; i++) {
-            System.out.println("Enter the name of ingredient " + i + ":");
-            // Get the ingredient name
-            String ingredientName = scanner.nextLine();
+            // Prompt the user to enter the name of the ingredient
+            System.out.println("Enter the name of ingredient " + i + " (or type 'exit' to cancel):");
+            String ingredientName = scanner.nextLine().trim();
 
-            System.out.println("Enter the quantity of ingredient " + i + ":");
-            // Get the ingredient quantity
-            int quantity = scanner.nextInt();
+            // Check if the user wants to exit the recipe creation process
+            if (ingredientName.equalsIgnoreCase("exit")) {
+                System.out.println("Recipe creation cancelled.");
+                return;
+            }
+
+            int quantity;
+            // Loop to ensure the user enters a valid positive integer for the ingredient quantity
+            while (true) {
+                System.out.println("Enter the quantity of ingredient " + i + ":");
+                if (scanner.hasNextInt()) {
+                    // Read the quantity
+                    quantity = scanner.nextInt();
+                    if (quantity > 0) {
+                        // Exit loop if a valid positive integer is entered
+                        break;
+                    }
+                    else {
+                        System.out.println("Quantity must be a positive integer.");
+                    }
+                } else {
+                    System.out.println("Invalid input. Please enter a valid integer.");
+                    scanner.next();
+                }
+            }
             scanner.nextLine();
 
-            // Create an Ingredient object and add it to the map
-            Ingredient ingredient = new Ingredient(ingredientName, quantity);
-            // Store the ingredient and its quantity
-            ingredients.put(ingredient, quantity);
+            // Add the ingredient and its quantity to the map
+            ingredients.put(new Ingredient(ingredientName, quantity), quantity);
         }
 
-        // Create a new Recipe object with the name and ingredients map
+        // Create a new Recipe object with the provided name and ingredients map
         Recipe recipe = new Recipe(recipeName, ingredients);
-        // Add the recipe to the recipe library
+
+        // Add the new recipe to the recipe library
         recipeLibrary.getRecipes().add(recipe);
-        // Confirm that the recipe was created
+
+        // Confirm that the recipe was successfully created
         System.out.println("Recipe created: " + recipeName);
     }
 

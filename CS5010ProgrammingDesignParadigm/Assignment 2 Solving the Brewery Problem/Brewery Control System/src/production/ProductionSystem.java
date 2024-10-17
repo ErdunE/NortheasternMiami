@@ -14,12 +14,13 @@ import recipe.RecipeLibrary;
 
  *
  * @author Erdun
- * @version 1.3
+ * @version 1.4
  * @since 10/15/2024
  */
 public class ProductionSystem {
     private ProductionController productionController;
     private List<Batch> batches;
+    private List<Vat> vats;
 
     /**
      * Constructor for the ProductionSystem class.
@@ -31,6 +32,12 @@ public class ProductionSystem {
         this.productionController = new ProductionController(inventorySystem, recipeLibrary, this);
         // Initializes the list to hold all production batches
         this.batches = new ArrayList<>();
+        this.vats = new ArrayList<>();
+
+        // Initialize vats
+        for (int i = 1; i <= 5; i++){
+            vats.add(new Vat(i, 1000));
+        }
     }
 
     /**
@@ -78,5 +85,28 @@ public class ProductionSystem {
         }
         // Return null if no batch with the specified ID is found
         return null;
+    }
+
+    public Vat getAvailableVat() {
+        for (Vat vat : vats) {
+            if (vat.getStatus().equals("This Vat is Empty.")) {
+                return vat;
+            }
+        }
+        return null;
+    }
+
+    public Vat getVatById(int vatId) {
+        for (Vat vat : vats) {
+            if (vat.getId() == vatId) {
+                return vat;
+            }
+        }
+        return null;
+    }
+
+    public Vat getVatForBatch(Batch batch) {
+        // Example logic: Assume first vat stores this batch.
+        return vats.get(0);
     }
 }

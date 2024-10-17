@@ -14,7 +14,7 @@ import java.util.Objects;
  * </p>
  *
  * @author Erdun E
- * @version 1.3
+ * @version 1.4
  * @since 10/15/2024
  */
 
@@ -29,6 +29,9 @@ public class Ingredient {
      * @param quantity Representing the available number of an ingredient.
      */
     public Ingredient(String ingredientName, int quantity) {
+        if (quantity < 0) {
+            throw new IllegalArgumentException("Initial quantity cannot be negative.");
+        }
         this.ingredientName = ingredientName;
         this.quantity = quantity;
     }
@@ -55,10 +58,29 @@ public class Ingredient {
      * Updates the quantity of the ingredient. This method is used when ingredients
      * are added to or consumed from the inventory.
      *
-     * @param quantity The new quantity of the ingredient to set. This should be a non-negative integer.
+     * @param newQuantity The new quantity to set.
+     * @throws IllegalArgumentException if the quantity is negative.
      */
-    public void updateQuantity(int quantity) {
-        this.quantity = quantity;
+    public void updateQuantity(int newQuantity) {
+        if (newQuantity < 0) {
+            throw new IllegalArgumentException("Quantity cannot be negative.");
+        }
+        this.quantity = newQuantity;
+    }
+
+    /**
+     * Adjusts the quantity by a specified amount.
+     *
+     * @param amount The amount to adjust the quantity
+     * @return true if the adjustment was successful, false if
+     *         there wasn't enough stock to reduce by the specified amount.
+     */
+    public boolean adjustQuantity(int amount) {
+        if (quantity + amount < 0) {
+            return false; // Not enough stock to reduce by the given amount
+        }
+        this.quantity += amount;
+        return true;
     }
 
     /**
