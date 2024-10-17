@@ -5,14 +5,14 @@ package production;
  * This pipe is used to transfer batches between vats during production.
  *
  * @author Erdun
- * @version 1.2
- * @since 10/15/2024
+ * @version 1.3
+ * @since 10/17/2024
  */
 
 public class Pipe {
-    private Vat sourceVat;
-    private Vat destinationVat;
-    private String status;
+    private final Vat sourceVat;
+    private final Vat destinationVat;
+    private boolean isOpen;
 
     /**
      * Constructor for Pipe class
@@ -23,58 +23,34 @@ public class Pipe {
     public Pipe(Vat source, Vat destination) {
         this.sourceVat = source;
         this.destinationVat = destination;
-        this.status = "Pipe line Closed";
-    }
-
-    /**
-     * Returns the source vat of this pipe, which is the vat where the batch transfer begins.
-     *
-     * @return The source vat.
-     */
-    public Vat getSourceVat() {
-        return sourceVat;
-    }
-
-    /**
-     * Returns the destination vat of this pipe, which is the vat where the batch transfer ends.
-     *
-     * @return The destination vat.
-     */
-    public Vat getDestinationVat() {
-        return destinationVat;
-    }
-
-    /**
-     * Returns the current status of this pipe that opened or closed.
-     *
-     * @return The status of the pipe.
-     */
-    public String getStatus() {
-        return status;
-    }
-
-    /**
-     * Updates the status of the pipe.
-     *
-     * @param status The new status for the pipe.
-     */
-    public void updateStatus(String status) {
-        this.status = status;
+        this.isOpen = false;
     }
 
     /**
      * Opens the pipe, allowing batch transfer between the source vat and the destination vat.
-     * The status is updated to "Pipe line Opened".
+     * The status is updated to "Pipeline Opened".
      */
     public void openPipe(){
-        this.status = "Pipe line Opened";
+        this.isOpen = true;
+        System.out.println("Pipe opened between Vat " + sourceVat.getId() + " and Vat " + destinationVat.getId());
     }
 
     /**
      * Closes the pipe, stopping batch transfer between the source vat and the destination vat.
-     * The status is updated to "Pipe line Closed".
+     * The status is updated to "Pipeline Closed".
      */
     public void closePipe(){
-        this.status = "Pipe line Closed";
+        this.isOpen = false;
+        System.out.println("Pipe closed.");
     }
+
+    /**
+     * Checks if the pipe is open.
+     *
+     * @return true if the pipe is open, false otherwise.
+     */
+    public boolean isOpen() {
+        return isOpen;
+    }
+
 }
