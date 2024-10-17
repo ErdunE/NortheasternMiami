@@ -1,6 +1,8 @@
 package production;
 
 import recipe.Recipe;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class represents a batch of beer being produced in the brewery.
@@ -12,7 +14,7 @@ import recipe.Recipe;
  * </p>
  *
  * @author Erdun E
- * @version 1.3
+ * @version 1.4
  * @since 10/15/2024
  */
 
@@ -21,6 +23,7 @@ public class Batch {
     private Recipe recipe;
     private int size;
     private String status;
+    private List<Double> gravityReadings;
 
     /**
      * Constructor for Batch class.
@@ -34,7 +37,8 @@ public class Batch {
         this.batchID = batchID;
         this.recipe = recipe;
         this.size = size;
-        this.status = "In Production"; // 初始化状态为 "In Production"
+        this.status = "In Production";
+        this.gravityReadings = new ArrayList<>();
     }
 
     /**
@@ -81,4 +85,14 @@ public class Batch {
     public void updateStatus(String status) {
         this.status = status;
     }
+
+    /**
+     * Adds a gravity reading to the batch's history.
+     *
+     * @param reading The gravity reading to add.
+     */
+    public void addGravityReading(double reading) {
+        gravityReadings.add(reading);
+    }
+
 }
