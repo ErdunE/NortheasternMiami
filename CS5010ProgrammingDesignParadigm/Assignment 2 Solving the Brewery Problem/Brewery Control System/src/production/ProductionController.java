@@ -14,7 +14,7 @@ import java.util.Scanner;
  * schedule and transfer, create and clean vat, and record the daily reading.
  *
  * @author Erdun E
- * @version 1.4
+ * @version 1.5
  * @since 10/17/2024
  */
 
@@ -53,6 +53,7 @@ public class ProductionController {
         if (recipe != null) {
             // If the recipe exists, ask for the batch size
             System.out.println("Enter the batch size:");
+            // Capture batch size from user input
             int size = scanner.nextInt();
             scanner.nextLine();
 
@@ -67,6 +68,7 @@ public class ProductionController {
                             inventorySystem.getStock().get(ingredient) - requiredQuantity);
                 }
 
+                // Get an available vat
                 Vat vat = productionSystem.getAvailableVat();
                 if (vat != null) {
                     Batch newBatch = new Batch(productionSystem.getBatches().size() + 1, recipe, size);
@@ -138,7 +140,26 @@ public class ProductionController {
         System.out.println("Enter the destination vat ID:");
         int destinationVatId = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Transfer scheduled for batch ID: " + batchId);
+
+        Batch batch = productionSystem.findBatchById(batchId);
+        Vat destinationVat = productionSystem.findVatById(destinationVatId);
+
+        if (batch == null) {
+            System.out.println("Batch ID not found.");
+            return;
+        }
+
+        if (destinationVat == null) {
+            System.out.println("Destination Vat ID not found.");
+            return;
+        }
+
+        if (destinationVat.getCapacity() < batch.getSize()) {
+            System.out.println("Transfer failed: Destination vat capacity exceeded.");
+            return;
+        }
+
+        System.out.println("Batch ID " + batchId + " is scheduled to transfer to Vat ID " + destinationVatId);
     }
 
     /**
@@ -149,27 +170,42 @@ public class ProductionController {
     public void transferBatch(Scanner scanner) {
         System.out.println("Enter the batch ID to transfer:");
         int batchId = scanner.nextInt();
+
+        System.out.println("Enter the source vat ID:");
+        int sourceVatId = scanner.nextInt();
+
+        System.out.println("Enter the destination vat ID:");
+        int destinationVatId = scanner.nextInt();
         scanner.nextLine();
 
         Batch batch = productionSystem.findBatchById(batchId);
-        if (batch != null) {
-            System.out.println("Enter the destination vat ID:");
-            int destinationVatId = scanner.nextInt();
-            scanner.nextLine();
+        Vat sourceVat = productionSystem.findVatById(sourceVatId);
+        Vat destinationVat = productionSystem.findVatById(destinationVatId);
 
-            Vat destinationVat = productionSystem.getVatById(destinationVatId);
-            if (destinationVat != null && destinationVat.getStatus().equals("This Vat is Empty.")) {
-                Pipe pipe = new Pipe(productionSystem.getVatForBatch(batch), destinationVat);
-                pipe.openPipe();
-                destinationVat.updateStatus("In Use");
-                pipe.closePipe();
-                System.out.println("Batch ID " + batchId + " transferred to Vat ID: " + destinationVatId);
-            } else {
-                System.out.println("Invalid vat selection or vat is already in use.");
-            }
-        } else {
-            System.out.println("Batch ID not found.");
+        if (batch == null || sourceVat == null || destinationVat == null) {
+            System.out.println("Invalid batch or vat ID.");
+            return;
         }
+
+        if (destinationVat.getCapacity() < batch.getSize()) {
+            System.out.println("Transfer failed: Destination vat capacity exceeded.");
+            return;
+        }
+
+        Pipe pipe = new Pipe(sourceVat, destinationVat);
+        if (!pipe.isOpen()) {
+            pipe.openPipe();
+        }
+
+        System.out.println("Transferring batch ID: " + batch.getBatchID() +
+                " from Vat " + sourceVat.getId() + " to Vat " + destinationVat.getId());
+
+        // Logic to finalize the transfer (update vat status, remove from source, etc.)
+        sourceVat.updateStatus("This Vat is Empty.");
+        destinationVat.updateStatus("In Use");
+
+        pipe.closePipe();
+        System.out.println("Batch transfer completed successfully.");
     }
 
     /**
@@ -201,8 +237,17 @@ public class ProductionController {
         int batchId = scanner.nextInt();
         System.out.println("Enter the gravity reading:");
         double gravity = scanner.nextDouble();
-        scanner.nextLine();
-        System.out.println("Daily reading recorded for batch ID: " + batchId);
+        scanner.nextLine();  // Consume newline
+
+        Batch batch = productionSystem.findBatchById(batchId);
+        if (batch == null) {
+            System.out.println("Batch ID not found.");
+            return;
+        }
+
+        // Store or log the gravity reading
+        batch.addGravityReading(gravity);
+        System.out.println("Daily gravity reading of " + gravity + " recorded for batch ID: " + batchId);
     }
 
     /**
@@ -211,9 +256,13 @@ public class ProductionController {
      * @param scanner A Scanner to take user input for vat id.
      */
     public void createVat(Scanner scanner) {
+        System.out.println("Enter the ID of the new vat:");
+        int vatId = scanner.nextInt();
         System.out.println("Enter the capacity of the new vat:");
         int capacity = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Vat created with capacity: " + capacity);
+
+        Vat vat = new Vat(vatId, capacity);
+        productionSystem.addVat(vat);
     }
 }
