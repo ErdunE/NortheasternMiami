@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Brewery Control System. It interacts with the RecipeLibrary to store and retrieve recipes.
  *
  * @author Erdun
- * @version 1.4
+ * @version 1.5
  * @since 10/17/2024
  */
 public class RecipeController {
@@ -104,7 +104,7 @@ public class RecipeController {
         recipeLibrary.getRecipes().add(recipe);
 
         // Confirm that the recipe was successfully created
-        System.out.println("Recipe created: " + recipeName);
+        System.out.println("Recipe " + recipeName + "created successfully and added to the Recipe Library.");
     }
 
     /**
@@ -127,7 +127,7 @@ public class RecipeController {
             // Additional details about the ingredients can be displayed here if needed
         } else {
             // Display to the user if the recipe was not found
-            System.out.println("Recipe not found.");
+            System.out.println("Recipe " + name + " not found.");
         }
     }
 
