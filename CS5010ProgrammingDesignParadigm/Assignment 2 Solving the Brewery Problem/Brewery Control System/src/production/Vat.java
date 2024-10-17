@@ -7,8 +7,8 @@ package production;
  * it is empty or in use.
  *
  * @author Erdun
- * @version 1.2
- * @since 10/15/2024
+ * @version 1.3
+ * @since 10/17/2024
  */
 public class Vat {
     private int vatId;
