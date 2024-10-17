@@ -14,7 +14,7 @@ import recipe.RecipeLibrary;
 
  *
  * @author Erdun
- * @version 1.4
+ * @version 1.5
  * @since 10/17/2024
  */
 public class ProductionSystem {
@@ -87,15 +87,12 @@ public class ProductionSystem {
         return null;
     }
 
-    public Vat getAvailableVat() {
-        for (Vat vat : vats) {
-            if (vat.getStatus().equals("This Vat is Empty.")) {
-                return vat;
-            }
-        }
-        return null;
-    }
-
+    /**
+     * Finds and returns a vat based on the given vat ID.
+     *
+     * @param vatId The ID of the vat to be retrieved.
+     * @return The Vat with the matching ID, or null if not found.
+     */
     public Vat getVatById(int vatId) {
         for (Vat vat : vats) {
             if (vat.getId() == vatId) {
@@ -105,8 +102,47 @@ public class ProductionSystem {
         return null;
     }
 
-    public Vat getVatForBatch(Batch batch) {
-        // Example logic: Assume first vat stores this batch.
-        return vats.get(0);
+    /**
+     * Retrieves the first available vat that is currently empty and ready for use.
+     * If no vat is available, this method returns null.
+     *
+     * @return The first available Vat object, or null if all vats are occupied.
+     */
+    public Vat getAvailableVat() {
+        for (Vat vat : vats) {
+            if (vat.getStatus().equals("This Vat is Empty.")) {
+                return vat;
+            }
+        }
+        return null;
     }
+
+    /**
+     * Searches for a vat by its unique ID. This is a helper method used in batch
+     * transfers and vat-related operations.
+     *
+     * @param vatId The ID of the vat to search for.
+     * @return The Vat if found, or null if no vat matches the given ID.
+     */
+    public Vat findVatById(int vatId) {
+        for (Vat vat : vats) {
+            if (vat.getId() == vatId) {
+                return vat;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Adds a new vat to the production system. This method is used when expanding the
+     * production capacity by adding more vats.
+     *
+     * @param vat The Vat object to be added to the production system.
+     */
+    public void addVat(Vat vat) {
+        vats.add(vat);
+        System.out.println("Added new Vat with ID: " + vat.getId());
+    }
+
+
 }
