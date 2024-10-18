@@ -9,13 +9,13 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
+ * Unit tests for the entertainment recommendation system.
+ *
  * @author Erdun E
- * @version 1.0
- * @since 2024-10-01
+ * @version 1.1
+ * @since 2024-10-18
  * Course: CS5010 Program Design Paradigm
  * Program: Mid-Semester Assignment
- *
- * Unit tests for the entertainment recommendation system.
  */
 public class RecommendationTest {
 
