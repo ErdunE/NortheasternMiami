@@ -8,13 +8,13 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * Main class to interact with the entertainment recommendation system
+ *
  * @author Erdun E
- * @version 1.0
- * @since 2024-10-01
+ * @version 1.1
+ * @since 2024-10-18
  * Course: CS5010 Program Design Paradigm
  * Program: Mid-Semester Assignment
- *
- * Main class to interact with the recommendation system
  */
 
 public class EntertainmentUI {
