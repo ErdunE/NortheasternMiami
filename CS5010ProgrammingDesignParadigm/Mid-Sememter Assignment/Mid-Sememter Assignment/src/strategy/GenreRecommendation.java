@@ -4,13 +4,13 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * GenreRecommendation class provides genre-specific movie recommendations.
+ *
  * @author Erdun E
- * @version 1.0
- * @since 2024-10-01
+ * @version 1.1
+ * @since 2024-10-18
  * Course: CS5010 Program Design Paradigm
  * Program: Mid-Semester Assignment
- *
- * GenreRecommendation class provides genre-specific movie recommendations.
  */
 
 
@@ -19,6 +19,7 @@ public class GenreRecommendation implements RecommendationStrategy {
 
     /**
      * Constructor to set the desired genre.
+     *
      * @param genre The genre of movies to recommend.
      */
     public GenreRecommendation(String genre) {
@@ -26,7 +27,9 @@ public class GenreRecommendation implements RecommendationStrategy {
     }
 
     /**
-     * Based on user choice return recommendation
+     * Returns a list of movie recommendations based on the specified genre.
+     *
+     * @return a List of movies for the specified genre, or a message display that no recommendations.
      */
     @Override
     public List<String> getRecommendations() {
