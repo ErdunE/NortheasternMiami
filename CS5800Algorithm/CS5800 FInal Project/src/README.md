@@ -32,10 +32,25 @@ cd NortheasternMiami/CS5800Algorithm/CS5800 Final Project/
 ```
 2. Create a Feature Branch:
 ```
-git checkout -b workspace-Erdun team-project
+git checkout -b workspace-erdun team-project
+```
+example
+```
+erdune@ErdundeMacBook-Pro CS5800 FInal Project % git checkout -b workspace-erdun team-project
+M       .DS_Store
+M       CS5010ProgrammingDesignParadigm/.DS_Store
+M       CS5800Algorithm/.DS_Store
+Switched to a new branch 'workspace-erdun'
+erdune@ErdundeMacBook-Pro CS5800 FInal Project % git branch
+  feature-improvement
+  main
+  team-project
+* workspace-erdun
+erdune@ErdundeMacBook-Pro CS5800 FInal Project % 
+
 ```
 3. Commit and Push Your Changes:
-```aiignore
+```
 git add .
 git commit -m "Implemented Algorithms Logic"
 git push origin workspace-Erdun
