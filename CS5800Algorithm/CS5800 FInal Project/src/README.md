@@ -30,6 +30,11 @@ This is the team project of CS5800 Algorithms. In this project, we aim to implem
 git clone https://github.com/ErdunE/NortheasternMiami.git
 cd NortheasternMiami/CS5800Algorithm/CS5800 Final Project/
 ```
+example
+```aiignore
+erdune@ErdundeMacBook-Pro CS5800 Final Project % pwd
+/Users/erdune/Desktop/NortheasternMiami/CS5800Algorithm/CS5800 Final Project
+```
 2. Create a Feature Branch:
 ```
 git checkout -b workspace-erdun team-project
