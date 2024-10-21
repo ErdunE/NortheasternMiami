@@ -58,7 +58,7 @@ erdune@ErdundeMacBook-Pro CS5800_Final_Project %
 ```
 git add .
 git commit -m “Implemented Algorithms Logic”
-git push origin workspace-Erdun
+git push origin workspace-erdun
 ```
 4. Create a Pull Request (PR):
     * Open a PR on GitHub to merge your feature branch into the team-project branch.
