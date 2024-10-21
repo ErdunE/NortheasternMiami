@@ -1,10 +1,10 @@
 # Entertainment Recommendation System
 ***
 ## Basic Information
-* #### Author: Erdun E
-* #### Course: CS5010 Program Design Paradigm
-* #### Program: Mid-Semester Assignment
-* #### Professor: Lindsay Jamieson
+* **Author: Erdun E**
+* **Course: CS5010 Program Design Paradigm**
+* **Program: Mid-Semester Assignment**
+* **Professor: Lindsay Jamieson**
 
 ## Project Overview
 #### The Entertainment Recommendation System provides personalized media recommendations movies based on user preferences(probabaly add more before the end of the semester, such as music, or TV shows). Users can switch between different recommendation strategies, such as genre-based recommendations or popular recommendations.
