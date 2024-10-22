@@ -1,5 +1,3 @@
-# main.py
-
 import logging
 import random
 from time import sleep
@@ -9,22 +7,18 @@ from webdriver_manager.chrome import ChromeDriverManager
 from linkedin_scraper import login_to_linkedin, collect_jobs
 from discord_notifier import send_to_discord
 
-# Define credentials and webhook URL directly here
 LINKEDIN_EMAIL = "email"
 LINKEDIN_PASSWORD = "password"
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1296315533058248795/yxrQReJWsCcwtE-DbF8CcnKNmMdw3l3CJ2kBE-FNjgoL0bge6PT-b4fFKoBF6sRngmMF"
 
-# Logging configuration
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def random_delay():
-    """Introduce a random delay to mimic human behavior."""
     delay = random.uniform(3, 7)
     logging.info(f"Sleeping for {delay:.2f} seconds...")
     sleep(delay)
 
 def create_driver():
-    """Create and return a WebDriver instance."""
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
@@ -35,7 +29,6 @@ def create_driver():
     return driver
 
 def main():
-    """Main entry point for the script."""
     driver = create_driver()
 
     try:
