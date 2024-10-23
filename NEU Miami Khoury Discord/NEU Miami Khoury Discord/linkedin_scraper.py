@@ -1,5 +1,3 @@
-# linkedin_scraper.py
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -8,7 +6,6 @@ from time import sleep
 import logging
 
 def login_to_linkedin(driver, email, password):
-    """Login to LinkedIn."""
     driver.get("https://www.linkedin.com/login")
     try:
         WebDriverWait(driver, 10).until(
@@ -23,22 +20,20 @@ def login_to_linkedin(driver, email, password):
         raise
 
 def infinite_scroll(driver, max_attempts=10):
-    """Scroll the page multiple times to ensure all content loads."""
     last_height = driver.execute_script("return document.body.scrollHeight")
 
     for attempt in range(max_attempts):
         logging.info(f"Scrolling attempt: {attempt + 1}")
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        sleep(5)  # Wait for content to load
+        sleep(5)
 
         new_height = driver.execute_script("return document.body.scrollHeight")
         if new_height == last_height:
             logging.info("Reached end of the page.")
-            break  # Exit if no new content is loaded
+            break
         last_height = new_height
 
 def collect_jobs(driver, limit=5):
-    """Collect job postings from LinkedIn."""
     url = (
         "https://www.linkedin.com/jobs/search/?f_E=1&f_TPR=r86400&geoId=103644278"
         "&keywords=2025%20Computer%20Science%20Summer%20Intern&origin=JOB_SEARCH_PAGE_JOB_FILTER"
@@ -48,10 +43,9 @@ def collect_jobs(driver, limit=5):
 
     infinite_scroll(driver)
 
-    # 打印页面 HTML 进行调试
     html_content = driver.page_source
     logging.info("Printing HTML content for debugging...")
-    print(html_content[:2000])  # 打印前 2000 个字符
+    print(html_content[:2000])
 
     try:
         job_cards = WebDriverWait(driver, 10).until(
