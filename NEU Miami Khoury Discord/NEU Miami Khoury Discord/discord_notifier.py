@@ -1,10 +1,7 @@
-# discord_notifier.py
-
 import requests
 import logging
 
 def send_to_discord(job_info, webhook_url):
-    """Send job information to Discord."""
     data = {"content": job_info}
     headers = {"Content-Type": "application/json"}
 
