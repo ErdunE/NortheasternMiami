@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7868046d-63e1-4ea3-8fec-551526938170" name="Changes" comment="Updated Comment">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7868046d-63e1-4ea3-8fec-551526938170" name="Changes" comment="Updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729136235578</updated>
       <workItem from="1729136236599" duration="12446000" />
-      <workItem from="1729563706149" duration="1333000" />
+      <workItem from="1729563706149" duration="1378000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Get Job Information discord_notifier.py">
       <option name="closed" value="true" />
@@ -132,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729563830607</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated">
+      <option name="closed" value="true" />
+      <created>1729650255388</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729650255388</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +150,8 @@
     <MESSAGE value="Initial Get Job Information main.py" />
     <MESSAGE value="Initial Get Job Information" />
     <MESSAGE value="Updated Comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Comment" />
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NEU_Miami_Khoury_Discord$config.coverage" NAME="config Coverage Results" MODIFIED="1729139254212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
