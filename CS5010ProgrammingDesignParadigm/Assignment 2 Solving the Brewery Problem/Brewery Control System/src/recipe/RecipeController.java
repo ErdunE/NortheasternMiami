@@ -127,7 +127,7 @@ public class RecipeController {
             // Additional details about the ingredients can be displayed here if needed
             System.out.println("Ingredients:");
             for (Map.Entry<Ingredient, Integer> entry : recipe.getIngredients().entrySet()){
-                System.out.println(entry.getKey().getName() + ": " + entry.getValue() + "units");
+                System.out.println(entry.getKey().getName() + ": " + entry.getValue() + " units");
             }
         } else {
             // Display to the user if the recipe was not found
