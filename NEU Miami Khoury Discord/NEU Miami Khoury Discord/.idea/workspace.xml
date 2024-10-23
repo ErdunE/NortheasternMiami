@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7868046d-63e1-4ea3-8fec-551526938170" name="Changes" comment="Initial Get Job Information" />
+    <list default="true" id="7868046d-63e1-4ea3-8fec-551526938170" name="Changes" comment="Updated Comment">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,21 +22,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ErdunE"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ErdunE&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ErdunE/NortheasternMiami.git",
-    "accountId": "cbb8338a-7989-4e57-9086-f998e645c4c3"
+}</component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="team-project" />
+      </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ErdunE/NortheasternMiami.git&quot;,
+    &quot;accountId&quot;: &quot;cbb8338a-7989-4e57-9086-f998e645c4c3&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2nY3Yhb5y5QomKH0LIZtbKVTJde" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,7 +55,7 @@
     "Python.config.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "workspace-erdun",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -73,6 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729136235578</updated>
       <workItem from="1729136236599" duration="12446000" />
+      <workItem from="1729563706149" duration="1333000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Get Job Information discord_notifier.py">
       <option name="closed" value="true" />
@@ -114,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729170423340</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated Comment">
+      <option name="closed" value="true" />
+      <created>1729563830607</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729563830607</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,7 +143,8 @@
     <MESSAGE value="Initial Get Job Information linkedin_scraper.py" />
     <MESSAGE value="Initial Get Job Information main.py" />
     <MESSAGE value="Initial Get Job Information" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Get Job Information" />
+    <MESSAGE value="Updated Comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Comment" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NEU_Miami_Khoury_Discord$config.coverage" NAME="config Coverage Results" MODIFIED="1729139254212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
