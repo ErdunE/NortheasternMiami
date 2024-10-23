@@ -1,0 +1,32 @@
+# Given directed graph which provided by Professor Lindsay in class
+# It's the Figure 3.9 in page 98 of Algorithms by Dasgupta-Papadimitriou-Vazirani
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+#EDGES
+A B
+B C
+B D
+B E
+C F
+E B
+E F
+E G
+F C
+F H
+G H
+G J
+H K
+I G
+J I
+K L
+L J
