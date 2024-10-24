@@ -619,7 +619,8 @@ Exit the system
 Brewery Control System Is Exiting...
 ```
 ## 7. Known Issue And Future Improvement
-As the Brewery Control System project progressed through development and multiple rounds of local testing, many potential areas for optimization were found. As well, there are several fun and innovative features that could improve the user experience. However, due to lack of time and the heavy homework workload, I prioritized meeting the rubric to ensure complete it on time. Even though, the project offers great opportunities for future improvements and exploration. Given more time and resources, I plan to revisit the system, add more advanced features and making it smarter, more efficient, and user friendly.
+As the Brewery Control System project progressed through development and multiple rounds of local testing, many potential areas for optimization were found. As well, there are several fun and innovative features that could improve the user experience. However, due to lack of time and the heavy homework workload, I prioritized meeting the rubric to ensure complete it on time. Even though, the project offers great opportunities for future improvements and exploration. Given more time and resources, I plan to revisit the system, add more advanced features and making it smarter, more efficient, and user friendly.  
+Below is a detailed list of known issues and areas for potential improvement:
 1. **Redundant Execution Flow**
   - The system requires users to navigate multiple nested menus repeatedly, making the workflow long and inefficient, so implementing shortcuts for frequently used operations, like typing commands directly (e.g., “Create Recipe”), can improve efficiency.
 
@@ -661,4 +662,3 @@ As the Brewery Control System project progressed through development and multipl
 
 14. **Duplicate Recipe Names Allowed**
   - Allowing multiple recipes with the same name can lead to confusion, so enforcing unique names or adding version control will help prevent errors.
-Below is a detailed list of known issues and areas for potential improvement:
