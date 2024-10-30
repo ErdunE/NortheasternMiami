@@ -3,8 +3,11 @@ package main;
 import states.*;
 import pieces.*;
 
+import javax.swing.*;
+
 public class ChessGame {
 	State state;
+	Board board;
 	
 	//You can initialize the game in any state, but this is the default one
 	//That I am passing through here.
@@ -15,6 +18,7 @@ public class ChessGame {
 		//The state is modifying the behavior of the core object (the chess game)
 		//by overriding what methods do in that state.
 		state = new NormalPlayState(this);
+		board = new Board();
 	}
 	
 	public void setState(State state) {
@@ -36,6 +40,8 @@ public class ChessGame {
 	public void startGame(){
 
 	}
-	
-	
+
+	public Board getBoard() {
+		return board;
+	}
 }
