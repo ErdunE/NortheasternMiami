@@ -3,6 +3,7 @@ package states;
 import main.*;
 import states.commons.Move;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class State {
