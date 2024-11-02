@@ -1,11 +1,14 @@
 package states;
-
 import main.*;
 import states.commons.Move;
-
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @author Xinyu Wang
+ * @version 9/15/2024
+ * Parent class for state:
+ *
+ */
 public abstract class State {
 	
 	ChessGame game;
