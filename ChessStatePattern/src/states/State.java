@@ -6,8 +6,7 @@ import java.util.List;
 /**
  * @author Xinyu Wang
  * @version 9/15/2024
- * Parent class for state:
- *
+ * The {@code State} class is the parent class for all states of this game.
  */
 public abstract class State {
 	
