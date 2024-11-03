@@ -8,8 +8,8 @@ import main.*;
 public abstract class State {
 	
 	ChessGame game;
-	private boolean check;
-	private boolean checkMate;
+	private boolean isCheck;
+	private boolean isCheckMate;
 	private String currentState;
 
 	public State(ChessGame game) {
@@ -21,7 +21,7 @@ public abstract class State {
 	 * Set the boolean value of check to true.
 	 */
 	public void setCheck() {
-		this.check = true;
+		this.isCheck = true;
 	}
 
 	/**
@@ -29,7 +29,7 @@ public abstract class State {
 	 * Set the boolean value of check to false.
 	 */
 	public void setEscape() {
-		this.check = false;
+		this.isCheck = false;
 	}
 
 	/**
@@ -37,7 +37,7 @@ public abstract class State {
 	 * Set the boolean value of checkmate to true.
 	 */
 	public void setCheckMate() {
-		this.checkMate = true;
+		this.isCheckMate = true;
 	}
 
 	/**
@@ -45,7 +45,7 @@ public abstract class State {
 	 * @return boolean.
 	 */
 	public boolean isCheck() {
-		return this.check;
+		return this.isCheck;
 	};
 
 	/**
@@ -53,7 +53,7 @@ public abstract class State {
 	 * @return boolean.
 	 */
 	public boolean isCheckMate() {
-		return this.checkMate;
+		return this.isCheckMate;
 	};
 
 	/**
