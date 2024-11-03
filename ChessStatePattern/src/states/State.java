@@ -2,7 +2,7 @@ package states;
 import main.*;
 /**
  * @author Xinyu Wang
- * @version 9/15/2024
+ * @version 10/31/2024
  * The {@code State} class is the abstract superclass representing the state of the game.
  */
 public abstract class State {
