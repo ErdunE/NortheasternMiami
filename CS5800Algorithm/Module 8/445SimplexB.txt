@@ -1,0 +1,32 @@
+Simplex (in-depth):
+
+Setup:
+* For each regular constraint - add an artificial variable to make it =
+* Convert the objective function to an = 0 equation (this is now equation 0)
+* Choose nonbasic variables (#of variables - #of equations) and set them to 0 - 
+typically these are our original variables.
+* Set all other variables based on equations.
+
+Steps:
+0.) Test for optimality - is there a negative coefficient in eq0? If so, continue.	
+
+1.) Determine direction of movement: Looking at equation 0, the coefficients 
+indicate the rate of change for variables in eq 0. Choose the largest. This is
+our chosen variable to increase.
+
+2.) Determine where to stop: Figure out how the basic variables change by 
+looking at every constraint equation. If the equation has the variable, then
+determine the minimum ratio for those basic variables. This is done by
+dividing the current value for the equation's basic variable by the coefficient
+in that equation. Choose the smallest basic variable.
+
+3a.) Solve for a new feasible solution: increase the nonbasic variable by the
+value determined in #2, it now becomes a basic variable. Decrease the chosen 
+basic variable to 0. It now becomes a nonbasic variable.
+
+3b.) Adjust the system of equations: since x2 is now the basic variable for
+eq 2, we need to drop its coefficient to 1, and eliminate it from all other
+equations. This is basic algebra. Start with eq2, then use eq2 to adjust the
+others.
+
+Repeat. At end, the values of x1 and x2, plus the Z value is our solution.
