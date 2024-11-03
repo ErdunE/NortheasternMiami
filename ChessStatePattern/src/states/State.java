@@ -1,38 +1,74 @@
 package states;
 import main.*;
-import states.commons.Move;
-import java.util.ArrayList;
-import java.util.List;
 /**
  * @author Xinyu Wang
  * @version 9/15/2024
- * The {@code State} class is the parent class for all states of this game.
+ * The {@code State} class is the abstract superclass representing the state of the game.
  */
 public abstract class State {
 	
 	ChessGame game;
-	String activePlayer;
-	List<Move> moveHistory;
+	private boolean check;
+	private boolean checkMate;
+	private String currentState;
 
 	public State(ChessGame game) {
 		this.game = game;
-		moveHistory = new ArrayList<>();
 	}
 
-	public void setActivePlayer(String playerName) {
-		this.activePlayer = playerName;
+	/**
+	 * Set the state to check.
+	 * Set the boolean value of check to true.
+	 */
+	public void setCheck() {
+		this.check = true;
 	}
 
-	public String getActivePlayer() {
-		return this.activePlayer;
+	/**
+	 * Set the state to normal play state.
+	 * Set the boolean value of check to false.
+	 */
+	public void setEscape() {
+		this.check = false;
 	}
 
-	public void addMove(Move move) {
-		moveHistory.add(move);
+	/**
+	 * Set the state to checkmate.
+	 * Set the boolean value of checkmate to true.
+	 */
+	public void setCheckMate() {
+		this.checkMate = true;
 	}
 
-	public List<Move> getMoveHistory() {
-		return moveHistory;
+	/**
+	 * Return if it is in check state.
+	 * @return boolean.
+	 */
+	public boolean isCheck() {
+		return this.check;
+	};
+
+	/**
+	 * Return if it is in checkmate state.
+	 * @return boolean.
+	 */
+	public boolean isCheckMate() {
+		return this.checkMate;
+	};
+
+	/**
+	 * Return the current state.
+	 * @return String.
+	 */
+	public String getCurrentState() {
+		return this.currentState;
 	}
-	
+
+	/**
+	 * Set the current state.
+	 * @param currentState a string that represent the current state
+	 */
+	public void setCurrentState(String currentState) {
+		this.currentState = currentState;
+	}
 }
