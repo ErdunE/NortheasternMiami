@@ -13,4 +13,29 @@ public class NormalPlayState extends State {
 	public NormalPlayState(ChessGame game) {
 		super(game);
 	}
+
+	@Override
+	public void setCheck() {
+
+	}
+
+	@Override
+	public void setNormalPlayState() {
+
+	}
+
+	@Override
+	public void setCheckMate() {
+
+	}
+
+	@Override
+	public boolean isCheck() {
+		return false;
+	}
+
+	@Override
+	public boolean isCheckMate() {
+		return false;
+	}
 }

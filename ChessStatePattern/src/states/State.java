@@ -18,43 +18,31 @@ public abstract class State {
 
 	/**
 	 * Set the state to check.
-	 * Set the boolean value of check to true.
 	 */
-	public void setCheck() {
-		this.isCheck = true;
-	}
+	public abstract void setCheck();
 
 	/**
 	 * Set the state to normal play state.
-	 * Set the boolean value of check to false.
+	 * Set isCheck to false.
 	 */
-	public void setEscape() {
-		this.isCheck = false;
-	}
+	public abstract void setNormalPlayState();
 
 	/**
 	 * Set the state to checkmate.
-	 * Set the boolean value of checkmate to true.
 	 */
-	public void setCheckMate() {
-		this.isCheckMate = true;
-	}
+	public abstract void setCheckMate();
 
 	/**
 	 * Return if it is in check state.
 	 * @return boolean.
 	 */
-	public boolean isCheck() {
-		return this.isCheck;
-	};
+	public abstract boolean isCheck();
 
 	/**
 	 * Return if it is in checkmate state.
 	 * @return boolean.
 	 */
-	public boolean isCheckMate() {
-		return this.isCheckMate;
-	};
+	public abstract boolean isCheckMate();
 
 	/**
 	 * Return the current state.
