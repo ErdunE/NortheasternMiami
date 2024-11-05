@@ -1,47 +1,75 @@
 package main;
 
 import states.*;
-import pieces.*;
 
-import javax.swing.*;
-
+/**
+ * The {@code ChessGame} class manages the flow of the chess game.
+ * It maintains the current {@code State} of the game and the {@code Board}.
+ * This class controls the game loop and handles state transitions.
+ *
+ * @author Erdun E
+ * @version 1.0
+ * @since 2024-10-30
+ */
 public class ChessGame {
-	State state;
-	Board board;
-	
-	//You can initialize the game in any state, but this is the default one
-	//That I am passing through here.
-	//You will also probably need to initialize any pieces and other objects
-	//as part of starting the game.
+	private State state;
+	private Board board;
+
+	/**
+	 * Constructs a new {@code ChessGame} instance.
+	 * Initial the game with {@code NormalPlayState} as the starting state
+	 * and creates a new {@code Board}.
+	 */
 	public ChessGame() {
-		//Each state constructor should pass an object of the chess game through it.
-		//The state is modifying the behavior of the core object (the chess game)
-		//by overriding what methods do in that state.
 		state = new NormalPlayState(this);
 		board = new Board();
 	}
-	
+
+	/**
+	 * Set the current state of the game.
+	 *
+	 * @param state the new state to set
+	 */
 	public void setState(State state) {
 		this.state = state;
 	}
-	
-	//In each state class, you will need to write methods that will do different actions based on what
-	//state the game is in. For example, perhaps a "take turn" method that
-	//changes who it prompts to go (player 1 versus player 2) depending
-	//on whose turn it is in the game?
-	
-	//The state-specific behavior of each method ought to be specified in
-	//each state. Reference the video linked in the lesson outline for details.
-	
-	//You will invoke the state methods in here as part of a simple loop
-	//Refer to how we set up text commands in Assignment 1 to manage a game 
-	//loop that takes instructions through command-line input.
 
-	public void startGame(){
-
-	}
-
+	/**
+	 * Get the board.
+	 *
+	 * @return the {@code Board} to represent the chessboard
+	 */
 	public Board getBoard() {
 		return board;
+	}
+
+	/**
+	 * Starts the game loop. The loop continues until the current state
+	 * indicates that the game is over.
+	 *
+	 * <p>
+	 * Placeholder: Currently only simulates the structure of
+	 * the game loop without actual state transitions or checks.
+	 * </p>
+	 */
+	public void startGame(){
+		// Placeholder: Start of game loop
+		System.out.println("Starting game loop...");
+
+		// Placeholder: Simulate game loop condition
+		// Expected behavior is replace this with `while (!state.isGameOver())` in final version
+		boolean gameInProgress = true;  // Placeholder variable to simulate loop condition
+
+		// Placeholder: Simulate a single iteration of the game loop
+		if (gameInProgress) {
+			// Placeholder for state actions in the loop
+			System.out.println("Taking turn in the current state...");
+			// Uncomment this when actual state logic is ready
+			// Placeholder: End loop after one iteration
+			gameInProgress = false;
+		}
+
+		// Placeholder: Game over message
+		System.out.println("Game Over. Thanks for playing!");
 	}
 }
