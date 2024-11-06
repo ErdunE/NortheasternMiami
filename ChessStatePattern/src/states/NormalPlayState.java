@@ -24,6 +24,7 @@ public class NormalPlayState extends State {
 	@Override
 	public State normalPlay() {
 		System.out.println("Nice try! Now it's your turn.");
+		System.out.println("Transitioning to PlayerTurnSwitchState.");
 		return new PlayerTurnSwitchState;
 	}
 
@@ -37,6 +38,7 @@ public class NormalPlayState extends State {
 		String currPlayer = game.getCurrentPlayer();
 		System.out.println("Check!");
 		System.out.println(currPlayer + ", Please take actions to escape.");
+		System.out.println("Transitioning to CheckState.");
 		return new CheckState;
 	}
 
