@@ -7,7 +7,7 @@ import main.*;
  */
 public abstract class State {
 	
-	private ChessGame game;
+	protected ChessGame game;
 
 	public State(ChessGame game) {
 		this.game = game;
@@ -41,5 +41,5 @@ public abstract class State {
 	 * Return the PlayerTurnSwitch.
 	 * @return State.
 	 */
-	public abstract State PlayerTurnSwitch();
+	public abstract State playerTurnSwitch();
 }
