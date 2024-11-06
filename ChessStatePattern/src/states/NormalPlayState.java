@@ -2,12 +2,10 @@ package states;
 
 import main.*;
 /**
- * Here is a single state class. You will need to add
- * more for this assignment. The states are arguably the most
- * important part of the assignment to understand, so please
- * work on implementing the states as reliably as possible.
+ * @author Xinyu Wang
+ * @version 10/31/2024
+ * The {@code NormalPlayState} class representing the normal play state of the game.
  */
-
 public class NormalPlayState extends State {
 
 	private ChessGame game;
@@ -16,11 +14,19 @@ public class NormalPlayState extends State {
 		super(game);
 	}
 
+	/**
+	 * This function is not intend to implement here.
+	 */
 	@Override
 	public State startGame() {
 		throw new UnsupportedOperationException("Please continue to play.");
 	}
 
+	/**
+	 * This function is called after a check action is resolved from CheckState.
+	 * Return PlayerTurnSwitchState
+	 * @return State.
+	 */
 	@Override
 	public State normalPlay() {
 		System.out.println("Nice try! Now it's your turn.");
@@ -28,11 +34,19 @@ public class NormalPlayState extends State {
 		return new PlayerTurnSwitchState;
 	}
 
+	/**
+	 * This function is not intend to implement here.
+	 */
 	@Override
 	public State checkMate() {
 		return null;
 	}
 
+	/**
+	 * This function is called when transitioning from NormalPlayState to CheckState.
+	 * Return CheckState
+	 * @return State.
+	 */
 	@Override
 	public State check() {
 		String currPlayer = game.getCurrentPlayer();
@@ -42,6 +56,9 @@ public class NormalPlayState extends State {
 		return new CheckState;
 	}
 
+	/**
+	 * This function is not intend to implement here.
+	 */
 	@Override
 	public State playerTurnSwitch() {
 		throw new UnsupportedOperationException("Please make your move. ");
