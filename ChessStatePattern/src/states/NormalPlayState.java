@@ -11,7 +11,6 @@ import main.*;
 public class NormalPlayState extends State {
 
 	private ChessGame game;
-	private String currentPlayer;
 
 	public NormalPlayState(ChessGame game) {
 		super(game);
@@ -35,7 +34,9 @@ public class NormalPlayState extends State {
 
 	@Override
 	public State check() {
-		System.out.println("Check! Please take actions to escape.");
+		String currPlayer = game.getCurrentPlayer();
+		System.out.println("Check!");
+		System.out.println(currPlayer + ", Please take actions to escape.");
 		return new CheckState;
 	}
 
