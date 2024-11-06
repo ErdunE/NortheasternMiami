@@ -33,9 +33,4 @@ public class NormalPlayState extends State {
 	public boolean isCheck() {
 		return false;
 	}
-
-	@Override
-	public boolean isCheckMate() {
-		return false;
-	}
 }

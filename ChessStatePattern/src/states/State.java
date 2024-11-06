@@ -7,56 +7,39 @@ import main.*;
  */
 public abstract class State {
 	
-	ChessGame game;
-	private boolean isCheck;
-	private boolean isCheckMate;
-	private String currentState;
+	private ChessGame game;
 
 	public State(ChessGame game) {
 		this.game = game;
 	}
 
 	/**
-	 * Set the state to check.
+	 * Return the StartGame state.
+	 * @return State.
 	 */
-	public abstract void setCheck();
+	public abstract State startGame();
 
 	/**
-	 * Set the state to normal play state.
-	 * Set isCheck to false.
+	 * Return the NormalPlayState.
+	 * @return State.
 	 */
-	public abstract void setNormalPlayState();
+	public abstract State normalPlay();
 
 	/**
-	 * Set the state to checkmate.
+	 * Return the CheckMate state.
+	 * @return State.
 	 */
-	public abstract void setCheckMate();
+	public abstract State checkMate();
 
 	/**
-	 * Return if it is in check state.
-	 * @return boolean.
+	 * Return the Check state.
+	 * @return State
 	 */
-	public abstract boolean isCheck();
+	public abstract State check();
 
 	/**
-	 * Return if it is in checkmate state.
-	 * @return boolean.
+	 * Return the PlayerTurnSwitch.
+	 * @return State.
 	 */
-	public abstract boolean isCheckMate();
-
-	/**
-	 * Return the current state.
-	 * @return String.
-	 */
-	public String getCurrentState() {
-		return this.currentState;
-	}
-
-	/**
-	 * Set the current state.
-	 * @param currentState a string that represent the current state
-	 */
-	public void setCurrentState(String currentState) {
-		this.currentState = currentState;
-	}
+	public abstract State PlayerTurnSwitch();
 }
