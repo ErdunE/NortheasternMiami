@@ -15,22 +15,27 @@ public class NormalPlayState extends State {
 	}
 
 	@Override
-	public void setCheck() {
-
+	public State startGame() {
+		return null;
 	}
 
 	@Override
-	public void setNormalPlayState() {
-
+	public State normalPlay() {
+		return null;
 	}
 
 	@Override
-	public void setCheckMate() {
-
+	public State checkMate() {
+		return null;
 	}
 
 	@Override
-	public boolean isCheck() {
-		return false;
+	public State check() {
+		return null;
+	}
+
+	@Override
+	public State PlayerTurnSwitch() {
+		return null;
 	}
 }
