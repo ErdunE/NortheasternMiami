@@ -35,7 +35,7 @@ public class NormalPlayState extends State {
 	}
 
 	@Override
-	public State PlayerTurnSwitch() {
+	public State playerTurnSwitch() {
 		return null;
 	}
 }
