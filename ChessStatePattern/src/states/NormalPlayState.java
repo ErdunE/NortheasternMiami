@@ -40,7 +40,7 @@ public class NormalPlayState extends State {
 	}
 
 	@Override
-	public State PlayerTurnSwitch() {
+	public State playerTurnSwitch() {
 		throw new UnsupportedOperationException("Please make your move. ");
 	}
 }
