@@ -9,19 +9,23 @@ import main.*;
  */
 
 public class NormalPlayState extends State {
-	
+
+	private ChessGame game;
+	private String currentPlayer;
+
 	public NormalPlayState(ChessGame game) {
 		super(game);
 	}
 
 	@Override
 	public State startGame() {
-		return null;
+		throw new UnsupportedOperationException("Please continue to play.");
 	}
 
 	@Override
 	public State normalPlay() {
-		return null;
+		System.out.println("Nice try! Now it's your turn.");
+		return new PlayerTurnSwitchState;
 	}
 
 	@Override
@@ -31,11 +35,12 @@ public class NormalPlayState extends State {
 
 	@Override
 	public State check() {
-		return null;
+		System.out.println("Check! Please take actions to escape.");
+		return new CheckState;
 	}
 
 	@Override
 	public State PlayerTurnSwitch() {
-		return null;
+		throw new UnsupportedOperationException("Please make your move. ");
 	}
 }
