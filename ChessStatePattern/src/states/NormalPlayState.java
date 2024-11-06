@@ -13,4 +13,29 @@ public class NormalPlayState extends State {
 	public NormalPlayState(ChessGame game) {
 		super(game);
 	}
+
+	@Override
+	public State startGame() {
+		return null;
+	}
+
+	@Override
+	public State normalPlay() {
+		return null;
+	}
+
+	@Override
+	public State checkMate() {
+		return null;
+	}
+
+	@Override
+	public State check() {
+		return null;
+	}
+
+	@Override
+	public State PlayerTurnSwitch() {
+		return null;
+	}
 }

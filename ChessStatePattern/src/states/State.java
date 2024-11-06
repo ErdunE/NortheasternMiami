@@ -1,16 +1,45 @@
 package states;
-
 import main.*;
-
+/**
+ * @author Xinyu Wang
+ * @version 10/31/2024
+ * The {@code State} class is the abstract superclass representing the state of the game.
+ */
 public abstract class State {
 	
-	ChessGame game;
-	
+	private ChessGame game;
+
 	public State(ChessGame game) {
 		this.game = game;
 	}
-	
-	//here is where you write the methods you will want overridden by each
-	//specific state's behavior
-	
+
+	/**
+	 * Return the StartGame state.
+	 * @return State.
+	 */
+	public abstract State startGame();
+
+	/**
+	 * Return the NormalPlayState.
+	 * @return State.
+	 */
+	public abstract State normalPlay();
+
+	/**
+	 * Return the CheckMate state.
+	 * @return State.
+	 */
+	public abstract State checkMate();
+
+	/**
+	 * Return the Check state.
+	 * @return State
+	 */
+	public abstract State check();
+
+	/**
+	 * Return the PlayerTurnSwitch.
+	 * @return State.
+	 */
+	public abstract State PlayerTurnSwitch();
 }
