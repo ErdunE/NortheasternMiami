@@ -1,45 +1,21 @@
 package states;
-import main.*;
+
+import main.ChessGame;
+
 /**
- * @author Xinyu Wang
- * @version 10/31/2024
- * The {@code State} class is the abstract superclass representing the state of the game.
+ * Abstract base class representing different states in a chess game.
+ * Each state defines different transitions for game phases and scenarios.
  */
 public abstract class State {
-	
 	protected ChessGame game;
 
 	public State(ChessGame game) {
 		this.game = game;
 	}
 
-	/**
-	 * Return the StartGame state.
-	 * @return State.
-	 */
 	public abstract State startGame();
-
-	/**
-	 * Return the NormalPlayState.
-	 * @return State.
-	 */
 	public abstract State normalPlay();
-
-	/**
-	 * Return the CheckMate state.
-	 * @return State.
-	 */
 	public abstract State checkMate();
-
-	/**
-	 * Return the Check state.
-	 * @return State
-	 */
 	public abstract State check();
-
-	/**
-	 * Return the PlayerTurnSwitch.
-	 * @return State.
-	 */
-	public abstract State playerTurnSwitch();
+	public abstract State PlayerTurnSwitch();
 }
