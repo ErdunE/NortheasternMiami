@@ -1,7 +1,16 @@
+
+
 package pieces;
 
 import main.Board;
 
+/**
+ * Rook class that defines the movement for the Rook piece as well as the color.
+ *
+ * @author Raj
+ * @version 1.0
+ * @since 11/06/2024
+ */
 public class Rook extends Piece {
 	
 	/*
@@ -16,12 +25,13 @@ public class Rook extends Piece {
 	}
 
 	/**
-	 * @param startX
-	 * @param startY
-	 * @param endX
-	 * @param endY
-	 * @param board
-	 * @return
+	 * Checks if the Rook is moving in a valid way.
+	 * @param startX Starting Row position
+	 * @param startY Starting Column position
+	 * @param endX Ending Row position
+	 * @param endY Ending Column position
+	 * @param board Chess board reference
+	 * @return Returns whether move is valid or not
 	 */
 	@Override
 	public boolean isValidMove(int startX, int startY, int endX, int endY, Board board) {
