@@ -108,7 +108,7 @@ public class ChessGame {
 			startY = random.nextInt(8);
 			piece = board.getPiece(startX, startY);
 		// Ensure it's the current player's piece
-		} while (piece == null || !piece.getColor().equals(currentPlayer));
+		} while (piece == null || (piece.getIsWhite() && !currentPlayer.equals("white")) || (!piece.getIsWhite() && !currentPlayer.equals("black")));
 		// Determine a potential end position based on the type of piece selected
 		if (piece instanceof Rook) {
 			// Rook moves vertically or horizontally
@@ -125,7 +125,7 @@ public class ChessGame {
 			endY = startY + random.nextInt(3) - 1;
 		// Pawn moves forward one square
 		} else if (piece instanceof Pawn) {
-			endX = piece.getColor().equals("white") ? startX - 1 : startX + 1;
+			endX = piece.getIsWhite() ? startX - 1 : startX + 1;
 			endY = startY;
 		}
 		// Check if the end position is within board bounds

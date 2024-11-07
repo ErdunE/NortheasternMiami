@@ -40,7 +40,7 @@ public class CheckmateState extends State {
      */
     @Override
     public State checkMate() {
-        System.out.println("Game Over. Checkmate!");
+        System.out.println("Checkmate! Game Over.");
         System.out.println("Winner is player " + game.getCurrentPlayer() + ". Congrats!!!!");
         System.out.println("Exiting the game...");
         return this;

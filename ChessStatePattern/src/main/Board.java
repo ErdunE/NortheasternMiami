@@ -31,24 +31,24 @@ public class Board {
 	 */
 	private void initializeBoard() {
 		// Place black rooks at initial positions
-		board[0][0] = new Rook("black");
-		board[0][7] = new Rook("black");
+		board[0][0] = new Rook(false);  // false for black
+		board[0][7] = new Rook(false);  // false for black
 
 		// Place white rooks at initial positions
-		board[7][0] = new Rook("white");
-		board[7][7] = new Rook("white");
+		board[7][0] = new Rook(true);   // true for white
+		board[7][7] = new Rook(true);   // true for white
 
 		// Place kings for black and white players
-		board[0][4] = new King("black");
-		board[7][4] = new King("white");
+		board[0][4] = new King(false);  // false for black
+		board[7][4] = new King(true);   // true for white
 
 		// Place black pawns at initial positions
-		board[1][0] = new Pawn("black");
-		board[1][1] = new Pawn("black");
+		board[1][0] = new Pawn(false);  // false for black
+		board[1][1] = new Pawn(false);  // false for black
 
 		// Place white pawns at initial positions
-		board[6][0] = new Pawn("white");
-		board[6][1] = new Pawn("white");
+		board[6][0] = new Pawn(true);   // true for white
+		board[6][1] = new Pawn(true);   // true for white
 	}
 
 	/**
