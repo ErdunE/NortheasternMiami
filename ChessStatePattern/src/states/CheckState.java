@@ -10,7 +10,7 @@ import main.*;
  *     @since 2024-11-6
  */
 public class CheckState extends State{
-    private ChessGame game;
+
     public CheckState(ChessGame game){
         super(game);
     }
@@ -27,8 +27,8 @@ public class CheckState extends State{
      * This function will throw an exception because player is checked now.
      */
     @Override
-    public State normalplay() {
-        throw new UnsupportedOperationException("Player" + game.getCurrentPlayer() + "is Checked now");
+    public State normalPlay() {
+        throw new UnsupportedOperationException("Game already started.");
     }
 
     /**
@@ -60,7 +60,7 @@ public class CheckState extends State{
      * This function will throw an exception because player is checked now.
      */
     @Override
-    public State PlayerTurnSwitch() {
+    public State playerTurnSwitch() {
         throw new UnsupportedOperationException("Please make your move. ");
     }
 }

@@ -58,7 +58,7 @@ public class CheckmateState extends State {
      * This function is not intend to implement here.
      */
     @Override
-    public State PlayerTurnSwitch() {
+    public State playerTurnSwitch() {
         throw new UnsupportedOperationException("Cannot switch turns in CheckmateState.");
     }
 }

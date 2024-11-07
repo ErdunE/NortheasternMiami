@@ -47,7 +47,7 @@ public class ChessGame {
 			if (currentState instanceof PlayerTurnSwitchState) {
 				switchPlayer();
 				// Transition to the NormalPlayState
-				currentState = currentState.PlayerTurnSwitch();
+				currentState = currentState.playerTurnSwitch();
 			// Handle normal play state, prompt player for action and simulate a move
 			} else if (currentState instanceof NormalPlayState) {
 				System.out.println("Waiting for player " + getCurrentPlayer() + " action...");
