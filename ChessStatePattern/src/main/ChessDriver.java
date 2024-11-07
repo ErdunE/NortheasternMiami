@@ -13,6 +13,6 @@ public class ChessDriver {
 		// Initial the game
 		ChessGame chessGame = new ChessGame();
 		// Kick off the game
-		chessGame.startGame();
+		chessGame.start();
 	}
 }

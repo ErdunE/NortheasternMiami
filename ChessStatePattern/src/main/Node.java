@@ -3,6 +3,9 @@ package main;
 import pieces.*;
 
 /**
+ * We didn't implement the {@code Node} class, because of the lack of availability of us, and it doesn't impact the program now.
+ * Will implement it in the future and this is the original design of {@code Node} class below
+ *
  * The {@code Node} class represents a single tile on the chessboard in a chess game.
  * Each {@code Node} can hold a reference to a {@code Piece}, allowing the board to track which piece is located on each tile.
  * <p>
