@@ -17,5 +17,5 @@ public abstract class State {
 	public abstract State normalPlay();
 	public abstract State checkMate();
 	public abstract State check();
-	public abstract State PlayerTurnSwitch();
+	public abstract State playerTurnSwitch();
 }

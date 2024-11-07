@@ -8,8 +8,6 @@ import main.*;
  */
 public class NormalPlayState extends State {
 
-	private ChessGame game;
-
 	public NormalPlayState(ChessGame game) {
 		super(game);
 	}
@@ -32,7 +30,7 @@ public class NormalPlayState extends State {
 		String currPlayer = game.getCurrentPlayer();
 		System.out.println("Player " + currPlayer + " resolved the check.");
 		System.out.println("Transitioning to PlayerTurnSwitchState.");
-		return new PlayerTurnSwitchState;
+		return new PlayerTurnSwitchState(game);
 	}
 
 	/**
@@ -54,7 +52,7 @@ public class NormalPlayState extends State {
 		System.out.println("Check!");
 		System.out.println(currPlayer + ", Please take actions to escape.");
 		System.out.println("Transitioning to CheckState.");
-		return new CheckState;
+		return new CheckState(game);
 	}
 
 	/**

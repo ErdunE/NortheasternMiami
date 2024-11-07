@@ -30,7 +30,7 @@ public class PlayerTurnSwitchState extends State {
     }
 
     @Override
-    public State PlayerTurnSwitch() {
+    public State playerTurnSwitch() {
         System.out.println("Switching player to " + game.getCurrentPlayer() + " turn.");
         System.out.println("Transitioning to NormalPlayState.");
         return new NormalPlayState(game);
