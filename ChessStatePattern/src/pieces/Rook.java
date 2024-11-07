@@ -1,5 +1,7 @@
 package pieces;
 
+import main.Board;
+
 public class Rook extends Piece {
 	
 	/*
@@ -8,12 +10,22 @@ public class Rook extends Piece {
 	 * The logic to control this behavior should probably be wrapped up
 	 * in another class.
 	 */
-	int xMovement;
-	int yMovement;
-	
-	public Rook(int[] coordinates2, String color2) {
-		super(coordinates2, color2);
-		
+	public Rook(boolean isWhite)
+	{
+		super(isWhite);
+	}
+
+	/**
+	 * @param startX
+	 * @param startY
+	 * @param endX
+	 * @param endY
+	 * @param board
+	 * @return
+	 */
+	@Override
+	public boolean isValidMove(int startX, int startY, int endX, int endY, Board board) {
+		return startX == endX || startY == endY;
 	}
 
 }
