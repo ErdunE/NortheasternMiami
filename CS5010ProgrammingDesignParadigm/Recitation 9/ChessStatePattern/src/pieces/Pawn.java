@@ -1,18 +1,22 @@
 package pieces;
 
+import main.Board;
+
+/**
+ * Class representing the Pawn piece.
+ */
 public class Pawn extends Piece {
 
-	int xMovement;
-	int yMovement;
-	
-	public Pawn(int[] coordinates, String color) {
-		super(coordinates, color);
-		
-		//Pawns have special conditions for their x and y movement.
-		//Those conditions need to be stored somewhere, like a logic class.
-		xMovement = 1;
-		yMovement = 1;
-		
+	public Pawn(String color) {
+		super(color);
 	}
 
+	@Override
+	public boolean isValidMove(int startX, int startY, int endX, int endY, Board board) {
+		if (color.equals("white")) {
+			return startX - endX == 1 && startY == endY;
+		} else {
+			return endX - startX == 1 && startY == endY;
+		}
+	}
 }

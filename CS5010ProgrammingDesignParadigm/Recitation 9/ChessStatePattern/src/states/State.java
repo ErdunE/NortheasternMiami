@@ -1,16 +1,21 @@
 package states;
 
-import main.*;
+import main.ChessGame;
 
+/**
+ * Abstract base class representing different states in a chess game.
+ * Each state defines different transitions for game phases and scenarios.
+ */
 public abstract class State {
-	
-	ChessGame game;
-	
-	public State(ChessGame game) {
-		this.game = game;
-	}
-	
-	//here is where you write the methods you will want overridden by each
-	//specific state's behavior
-	
+    protected ChessGame game;
+
+    public State(ChessGame game) {
+        this.game = game;
+    }
+
+    public abstract State startGame();
+    public abstract State normalPlay();
+    public abstract State checkMate();
+    public abstract State check();
+    public abstract State PlayerTurnSwitch();
 }
