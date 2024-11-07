@@ -29,7 +29,8 @@ public class NormalPlayState extends State {
 	 */
 	@Override
 	public State normalPlay() {
-		System.out.println("Nice try! Now it's your turn.");
+		String currPlayer = game.getCurrentPlayer();
+		System.out.println("Player " + currPlayer + " resolved the check.");
 		System.out.println("Transitioning to PlayerTurnSwitchState.");
 		return new PlayerTurnSwitchState;
 	}
@@ -39,7 +40,7 @@ public class NormalPlayState extends State {
 	 */
 	@Override
 	public State checkMate() {
-		return null;
+		throw new UnsupportedOperationException("Please continue to play.");
 	}
 
 	/**
