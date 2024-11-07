@@ -38,7 +38,7 @@ public class PlayerTurnSwitchState extends State {
      */
     @Override
     public State checkMate() {
-        throw new UnsupportedOperationException("Cannot checkmate in PlayerTurnState.");
+        throw new UnsupportedOperationException("Cannot checkmate in PlayerTurnSwitchState.");
     }
 
     /**
@@ -46,7 +46,7 @@ public class PlayerTurnSwitchState extends State {
      */
     @Override
     public State check() {
-        throw new UnsupportedOperationException("Cannot check in PlayerTurnState.");
+        throw new UnsupportedOperationException("Cannot check in PlayerTurnSwitchState.");
     }
 
     /**
