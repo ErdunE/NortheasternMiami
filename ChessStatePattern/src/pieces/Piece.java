@@ -1,34 +1,22 @@
 package pieces;
 
+import main.Board;
+
 public abstract class Piece {
-	
-	int[] coordinates;
-	String color;
-	char repChar;
-	
-	public Piece(int[] coordinates, String color) {
-		// generic constructor for a piece
-		this.coordinates = coordinates;
-		this.color = color;
-		this.repChar = 'p';
-	}
 
-	public int getXCoordinate()
+	protected boolean isWhite;
+
+	public Piece(boolean isWhite)
 	{
-		return coordinates[0];
+		this.isWhite = isWhite;
 	}
 
-	public int getYCoordinate()
+	public boolean getIsWhite()
 	{
-		return coordinates[1];
+		return isWhite;
 	}
 
-	public char getRepChar()
-	{
-		return repChar;
-	}
+	public abstract boolean isValidMove(int startX, int startY, int endX, int endY, Board board);
 
-	public void setCoordinates(int[] coordinates) {
-		this.coordinates = coordinates;
-	}
 }
+

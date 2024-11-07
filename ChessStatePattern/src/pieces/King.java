@@ -1,15 +1,24 @@
 package pieces;
 
-public class King extends Piece {
-	
-	int xMovement;
-	int yMovement;
-	
-	public King(int[] coordinates, String color) {
-		super(coordinates, color);
-		
-		xMovement = 1;
-		yMovement = 1;
-		
+import main.Board;
+
+public class King extends Piece
+{
+
+	public King(boolean isWhite)
+	{
+		super(isWhite);
+	}
+	/**
+	 * @param startX
+	 * @param endX
+	 * @param endY
+	 * @param board
+	 * @return
+	 */
+	@Override
+	public boolean isValidMove(int startX, int startY, int endX, int endY, Board board) {
+		return Math.abs(startX - endX) <= 1 && Math.abs (startY - endY) <= 1;
 	}
 }
+
