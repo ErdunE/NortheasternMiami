@@ -7,13 +7,6 @@ public class Controller {
     public void init() {
         board = new Board(this);
         board.createBoard();
-        gameLoop();
-    }
-
-    private void gameLoop() {
-        while (true) {
-            board.repaintBoard();
-        }
     }
 
     public void switchPlayer() {
@@ -37,16 +30,9 @@ public class Controller {
 
     private int showGameOverDialog(String message) {
         Object[] options = {"New Game", "OK"};
-
         return JOptionPane.showOptionDialog(
-                null,
-                message,
-                "Game Over",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.INFORMATION_MESSAGE,
-                null,
-                options,
-                options[0]
+                null, message, "Game Over",
+                JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]
         );
     }
 }
