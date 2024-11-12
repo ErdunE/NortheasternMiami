@@ -1,7 +1,7 @@
 import javax.swing.*;
+import java.awt.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import java.awt.*;
 
 public class Board {
     private JFrame boardFrame;
@@ -10,6 +10,7 @@ public class Board {
     private Controller controller;
     private JPanel boardPanel;
     private JSlider slider;
+    private JLabel rulesLabel;
 
     private int rows = 4;
     private int cols = 7;
@@ -30,19 +31,35 @@ public class Board {
         boardFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         boardFrame.setLayout(new BorderLayout());
 
+        JPanel rulesPanel = new JPanel();
+        rulesLabel = new JLabel("<html><div style='text-align: center;'>"
+                + "The game of Chomp is like Russian Roulette for chocolate lovers.<br><br>"
+                + "A move consists of chomping a square out of the chocolate bar<br>"
+                + "along with any squares to the right and below.<br><br>"
+                + "The upper left square is poisoned though and the player forced to chomp it loses.<br><br>"
+                + "Player 1 move first then player 2. <br>"
+                + "Players alternate moves. <br><br>"
+                + "You can adjust the size of the board via the slider in the bottom.<br><br>"
+                + "Try your luck against your friend.<br>"
+                + "You chomp on a square by clicking on the square with the mouse.<br>"
+                + "And have fun!<br>"
+                + "</div></html>");
+        rulesLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        rulesPanel.add(rulesLabel);
+        boardFrame.add(rulesPanel, BorderLayout.NORTH);
+
+        JPanel gamePanel = new JPanel(new BorderLayout());
+        gamePanel.add(output, BorderLayout.NORTH);
+        initializeBoardPanel();
+        gamePanel.add(boardPanel, BorderLayout.CENTER);
+
         slider = new JSlider(3, 10, cols);
         slider.setMajorTickSpacing(1);
         slider.setPaintTicks(true);
         slider.setPaintLabels(true);
-        slider.addChangeListener(e -> {
-            cols = slider.getValue();
-            initializeBoardPanel();
-        });
+        slider.addChangeListener(new SliderChangeListener());
 
-        initializeBoardPanel();
-
-        boardFrame.add(output, BorderLayout.NORTH);
-        boardFrame.add(boardPanel, BorderLayout.CENTER);
+        boardFrame.add(gamePanel, BorderLayout.CENTER);
         boardFrame.add(slider, BorderLayout.SOUTH);
         boardFrame.pack();
         boardFrame.setLocationRelativeTo(null);
@@ -52,10 +69,11 @@ public class Board {
 
     private void initializeBoardPanel() {
         if (boardPanel != null) {
-            boardFrame.remove(boardPanel);
+            boardPanel.removeAll();
+        } else {
+            boardPanel = new JPanel();
         }
 
-        boardPanel = new JPanel();
         boardPanel.setLayout(new GridLayout(rows, cols, 2, 2));
         boardPanel.setPreferredSize(new Dimension(896, 400));
 
@@ -67,17 +85,15 @@ public class Board {
             }
         }
 
-        boardFrame.add(boardPanel, BorderLayout.CENTER);
+        boardPanel.revalidate();
+        boardPanel.repaint();
+
         boardFrame.revalidate();
         boardFrame.repaint();
     }
 
     public void updateMessage(String message) {
         output.setText(message);
-    }
-
-    public void repaintBoard() {
-        boardFrame.repaint();
     }
 
     public void eat(int row, int col) {
