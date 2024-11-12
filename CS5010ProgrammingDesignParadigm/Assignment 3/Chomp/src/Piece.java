@@ -18,7 +18,7 @@ public class Piece {
         panel = new JPanel();
         button = new JButton();
 
-        chocolate = new ImageIcon(getClass().getResource("/resources/chocolate.jpg")); // 初始显示巧克力
+        chocolate = new ImageIcon(getClass().getResource("/resources/chocolate.jpg"));
         empty = new ImageIcon(getClass().getResource("/resources/empty.jpg"));
         poison = new ImageIcon(getClass().getResource("/resources/poison.jpg"));
 
