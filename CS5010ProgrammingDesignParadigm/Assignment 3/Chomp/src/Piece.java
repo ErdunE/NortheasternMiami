@@ -8,30 +8,24 @@ import java.awt.event.ActionListener;
  * According to the provided class diagram, this class belongs to the Model package and holds
  * information pertinent to the chocolate piece objects.
  *
- * <p><b>Expected Design:</b> As per the class diagram, the Piece class should include:
- * <ul>
- *   <li>Attributes: JPanel panel, JButton button, Image chocolate, Image empty,
- *       boolean eaten, int row, int col.</li>
- *   <li>Methods: onButtonClick() to handle button click events and call the board’s eat
- *       function with the piece’s coordinates.</li>
- * </ul>
- * </p>
+ * Expected Design: As per the class diagram, the Piece class should include:
+ *  Attributes: JPanel panel, JButton button, Image chocolate, Image empty,
+ *       boolean eaten, int row, int col.
+ *  Methods: onButtonClick() to handle button click events and call the board’s eat
+ *       function with the piece’s coordinates.
  *
- * <p><b>Deviations and Extensions:</b> This implementation adheres closely to the provided design,
+ * Deviations and Extensions: This implementation adheres closely to the provided design,
  * but includes the following modifications:
- * <ul>
- *   <li>Added poison icon (ImageIcon poison) to represent the poisoned square as a unique visual
+ *  Added poison icon (ImageIcon poison) to represent the poisoned square as a unique visual
  *       element. The class diagram didn’t specify a separate icon for the poison piece,
- *       but this addition enhances user experience by clearly identifying the poisoned square.</li>
- *   <li>The expected method `onButtonClick()` has been replaced with an inner class `ButtonClickListener`
+ *       but this addition enhances user experience by clearly identifying the poisoned square.
+ *  The expected method `onButtonClick()` has been replaced with an inner class `ButtonClickListener`
  *       that implements `ActionListener` to handle button click events. This aligns with the Java Swing
- *       structure, where `ActionListener` is a common way to handle GUI events.</li>
- * </ul>
- * </p>
+ *       structure, where `ActionListener` is a common way to handle GUI events.
  *
  * @author Erdun E
  * @since 2024-11-12
- * @version 1.1
+ * @version 1.2
  */
 public class Piece {
     private JPanel panel; // Container for the button.
@@ -45,9 +39,9 @@ public class Piece {
      * Constructor for the Piece class, initializes the piece with its coordinates and board reference.
      * Sets the icon based on whether the piece is poison or chocolate.
      *
-     * <p><b>Expected:</b> Constructor with coordinates as per class diagram.
-     * <p><b>Adherence:</b> This constructor aligns with the design, initializing piece state and visuals.
-     * <p><b>Deviation:</b> Added reference to the Board and additional poison icon setting for clarity.</p>
+     * Expected: Constructor with coordinates as per class diagram.
+     * Adherence: This constructor aligns with the design, initializing piece state and visuals.
+     * Deviation: Added reference to the Board and additional poison icon setting for clarity.
      *
      * @param row the row coordinate of the piece
      * @param col the column coordinate of the piece
@@ -79,8 +73,8 @@ public class Piece {
 
     /**
      * Returns the JPanel containing the button.
-     * <p><b>Expected:</b> JPanel as per class diagram.
-     * <p><b>Adherence:</b> This method aligns with the design, providing access to the piece’s UI component.
+     * Expected: JPanel as per class diagram.
+     * Adherence: This method aligns with the design, providing access to the piece’s UI component.
      *
      * @return JPanel the container panel for the button
      */
@@ -90,8 +84,8 @@ public class Piece {
 
     /**
      * Updates the piece's state to eaten, disabling the button and changing its icon.
-     * <p><b>Expected:</b> Method to update state after chomped as per class diagram.
-     * <p><b>Adherence:</b> This method follows the design, switching the piece's appearance and state.
+     * Expected: Method to update state after chomped as per class diagram.
+     * Adherence: This method follows the design, switching the piece's appearance and state.
      *
      * @param eaten the new state of the piece
      */
@@ -104,8 +98,8 @@ public class Piece {
     /**
      * Inner class that implements ActionListener to handle button clicks.
      * Calls the Board’s eat method with the piece’s coordinates when clicked.
-     * <p><b>Expected:</b> Equivalent to onButtonClick() in class diagram.
-     * <p><b>Deviation:</b> Implemented using ActionListener instead of direct method for better GUI integration.
+     * Expected: Equivalent to onButtonClick() in class diagram.
+     * Deviation: Implemented using ActionListener instead of direct method for better GUI integration.
      */
     private class ButtonClickListener implements ActionListener {
         @Override

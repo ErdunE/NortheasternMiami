@@ -8,19 +8,19 @@ import javax.swing.event.ChangeListener;
  * It displays the grid of pieces, controls game information display, and allows
  * for grid customization with a slider.
  *
- * <p><b>Expected Design:</b> According to the provided class diagram, the Board
+ * Expected Design: According to the provided class diagram, the Board
  * class is responsible for displaying the game board, managing piece states, and
- * updating player turns.</p>
+ * updating player turns.
  *
- * <p><b>Deviations and Extensions:</b> Additional features, such as the slider for
+ * Deviations and Extensions: Additional features, such as the slider for
  * board size customization and a rules label, were added to enhance user experience.
  * The `eat` method was implemented with row and column parameters instead of an array,
  * simplifying usage. Methods such as `startNewGame` and `initializeBoardPanel` were also
- * added to handle game reset and board setup modular.</p>
+ * added to handle game reset and board setup modular.
  *
  * @author Erdun E
  * @since 2024-11-12
- * @version 1.1
+ * @version 1.2
  */
 public class Board {
     private JFrame boardFrame; // Main window containing the game interface
@@ -48,8 +48,8 @@ public class Board {
 
     /**
      * Resets the game board and player turn for a new game.
-     * <p>
-     * <b>Reason for Addition:</b> This method was added to allow users to restart
+     *
+     * Reason for Addition: This method was added to allow users to restart
      * the game without closing and reopening the application.
      */
     public void startNewGame() {
@@ -60,8 +60,8 @@ public class Board {
 
     /**
      * Creates the main game window and sets up the board layout.
-     * <p>
-     * <b>Expected Design:</b> This method sets up the board layout including grid,
+     *
+     * Expected Design: This method sets up the board layout including grid,
      * slider, and rule displays. Adheres to expected design with added enhancements
      * like a rules label and slider.
      */
@@ -111,8 +111,8 @@ public class Board {
 
     /**
      * Initializes or refreshes the game board grid based on the current row and column values.
-     * <p>
-     * <b>Reason for Addition:</b> This method encapsulates board setup logic, making it
+     *
+     * Reason for Addition: This method encapsulates board setup logic, making it
      * easy to reset the board or adjust its size based on the slider value.
      */
     private void initializeBoardPanel() {
@@ -151,8 +151,8 @@ public class Board {
 
     /**
      * Processes a player's move, marking pieces as eaten and updating the board.
-     * <p>
-     * <b>Expected Design:</b> This method was expected to disable buttons to the right
+     *
+     * Expected Design: This method was expected to disable buttons to the right
      * and below the selected piece. Implemented as expected, but uses separate row and
      * column parameters instead of an array.
      *
