@@ -8,24 +8,14 @@ import javax.swing.event.ChangeListener;
  * It displays the grid of pieces, controls game information display, and allows
  * for grid customization with a slider.
  *
- * Expected Design: According to the provided class diagram, the Board
- * class is responsible for displaying the game board, managing piece states, and
- * updating player turns.
- *
- * Deviations and Extensions: Additional features, such as the slider for
- * board size customization and a rules label, were added to enhance user experience.
- * The `eat` method was implemented with row and column parameters instead of an array,
- * simplifying usage. Methods such as `startNewGame` and `initializeBoardPanel` were also
- * added to handle game reset and board setup modular.
- *
  * @author Erdun E
- * @since 2024-11-12
- * @version 1.2
+ * @since 2024-11-13
+ * @version 1.3
  */
 public class Board {
-    private JFrame boardFrame; // Main window containing the game interface
-    private Piece[][] grid; // Grid of game pieces
-    private JLabel output; // Label to display the current player turn or game messages
+    private JFrame boardFrame;
+    private Piece[][] grid;
+    private JLabel output;
     private Controller controller; // Reference to the game controller
     private JPanel boardPanel; // Panel holding the grid of pieces
     private JSlider slider; // Slider to control the number of columns in the grid
@@ -48,11 +38,10 @@ public class Board {
 
     /**
      * Resets the game board and player turn for a new game.
-     *
-     * Reason for Addition: This method was added to allow users to restart
-     * the game without closing and reopening the application.
      */
     public void startNewGame() {
+        // Reason for Addition: This method was added to allow users to restart
+        // the game without closing and reopening the application.
         output.setText("Player 1 Turn");
         initializeBoardPanel();
         controller.resetPlayer();
@@ -66,6 +55,7 @@ public class Board {
      * like a rules label and slider.
      */
     public void createBoard() {
+        // Reason for Modification: added enhancements like a rules label and slider.
         boardFrame = new JFrame("Chomp Game");
         boardFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         boardFrame.setLayout(new BorderLayout());
@@ -112,10 +102,10 @@ public class Board {
     /**
      * Initializes or refreshes the game board grid based on the current row and column values.
      *
-     * Reason for Addition: This method encapsulates board setup logic, making it
-     * easy to reset the board or adjust its size based on the slider value.
      */
     private void initializeBoardPanel() {
+        // Reason for Addition: This method encapsulates board setup logic, making it
+        // easy to reset the board or adjust its size based on the slider value.
         if (boardPanel != null) {
             boardPanel.removeAll();
         } else {
@@ -152,14 +142,11 @@ public class Board {
     /**
      * Processes a player's move, marking pieces as eaten and updating the board.
      *
-     * Expected Design: This method was expected to disable buttons to the right
-     * and below the selected piece. Implemented as expected, but uses separate row and
-     * column parameters instead of an array.
-     *
      * @param row The row index of the selected piece.
      * @param col The column index of the selected piece.
      */
     public void eat(int row, int col) {
+        // Reason for Modification: Implemented as expected, but uses separate row and column parameters instead of an array.
         for (int r = row; r < grid.length; r++) {
             for (int c = col; c < grid[r].length; c++) {
                 grid[r][c].setEaten(true);
