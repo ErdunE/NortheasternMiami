@@ -3,23 +3,23 @@
  * It initializes the game by creating an instance of the Controller class
  * and invoking its init() method, which starts the game setup and interface.
  *
- * <p><b>Expected Design:</b> According to the provided class diagram, the Driver class
+ * Expected Design: According to the provided class diagram, the Driver class
  * is expected to function as the main entry point for the application, initializing
  * the Controller to begin the game. The class diagram specifies that Driver should
- * instantiate the Controller and trigger the game initialization process.</p>
+ * instantiate the Controller and trigger the game initialization process.
  *
- * <p><b>Deviations and Extensions:</b> This class strictly adheres to the design provided
+ * Deviations and Extensions: This class strictly adheres to the design provided
  * in the class diagram with no deviations. The Driver class has no additional attributes
  * or methods beyond what is outlined in the class diagram, as its sole responsibility is
- * to initialize and start the game through the Controller.</p>
+ * to initialize and start the game through the Controller.
  *
- * <p><b>Reasoning for Adherence:</b> Since the Driver class is solely responsible for
+ * Reasoning for Adherence: Since the Driver class is solely responsible for
  * initializing the game, no further extensions or modifications were deemed necessary.
- * The provided design aligns perfectly with the intended purpose of this class.</p>
+ * The provided design aligns perfectly with the intended purpose of this class.
  *
  * @author Erdun E
  * @since 2024-11-12
- * @version 1.1
+ * @version 1.2
  */
 public class Driver {
     /**
