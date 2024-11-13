@@ -8,46 +8,28 @@ import java.awt.event.ActionListener;
  * According to the provided class diagram, this class belongs to the Model package and holds
  * information pertinent to the chocolate piece objects.
  *
- * Expected Design: As per the class diagram, the Piece class should include:
- *  Attributes: JPanel panel, JButton button, Image chocolate, Image empty,
- *       boolean eaten, int row, int col.
- *  Methods: onButtonClick() to handle button click events and call the board’s eat
- *       function with the piece’s coordinates.
- *
- * Deviations and Extensions: This implementation adheres closely to the provided design,
- * but includes the following modifications:
- *  Added poison icon (ImageIcon poison) to represent the poisoned square as a unique visual
- *       element. The class diagram didn’t specify a separate icon for the poison piece,
- *       but this addition enhances user experience by clearly identifying the poisoned square.
- *  The expected method `onButtonClick()` has been replaced with an inner class `ButtonClickListener`
- *       that implements `ActionListener` to handle button click events. This aligns with the Java Swing
- *       structure, where `ActionListener` is a common way to handle GUI events.
- *
  * @author Erdun E
- * @since 2024-11-12
- * @version 1.2
+ * @since 2024-11-13
+ * @version 1.3
  */
 public class Piece {
-    private JPanel panel; // Container for the button.
-    private JButton button; // Clickable JButton representing the piece.
-    private ImageIcon chocolate, empty, poison; // Icon for a chocolate, empty and poison square (poison added for clarity)
-    private boolean eaten = false; // Boolean indicating if the square is chomped.
-    private int row, col; // Coordinates of the piece on the board.
+    private JPanel panel;
+    private JButton button;
+    private ImageIcon chocolate, empty, poison; // Add icon poison square for clarity
+    private boolean eaten = false;
+    private int row, col;
     private Board board; // Refer to Board instance and used to update game state and trigger actions when this piece is clicked.
 
     /**
      * Constructor for the Piece class, initializes the piece with its coordinates and board reference.
      * Sets the icon based on whether the piece is poison or chocolate.
      *
-     * Expected: Constructor with coordinates as per class diagram.
-     * Adherence: This constructor aligns with the design, initializing piece state and visuals.
-     * Deviation: Added reference to the Board and additional poison icon setting for clarity.
-     *
      * @param row the row coordinate of the piece
      * @param col the column coordinate of the piece
      * @param board the board that contains this piece
      */
     public Piece(int row, int col, Board board) {
+        // Reason for modification: Added reference to the Board and additional poison icon setting for clarity.
         this.row = row;
         this.col = col;
         this.board = board;
@@ -60,14 +42,12 @@ public class Piece {
         poison = new ImageIcon(getClass().getResource("/resources/poison.jpg"));
 
         if (row == 0 && col == 0) {
-            // Sets the poison icon for the upper left square
-            button.setIcon(poison);
+            button.setIcon(poison); // Sets the poison icon for the upper left square
         } else {
             button.setIcon(chocolate);
         }
 
-        // Observes button clicks
-        button.addActionListener(new ButtonClickListener());
+        button.addActionListener(new ButtonClickListener()); // Observes button clicks
         panel.add(button);
     }
 
@@ -98,10 +78,9 @@ public class Piece {
     /**
      * Inner class that implements ActionListener to handle button clicks.
      * Calls the Board’s eat method with the piece’s coordinates when clicked.
-     * Expected: Equivalent to onButtonClick() in class diagram.
-     * Deviation: Implemented using ActionListener instead of direct method for better GUI integration.
      */
     private class ButtonClickListener implements ActionListener {
+        // Reason for modification: Implemented using ActionListener instead of direct method for better GUI integration.
         @Override
         public void actionPerformed(ActionEvent e) {
             if (!eaten) {
