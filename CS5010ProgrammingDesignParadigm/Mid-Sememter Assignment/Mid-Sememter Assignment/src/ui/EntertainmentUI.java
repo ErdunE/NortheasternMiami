@@ -16,7 +16,6 @@ import java.util.Scanner;
  * Course: CS5010 Program Design Paradigm
  * Program: Mid-Semester Assignment
  */
-
 public class EntertainmentUI {
 
     public static void main(String[] args) {
