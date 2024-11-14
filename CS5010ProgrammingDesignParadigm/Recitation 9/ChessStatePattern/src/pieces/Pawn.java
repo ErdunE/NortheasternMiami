@@ -2,20 +2,29 @@ package pieces;
 
 import main.Board;
 
-/**
- * Class representing the Pawn piece.
- */
-public class Pawn extends Piece {
+public class Pawn extends Piece
+{
 
-	public Pawn(String color) {
-		super(color);
+	public Pawn(boolean isWhite)
+	{
+		super(isWhite);
 	}
-
+	/**
+	 * @param startX
+	 * @param startY
+	 * @param endX
+	 * @param endY
+	 * @param board
+	 * @return
+	 */
 	@Override
 	public boolean isValidMove(int startX, int startY, int endX, int endY, Board board) {
-		if (color.equals("white")) {
+		if (isWhite == true)
+		{
 			return startX - endX == 1 && startY == endY;
-		} else {
+		}
+		else
+		{
 			return endX - startX == 1 && startY == endY;
 		}
 	}

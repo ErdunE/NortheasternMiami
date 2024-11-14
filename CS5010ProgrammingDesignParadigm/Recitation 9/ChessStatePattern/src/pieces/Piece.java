@@ -2,19 +2,21 @@ package pieces;
 
 import main.Board;
 
-/**
- * Abstract class representing a chess piece.
- */
 public abstract class Piece {
-	protected String color;
 
-	public Piece(String color) {
-		this.color = color;
+	protected boolean isWhite;
+
+	public Piece(boolean isWhite)
+	{
+		this.isWhite = isWhite;
 	}
 
-	public String getColor() {
-		return color;
+	public boolean getIsWhite()
+	{
+		return isWhite;
 	}
 
 	public abstract boolean isValidMove(int startX, int startY, int endX, int endY, Board board);
+
 }
+

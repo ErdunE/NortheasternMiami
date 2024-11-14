@@ -1,53 +1,66 @@
 package states;
+import main.*;
+/**
+ *  Represent the Check state in a chess game, where one player has been checked, if player
+ *     can't solve the situation, switch to the checkmated state. If player are not checked, switch
+ *     to the NormalPlayState.
+ *
+ *     @Author: Kai
+ *     @Version: 1.0
+ *     @since 2024-11-6
+ */
+public class CheckState extends State{
 
-import main.ChessGame;
-import java.util.Random;
-
-public class CheckState extends State {
-    private final Random random;
-
-    public CheckState(ChessGame game) {
+    public CheckState(ChessGame game){
         super(game);
-        this.random = new Random();
     }
 
+    /**
+     * This function will throw an exception because the game already started.
+     */
     @Override
     public State startGame() {
         throw new UnsupportedOperationException("Game already started.");
     }
 
+    /**
+     * This function will throw an exception because player is checked now.
+     */
     @Override
     public State normalPlay() {
-        throw new UnsupportedOperationException("Cannot play in CheckState.");
+        throw new UnsupportedOperationException("Game already started.");
     }
 
+    /**
+     * This function is called when transitioning from Check to checkMate.
+     * Return checkMate
+     * @return State.
+     */
     @Override
     public State checkMate() {
-        System.out.println("Player " + game.getCurrentPlayer() + " can not resolved the Check. ");
-        System.out.println("Transitioning to CheckmateState.");
+        System.out.println("Player" + game.getCurrentPlayer() + "unable to resolve the current situation. ");
+        System.out.println("Transitioning to Checkmate State");
         return new CheckmateState(game);
+
     }
 
+    /**
+     * This function is called when transitioning from CheckState to NormalPlayState.
+     * Return NormalPlayState
+     * @return State.
+     */
     @Override
     public State check() {
-        System.out.println("Player " + game.getCurrentPlayer() + " resolved the Check. ");
-        System.out.println("Returning to NormalPlayState.");
+        System.out.println("Player" + game.getCurrentPlayer() + "is not checked now.");
+        System.out.println("Transitioning to Normal Play State.");
         return new NormalPlayState(game);
-
-//        boolean checkResolved = random.nextDouble() > 0.3;
-//        if (checkResolved) {
-//            System.out.println("Player " + game.getCurrentPlayer() + " resolved the Check. ");
-//            System.out.println("Returning to NormalPlayState.");
-//            return new NormalPlayState(game);
-//        } else {
-//            System.out.println("Player " + game.getCurrentPlayer() + " can not resolved the Check. ");
-//            System.out.println("Transitioning to CheckmateState.");
-//            return new CheckmateState(game);
-//        }
     }
 
+    /**
+     * This function will throw an exception because player is checked now.
+     */
     @Override
-    public State PlayerTurnSwitch() {
-        throw new UnsupportedOperationException("Cannot switch turns in CheckState.");
+    public State playerTurnSwitch() {
+        throw new UnsupportedOperationException("Please make your move. ");
     }
 }
