@@ -1,24 +1,24 @@
 package main;
 
-import pieces.*;
-import states.State;
+import pieces.King;
+import pieces.Pawn;
+import pieces.Piece;
+import pieces.Rook;
 
 /**
- * Represents the chess board, managing the placement and movement of pieces in a standard 8x8 chess grid.
- * It provides functionality to initialize the board with a standard chess setup, retrieve and set pieces at
- * specific locations, and validate moves according to the rules of each piece.
+ * Represents the chess board, managing the placement and movement of
+ * pieces in a standard 8x8 chess grid.
+ * It provides functionality to initialize the board with a standard
+ * chess setup, retrieve and set pieces at specific locations, and
+ * validate moves according to the rules of each piece.
  *
  * @author Erdun E
- * @Since
+ * @version 1.0
+ * @since 2024-11-04
  */
 public class Board {
-	private Piece[][] board; // 2D array representing the chessboard with pieces in specific positions
+	private Piece[][] board;
 
-	/**
-	 * Constructs a new Board with a standard chess piece setup.
-	 * Initializes an 8x8 board and places pieces for both black and white players
-	 * in their starting positions.
-	 */
 	public Board() {
 		this.board = new Piece[8][8];
 		initializeBoard();
@@ -31,27 +31,24 @@ public class Board {
 	 */
 	private void initializeBoard() {
 		// Place black rooks at initial positions
-		board[0][0] = new Rook("black");
-		board[0][7] = new Rook("black");
+		board[0][0] = new Rook(false);  // false for black
+		board[0][7] = new Rook(false);  // false for black
 
 		// Place white rooks at initial positions
-		board[7][0] = new Rook("white");
-		board[7][7] = new Rook("white");
+		board[7][0] = new Rook(true);   // true for white
+		board[7][7] = new Rook(true);   // true for white
 
 		// Place kings for black and white players
-		board[0][4] = new King("black");
-		board[7][4] = new King("white");
+		board[0][4] = new King(false);  // false for black
+		board[7][4] = new King(true);   // true for white
 
 		// Place black pawns at initial positions
-		board[1][0] = new Pawn("black");
-		board[1][1] = new Pawn("black");
+		board[1][0] = new Pawn(false);  // false for black
+		board[1][1] = new Pawn(false);  // false for black
 
 		// Place white pawns at initial positions
-		board[6][0] = new Pawn("white");
-		board[6][1] = new Pawn("white");
-
-		// Additional pieces like knights, bishops, queens, and pawns
-		// would be initialized here for a complete setup
+		board[6][0] = new Pawn(true);   // true for white
+		board[6][1] = new Pawn(true);   // true for white
 	}
 
 	/**
@@ -89,7 +86,9 @@ public class Board {
 	 */
 	public boolean isValidMove(int startX, int startY, int endX, int endY) {
 		Piece piece = getPiece(startX, startY);
-		if (piece == null) return false;  // No piece at the start position
-		return piece.isValidMove(startX, startY, endX, endY, this);  // Check move validity with piece's logic
+		// No piece at the start position
+		if (piece == null) return false;
+		// Check move validity with piece's logic
+		return piece.isValidMove(startX, startY, endX, endY, this);
 	}
 }

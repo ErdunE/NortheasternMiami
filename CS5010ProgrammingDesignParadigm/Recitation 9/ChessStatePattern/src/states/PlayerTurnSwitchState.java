@@ -2,8 +2,8 @@ package states;
 
 import main.ChessGame;
 
-public class PlayerTurnState extends State {
-    public PlayerTurnState(ChessGame game) {
+public class PlayerTurnSwitchState extends State {
+    public PlayerTurnSwitchState(ChessGame game) {
         super(game);
     }
 
@@ -21,16 +21,16 @@ public class PlayerTurnState extends State {
 
     @Override
     public State checkMate() {
-        throw new UnsupportedOperationException("Cannot checkmate in PlayerTurnState.");
+        throw new UnsupportedOperationException("Cannot checkmate in PlayerTurnSwitchState.");
     }
 
     @Override
     public State check() {
-        throw new UnsupportedOperationException("Cannot check in PlayerTurnState.");
+        throw new UnsupportedOperationException("Cannot check in PlayerTurnSwitchState.");
     }
 
     @Override
-    public State PlayerTurnSwitch() {
+    public State playerTurnSwitch() {
         System.out.println("Switching player to " + game.getCurrentPlayer() + " turn.");
         System.out.println("Transitioning to NormalPlayState.");
         return new NormalPlayState(game);
