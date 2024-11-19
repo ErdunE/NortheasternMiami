@@ -8,3 +8,4 @@
 /dataSources.local.xml
 # Ignore macOS system files
 .DS_Store
+**/.DS_Store
