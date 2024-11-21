@@ -33,17 +33,17 @@ public class KeyBinder implements KeyListener{
 	public void keyTyped(KeyEvent e) {
 		int keyChar = e.getKeyChar();
 		if (keyChar == 'a') {
-			// Simulate a mouse click at (50, 50) for key 'a'
+			// Simulate a mouse click at (50, 50) for key a
 			event = new MouseEvent(e.getComponent(), MouseEvent.MOUSE_CLICKED, 0, 0, 50, 50, 1, false);
 			adaptee.mouseClicked(event);
 			main.textField.setText("Key A triggered (via key binding)");
 		} else if (keyChar == 'b') {
-			// Simulate a mouse click at (100, 100) for key 'b'
+			// Simulate a mouse click at (100, 100) for key b
 			event = new MouseEvent(e.getComponent(), MouseEvent.MOUSE_CLICKED, 0, 0, 100, 100, 1, false);
 			adaptee.mouseClicked(event);
 			main.textField.setText("Key B triggered (via key binding)");
 		} else if (keyChar == 'c') {
-			// Simulate a mouse click at (150, 150) for key 'c'
+			// Simulate a mouse click at (150, 150) for key c
 			event = new MouseEvent(e.getComponent(), MouseEvent.MOUSE_CLICKED, 0, 0, 150, 150, 1, false);
 			adaptee.mouseClicked(event);
 			main.textField.setText("Key C triggered (via key binding)");
