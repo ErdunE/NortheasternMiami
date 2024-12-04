@@ -18,3 +18,6 @@ it unexpectedly difficult to click. This adds an element of surprise
 and frustration.
 * Click Feedback: The game tracks all missed clicks, amplifying 
 the user’s sense of failure while encouraging persistence.
+* Fake Exit: Even when the user taps the exit button successfully, 
+it doesn't exit the program as expected, a feeling as if you've 
+entered a rogue website.
