@@ -33,5 +33,27 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/Final Project/dependencies/json-20240303.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/Final Project/dependencies/javafx-sdk-23.0.1/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://$MODULE_DIR$/Final Project/dependencies/javafx-sdk-23.0.1/lib" />
+        </NATIVE>
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/Final Project/dependencies/javafx-sdk-23.0.1/lib" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

@@ -1,19 +1,29 @@
 package strategy;
 
-import java.util.Arrays;
+import model.Movie;
+import service.TMDBService;
+
+import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * PopularRecommendation class provides popular movie recommendations.
  *
  * @author Erdun E
- * @version 1.1
- * @since 2024-10-18
+ * @version 1.2
+ * @since 2024-12-04
  * Course: CS5010 Program Design Paradigm
  * Program: Mid-Semester Assignment
  */
 
 public class PopularRecommendation implements RecommendationStrategy {
+
+    private final TMDBService tmdbService;
+
+    public PopularRecommendation() {
+        this.tmdbService = new TMDBService();
+    }
 
     /**
      * Returns a list of popular movie recommendations.
@@ -22,6 +32,14 @@ public class PopularRecommendation implements RecommendationStrategy {
      */
     @Override
     public List<String> getRecommendations() {
-        return Arrays.asList("Inception", "The Dark Knight", "Interstellar");
+        try {
+            List<Movie> movies = tmdbService.fetchPopularMovies();
+            return movies.stream()
+                    .map(Movie::getTitle)
+                    .collect(Collectors.toList());
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+            return List.of("Failed to fetch popular movies.");
+        }
     }
 }

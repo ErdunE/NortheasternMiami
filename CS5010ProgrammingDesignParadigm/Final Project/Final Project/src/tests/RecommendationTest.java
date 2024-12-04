@@ -4,6 +4,7 @@ import context.RecommendationContext;
 import org.junit.Test;
 import strategy.GenreRecommendation;
 import strategy.PopularRecommendation;
+import strategy.RatingBasedRecommendation;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -57,5 +58,16 @@ public class RecommendationTest {
         assertNotNull(recommendations);
         assertEquals(1, recommendations.size());
         assertEquals("No recommendations for this genre.", recommendations.get(0));
+    }
+
+    @Test
+    public void testRatingBasedRecommendation() {
+        RecommendationContext context = new RecommendationContext();
+        context.setRecommendationStrategy(new RatingBasedRecommendation());
+        List<String> recommendations = context.getRecommendations();
+
+        assertNotNull(recommendations);
+        assertEquals(3, recommendations.size());
+        assertTrue(recommendations.contains("The Shawshank Redemption"));
     }
 }
