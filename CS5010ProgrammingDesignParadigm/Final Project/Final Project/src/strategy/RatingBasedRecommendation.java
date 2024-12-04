@@ -14,11 +14,11 @@ public class RatingBasedRecommendation implements RecommendationStrategy {
 
     // Simulated data: Movie titles with ratings
     private final List<Movie> movies = Arrays.asList(
-            new Movie("Inception", "Action", 9.0),
-            new Movie("The Dark Knight", "Action", 9.2),
-            new Movie("Interstellar", "Sci-Fi", 8.8),
-            new Movie("Forrest Gump", "Drama", 8.9),
-            new Movie("The Shawshank Redemption", "Drama", 9.3)
+            new Movie("Inception", Arrays.asList("Action", "Sci-Fi"), 9.0, "A mind-bending thriller", null),
+            new Movie("The Dark Knight", Arrays.asList("Action", "Crime"), 9.2, "A gritty crime drama", null),
+            new Movie("Interstellar", Arrays.asList("Sci-Fi", "Adventure"), 8.8, "An epic journey through space", null),
+            new Movie("Forrest Gump", Arrays.asList("Drama", "Romance"), 8.9, "A heartwarming tale", null),
+            new Movie("The Shawshank Redemption", Arrays.asList("Drama", "Crime"), 9.3, "A story of hope and friendship", null)
     );
 
     @Override
