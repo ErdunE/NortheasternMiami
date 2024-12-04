@@ -8,7 +8,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -80,8 +83,31 @@ public class TMDBService {
             JSONObject movieJson = results.getJSONObject(i);
             String title = movieJson.getString("title");
             double rating = movieJson.getDouble("vote_average");
-            movies.add(new Movie(title, "Unknown", rating)); // Genre is "Unknown" for simplicity
+            String overview = movieJson.getString("overview");
+            String posterUrl = "https://image.tmdb.org/t/p/w500" + movieJson.getString("poster_path");
+
+            // Parse genres (for simplicity, we'll only extract genre IDs here)
+            JSONArray genreIds = movieJson.getJSONArray("genre_ids");
+            List<String> genres = new ArrayList<>();
+            for (int j = 0; j < genreIds.length(); j++) {
+                genres.add(getGenreNameById(genreIds.getInt(j))); // Convert ID to name
+            }
+
+            movies.add(new Movie(title, genres, rating, overview, posterUrl));
         }
         return movies;
+    }
+
+    private String getGenreNameById(int id) {
+        switch (id) {
+            case 28: return "Action";
+            case 12: return "Adventure";
+            case 16: return "Animation";
+            case 35: return "Comedy";
+            case 80: return "Crime";
+            case 99: return "Documentary";
+            // Add more genres as needed
+            default: return "Unknown";
+        }
     }
 }
