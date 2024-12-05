@@ -19,11 +19,7 @@ import java.util.stream.Collectors;
 
 public class PopularRecommendation implements RecommendationStrategy {
 
-    private final TMDBService tmdbService;
-
-    public PopularRecommendation() {
-        this.tmdbService = new TMDBService();
-    }
+    private final TMDBService tmdbService = new TMDBService();
 
     /**
      * Returns a list of popular movie recommendations.
@@ -33,13 +29,23 @@ public class PopularRecommendation implements RecommendationStrategy {
     @Override
     public List<String> getRecommendations() {
         try {
-            List<Movie> movies = tmdbService.fetchPopularMovies();
-            return movies.stream()
+            return tmdbService.fetchPopularMovies()
+                    .stream()
                     .map(Movie::getTitle)
-                    .collect(Collectors.toList());
-        } catch (IOException | InterruptedException e) {
+                    .toList();
+        } catch (Exception e) {
             e.printStackTrace();
-            return List.of("Failed to fetch popular movies.");
+            return List.of("Failed to fetch popular recommendations.");
+        }
+    }
+
+    @Override
+    public List<Movie> getDetailedRecommendations() {
+        try {
+            return tmdbService.fetchPopularMovies();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return List.of();
         }
     }
 }

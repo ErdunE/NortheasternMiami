@@ -26,7 +26,7 @@ public class RecommendationFactory {
             case "rating":
                 return new RatingBasedRecommendation();
             default:
-                return null; // Return null for invalid types
+                return null;
         }
     }
 }

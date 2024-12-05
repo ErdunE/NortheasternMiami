@@ -1,34 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .root {
-    -fx-background-color: #f0f0f0;
+    -fx-background-color: linear-gradient(to bottom, #000000, #111111);
+    -fx-padding: 0;
+    -fx-spacing: 0;
 }
 
-.label.title {
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #333333;
+.main-title {
+    -fx-font-family: 'Bebas Neue', sans-serif;
+    -fx-font-size: 40px;
+    -fx-text-fill: transparent;
+    -fx-background-color: linear-gradient(to bottom, #E50914, #B81D24);
+    -fx-background-clip: text;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 4, 0.5, 0, 2);
+    -fx-padding: 5;
+    -fx-margin: 0;
 }
 
-.label.description {
-    -fx-font-size: 14px;
-    -fx-text-fill: #666666;
+.menu-bar {
+    -fx-background-color: #222222;
+    -fx-spacing: 10;
 }
 
-.button {
-    -fx-background-color: #0078d7;
+.menu-bar button {
+    -fx-background-color: #444444;
     -fx-text-fill: white;
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-weight: bold;
     -fx-font-size: 14px;
-    -fx-padding: 10px 20px;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
 }
 
-.button:hover {
-    -fx-background-color: #005fa3;
+.menu-bar button:hover {
+    -fx-background-color: #555555;
+    -fx-cursor: hand;
 }
 
-.text-area {
-    -fx-font-family: 'Courier New';
+.movie-card {
+    -fx-background-color: #1c1c1c;
+    -fx-border-color: #444444;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-position: relative;
+    -fx-pref-width: 300px;
+    -fx-max-width: 300px;
+    -fx-pref-height: 450px;
+    -fx-max-height: 450px;
+}
+
+.movie-card:hover {
+    -fx-border-color: gold;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(255,215,0,0.5), 8, 0.5, 0, 2);
+}
+
+.movie-card-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center;
+    -fx-padding: 10;
+    -fx-opacity: 0;
+    -fx-transition: opacity 0.5s ease-in-out;
+}
+
+.movie-card:hover .movie-card-overlay {
+    -fx-opacity: 1;
+}
+
+.overview-text {
+    -fx-font-family: 'Roboto', sans-serif;
     -fx-font-size: 14px;
-    -fx-background-color: #ffffff;
-    -fx-border-color: #cccccc;
+    -fx-text-fill: white;
+    -fx-text-alignment: left;
+    -fx-wrap-text: true;
+    -fx-spacing: 10;
+}
+
+.movie-title {
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+}
+
+.movie-details {
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-size: 15px;
+    -fx-text-fill: #E0E0E0;
+    -fx-line-spacing: 4px;
+    -fx-font-weight: normal;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.custom-tooltip {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-text-fill: white;
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-background-radius: 5;
+    -fx-border-color: gold;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.hover-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.9);
+    -fx-padding: 15;
+    -fx-text-fill: #E0E0E0;
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-size: 14px;
+    -fx-line-spacing: 4px;
+    -fx-border-radius: 10;
+    -fx-alignment: top-left;
+}
+
+.hover-section-title {
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-text-alignment: left;
+    -fx-padding: 5 0 10 0;
+}
+
+.hover-tags {
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-text-alignment: left;
+    -fx-padding: 5 0 10 0;
 }
