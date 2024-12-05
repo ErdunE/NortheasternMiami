@@ -1,5 +1,6 @@
 package context;
 
+import model.Movie;
 import strategy.RecommendationStrategy;
 import java.util.List;
 
@@ -16,7 +17,7 @@ import java.util.List;
 
 public class RecommendationContext {
 
-    private RecommendationStrategy strategy;
+    private RecommendationStrategy currentStrategy;
 
     /**
      * Set the current recommendation strategy.
@@ -24,7 +25,7 @@ public class RecommendationContext {
      * @param strategy The strategy to be applied.
      */
     public void setRecommendationStrategy(RecommendationStrategy strategy) {
-        this.strategy = strategy;
+        this.currentStrategy = strategy;
     }
 
     /**
@@ -32,7 +33,20 @@ public class RecommendationContext {
      *
      * @return List of recommended media titles.
      */
-    public List<String> getRecommendations(){
-        return strategy.getRecommendations();
+    public List<String> getRecommendations() {
+        if (currentStrategy != null) {
+            return currentStrategy.getRecommendations();
+        } else {
+            return List.of("No strategy set.");
+        }
     }
+
+    public List<Movie> getRecommendationsWithDetails() {
+        if (currentStrategy != null) {
+            return currentStrategy.getDetailedRecommendations();
+        } else {
+            return List.of();
+        }
+    }
+
 }

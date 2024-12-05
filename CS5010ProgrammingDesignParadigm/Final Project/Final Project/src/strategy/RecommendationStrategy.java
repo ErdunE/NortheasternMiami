@@ -1,5 +1,6 @@
 package strategy;
 
+import model.Movie;
 import java.util.List;
 
 /**
@@ -21,4 +22,7 @@ public interface RecommendationStrategy {
      * @return List of recommended titles.
      */
     List<String> getRecommendations();
+    default List<Movie> getDetailedRecommendations() {
+        throw new UnsupportedOperationException("Detailed recommendations not implemented.");
+    }
 }
