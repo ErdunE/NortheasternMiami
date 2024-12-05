@@ -193,8 +193,4 @@ public class EntertainmentGUI extends Application {
         filterDialog.setContentText("Filter options will be implemented.");
         filterDialog.showAndWait();
     }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 }
