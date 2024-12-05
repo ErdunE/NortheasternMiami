@@ -3,7 +3,8 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/Final Project/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/FinalProject/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/FinalProject/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -36,23 +37,23 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Final Project/dependencies/json-20240303.jar!/" />
+          <root url="file://$MODULE_DIR$/FinalProject/dependencies/javafx-sdk-23.0.1/lib" />
         </CLASSES>
         <JAVADOC />
+        <NATIVE>
+          <root url="file://$MODULE_DIR$/FinalProject/dependencies/javafx-sdk-23.0.1/lib" />
+        </NATIVE>
         <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/FinalProject/dependencies/javafx-sdk-23.0.1/lib" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/Final Project/dependencies/javafx-sdk-23.0.1/lib" />
+          <root url="jar://$MODULE_DIR$/FinalProject/dependencies/json-20240303.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <NATIVE>
-          <root url="file://$MODULE_DIR$/Final Project/dependencies/javafx-sdk-23.0.1/lib" />
-        </NATIVE>
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/Final Project/dependencies/javafx-sdk-23.0.1/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>
