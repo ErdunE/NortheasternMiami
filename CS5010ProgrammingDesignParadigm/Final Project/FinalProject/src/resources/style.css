@@ -146,3 +146,21 @@
     -fx-text-alignment: left;
     -fx-padding: 5 0 10 0;
 }
+
+.details-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.hbox {
+    -fx-spacing: 10;
+}
+
+.vbox {
+    -fx-spacing: 10;
+}
