@@ -113,8 +113,12 @@ public class MovieDetailsWindow {
 
         // Stop trailer on close
         stage.setOnCloseRequest(event -> {
-            trailerView.getEngine().load(null); // Stop the WebView content
+            event.consume(); // 防止直接关闭
+            applyFadeTransition(stage, false, trailerView); // 确保关闭时停止视频
         });
+
+        // Add fade-in effect
+        stage.setOnShown(event -> applyFadeTransition(stage, true, null));
 
         stage.showAndWait();
     }
@@ -125,11 +129,11 @@ public class MovieDetailsWindow {
         fadeTransition.setToValue(fadeIn ? 1 : 0);
         fadeTransition.setOnFinished(event -> {
             if (!fadeIn) {
-
+                // 停止 WebView 内容加载以确保资源释放
                 if (trailerView != null) {
-                    trailerView.getEngine().load(null);
+                    trailerView.getEngine().load(null); // 停止 WebView 内容
                 }
-                stage.close();
+                stage.close(); // 关闭窗口
             }
         });
         fadeTransition.play();
