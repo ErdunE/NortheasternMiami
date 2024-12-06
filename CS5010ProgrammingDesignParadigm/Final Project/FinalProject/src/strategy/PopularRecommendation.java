@@ -29,10 +29,14 @@ public class PopularRecommendation implements RecommendationStrategy {
     @Override
     public List<String> getRecommendations() {
         try {
-            return tmdbService.fetchPopularMovies()
+            List<String> recommendations = tmdbService.fetchPopularMovies()
                     .stream()
                     .map(Movie::getTitle)
                     .toList();
+
+            // Log the fetched recommendations
+            System.out.println("Fetched popular movie titles: " + recommendations);
+            return recommendations;
         } catch (Exception e) {
             e.printStackTrace();
             return List.of("Failed to fetch popular recommendations.");
@@ -42,7 +46,11 @@ public class PopularRecommendation implements RecommendationStrategy {
     @Override
     public List<Movie> getDetailedRecommendations() {
         try {
-            return tmdbService.fetchPopularMovies();
+            List<Movie> detailedMovies = tmdbService.fetchPopularMovies();
+
+            // Log detailed movie recommendations
+            System.out.println("Fetched detailed popular movies: " + detailedMovies);
+            return detailedMovies;
         } catch (Exception e) {
             e.printStackTrace();
             return List.of();

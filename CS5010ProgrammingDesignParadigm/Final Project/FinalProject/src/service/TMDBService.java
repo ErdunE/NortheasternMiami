@@ -37,6 +37,22 @@ public class TMDBService {
      * @throws IOException          If an I/O error occurs.
      * @throws InterruptedException If the operation is interrupted.
      */
+    private JSONObject fetchMovieDetails(int movieId) {
+        String url = BASE_URL + "/movie/" + movieId + "?api_key=" + API_KEY + "&append_to_response=videos,keywords,credits";
+        try {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+            return new JSONObject(response.body());
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+            return new JSONObject();
+        }
+    }
+
     public List<Movie> fetchPopularMovies() throws IOException, InterruptedException {
         String url = BASE_URL + "/movie/popular?api_key=" + API_KEY;
 
@@ -46,17 +62,39 @@ public class TMDBService {
                 .build();
 
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+
+        // Log the response for debugging
+        System.out.println("API Response: " + response.body());
+
         return parseMoviesFromResponse(response.body());
     }
 
-    /**
-     * Fetches movies by genre from TMDB API.
-     *
-     * @param genreId TMDB genre ID.
-     * @return List of movies in the specified genre.
-     * @throws IOException          If an I/O error occurs.
-     * @throws InterruptedException If the operation is interrupted.
-     */
+    private String extractRatingLevel(JSONObject movieJson) {
+        JSONObject releaseDates = movieJson.optJSONObject("release_dates");
+        if (releaseDates != null) {
+            JSONArray results = releaseDates.optJSONArray("results");
+            if (results != null) {
+                for (int i = 0; i < results.length(); i++) {
+                    JSONObject countryRelease = results.getJSONObject(i);
+                    JSONArray certifications = countryRelease.optJSONArray("release_dates");
+                    if (certifications != null && certifications.length() > 0) {
+                        return certifications.getJSONObject(0).optString("certification", "Unknown");
+                    }
+                }
+            }
+        }
+        return "Unknown";
+    }
+
+    private String extractLanguages(JSONArray languagesArray) {
+        if (languagesArray == null) return "Unknown";
+        List<String> languages = new ArrayList<>();
+        for (int i = 0; i < languagesArray.length(); i++) {
+            languages.add(languagesArray.getJSONObject(i).optString("english_name", "Unknown"));
+        }
+        return String.join(", ", languages);
+    }
+
     public List<Movie> fetchMoviesByGenre(int genreId) throws IOException, InterruptedException {
         String url = BASE_URL + "/discover/movie?api_key=" + API_KEY + "&with_genres=" + genreId;
 
@@ -69,34 +107,21 @@ public class TMDBService {
         return parseMoviesFromResponse(response.body());
     }
 
-    public List<String> fetchMovieTrailers(List<Integer> movieIds) throws IOException, InterruptedException {
-        List<String> trailerUrls = new ArrayList<>();
-        for (int movieId : movieIds) {
-            String url = BASE_URL + "/movie/" + movieId + "/videos?api_key=" + API_KEY;
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(url))
-                    .GET()
-                    .build();
-
-            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-            trailerUrls.addAll(parseTrailerUrls(response.body()));
-        }
-        return trailerUrls;
-    }
-
-    private List<String> parseTrailerUrls(String responseBody) {
-        List<String> trailerUrls = new ArrayList<>();
-        JSONObject json = new JSONObject(responseBody);
-        JSONArray results = json.getJSONArray("results");
-
-        for (int i = 0; i < results.length(); i++) {
-            JSONObject video = results.getJSONObject(i);
-            if ("YouTube".equalsIgnoreCase(video.getString("site")) && "Trailer".equalsIgnoreCase(video.getString("type"))) {
-                String key = video.getString("key");
-                trailerUrls.add("https://www.youtube.com/watch?v=" + key);
+    private String fetchTrailerUrl(JSONObject movieDetails) {
+        JSONObject videos = movieDetails.optJSONObject("videos");
+        if (videos != null) {
+            JSONArray results = videos.optJSONArray("results");
+            if (results != null) {
+                for (int i = 0; i < results.length(); i++) {
+                    JSONObject video = results.getJSONObject(i);
+                    if ("YouTube".equalsIgnoreCase(video.optString("site")) &&
+                            "Trailer".equalsIgnoreCase(video.optString("type"))) {
+                        return "https://www.youtube.com/watch?v=" + video.optString("key");
+                    }
+                }
             }
         }
-        return trailerUrls;
+        return null;
     }
 
     private String fetchDirector(int movieId) throws IOException, InterruptedException {
@@ -107,12 +132,12 @@ public class TMDBService {
                 .build();
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         JSONObject json = new JSONObject(response.body());
-        JSONArray crew = json.getJSONArray("crew");
+        JSONArray crew = json.optJSONArray("crew");
 
         for (int i = 0; i < crew.length(); i++) {
             JSONObject person = crew.getJSONObject(i);
-            if ("Director".equals(person.getString("job"))) {
-                return person.getString("name");
+            if ("Director".equals(person.optString("job", ""))) {
+                return person.optString("name", "Unknown");
             }
         }
         return "Unknown";
@@ -125,22 +150,18 @@ public class TMDBService {
 
         for (int i = 0; i < results.length(); i++) {
             JSONObject movieJson = results.getJSONObject(i);
-            String title = movieJson.getString("title");
-            double rating = movieJson.getDouble("vote_average");
-            String posterPath = movieJson.optString("poster_path", "");
-            String overview = movieJson.optString("overview", "");
-            String releaseDate = movieJson.optString("release_date", "");
 
+            String title = movieJson.getString("title");
+            double rating = movieJson.optDouble("vote_average", 0.0);
+            String posterPath = movieJson.optString("poster_path", "");
+            String overview = movieJson.optString("overview", "No overview available.");
+            String releaseDate = movieJson.optString("release_date", "");
             int releaseYear = releaseDate.isEmpty() ? 0 : Integer.parseInt(releaseDate.split("-")[0]);
 
-            String director;
-            try {
-                director = fetchDirector(movieJson.getInt("id"));
-            } catch (IOException | InterruptedException e) {
-                e.printStackTrace();
-                director = "Unknown";
-            }
+            int movieId = movieJson.getInt("id");
+            JSONObject movieDetails = fetchMovieDetails(movieId);
 
+            // Genres
             JSONArray genreIds = movieJson.optJSONArray("genre_ids");
             List<String> genres = new ArrayList<>();
             if (genreIds != null) {
@@ -149,7 +170,49 @@ public class TMDBService {
                 }
             }
 
-            Movie movie = new Movie(title, posterPath, rating, genres, overview, director, releaseYear);
+            // Duration, ratingLevel, language
+            String duration = movieDetails.optInt("runtime", 0) > 0 ? movieDetails.optInt("runtime") + " mins" : "Unknown";
+            String ratingLevel = extractRatingLevel(movieDetails);
+            String language = extractLanguages(movieDetails.optJSONArray("spoken_languages"));
+
+            // Keywords
+            List<String> keywords = new ArrayList<>();
+            JSONObject keywordsObject = movieDetails.optJSONObject("keywords");
+            if (keywordsObject != null) {
+                JSONArray keywordsArray = keywordsObject.optJSONArray("keywords");
+                if (keywordsArray != null) {
+                    for (int j = 0; j < keywordsArray.length(); j++) {
+                        keywords.add(keywordsArray.getJSONObject(j).optString("name", "Unknown"));
+                    }
+                }
+            }
+
+            // Cast
+            List<String> cast = new ArrayList<>();
+            JSONObject credits = movieDetails.optJSONObject("credits");
+            if (credits != null) {
+                JSONArray castArray = credits.optJSONArray("cast");
+                if (castArray != null) {
+                    for (int j = 0; j < Math.min(5, castArray.length()); j++) { // Top 5 actors
+                        cast.add(castArray.getJSONObject(j).optString("name", "Unknown"));
+                    }
+                }
+            }
+
+            // Director
+            String director;
+            try {
+                director = fetchDirector(movieId);
+            } catch (IOException | InterruptedException e) {
+                e.printStackTrace();
+                director = "Unknown";
+            }
+
+            String trailerUrl = fetchTrailerUrl(movieDetails);
+
+            Movie movie = new Movie(title, posterPath, rating, genres, overview, director, releaseYear,
+                    duration, ratingLevel, language, keywords, cast);
+            movie.setTrailerUrl(fetchTrailerUrl(movieDetails)); // 设置 Trailer URL
             movies.add(movie);
         }
         return movies;
