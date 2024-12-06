@@ -40,7 +40,7 @@ public class MovieDetailsWindow {
         ImageView posterView = new ImageView(movie.getPosterUrl());
         posterView.setFitWidth(200);
         posterView.setPreserveRatio(true);
-        posterView.setStyle("-fx-border-radius: 15px;"); // Ensure the poster itself respects the border radius
+        posterView.setStyle("-fx-border-radius: 15px;");
 
         posterBox.getChildren().add(posterView);
 
@@ -52,7 +52,7 @@ public class MovieDetailsWindow {
 
         // Title
         Label titleLabel = new Label(movie.getTitle());
-        titleLabel.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-border-width: 0 0 2 0; -fx-border-color: #ddd; -fx-padding: 0 0 10 0;");
+        titleLabel.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-underline: true;");
 
         Label ratingLabel = new Label("Rating: ★ " + movie.getRating());
         Label durationLabel = new Label("Duration: " + movie.getDuration());
@@ -63,9 +63,10 @@ public class MovieDetailsWindow {
 
         movieDetailsBox.getChildren().addAll(titleLabel, ratingLabel, durationLabel, genresLabel, languageLabel, directorLabel, castLabel);
 
+
         // Bottom: Movie Overview
         VBox overviewBox = new VBox(10);
-        overviewBox.setStyle("-fx-background-color: #ffffff; -fx-border-color: #ccc; -fx-border-radius: 15px; -fx-padding: 15px;");
+        overviewBox.setStyle("-fx-background-color: #ffffff; -fx-border-color: #ccc; -fx-padding: 10px; -fx-border-radius: 15px;");
         overviewBox.setPadding(new Insets(20, 10, 10, 10));
 
         Label overviewTitle = new Label("Overview:");
@@ -77,7 +78,7 @@ public class MovieDetailsWindow {
 
         ScrollPane overviewScroll = new ScrollPane(overviewText);
         overviewScroll.setFitToWidth(true);
-        overviewScroll.setStyle("-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: transparent;");
+        overviewScroll.setStyle("-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: transparent;"); // 彻底移除灰色背景和边框
 
         overviewBox.getChildren().addAll(overviewTitle, overviewScroll);
 
@@ -112,12 +113,8 @@ public class MovieDetailsWindow {
 
         // Stop trailer on close
         stage.setOnCloseRequest(event -> {
-            event.consume(); // 防止直接关闭
-            applyFadeTransition(stage, false, trailerView); // 确保关闭时停止视频
+            trailerView.getEngine().load(null); // Stop the WebView content
         });
-
-        // Add fade-in effect
-        stage.setOnShown(event -> applyFadeTransition(stage, true, null));
 
         stage.showAndWait();
     }

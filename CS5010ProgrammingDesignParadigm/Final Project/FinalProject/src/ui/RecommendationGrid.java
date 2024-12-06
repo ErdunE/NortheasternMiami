@@ -24,9 +24,20 @@ public class RecommendationGrid {
         context.setRecommendationStrategy(RecommendationFactory.createStrategy(type, additionalParam));
         List<Movie> recommendations = context.getRecommendationsWithDetails();
 
+        System.out.println("Fetching recommendations...");
+        System.out.println("Number of recommendations: " + recommendations.size());
+
         int col = 0, row = 0;
         for (Movie movie : recommendations) {
+            System.out.println("Adding movie card to grid: " + movie.getTitle());
             MovieCard movieCard = new MovieCard(movie);
+
+            // Directly bind click event for testing
+            movieCard.getMovieCard().setOnMouseClicked(e -> {
+                System.out.println("Direct GridPane card click! Movie: " + movie.getTitle());
+                MovieDetailsWindow.display(movie);
+            });
+
             gridPane.add(movieCard.getMovieCard(), col++, row);
 
             if (col == 4) {

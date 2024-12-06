@@ -39,6 +39,8 @@ public class HoverOverlay {
         overlay.setAlignment(Pos.CENTER);
         overlay.setVisible(false);
 
+        overlay.setMouseTransparent(true);
+
     }
 
     public StackPane getOverlay() {
