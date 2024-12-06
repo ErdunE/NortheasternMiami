@@ -38,13 +38,8 @@ public class MovieCard {
         VBox movieCardContent = new VBox(10, poster, detailsBox);
         movieCardContent.setAlignment(Pos.CENTER);
 
-        HoverOverlay hoverOverlay = new HoverOverlay(movie);
-
-        movieCard = new StackPane(movieCardContent, hoverOverlay.getOverlay());
+        movieCard = new StackPane(movieCardContent);
         movieCard.getStyleClass().add("movie-card");
-
-        movieCard.setOnMouseEntered(e -> hoverOverlay.getOverlay().setVisible(true));
-        movieCard.setOnMouseExited(e -> hoverOverlay.getOverlay().setVisible(false));
 
         movieCard.setOnMouseClicked(e -> MovieDetailsWindow.display(movie));
     }

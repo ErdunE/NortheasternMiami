@@ -20,7 +20,7 @@ import org.json.JSONObject;
  */
 public class TMDBService {
 
-    private static final String API_KEY = "5fa0e3409a2f8d85bcd647f9816c954b";
+    private static final String API_KEY = "297efb0f5cf3a920cebbb9b5f8d2302d";
     private static final String BASE_URL = "https://api.themoviedb.org/3";
 
     private final HttpClient httpClient;
