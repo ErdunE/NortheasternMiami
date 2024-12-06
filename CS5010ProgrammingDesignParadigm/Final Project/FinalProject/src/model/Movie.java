@@ -1,8 +1,6 @@
 package model;
 
 import java.util.List;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 /**
  * Represents a movie with a title, genre, and rating.
@@ -16,16 +14,31 @@ public class Movie {
     private String director;
     private int releaseYear;
 
-    public Movie(String title, String posterPath, double rating, List<String> genres, String overview, String director, int releaseYear) {
+    // New fields for additional details
+    private String duration;
+    private String ratingLevel;
+    private String language;
+    private List<String> keywords;
+    private List<String> cast;
+
+    public Movie(String title, String posterPath, double rating, List<String> genres, String overview,
+                 String director, int releaseYear, String duration, String ratingLevel,
+                 String language, List<String> keywords, List<String> cast) {
         this.title = title;
-        this.genres = genres;
-        this.rating = rating;
-        this.overview = overview;
         this.posterPath = posterPath != null ? posterPath : "";
+        this.rating = rating;
+        this.genres = genres;
+        this.overview = overview;
         this.director = director;
         this.releaseYear = releaseYear;
+        this.duration = duration;
+        this.ratingLevel = ratingLevel;
+        this.language = language;
+        this.keywords = keywords;
+        this.cast = cast;
     }
 
+    // Getters for existing fields
     public String getTitle() {
         return title;
     }
@@ -43,10 +56,9 @@ public class Movie {
     }
 
     public String getPosterUrl() {
-        return "https://image.tmdb.org/t/p/w200" + posterPath; // 确保 URL 拼接正确
+        return "https://image.tmdb.org/t/p/w200" + posterPath;
     }
 
-    // Getter and Setter for Director
     public String getDirector() {
         return director;
     }
@@ -55,12 +67,63 @@ public class Movie {
         this.director = director;
     }
 
-    // Getter and Setter for Release Year
     public int getReleaseYear() {
         return releaseYear;
     }
 
     public void setReleaseYear(int releaseYear) {
         this.releaseYear = releaseYear;
+    }
+
+    // New getters for additional details
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public String getRatingLevel() {
+        return ratingLevel;
+    }
+
+    public void setRatingLevel(String ratingLevel) {
+        this.ratingLevel = ratingLevel;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public List<String> getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(List<String> keywords) {
+        this.keywords = keywords;
+    }
+
+    public List<String> getCast() {
+        return cast;
+    }
+
+    public void setCast(List<String> cast) {
+        this.cast = cast;
+    }
+
+    private String trailerUrl;
+
+    // Getter and Setter for trailerUrl
+    public String getTrailerUrl() {
+        return trailerUrl;
+    }
+
+    public void setTrailerUrl(String trailerUrl) {
+        this.trailerUrl = trailerUrl;
     }
 }
