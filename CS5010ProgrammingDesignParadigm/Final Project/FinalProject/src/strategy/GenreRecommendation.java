@@ -5,25 +5,28 @@ import service.TMDBService;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
+import service.TMDBGenreMapper;
 
 /**
  * GenreRecommendation class provides genre-specific movie recommendations.
  *
  * @author Erdun E
- * @version 1.2
- * @since 2024-12-04
+ * @version 1.3
+ * @since 2024-12-07
  * Course: CS5010 Program Design Paradigm
  * Program: Mid-Semester Assignment
  */
 public class GenreRecommendation implements RecommendationStrategy {
 
     private final TMDBService tmdbService;
+    private final TMDBGenreMapper tmdbGenreMapper;
     private final int genreId;
 
 
     public GenreRecommendation(String genreName) {
         this.tmdbService = new TMDBService();
-        this.genreId = tmdbService.getGenreIdByName(genreName); // 使用 TMDBService 获取 genreId
+        this.tmdbGenreMapper = new TMDBGenreMapper();
+        this.genreId = tmdbGenreMapper.getGenreIdByName(genreName); // 使用 TMDBService 获取 genreId
     }
 
     @Override
@@ -34,8 +37,9 @@ public class GenreRecommendation implements RecommendationStrategy {
                     .map(Movie::getTitle)
                     .collect(Collectors.toList());
         } catch (IOException | InterruptedException e) {
+            System.err.println("Error fetching movies for genre ID: " + genreId);
             e.printStackTrace();
-            return List.of("Failed to fetch movies for the genre.");
+            return List.of("An error occurred while fetching movies. Please try again later.");
         }
     }
 
