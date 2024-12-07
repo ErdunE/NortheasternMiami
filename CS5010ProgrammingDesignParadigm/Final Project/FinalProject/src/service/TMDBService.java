@@ -1,12 +1,7 @@
 package service;
 
 import model.Movie;
-
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -21,10 +16,12 @@ import org.json.JSONObject;
 public class TMDBService {
 
     private final TMDBHttpRequest tmdbHttpRequest;
+    private final TMDBTrailerFetcher tmdbTrailerFetcher;
     private static final Map<String, Integer> GENRE_MAP = new HashMap<>();
 
     public TMDBService() {
         this.tmdbHttpRequest = new TMDBHttpRequest();
+        this.tmdbTrailerFetcher = new TMDBTrailerFetcher();
     }
 
     /**
@@ -82,23 +79,6 @@ public class TMDBService {
         JSONObject response = tmdbHttpRequest.sendGetRequest("/discover/movie?with_genres=" + genreId);
 
         return parseMoviesFromResponse(response.toString());
-    }
-
-    private String fetchTrailerUrl(JSONObject movieDetails) {
-        JSONObject videos = movieDetails.optJSONObject("videos");
-        if (videos != null) {
-            JSONArray results = videos.optJSONArray("results");
-            if (results != null) {
-                for (int i = 0; i < results.length(); i++) {
-                    JSONObject video = results.getJSONObject(i);
-                    if ("YouTube".equalsIgnoreCase(video.optString("site")) &&
-                            "Trailer".equalsIgnoreCase(video.optString("type"))) {
-                        return "https://www.youtube.com/watch?v=" + video.optString("key");
-                    }
-                }
-            }
-        }
-        return null;
     }
 
     private String fetchDirector(int movieId) throws IOException, InterruptedException {
@@ -179,11 +159,14 @@ public class TMDBService {
                 director = "Unknown";
             }
 
-            String trailerUrl = fetchTrailerUrl(movieDetails);
+            String trailerUrl = tmdbTrailerFetcher.fetchTrailerUrl(movieDetails);
+            if (trailerUrl.isEmpty()) {
+                trailerUrl = "Trailer not available";
+            }
 
             Movie movie = new Movie(title, posterPath, rating, genres, overview, director, releaseYear,
                     duration, ratingLevel, language, keywords, cast);
-            movie.setTrailerUrl(fetchTrailerUrl(movieDetails)); // 设置 Trailer URL
+            movie.setTrailerUrl(trailerUrl);
             movies.add(movie);
         }
         return movies;
