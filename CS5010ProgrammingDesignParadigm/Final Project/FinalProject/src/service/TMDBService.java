@@ -20,14 +20,11 @@ import org.json.JSONObject;
  */
 public class TMDBService {
 
-    private static final String API_KEY = "297efb0f5cf3a920cebbb9b5f8d2302d";
-    private static final String BASE_URL = "https://api.themoviedb.org/3";
-
-    private final HttpClient httpClient;
+    private final TMDBHttpRequest tmdbHttpRequest;
     private static final Map<String, Integer> GENRE_MAP = new HashMap<>();
 
     public TMDBService() {
-        this.httpClient = HttpClient.newHttpClient();
+        this.tmdbHttpRequest = new TMDBHttpRequest();
     }
 
     /**
@@ -38,15 +35,8 @@ public class TMDBService {
      * @throws InterruptedException If the operation is interrupted.
      */
     private JSONObject fetchMovieDetails(int movieId) {
-        String url = BASE_URL + "/movie/" + movieId + "?api_key=" + API_KEY + "&append_to_response=videos,keywords,credits";
         try {
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(url))
-                    .GET()
-                    .build();
-
-            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-            return new JSONObject(response.body());
+            return tmdbHttpRequest.sendGetRequest("/movie/" + movieId + "?append_to_response=videos,keywords,credits");
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
             return new JSONObject();
@@ -54,19 +44,12 @@ public class TMDBService {
     }
 
     public List<Movie> fetchPopularMovies() throws IOException, InterruptedException {
-        String url = BASE_URL + "/movie/popular?api_key=" + API_KEY;
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+        JSONObject response = tmdbHttpRequest.sendGetRequest("/movie/popular");
 
         // Log the response for debugging
-        System.out.println("API Response: " + response.body());
+        System.out.println("API Response: " + response);
 
-        return parseMoviesFromResponse(response.body());
+        return parseMoviesFromResponse(response.toString());
     }
 
     private String extractRatingLevel(JSONObject movieJson) {
@@ -96,15 +79,9 @@ public class TMDBService {
     }
 
     public List<Movie> fetchMoviesByGenre(int genreId) throws IOException, InterruptedException {
-        String url = BASE_URL + "/discover/movie?api_key=" + API_KEY + "&with_genres=" + genreId;
+        JSONObject response = tmdbHttpRequest.sendGetRequest("/discover/movie?with_genres=" + genreId);
 
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        return parseMoviesFromResponse(response.body());
+        return parseMoviesFromResponse(response.toString());
     }
 
     private String fetchTrailerUrl(JSONObject movieDetails) {
@@ -125,14 +102,8 @@ public class TMDBService {
     }
 
     private String fetchDirector(int movieId) throws IOException, InterruptedException {
-        String url = BASE_URL + "/movie/" + movieId + "/credits?api_key=" + API_KEY;
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
-                .GET()
-                .build();
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        JSONObject json = new JSONObject(response.body());
-        JSONArray crew = json.optJSONArray("crew");
+        JSONObject response = tmdbHttpRequest.sendGetRequest("/movie/" + movieId + "/credits");
+        JSONArray crew = response.optJSONArray("crew");
 
         for (int i = 0; i < crew.length(); i++) {
             JSONObject person = crew.getJSONObject(i);
@@ -253,3 +224,4 @@ public class TMDBService {
                 .orElse("Unknown");
     }
 }
+
