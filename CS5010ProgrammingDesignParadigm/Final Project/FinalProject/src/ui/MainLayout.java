@@ -11,23 +11,25 @@ import javafx.stage.Stage;
 public class MainLayout {
 
     private final VBox mainLayout;
-    private final RecommendationGrid recommendationGrid;
+    private RecommendationGrid recommendationGrid;
+    private final ScrollPane recommendationScrollPane;
+    private final HBox sortButtons;
 
     public MainLayout(Stage primaryStage) {
         Text titleText = TitleComponent.createGradientTitle();
 
-        MenuBarComponent menuBarComponent = new MenuBarComponent(primaryStage);
+        MenuBarComponent menuBarComponent = new MenuBarComponent(primaryStage, this);
 
-        ScrollPane recommendationScrollPane = new ScrollPane();
+        recommendationScrollPane = new ScrollPane();
         recommendationScrollPane.setFitToWidth(true);
         recommendationScrollPane.setStyle("-fx-background: transparent;");
 
         recommendationGrid = new RecommendationGrid("popular", null);
         recommendationScrollPane.setContent(recommendationGrid.getGrid());
 
-        HBox sortButtons = createSortButtons();
+        sortButtons = createSortButtons();
 
-        mainLayout = new VBox(20, titleText, menuBarComponent.getMenuBar(), recommendationScrollPane, sortButtons);
+        mainLayout = new VBox(20, titleText, menuBarComponent.getMenuBar(), sortButtons, recommendationScrollPane);
         mainLayout.setAlignment(Pos.TOP_CENTER);
         mainLayout.setPadding(new Insets(20));
         mainLayout.getStyleClass().add("root");
@@ -51,5 +53,10 @@ public class MainLayout {
         sortButtons.setPadding(new Insets(10));
 
         return sortButtons;
+    }
+
+    public void updateRecommendationGrid(RecommendationGrid newGrid) {
+        this.recommendationGrid = newGrid;
+        recommendationScrollPane.setContent(newGrid.getGrid());
     }
 }
