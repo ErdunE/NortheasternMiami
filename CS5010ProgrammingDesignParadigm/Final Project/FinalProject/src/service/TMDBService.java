@@ -21,16 +21,11 @@ public class TMDBService {
 
     public List<Movie> fetchPopularMovies() throws IOException, InterruptedException {
         JSONObject response = tmdbHttpRequest.sendGetRequest("/movie/popular");
-
-        // Log the response for debugging
-        System.out.println("API Response: " + response);
-
         return tmdbMovieParser.parseMoviesFromResponse(response.toString());
     }
 
     public List<Movie> fetchMoviesByGenre(int genreId) throws IOException, InterruptedException {
         JSONObject response = tmdbHttpRequest.sendGetRequest("/discover/movie?with_genres=" + genreId);
-
         return tmdbMovieParser.parseMoviesFromResponse(response.toString());
     }
 }
