@@ -37,11 +37,8 @@ public class MenuBarComponent {
     }
 
     private void showFilterDialog() {
-        Alert filterDialog = new Alert(Alert.AlertType.INFORMATION);
-        filterDialog.setTitle("Filter");
-        filterDialog.setHeaderText("Filter Movies");
-        filterDialog.setContentText("Filter options will be implemented.");
-        filterDialog.showAndWait();
+        FilterDialog filterDialog = new FilterDialog();
+        filterDialog.show(new Stage());
     }
 
     public HBox getMenuBar() {

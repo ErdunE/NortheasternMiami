@@ -1,0 +1,147 @@
+package ui;
+
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FilterDialog {
+
+    private final List<String> selectedGenres = new ArrayList<>();
+    private final List<String> selectedRatings = new ArrayList<>();
+    private final List<String> selectedLanguages = new ArrayList<>();
+    private final List<String> selectedYears = new ArrayList<>();
+    private final List<String> selectedDurations = new ArrayList<>();
+    private final List<String> selectedRatingLevels = new ArrayList<>();
+
+    private List<ToggleButton> allButtons = new ArrayList<>();
+
+    public void show(Stage parentStage) {
+        Stage filterStage = new Stage();
+        filterStage.initModality(Modality.APPLICATION_MODAL);
+        filterStage.setTitle("Filter Movies");
+
+        VBox root = new VBox(20);
+        root.setPadding(new Insets(20));
+
+        // Genre Filter
+        Label genreLabel = new Label("Genre:");
+        FlowPane genreBox = createButtonGroup(new String[]{
+                "Action", "Adventure", "Animation", "Biography", "Comedy", "Crime",
+                "Documentary", "Drama", "Family", "Fantasy", "History", "Horror",
+                "Mystery", "Romance", "Sci-Fi", "Short", "Sport", "War", "Western"
+        }, selectedGenres);
+
+        // Rating Range Filter
+        Label ratingLabel = new Label("Rating Range:");
+        FlowPane ratingBox = createButtonGroup(new String[]{
+                "6+", "6.5+", "7+", "7.5+", "8+", "8.5+", "9+"
+        }, selectedRatings);
+
+        // Release Year Filter
+        Label yearLabel = new Label("Release Year:");
+        FlowPane yearBox = createButtonGroup(new String[]{
+                "This Year", "Last Year", "Earlier"
+        }, selectedYears);
+
+        // Language Filter
+        Label languageLabel = new Label("Language:");
+        FlowPane languageBox = createButtonGroup(new String[]{
+                "English", "Mandarin", "Cantonese", "Korean", "Japanese",
+                "Spanish", "French", "German", "Italian", "Other"
+        }, selectedLanguages);
+
+        // Duration Filter
+        Label durationLabel = new Label("Duration:");
+        FlowPane durationBox = createButtonGroup(new String[]{
+                "0-90 mins", "90-120 mins", "120+ mins"
+        }, selectedDurations);
+
+        // Rating Level Filter
+        Label ratingLevelLabel = new Label("Rating Level:");
+        FlowPane ratingLevelBox = createButtonGroup(new String[]{
+                "G", "PG", "PG-13", "R", "NC-17"
+        }, selectedRatingLevels);
+
+        // Search Button
+        Button searchButton = new Button("Search");
+        searchButton.setOnAction(e -> {
+            filterStage.close();
+            applyFilters();
+        });
+
+        // Reset Button
+        Button resetButton = new Button("Reset");
+        resetButton.setOnAction(e -> resetFilters());
+
+        // Button Box
+        HBox buttonBox = new HBox(20, searchButton, resetButton);
+        buttonBox.setAlignment(Pos.CENTER);
+
+        root.getChildren().addAll(
+                genreLabel, genreBox,
+                ratingLabel, ratingBox,
+                yearLabel, yearBox,
+                languageLabel, languageBox,
+                durationLabel, durationBox,
+                ratingLevelLabel, ratingLevelBox,
+                buttonBox
+        );
+
+        Scene scene = new Scene(root, 800, 800);
+        filterStage.setScene(scene);
+        filterStage.showAndWait();
+    }
+
+    private FlowPane createButtonGroup(String[] options, List<String> selectedItems) {
+        FlowPane box = new FlowPane();
+        box.setHgap(10);
+        box.setVgap(10);
+        box.setPadding(new Insets(5));
+
+        for (String option : options) {
+            ToggleButton button = new ToggleButton(option);
+            button.setOnAction(e -> {
+                if (button.isSelected()) {
+                    selectedItems.add(option);
+                } else {
+                    selectedItems.remove(option);
+                }
+            });
+            allButtons.add(button);
+            box.getChildren().add(button);
+        }
+        return box;
+    }
+
+    private void resetFilters() {
+        selectedGenres.clear();
+        selectedRatings.clear();
+        selectedLanguages.clear();
+        selectedYears.clear();
+        selectedDurations.clear();
+        selectedRatingLevels.clear();
+
+        for (ToggleButton button : allButtons) {
+            button.setSelected(false);
+        }
+
+        System.out.println("All filters have been reset.");
+    }
+
+    private void applyFilters() {
+        System.out.println("Filters applied:");
+        System.out.println("Genres: " + selectedGenres);
+        System.out.println("Ratings: " + selectedRatings);
+        System.out.println("Years: " + selectedYears);
+        System.out.println("Languages: " + selectedLanguages);
+        System.out.println("Durations: " + selectedDurations);
+        System.out.println("Rating Levels: " + selectedRatingLevels);
+    }
+}
