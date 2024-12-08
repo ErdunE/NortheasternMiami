@@ -17,7 +17,7 @@ public class TMDBMovieDetailsFetcher {
 
     public JSONObject fetchMovieDetailsById(int movieId) {
         try {
-            return tmdbHttpRequest.sendGetRequest("/movie/" + movieId + "?append_to_response=videos,keywords,credits");
+            return tmdbHttpRequest.sendGetRequest("/movie/" + movieId + "?append_to_response=videos,keywords,credits,release_dates");
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
             return new JSONObject();
@@ -37,16 +37,21 @@ public class TMDBMovieDetailsFetcher {
         return "Unknown";
     }
 
-    public String fetchRatingLevel(JSONObject movieJson) {
-        JSONObject releaseDates = movieJson.optJSONObject("release_dates");
+    public String fetchRatingLevel(JSONObject movieDetails) {
+        JSONObject releaseDates = movieDetails.optJSONObject("release_dates");
         if (releaseDates != null) {
             JSONArray results = releaseDates.optJSONArray("results");
             if (results != null) {
                 for (int i = 0; i < results.length(); i++) {
                     JSONObject countryRelease = results.getJSONObject(i);
-                    JSONArray certifications = countryRelease.optJSONArray("release_dates");
-                    if (certifications != null && certifications.length() > 0) {
-                        return certifications.getJSONObject(0).optString("certification", "Unknown");
+                    if ("US".equalsIgnoreCase(countryRelease.optString("iso_3166_1"))) {
+                        JSONArray certifications = countryRelease.optJSONArray("release_dates");
+                        if (certifications != null && certifications.length() > 0) {
+                            String certification = certifications.getJSONObject(0).optString("certification", "Unknown");
+                            if (!certification.isEmpty()) {
+                                return certification;
+                            }
+                        }
                     }
                 }
             }
@@ -62,4 +67,26 @@ public class TMDBMovieDetailsFetcher {
         }
         return String.join(", ", languages);
     }
+
+    public String fetchReleaseDate(JSONObject movieJson) {
+        return movieJson.optString("release_date", "Unknown");
+    }
+
+    public int fetchReleaseYear(String releaseDate) {
+        if (releaseDate != null && !releaseDate.isEmpty() && releaseDate.contains("-")) {
+            try {
+                return Integer.parseInt(releaseDate.split("-")[0]);
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+        }
+        return 0; // Default year if extraction fails
+    }
+
+    public long fetchRevenue(JSONObject movieDetails) {
+        long revenue = movieDetails.optLong("revenue", 0);
+        return revenue > 0 ? revenue : 0;
+    }
+
+
 }
