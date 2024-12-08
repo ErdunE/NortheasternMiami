@@ -20,7 +20,7 @@ public class MovieCard {
         title.getStyleClass().add("movie-title");
 
         // Add additional details
-        Label rating = new Label("Rating: " + movie.getRating());
+        Label rating = new Label("Rating: 🌟" + movie.getRating());
         rating.getStyleClass().add("movie-details");
 
         Label genres = new Label("Genres: " + (movie.getGenres().isEmpty() ? "Unknown" : String.join(", ", movie.getGenres())));

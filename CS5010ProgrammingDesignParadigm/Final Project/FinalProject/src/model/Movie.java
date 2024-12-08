@@ -12,30 +12,32 @@ public class Movie {
     private final String overview;
     private final String posterPath;
     private String director;
+    private String releaseDate;
     private int releaseYear;
-
-    // New fields for additional details
     private String duration;
     private String ratingLevel;
     private String language;
     private List<String> keywords;
     private List<String> cast;
+    private long revenue;
 
     public Movie(String title, String posterPath, double rating, List<String> genres, String overview,
-                 String director, int releaseYear, String duration, String ratingLevel,
-                 String language, List<String> keywords, List<String> cast) {
+                 String director, String releaseDate, int releaseYear, String duration, String ratingLevel,
+                 String language, List<String> keywords, List<String> cast, long revenue) {
         this.title = title;
         this.posterPath = posterPath != null ? posterPath : "";
         this.rating = rating;
         this.genres = genres;
         this.overview = overview;
         this.director = director;
+        this.releaseDate = releaseDate;
         this.releaseYear = releaseYear;
         this.duration = duration;
         this.ratingLevel = ratingLevel;
         this.language = language;
         this.keywords = keywords;
         this.cast = cast;
+        this.revenue = revenue;
     }
 
     // Getters for existing fields
@@ -65,6 +67,14 @@ public class Movie {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
     public int getReleaseYear() {
@@ -118,12 +128,19 @@ public class Movie {
 
     private String trailerUrl;
 
-    // Getter and Setter for trailerUrl
     public String getTrailerUrl() {
         return trailerUrl;
     }
 
     public void setTrailerUrl(String trailerUrl) {
         this.trailerUrl = trailerUrl;
+    }
+
+    public String getRevenue() {
+        return revenue > 0 ? String.format("$%,d", revenue) : "NO UPDATE";
+    }
+
+    public void setRevenue(long revenue) {
+        this.revenue = revenue;
     }
 }

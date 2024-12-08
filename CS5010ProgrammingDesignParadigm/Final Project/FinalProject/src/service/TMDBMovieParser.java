@@ -32,11 +32,14 @@ public class TMDBMovieParser {
             double rating = movieJson.optDouble("vote_average", 0.0);
             String posterPath = movieJson.optString("poster_path", "");
             String overview = movieJson.optString("overview", "No overview available.");
-            String releaseDate = movieJson.optString("release_date", "");
-            int releaseYear = releaseDate.isEmpty() ? 0 : Integer.parseInt(releaseDate.split("-")[0]);
+
+            String releaseDate = tmdbMovieDetailsFetcher.fetchReleaseDate(movieJson);
+            int releaseYear = tmdbMovieDetailsFetcher.fetchReleaseYear(releaseDate);
 
             int movieId = movieJson.getInt("id");
             JSONObject movieDetails = tmdbMovieDetailsFetcher.fetchMovieDetailsById(movieId);
+
+            long revenue = tmdbMovieDetailsFetcher.fetchRevenue(movieDetails);
 
             // Genres
             JSONArray genreIds = movieJson.optJSONArray("genre_ids");
@@ -59,7 +62,7 @@ public class TMDBMovieParser {
             if (keywordsObject != null) {
                 JSONArray keywordsArray = keywordsObject.optJSONArray("keywords");
                 if (keywordsArray != null) {
-                    for (int j = 0; j < keywordsArray.length(); j++) {
+                    for (int j = 0; j < Math.min(5, keywordsArray.length()); j++) {
                         keywords.add(keywordsArray.getJSONObject(j).optString("name", "Unknown"));
                     }
                 }
@@ -71,7 +74,7 @@ public class TMDBMovieParser {
             if (credits != null) {
                 JSONArray castArray = credits.optJSONArray("cast");
                 if (castArray != null) {
-                    for (int j = 0; j < Math.min(5, castArray.length()); j++) { // Top 5 actors
+                    for (int j = 0; j < Math.min(5, castArray.length()); j++) {
                         cast.add(castArray.getJSONObject(j).optString("name", "Unknown"));
                     }
                 }
@@ -92,8 +95,8 @@ public class TMDBMovieParser {
                 trailerUrl = "Trailer not available";
             }
 
-            Movie movie = new Movie(title, posterPath, rating, genres, overview, director, releaseYear,
-                    duration, ratingLevel, language, keywords, cast);
+            Movie movie = new Movie(title, posterPath, rating, genres, overview, director, releaseDate,
+                    releaseYear, duration, ratingLevel, language, keywords, cast, revenue);
             movie.setTrailerUrl(trailerUrl);
             movies.add(movie);
         }

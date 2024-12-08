@@ -25,7 +25,7 @@ public class HoverOverlay {
 
         Label additionalInfo = new Label(
                 "Duration: " + (movie.getDuration() != null ? movie.getDuration() : "Unknown") + "\n" +
-                   "Rating: " + (movie.getRating() > 0 ? movie.getRating() : "Unknown") + "\n" +
+                   "Rating: 🌟" + (movie.getRating() > 0 ? movie.getRating() : "Unknown") + "\n" +
                    "Language: " + (movie.getLanguage() != null ? movie.getLanguage() : "Unknown") + "\n" +
                    "Keywords: " + (movie.getKeywords() != null ? String.join(", ", movie.getKeywords()) : "Unknown") + "\n" +
                    "Cast: " + (movie.getCast() != null ? String.join(", ", movie.getCast()) : "Unknown")
