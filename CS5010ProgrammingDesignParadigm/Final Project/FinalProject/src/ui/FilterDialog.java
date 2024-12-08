@@ -23,7 +23,7 @@ public class FilterDialog {
 
     private List<ToggleButton> allButtons = new ArrayList<>();
 
-    public void show(Stage parentStage) {
+    public void show(Stage parentStage, MainLayout mainLayout) {
         Stage filterStage = new Stage();
         filterStage.initModality(Modality.APPLICATION_MODAL);
         filterStage.setTitle("Filter Movies");
@@ -74,7 +74,7 @@ public class FilterDialog {
         Button searchButton = new Button("Search");
         searchButton.setOnAction(e -> {
             filterStage.close();
-            applyFilters();
+            applyFilters(mainLayout);
         });
 
         // Reset Button
@@ -85,6 +85,7 @@ public class FilterDialog {
         HBox buttonBox = new HBox(20, searchButton, resetButton);
         buttonBox.setAlignment(Pos.CENTER);
 
+        // Adding all filters to the layout
         root.getChildren().addAll(
                 genreLabel, genreBox,
                 ratingLabel, ratingBox,
@@ -95,11 +96,13 @@ public class FilterDialog {
                 buttonBox
         );
 
+        // Create and show the scene
         Scene scene = new Scene(root, 800, 800);
         filterStage.setScene(scene);
         filterStage.showAndWait();
     }
 
+    // Helper method to create button groups for each filter category
     private FlowPane createButtonGroup(String[] options, List<String> selectedItems) {
         FlowPane box = new FlowPane();
         box.setHgap(10);
@@ -121,6 +124,7 @@ public class FilterDialog {
         return box;
     }
 
+    // Method to reset all selected filters
     private void resetFilters() {
         selectedGenres.clear();
         selectedRatings.clear();
@@ -136,9 +140,15 @@ public class FilterDialog {
         System.out.println("All filters have been reset.");
     }
 
-    private void applyFilters() {
+    // Apply filters and update the RecommendationGrid in MainLayout
+    private void applyFilters(MainLayout mainLayout) {
         System.out.println("Filters applied:");
         System.out.println("Genres: " + selectedGenres);
+        System.out.println("Ratings: " + selectedRatings);
+        System.out.println("Years: " + selectedYears);
+        System.out.println("Languages: " + selectedLanguages);
+        System.out.println("Durations: " + selectedDurations);
+        System.out.println("Rating Levels: " + selectedRatingLevels);
 
         TMDBGenreMapper genreMapper = new TMDBGenreMapper();
         List<Integer> genreIds = new ArrayList<>();
@@ -154,22 +164,15 @@ public class FilterDialog {
                 .map(String::valueOf)
                 .toArray(String[]::new));
 
-        System.out.println("Genre IDs: " + genreIdsParam);
-
-        System.out.println("Ratings: " + selectedRatings);
-        System.out.println("Years: " + selectedYears);
-        System.out.println("Languages: " + selectedLanguages);
-        System.out.println("Durations: " + selectedDurations);
-        System.out.println("Rating Levels: " + selectedRatingLevels);
         String minRating = selectedRatings.isEmpty() ? null : selectedRatings.get(0).replace("+", "");
         String year = selectedYears.isEmpty() ? null : selectedYears.get(0);
         String language = selectedLanguages.isEmpty() ? null : selectedLanguages.get(0);
         String minRuntime = selectedDurations.isEmpty() ? null : getMinRuntime(selectedDurations.get(0));
         String maxRuntime = selectedDurations.isEmpty() ? null : getMaxRuntime(selectedDurations.get(0));
 
-        Stage primaryStage = EntertainmentGUI.getInstance().getPrimaryStage();
-        MenuBarComponent menuBar = new MenuBarComponent(primaryStage);
-        menuBar.updateGridWithFilters(primaryStage, genreIdsParam, minRating, null, language, minRuntime, maxRuntime, year);
+        // Create a new RecommendationGrid based on the filters
+        RecommendationGrid newGrid = new RecommendationGrid(genreIdsParam, minRating, null, language, minRuntime, maxRuntime, year);
+        mainLayout.updateRecommendationGrid(newGrid);
     }
 
     // Helper methods to convert duration strings to runtime ranges
