@@ -54,14 +54,30 @@ public class MovieDetailsWindow {
         Label titleLabel = new Label(movie.getTitle());
         titleLabel.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-underline: true;");
 
-        Label ratingLabel = new Label("Rating: ★ " + movie.getRating());
-        Label durationLabel = new Label("Duration: " + movie.getDuration());
+        Label ratingLabel = new Label("Rating: 🌟 " + movie.getRating());
+        Label ratingLevelLabel = new Label("Rating Level: " + movie.getRatingLevel());
+        Label releaseDateLabel = new Label("Release Date: " + movie.getReleaseDate());
         Label genresLabel = new Label("Genres: " + String.join(", ", movie.getGenres()));
-        Label languageLabel = new Label("Language: " + movie.getLanguage());
+        Label durationLabel = new Label("Duration: " + movie.getDuration());
         Label directorLabel = new Label("Director: " + movie.getDirector());
         Label castLabel = new Label("Cast: " + String.join(", ", movie.getCast()));
+        Label languageLabel = new Label("Language: " + movie.getLanguage());
+        Label revenueLabel = new Label("Revenue: " + movie.getRevenue());
+        Label keywordsLabel = new Label("Keywords: " + String.join(", ", movie.getKeywords()));
 
-        movieDetailsBox.getChildren().addAll(titleLabel, ratingLabel, durationLabel, genresLabel, languageLabel, directorLabel, castLabel);
+        movieDetailsBox.getChildren().addAll(
+                titleLabel,
+                ratingLabel,
+                ratingLevelLabel,
+                releaseDateLabel,
+                genresLabel,
+                durationLabel,
+                directorLabel,
+                castLabel,
+                languageLabel,
+                revenueLabel,
+                keywordsLabel
+        );
 
 
         // Bottom: Movie Overview
@@ -102,7 +118,7 @@ public class MovieDetailsWindow {
 
         VBox bottomSection = new VBox(20, overviewBox, trailerBox);
         bottomSection.setAlignment(Pos.CENTER_LEFT);
-        bottomSection.setPadding(new Insets(20, 0, 0, 0)); // Add space between overview and trailer
+        bottomSection.setPadding(new Insets(20, 0, 0, 0));
 
         root.setTop(topSection);
         root.setBottom(bottomSection);
@@ -113,8 +129,8 @@ public class MovieDetailsWindow {
 
         // Stop trailer on close
         stage.setOnCloseRequest(event -> {
-            event.consume(); // 防止直接关闭
-            applyFadeTransition(stage, false, trailerView); // 确保关闭时停止视频
+            event.consume();
+            applyFadeTransition(stage, false, trailerView);
         });
 
         // Add fade-in effect
@@ -129,11 +145,10 @@ public class MovieDetailsWindow {
         fadeTransition.setToValue(fadeIn ? 1 : 0);
         fadeTransition.setOnFinished(event -> {
             if (!fadeIn) {
-                // 停止 WebView 内容加载以确保资源释放
                 if (trailerView != null) {
-                    trailerView.getEngine().load(null); // 停止 WebView 内容
+                    trailerView.getEngine().load(null);
                 }
-                stage.close(); // 关闭窗口
+                stage.close();
             }
         });
         fadeTransition.play();

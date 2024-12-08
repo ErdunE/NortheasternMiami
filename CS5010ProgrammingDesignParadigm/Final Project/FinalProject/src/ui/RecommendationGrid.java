@@ -29,10 +29,8 @@ public class RecommendationGrid {
 
         int col = 0, row = 0;
         for (Movie movie : recommendations) {
-            System.out.println("Adding movie card to grid: " + movie.getTitle());
             MovieCard movieCard = new MovieCard(movie);
 
-            // Directly bind click event for testing
             movieCard.getMovieCard().setOnMouseClicked(e -> {
                 System.out.println("Direct GridPane card click! Movie: " + movie.getTitle());
                 MovieDetailsWindow.display(movie);
