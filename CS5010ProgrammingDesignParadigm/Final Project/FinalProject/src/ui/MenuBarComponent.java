@@ -41,6 +41,12 @@ public class MenuBarComponent {
         filterDialog.show(new Stage());
     }
 
+    public void updateGridWithFilters(Stage primaryStage, String genreIds, String minRating, String maxRating, String language, String minRuntime, String maxRuntime, String year) {
+        RecommendationGrid recommendationGrid = new RecommendationGrid(genreIds, minRating, maxRating, language, minRuntime, maxRuntime, year);
+        ScrollPane recommendationScrollPane = (ScrollPane) ((VBox) primaryStage.getScene().getRoot()).getChildren().get(2);
+        recommendationScrollPane.setContent(recommendationGrid.getGrid());
+    }
+
     public HBox getMenuBar() {
         return menuBar;
     }
