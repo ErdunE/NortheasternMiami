@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import service.TMDBGenreMapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -138,10 +139,50 @@ public class FilterDialog {
     private void applyFilters() {
         System.out.println("Filters applied:");
         System.out.println("Genres: " + selectedGenres);
+
+        TMDBGenreMapper genreMapper = new TMDBGenreMapper();
+        List<Integer> genreIds = new ArrayList<>();
+
+        for (String genre : selectedGenres) {
+            int genreId = genreMapper.getGenreIdByName(genre);
+            if (genreId != -1) {
+                genreIds.add(genreId);
+            }
+        }
+
+        String genreIdsParam = genreIds.isEmpty() ? null : String.join(",", genreIds.stream()
+                .map(String::valueOf)
+                .toArray(String[]::new));
+
+        System.out.println("Genre IDs: " + genreIdsParam);
+
         System.out.println("Ratings: " + selectedRatings);
         System.out.println("Years: " + selectedYears);
         System.out.println("Languages: " + selectedLanguages);
         System.out.println("Durations: " + selectedDurations);
         System.out.println("Rating Levels: " + selectedRatingLevels);
+        String minRating = selectedRatings.isEmpty() ? null : selectedRatings.get(0).replace("+", "");
+        String year = selectedYears.isEmpty() ? null : selectedYears.get(0);
+        String language = selectedLanguages.isEmpty() ? null : selectedLanguages.get(0);
+        String minRuntime = selectedDurations.isEmpty() ? null : getMinRuntime(selectedDurations.get(0));
+        String maxRuntime = selectedDurations.isEmpty() ? null : getMaxRuntime(selectedDurations.get(0));
+
+        Stage primaryStage = EntertainmentGUI.getInstance().getPrimaryStage();
+        MenuBarComponent menuBar = new MenuBarComponent(primaryStage);
+        menuBar.updateGridWithFilters(primaryStage, genreIdsParam, minRating, null, language, minRuntime, maxRuntime, year);
+    }
+
+    // Helper methods to convert duration strings to runtime ranges
+    private String getMinRuntime(String duration) {
+        if (duration.equals("0-90 mins")) return "0";
+        if (duration.equals("90-120 mins")) return "90";
+        if (duration.equals("120+ mins")) return "120";
+        return null;
+    }
+
+    private String getMaxRuntime(String duration) {
+        if (duration.equals("0-90 mins")) return "90";
+        if (duration.equals("90-120 mins")) return "120";
+        return null;
     }
 }
