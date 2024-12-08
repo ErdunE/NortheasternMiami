@@ -7,10 +7,12 @@ import javafx.stage.Stage;
 public class EntertainmentGUI extends Application {
 
     private static EntertainmentGUI instance;
+    private Stage primaryStage;
 
     @Override
     public void start(Stage primaryStage) {
-        instance = this; // 保存当前应用实例
+        this.primaryStage = primaryStage;
+        instance = this;
 
         primaryStage.setTitle("Entertainment Recommendation System");
         primaryStage.setMaximized(true);
@@ -29,6 +31,10 @@ public class EntertainmentGUI extends Application {
     }
 
     public static javafx.application.HostServices getHostServicesInstance() {
-        return getInstance().getHostServices(); // 使用当前实例获取 HostServices
+        return getInstance().getHostServices();
+    }
+
+    public Stage getPrimaryStage() {
+        return primaryStage;
     }
 }

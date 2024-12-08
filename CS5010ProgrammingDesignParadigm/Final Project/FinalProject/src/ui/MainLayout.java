@@ -2,6 +2,7 @@ package ui;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
@@ -10,6 +11,7 @@ import javafx.stage.Stage;
 public class MainLayout {
 
     private final VBox mainLayout;
+    private final RecommendationGrid recommendationGrid;
 
     public MainLayout(Stage primaryStage) {
         Text titleText = TitleComponent.createGradientTitle();
@@ -20,10 +22,12 @@ public class MainLayout {
         recommendationScrollPane.setFitToWidth(true);
         recommendationScrollPane.setStyle("-fx-background: transparent;");
 
-        RecommendationGrid recommendationGrid = new RecommendationGrid("popular", null);
+        recommendationGrid = new RecommendationGrid("popular", null);
         recommendationScrollPane.setContent(recommendationGrid.getGrid());
 
-        mainLayout = new VBox(20, titleText, menuBarComponent.getMenuBar(), recommendationScrollPane);
+        HBox sortButtons = createSortButtons();
+
+        mainLayout = new VBox(20, titleText, menuBarComponent.getMenuBar(), recommendationScrollPane, sortButtons);
         mainLayout.setAlignment(Pos.TOP_CENTER);
         mainLayout.setPadding(new Insets(20));
         mainLayout.getStyleClass().add("root");
@@ -31,5 +35,21 @@ public class MainLayout {
 
     public VBox getMainLayout() {
         return mainLayout;
+    }
+
+    private HBox createSortButtons() {
+        Button sortByDateButton = new Button("Sort by Release Date");
+        Button sortByRatingButton = new Button("Sort by Rating");
+        Button sortByPopularityButton = new Button("Sort by Popularity");
+
+        sortByDateButton.setOnAction(e -> recommendationGrid.sortMovies("date"));
+        sortByRatingButton.setOnAction(e -> recommendationGrid.sortMovies("rating"));
+        sortByPopularityButton.setOnAction(e -> recommendationGrid.sortMovies("popularity"));
+
+        HBox sortButtons = new HBox(10, sortByDateButton, sortByRatingButton, sortByPopularityButton);
+        sortButtons.setAlignment(Pos.CENTER);
+        sortButtons.setPadding(new Insets(10));
+
+        return sortButtons;
     }
 }
