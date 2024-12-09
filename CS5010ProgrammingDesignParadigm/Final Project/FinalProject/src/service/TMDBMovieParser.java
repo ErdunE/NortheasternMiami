@@ -52,7 +52,13 @@ public class TMDBMovieParser {
 
             // Duration, ratingLevel, language
             String duration = movieDetails.optInt("runtime", 0) > 0 ? movieDetails.optInt("runtime") + " mins" : "Unknown";
+
             String ratingLevel = tmdbMovieDetailsFetcher.fetchRatingLevel(movieDetails);
+            if (ratingLevel == null || ratingLevel.isEmpty()) {
+                ratingLevel = "Unrated";
+            }
+
+
             String language = tmdbMovieDetailsFetcher.fetchLanguages(movieDetails.optJSONArray("spoken_languages"));
 
 

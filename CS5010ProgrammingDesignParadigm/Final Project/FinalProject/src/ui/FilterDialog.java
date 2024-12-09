@@ -177,9 +177,10 @@ public class FilterDialog {
         String language = selectedLanguages.isEmpty() ? null : languageMapper.getLanguageCodeByName(selectedLanguages.get(0));
         String minRuntime = selectedDurations.isEmpty() ? null : getMinRuntime(selectedDurations.get(0));
         String maxRuntime = selectedDurations.isEmpty() ? null : getMaxRuntime(selectedDurations.get(0));
+        String certification = selectedRatingLevels.isEmpty() ? null : selectedRatingLevels.get(0);
 
         // Create a new RecommendationGrid based on the filters
-        RecommendationGrid newGrid = new RecommendationGrid(genreIdsParam, minRating, null, language, minRuntime, maxRuntime, year, releaseDateLte);
+        RecommendationGrid newGrid = new RecommendationGrid(genreIdsParam, minRating, null, language, minRuntime, maxRuntime, year, releaseDateLte, certification);
         mainLayout.updateRecommendationGrid(newGrid);
     }
 
