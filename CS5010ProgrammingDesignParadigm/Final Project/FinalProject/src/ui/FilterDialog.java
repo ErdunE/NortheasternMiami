@@ -8,6 +8,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import service.TMDBGenreMapper;
+import service.TMDBLanguageMapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -151,6 +152,7 @@ public class FilterDialog {
         System.out.println("Rating Levels: " + selectedRatingLevels);
 
         TMDBGenreMapper genreMapper = new TMDBGenreMapper();
+        TMDBLanguageMapper languageMapper = new TMDBLanguageMapper();
         List<Integer> genreIds = new ArrayList<>();
 
         for (String genre : selectedGenres) {
@@ -172,7 +174,7 @@ public class FilterDialog {
             releaseDateLte = (java.time.Year.now().getValue() - 2) + "-12-31";
         }
 
-        String language = selectedLanguages.isEmpty() ? null : selectedLanguages.get(0);
+        String language = selectedLanguages.isEmpty() ? null : languageMapper.getLanguageCodeByName(selectedLanguages.get(0));
         String minRuntime = selectedDurations.isEmpty() ? null : getMinRuntime(selectedDurations.get(0));
         String maxRuntime = selectedDurations.isEmpty() ? null : getMaxRuntime(selectedDurations.get(0));
 
@@ -183,16 +185,29 @@ public class FilterDialog {
 
     // Helper methods to convert duration strings to runtime ranges
     private String getMinRuntime(String duration) {
-        if (duration.equals("0-90 mins")) return "0";
-        if (duration.equals("90-120 mins")) return "90";
-        if (duration.equals("120+ mins")) return "120";
-        return null;
+        switch (duration) {
+            case "0-90 mins":
+                return "0";
+            case "90-120 mins":
+                return "90";
+            case "120+ mins":
+                return "120";
+            default:
+                return null;
+        }
     }
 
     private String getMaxRuntime(String duration) {
-        if (duration.equals("0-90 mins")) return "90";
-        if (duration.equals("90-120 mins")) return "120";
-        return null;
+        switch (duration) {
+            case "0-90 mins":
+                return "90";
+            case "90-120 mins":
+                return "120";
+            case "120+ mins":
+                return null;
+            default:
+                return null;
+        }
     }
 
     // Helper method to map year selection to specific year
