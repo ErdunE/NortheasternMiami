@@ -58,9 +58,7 @@ public class TMDBMovieParser {
                 ratingLevel = "Unrated";
             }
 
-
             String language = tmdbMovieDetailsFetcher.fetchLanguages(movieDetails.optJSONArray("spoken_languages"));
-
 
             // Keywords
             List<String> keywords = new ArrayList<>();
