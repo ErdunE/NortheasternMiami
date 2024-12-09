@@ -31,12 +31,12 @@ public class RecommendationGrid {
     }
 
 
-    public RecommendationGrid(String genreIds, String minRating, String maxRating, String language, String minRuntime, String maxRuntime, String year) {
+    public RecommendationGrid(String genreIds, String minRating, String maxRating, String language, String minRuntime, String maxRuntime, String year, String releaseDateLte) {
         initializeGrid();
 
         TMDBService tmdbService = new TMDBService();
         try {
-            recommendations = tmdbService.fetchMoviesWithFilters(genreIds, minRating, maxRating, language, minRuntime, maxRuntime, year);
+            recommendations = tmdbService.fetchMoviesWithFilters(genreIds, minRating, maxRating, language, minRuntime, maxRuntime, year, releaseDateLte);
             displayMovies(recommendations);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
