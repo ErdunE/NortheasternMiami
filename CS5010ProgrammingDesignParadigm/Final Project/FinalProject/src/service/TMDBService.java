@@ -29,7 +29,7 @@ public class TMDBService {
         return tmdbMovieParser.parseMoviesFromResponse(response.toString());
     }
 
-    public List<Movie> fetchMoviesWithFilters(String genreIds, String minRating, String maxRating, String language, String minRuntime, String maxRuntime, String year) throws IOException, InterruptedException {
+    public List<Movie> fetchMoviesWithFilters(String genreIds, String minRating, String maxRating, String language, String minRuntime, String maxRuntime, String year, String releaseDateLte) throws IOException, InterruptedException {
         StringBuilder url = new StringBuilder("/discover/movie?");
 
         if (genreIds != null && !genreIds.isEmpty()) {
@@ -41,6 +41,7 @@ public class TMDBService {
         if (minRuntime != null && !minRuntime.isEmpty()) url.append("with_runtime.gte=").append(minRuntime).append("&");
         if (maxRuntime != null && !maxRuntime.isEmpty()) url.append("with_runtime.lte=").append(maxRuntime).append("&");
         if (year != null && !year.isEmpty()) url.append("primary_release_year=").append(year).append("&");
+        if (releaseDateLte != null && !releaseDateLte.isEmpty()) url.append("primary_release_date.lte=").append(releaseDateLte).append("&");
 
         if (url.charAt(url.length() - 1) == '&') {
             url.deleteCharAt(url.length() - 1);
