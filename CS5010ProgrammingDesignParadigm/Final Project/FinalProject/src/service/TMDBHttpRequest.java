@@ -5,7 +5,6 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-
 import org.json.JSONObject;
 
 public class TMDBHttpRequest {
@@ -18,14 +17,6 @@ public class TMDBHttpRequest {
         this.httpClient = HttpClient.newHttpClient();
     }
 
-    /**
-     * Sends a GET request to the specified endpoint and returns the response as a JSONObject.
-     *
-     * @param endpoint The API endpoint (excluding the base URL).
-     * @return JSONObject containing the API response.
-     * @throws IOException If an I/O error occurs.
-     * @throws InterruptedException If the operation is interrupted.
-     */
     public JSONObject sendGetRequest(String endpoint) throws IOException, InterruptedException {
         String url = BASE_URL + endpoint + (endpoint.contains("?") ? "&" : "?") + "api_key=" + API_KEY;
         HttpRequest request = HttpRequest.newBuilder()

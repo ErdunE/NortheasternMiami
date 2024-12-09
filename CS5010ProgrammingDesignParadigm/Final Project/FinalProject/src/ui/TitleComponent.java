@@ -11,14 +11,9 @@ import javafx.scene.text.Text;
 
 public class TitleComponent {
 
-    /**
-     * Creates a gradient title text component.
-     *
-     * @return Text object styled with gradient and shadow effects.
-     */
     public static Text createGradientTitle() {
         Text titleText = new Text("Entertainment Recommendation System");
-        titleText.setFont(Font.font("Bebas Neue", FontWeight.BOLD, 40)); // Font and size
+        titleText.setFont(Font.font("Bebas Neue", FontWeight.BOLD, 40));
 
         // Linear gradient for title color
         LinearGradient gradient = new LinearGradient(

@@ -14,25 +14,14 @@ import java.util.List;
  * Course: CS5010 Program Design Paradigm
  * Program: Mid-Semester Assignment
  */
-
 public class RecommendationContext {
 
     private RecommendationStrategy currentStrategy;
 
-    /**
-     * Set the current recommendation strategy.
-     *
-     * @param strategy The strategy to be applied.
-     */
     public void setRecommendationStrategy(RecommendationStrategy strategy) {
         this.currentStrategy = strategy;
     }
 
-    /**
-     * Get recommendations from the current strategy.
-     *
-     * @return List of recommended media titles.
-     */
     public List<String> getRecommendations() {
         if (currentStrategy != null) {
             return currentStrategy.getRecommendations();
@@ -48,5 +37,4 @@ public class RecommendationContext {
             return List.of();
         }
     }
-
 }
