@@ -2,6 +2,7 @@ package service;
 
 import model.Movie;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.json.JSONObject;
@@ -48,6 +49,26 @@ public class TMDBService {
         }
 
         JSONObject response = tmdbHttpRequest.sendGetRequest(url.toString());
-        return tmdbMovieParser.parseMoviesFromResponse(response.toString());
+        List<Movie> movies = tmdbMovieParser.parseMoviesFromResponse(response.toString());
+
+        return filterMoviesByRuntime(movies, minRuntime, maxRuntime);
+    }
+
+    private List<Movie> filterMoviesByRuntime(List<Movie> movies, String minRuntime, String maxRuntime) {
+        int min = minRuntime != null ? Integer.parseInt(minRuntime) : Integer.MIN_VALUE;
+        int max = maxRuntime != null ? Integer.parseInt(maxRuntime) : Integer.MAX_VALUE;
+
+        List<Movie> filteredMovies = new ArrayList<>();
+        for (Movie movie : movies) {
+            try {
+                int runtime = Integer.parseInt(movie.getDuration().replace(" mins", ""));
+                if (runtime >= min && runtime <= max) {
+                    filteredMovies.add(movie);
+                }
+            } catch (NumberFormatException e) {
+                continue;
+            }
+        }
+        return filteredMovies;
     }
 }
