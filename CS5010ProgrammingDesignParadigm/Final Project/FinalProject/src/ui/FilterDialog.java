@@ -165,13 +165,19 @@ public class FilterDialog {
                 .toArray(String[]::new));
 
         String minRating = selectedRatings.isEmpty() ? null : selectedRatings.get(0).replace("+", "");
-        String year = selectedYears.isEmpty() ? null : selectedYears.get(0);
+
+        String year = getYearFromSelection(selectedYears.isEmpty() ? null : selectedYears.get(0));
+        String releaseDateLte = null;
+        if (selectedYears.contains("Earlier")) {
+            releaseDateLte = (java.time.Year.now().getValue() - 2) + "-12-31";
+        }
+
         String language = selectedLanguages.isEmpty() ? null : selectedLanguages.get(0);
         String minRuntime = selectedDurations.isEmpty() ? null : getMinRuntime(selectedDurations.get(0));
         String maxRuntime = selectedDurations.isEmpty() ? null : getMaxRuntime(selectedDurations.get(0));
 
         // Create a new RecommendationGrid based on the filters
-        RecommendationGrid newGrid = new RecommendationGrid(genreIdsParam, minRating, null, language, minRuntime, maxRuntime, year);
+        RecommendationGrid newGrid = new RecommendationGrid(genreIdsParam, minRating, null, language, minRuntime, maxRuntime, year, releaseDateLte);
         mainLayout.updateRecommendationGrid(newGrid);
     }
 
@@ -187,5 +193,21 @@ public class FilterDialog {
         if (duration.equals("0-90 mins")) return "90";
         if (duration.equals("90-120 mins")) return "120";
         return null;
+    }
+
+    // Helper method to map year selection to specific year
+    private String getYearFromSelection(String selection) {
+        if (selection == null) return null;
+        int currentYear = java.time.Year.now().getValue();
+        switch (selection) {
+            case "This Year":
+                return String.valueOf(currentYear);
+            case "Last Year":
+                return String.valueOf(currentYear - 1);
+            case "Earlier":
+                return null;
+            default:
+                return null;
+        }
     }
 }
