@@ -30,7 +30,7 @@ public class TMDBService {
         return tmdbMovieParser.parseMoviesFromResponse(response.toString());
     }
 
-    public List<Movie> fetchMoviesWithFilters(String genreIds, String minRating, String maxRating, String language, String minRuntime, String maxRuntime, String year, String releaseDateLte) throws IOException, InterruptedException {
+    public List<Movie> fetchMoviesWithFilters(String genreIds, String minRating, String maxRating, String language, String minRuntime, String maxRuntime, String year, String releaseDateLte, String certification) throws IOException, InterruptedException {
         StringBuilder url = new StringBuilder("/discover/movie?");
 
         if (genreIds != null && !genreIds.isEmpty()) {
@@ -43,6 +43,9 @@ public class TMDBService {
         if (maxRuntime != null && !maxRuntime.isEmpty()) url.append("with_runtime.lte=").append(maxRuntime).append("&");
         if (year != null && !year.isEmpty()) url.append("primary_release_year=").append(year).append("&");
         if (releaseDateLte != null && !releaseDateLte.isEmpty()) url.append("primary_release_date.lte=").append(releaseDateLte).append("&");
+        if (certification != null && !certification.isEmpty()) {
+            url.append("certification_country=US&certification=").append(certification).append("&");
+        }
 
         if (url.charAt(url.length() - 1) == '&') {
             url.deleteCharAt(url.length() - 1);
@@ -50,8 +53,10 @@ public class TMDBService {
 
         JSONObject response = tmdbHttpRequest.sendGetRequest(url.toString());
         List<Movie> movies = tmdbMovieParser.parseMoviesFromResponse(response.toString());
+        movies = filterMoviesByRuntime(movies, minRuntime, maxRuntime);
+        movies = filterMoviesByCertification(movies, certification);
 
-        return filterMoviesByRuntime(movies, minRuntime, maxRuntime);
+        return movies;
     }
 
     private List<Movie> filterMoviesByRuntime(List<Movie> movies, String minRuntime, String maxRuntime) {
@@ -67,6 +72,22 @@ public class TMDBService {
                 }
             } catch (NumberFormatException e) {
                 continue;
+            }
+        }
+        return filteredMovies;
+    }
+
+    private List<Movie> filterMoviesByCertification(List<Movie> movies, String certification) {
+        if (certification == null || certification.isEmpty()) {
+            return movies;
+        }
+
+        List<Movie> filteredMovies = new ArrayList<>();
+        for (Movie movie : movies) {
+            if (movie.getRatingLevel() != null && !movie.getRatingLevel().equals("Unknown")) {
+                if (movie.getRatingLevel().equalsIgnoreCase(certification)) {
+                    filteredMovies.add(movie);
+                }
             }
         }
         return filteredMovies;
