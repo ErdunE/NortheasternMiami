@@ -13,7 +13,6 @@ import java.util.List;
  * Course: CS5010 Program Design Paradigm
  * Program: Mid-Semester Assignment
  */
-
 public interface RecommendationStrategy {
 
     /**

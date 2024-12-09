@@ -3,7 +3,6 @@ package service;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -87,6 +86,4 @@ public class TMDBMovieDetailsFetcher {
         long revenue = movieDetails.optLong("revenue", 0);
         return revenue > 0 ? revenue : 0;
     }
-
-
 }

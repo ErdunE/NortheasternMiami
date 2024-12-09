@@ -10,13 +10,6 @@ import strategy.RatingBasedRecommendation;
  */
 public class RecommendationFactory {
 
-    /**
-     * Creates a recommendation strategy based on the given type.
-     *
-     * @param type The type of recommendation strategy ("popular", "genre", "rating").
-     * @param additionalParam An optional parameter (e.g., genre name for genre-based strategy).
-     * @return A RecommendationStrategy instance or null if the type is invalid.
-     */
     public static RecommendationStrategy createStrategy(String type, String additionalParam) {
         switch (type.toLowerCase()) {
             case "popular":

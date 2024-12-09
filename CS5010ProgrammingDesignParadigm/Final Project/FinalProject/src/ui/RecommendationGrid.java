@@ -8,7 +8,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import model.Movie;
 import service.TMDBService;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
