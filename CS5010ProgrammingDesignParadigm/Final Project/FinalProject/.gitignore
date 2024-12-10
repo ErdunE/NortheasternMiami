@@ -30,3 +30,6 @@ bin/
 
 ### dependencies ###
 dependencies/
+
+### system log ###
+**/log/system_log.txt
