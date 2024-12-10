@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 
 public class LogHelper {
 
-    private static final String LOG_FILE = "system_log.txt";
+    private static final String LOG_FILE = "./src/log/system_log.txt";
 
     public static Logger getLogger(Class<?> clazz) {
         Logger logger = Logger.getLogger(clazz.getName());
