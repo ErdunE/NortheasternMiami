@@ -1,26 +1,23 @@
 package service;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class TMDBLanguageMapper {
 
-    private static final Map<String, String> LANGUAGE_MAP = new HashMap<>();
+    private static final Map<String, String> LANGUAGE_MAP = Map.ofEntries(
+            Map.entry("English", "en"),
+            Map.entry("Mandarin", "zh"),
+            Map.entry("Cantonese", "yue"),
+            Map.entry("Korean", "ko"),
+            Map.entry("Japanese", "ja"),
+            Map.entry("Spanish", "es"),
+            Map.entry("French", "fr"),
+            Map.entry("German", "de"),
+            Map.entry("Italian", "it"),
+            Map.entry("Other", "")
+    );
 
-    static {
-        LANGUAGE_MAP.put("English", "en");
-        LANGUAGE_MAP.put("Mandarin", "zh");
-        LANGUAGE_MAP.put("Cantonese", "yue");
-        LANGUAGE_MAP.put("Korean", "ko");
-        LANGUAGE_MAP.put("Japanese", "ja");
-        LANGUAGE_MAP.put("Spanish", "es");
-        LANGUAGE_MAP.put("French", "fr");
-        LANGUAGE_MAP.put("German", "de");
-        LANGUAGE_MAP.put("Italian", "it");
-        LANGUAGE_MAP.put("Other", "");
-    }
-
-    public String getLanguageCodeByName(String languageName) {
-        return LANGUAGE_MAP.getOrDefault(languageName, null);
+    public String getCodeByLanguageName(String languageName) {
+        return LANGUAGE_MAP.getOrDefault(languageName, "Unknown");
     }
 }
