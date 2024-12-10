@@ -15,9 +15,9 @@ public class MenuBarComponent {
     public MenuBarComponent(Stage primaryStage, MainLayout mainLayout) {
         this.mainLayout = mainLayout;
 
-        Button popularButton = new Button("Popular");
-        Button genreButton = new Button("By Genre");
-        Button ratingButton = new Button("By Rating");
+        Button popularButton = new Button("Popular Movies");
+        Button genreButton = new Button("Genre Movies(Deprecated)");
+        Button ratingButton = new Button("Rating Movies");
         Button filterButton = new Button("Filter");
 
         popularButton.setOnAction(e -> switchTab(primaryStage, "popular", null));
