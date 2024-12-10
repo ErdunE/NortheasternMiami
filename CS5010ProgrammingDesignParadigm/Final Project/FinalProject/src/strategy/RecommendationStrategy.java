@@ -5,21 +5,20 @@ import java.util.List;
 
 /**
  *  RecommendationStrategy is the interface for different recommendation strategies.
- *  Each strategy should implement the getRecommendations method.
+ *  Each strategy should implement the getDetailedRecommendations method.
  *
  * @author Erdun E
- * @version 1.1
- * @since 2024-10-18
+ * @version 1.2
+ * @since 2024-12-10
  * Course: CS5010 Program Design Paradigm
- * Program: Mid-Semester Assignment
+ * Program: Final Project
  */
 public interface RecommendationStrategy {
 
     /**
-     * Provides a list of recommended media titles.
+     * Provides a list of detailed movie recommendations.
      *
-     * @return List of recommended titles.
+     * @return List of detailed Movie objects.
      */
-    List<String> getRecommendations();
     List<Movie> getDetailedRecommendations();
 }

@@ -1,52 +1,39 @@
 package strategy;
 
+import log.LogHelper;
 import model.Movie;
 import service.TMDBService;
 
 import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.logging.Logger;
 
+/**
+ * RatingBasedRecommendation class provides movie recommendations based on ratings.
+ */
 public class RatingBasedRecommendation implements RecommendationStrategy {
 
+    private static final Logger logger = LogHelper.getLogger(RatingBasedRecommendation.class);
     private final TMDBService tmdbService;
 
     public RatingBasedRecommendation() {
         this.tmdbService = new TMDBService();
-    }
-
-    @Override
-    public List<String> getRecommendations() {
-        try {
-            // Fetch popular movies and sort by rating
-            List<Movie> movies = tmdbService.fetchPopularMovies().stream()
-                    .sorted(Comparator.comparingDouble(Movie::getRating).reversed())
-                    .limit(8)
-                    .collect(Collectors.toList());
-
-            // Return movie titles
-            return movies.stream()
-                    .map(Movie::getTitle)
-                    .collect(Collectors.toList());
-
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-            return List.of("Failed to fetch high-rated movies.");
-        }
+        logger.info("RatingBasedRecommendation initialized.");
     }
 
     @Override
     public List<Movie> getDetailedRecommendations() {
+        logger.info("Fetching high-rated movies for RatingBasedRecommendation strategy.");
         try {
-            // Fetch popular movies and sort by rating
-            return tmdbService.fetchPopularMovies().stream()
+            List<Movie> movies = tmdbService.fetchRatingMovies().stream()
                     .sorted(Comparator.comparingDouble(Movie::getRating).reversed())
-                    .limit(8)
-                    .collect(Collectors.toList());
-
+                    .limit(20)
+                    .toList();
+            logger.info("Successfully fetched and sorted high-rated movies.");
+            return movies;
         } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+            logger.severe("Failed to fetch high-rated movies: " + e.getMessage());
             return List.of();
         }
     }
