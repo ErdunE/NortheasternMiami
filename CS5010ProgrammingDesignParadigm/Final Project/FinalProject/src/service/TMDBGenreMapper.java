@@ -1,8 +1,12 @@
 package service;
 
+import log.LogHelper;
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class TMDBGenreMapper {
+
+    private static final Logger logger = LogHelper.getLogger(TMDBGenreMapper.class);
 
     private static final Map<String, Integer> GENRE_MAP = Map.ofEntries(
             Map.entry("Action", 28),
@@ -27,15 +31,19 @@ public class TMDBGenreMapper {
     );
 
     public int getIdByGenreName(String genreName) {
-        return GENRE_MAP.getOrDefault(genreName, -1);
+        int id = GENRE_MAP.getOrDefault(genreName, -1);
+        LogHelper.logInfo(logger, "Mapping genre name '" + genreName + "' to ID: " + id);
+        return id;
     }
 
     public String getNameByGenreId(int id) {
-        return GENRE_MAP.entrySet()
+        String genreName = GENRE_MAP.entrySet()
                 .stream()
                 .filter(entry -> entry.getValue() == id)
                 .map(Map.Entry::getKey)
                 .findFirst()
                 .orElse("Unknown");
+        LogHelper.logInfo(logger, "Mapping genre ID '" + id + "' to name: " + genreName);
+        return genreName;
     }
 }

@@ -1,8 +1,12 @@
 package service;
 
+import log.LogHelper;
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class TMDBLanguageMapper {
+
+    private static final Logger logger = LogHelper.getLogger(TMDBLanguageMapper.class);
 
     private static final Map<String, String> LANGUAGE_MAP = Map.ofEntries(
             Map.entry("English", "en"),
@@ -18,6 +22,8 @@ public class TMDBLanguageMapper {
     );
 
     public String getCodeByLanguageName(String languageName) {
-        return LANGUAGE_MAP.getOrDefault(languageName, "Unknown");
+        String code = LANGUAGE_MAP.getOrDefault(languageName, "Unknown");
+        LogHelper.logInfo(logger, "Mapping language name '" + languageName + "' to code: " + code);
+        return code;
     }
 }
