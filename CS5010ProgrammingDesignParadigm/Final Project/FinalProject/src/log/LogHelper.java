@@ -1,13 +1,16 @@
 package log;
 
-import java.util.logging.ConsoleHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.logging.*;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 
 public class LogHelper {
+
+    private static final String LOG_FILE = "system_log.txt";
 
     public static Logger getLogger(Class<?> clazz) {
         Logger logger = Logger.getLogger(clazz.getName());
@@ -17,20 +20,37 @@ public class LogHelper {
             logger.removeHandler(handler);
         }
 
-        ConsoleHandler handler = new ConsoleHandler();
-        handler.setFormatter(new CustomFormatter());
-        logger.addHandler(handler);
+        try {
+            PrintStream fileOut = new PrintStream(new FileOutputStream(LOG_FILE, false));
+
+            StreamHandler streamHandler = new StreamHandler(fileOut, new CustomFormatter());
+            logger.addHandler(streamHandler);
+
+            ConsoleHandler consoleHandler = new ConsoleHandler();
+            consoleHandler.setFormatter(new CustomFormatter());
+            logger.addHandler(consoleHandler);
+
+            logger.info("Logger initialized for class: " + clazz.getName());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return logger;
     }
 
-    private static class CustomFormatter extends SimpleFormatter {
+
+    private static class CustomFormatter extends Formatter {
+        private static final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+                .withZone(ZoneId.systemDefault());
+
         @Override
         public String format(LogRecord record) {
+            String timestamp = dateFormatter.format(Instant.ofEpochMilli(record.getMillis()));
             return String.format("[%s] [%s] [%s] %s%n",
+                    timestamp,
                     record.getLevel(),
                     record.getLoggerName(),
-                    record.getInstant(),
                     record.getMessage());
         }
     }
