@@ -42,6 +42,12 @@ public class RecommendationGrid {
         }
     }
 
+    public RecommendationGrid(List<Movie> movies) {
+        initializeGrid();
+        this.recommendations = movies;
+        displayMovies(recommendations);
+    }
+
     public GridPane getGrid() {
         return gridPane;
     }
