@@ -37,6 +37,12 @@ public class TMDBService {
         return tmdbMovieParser.parseMoviesFromResponse(response.toString());
     }
 
+    public List<Movie> fetchRatingMovies() throws IOException, InterruptedException {
+        logger.info("Fetching high-rated movies");
+        JSONObject response = tmdbHttpRequest.sendGetRequest("/discover/movie?vote_average.gte=8.0");
+        return tmdbMovieParser.parseMoviesFromResponse(response.toString());
+    }
+
     public List<Movie> fetchMoviesWithFilters(String genreIds, String minRating, String maxRating, String language,
                                               String minRuntime, String maxRuntime, String year, String releaseDateLte,
                                               String certification) throws IOException, InterruptedException {
