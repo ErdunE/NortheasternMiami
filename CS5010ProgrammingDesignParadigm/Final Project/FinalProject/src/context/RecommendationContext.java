@@ -1,8 +1,12 @@
 package context;
 
+import log.LogHelper;
 import model.Movie;
 import strategy.RecommendationStrategy;
+
+import java.util.Collections;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Context class to manage different recommendation strategies.
@@ -16,25 +20,22 @@ import java.util.List;
  */
 public class RecommendationContext {
 
+    private static final Logger logger = LogHelper.getLogger(RecommendationContext.class);
+
     private RecommendationStrategy currentStrategy;
 
     public void setRecommendationStrategy(RecommendationStrategy strategy) {
         this.currentStrategy = strategy;
-    }
-
-    public List<String> getRecommendations() {
-        if (currentStrategy != null) {
-            return currentStrategy.getRecommendations();
-        } else {
-            return List.of("No strategy set.");
-        }
+        logger.info("Recommendation strategy set to: " + strategy.getClass().getSimpleName());
     }
 
     public List<Movie> getRecommendationsWithDetails() {
-        if (currentStrategy != null) {
-            return currentStrategy.getDetailedRecommendations();
-        } else {
-            return List.of();
+        if (currentStrategy == null) {
+            logger.warning("No recommendation strategy set. Returning empty list.");
+            return Collections.emptyList();
         }
+
+        logger.info("Fetching detailed recommendations from strategy: " + currentStrategy.getClass().getSimpleName());
+        return currentStrategy.getDetailedRecommendations();
     }
 }

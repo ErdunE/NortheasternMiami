@@ -1,11 +1,13 @@
 package strategy;
 
+import log.LogHelper;
 import model.Movie;
 import service.TMDBService;
+import service.TMDBGenreMapper;
+
 import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
-import service.TMDBGenreMapper;
+import java.util.logging.Logger;
 
 /**
  * GenreRecommendation class provides genre-specific movie recommendations.
@@ -18,38 +20,24 @@ import service.TMDBGenreMapper;
  */
 public class GenreRecommendation implements RecommendationStrategy {
 
+    private static final Logger logger = LogHelper.getLogger(GenreRecommendation.class);
     private final TMDBService tmdbService;
-    private final TMDBGenreMapper tmdbGenreMapper;
     private final int genreId;
-
 
     public GenreRecommendation(String genreName) {
         this.tmdbService = new TMDBService();
-        this.tmdbGenreMapper = new TMDBGenreMapper();
+        TMDBGenreMapper tmdbGenreMapper = new TMDBGenreMapper();
         this.genreId = tmdbGenreMapper.getIdByGenreName(genreName);
+        logger.info("GenreRecommendation initialized with genre ID: " + genreId);
     }
-
-    @Override
-    public List<String> getRecommendations() {
-        try {
-            List<Movie> movies = tmdbService.fetchMoviesByGenre(genreId);
-            return movies.stream()
-                    .map(Movie::getTitle)
-                    .collect(Collectors.toList());
-        } catch (IOException | InterruptedException e) {
-            System.err.println("Error fetching movies for genre ID: " + genreId);
-            e.printStackTrace();
-            return List.of("An error occurred while fetching movies. Please try again later.");
-        }
-    }
-
 
     @Override
     public List<Movie> getDetailedRecommendations() {
+        logger.info("Fetching movies for genre ID: " + genreId);
         try {
             return tmdbService.fetchMoviesByGenre(genreId);
         } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+            logger.severe("Failed to fetch movies for genre ID " + genreId + ": " + e.getMessage());
             return List.of();
         }
     }
