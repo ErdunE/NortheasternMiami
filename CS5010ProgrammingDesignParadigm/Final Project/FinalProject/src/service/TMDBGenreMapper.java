@@ -1,42 +1,39 @@
 package service;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class TMDBGenreMapper {
 
-    private static final Map<String, Integer> GENRE_MAP = new HashMap<>();
+    private static final Map<String, Integer> GENRE_MAP = Map.ofEntries(
+            Map.entry("Action", 28),
+            Map.entry("Adventure", 12),
+            Map.entry("Animation", 16),
+            Map.entry("Comedy", 35),
+            Map.entry("Crime", 80),
+            Map.entry("Documentary", 99),
+            Map.entry("Drama", 18),
+            Map.entry("Family", 10751),
+            Map.entry("Fantasy", 14),
+            Map.entry("History", 36),
+            Map.entry("Horror", 27),
+            Map.entry("Music", 10402),
+            Map.entry("Mystery", 9648),
+            Map.entry("Romance", 10749),
+            Map.entry("Science Fiction", 878),
+            Map.entry("TV Movie", 10770),
+            Map.entry("Thriller", 53),
+            Map.entry("War", 10752),
+            Map.entry("Western", 37)
+    );
 
-    static {
-        GENRE_MAP.put("Action", 28);
-        GENRE_MAP.put("Adventure", 12);
-        GENRE_MAP.put("Animation", 16);
-        GENRE_MAP.put("Comedy", 35);
-        GENRE_MAP.put("Crime", 80);
-        GENRE_MAP.put("Documentary", 99);
-        GENRE_MAP.put("Drama", 18);
-        GENRE_MAP.put("Family", 10751);
-        GENRE_MAP.put("Fantasy", 14);
-        GENRE_MAP.put("History", 36);
-        GENRE_MAP.put("Horror", 27);
-        GENRE_MAP.put("Music", 10402);
-        GENRE_MAP.put("Mystery", 9648);
-        GENRE_MAP.put("Romance", 10749);
-        GENRE_MAP.put("Science Fiction", 878);
-        GENRE_MAP.put("TV Movie", 10770);
-        GENRE_MAP.put("Thriller", 53);
-        GENRE_MAP.put("War", 10752);
-        GENRE_MAP.put("Western", 37);
-    }
-
-    public int getGenreIdByName(String genreName) {
+    public int getIdByGenreName(String genreName) {
         return GENRE_MAP.getOrDefault(genreName, -1);
     }
 
-    public String getGenreNameById(int id) {
+    public String getNameByGenreId(int id) {
         return GENRE_MAP.entrySet()
                 .stream()
-                .filter(entry -> entry.getValue().equals(id))
+                .filter(entry -> entry.getValue() == id)
                 .map(Map.Entry::getKey)
                 .findFirst()
                 .orElse("Unknown");
