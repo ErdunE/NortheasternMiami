@@ -2,6 +2,8 @@ package service;
 
 import model.Movie;
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,5 +93,11 @@ public class TMDBService {
             }
         }
         return filteredMovies;
+    }
+
+    public List<Movie> searchMovies(String query) throws IOException, InterruptedException {
+        String url = "/search/movie?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8);
+        JSONObject response = tmdbHttpRequest.sendGetRequest(url);
+        return tmdbMovieParser.parseMoviesFromResponse(response.toString());
     }
 }
