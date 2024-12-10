@@ -46,7 +46,7 @@ public class TMDBMovieParser {
             List<String> genres = new ArrayList<>();
             if (genreIds != null) {
                 for (int j = 0; j < genreIds.length(); j++) {
-                    genres.add(tmdbGenreMapper.getGenreNameById(genreIds.getInt(j)));
+                    genres.add(tmdbGenreMapper.getNameByGenreId(genreIds.getInt(j)));
                 }
             }
 

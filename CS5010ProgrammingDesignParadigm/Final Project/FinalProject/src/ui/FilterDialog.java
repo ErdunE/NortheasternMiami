@@ -156,7 +156,7 @@ public class FilterDialog {
         List<Integer> genreIds = new ArrayList<>();
 
         for (String genre : selectedGenres) {
-            int genreId = genreMapper.getGenreIdByName(genre);
+            int genreId = genreMapper.getIdByGenreName(genre);
             if (genreId != -1) {
                 genreIds.add(genreId);
             }

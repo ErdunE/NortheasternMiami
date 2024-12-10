@@ -26,7 +26,7 @@ public class GenreRecommendation implements RecommendationStrategy {
     public GenreRecommendation(String genreName) {
         this.tmdbService = new TMDBService();
         this.tmdbGenreMapper = new TMDBGenreMapper();
-        this.genreId = tmdbGenreMapper.getGenreIdByName(genreName); // 使用 TMDBService 获取 genreId
+        this.genreId = tmdbGenreMapper.getIdByGenreName(genreName);
     }
 
     @Override
