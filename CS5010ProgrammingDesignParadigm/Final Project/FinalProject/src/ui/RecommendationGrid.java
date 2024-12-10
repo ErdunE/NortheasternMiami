@@ -2,10 +2,12 @@ package ui;
 
 import context.RecommendationContext;
 import factory.RecommendationFactory;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 import model.Movie;
 import service.TMDBService;
 import java.io.IOException;
@@ -16,30 +18,19 @@ import java.util.Map;
 public class RecommendationGrid {
 
     private GridPane gridPane;
+    private StackPane stackPane;
     private List<Movie> recommendations;
     private final Map<String, Boolean> sortOrder = new HashMap<>();
+    private final LoadingSpinner loadingSpinner = new LoadingSpinner();
 
     public RecommendationGrid(String type, String additionalParam) {
         initializeGrid();
-
-        RecommendationContext context = new RecommendationContext();
-        context.setRecommendationStrategy(RecommendationFactory.createStrategy(type, additionalParam));
-        recommendations = context.getRecommendationsWithDetails();
-
-        displayMovies(recommendations);
+        loadRecommendations(type, additionalParam);
     }
-
 
     public RecommendationGrid(String genreIds, String minRating, String maxRating, String language, String minRuntime, String maxRuntime, String year, String releaseDateLte, String certification) {
         initializeGrid();
-
-        TMDBService tmdbService = new TMDBService();
-        try {
-            recommendations = tmdbService.fetchMoviesWithFilters(genreIds, minRating, maxRating, language, minRuntime, maxRuntime, year, releaseDateLte, certification);
-            displayMovies(recommendations);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
+        loadRecommendationsWithFilters(genreIds, minRating, maxRating, language, minRuntime, maxRuntime, year, releaseDateLte, certification);
     }
 
     public RecommendationGrid(List<Movie> movies) {
@@ -48,8 +39,51 @@ public class RecommendationGrid {
         displayMovies(recommendations);
     }
 
-    public GridPane getGrid() {
-        return gridPane;
+    public StackPane getGrid() {
+        return stackPane;
+    }
+
+    private void initializeGrid() {
+        gridPane = new GridPane();
+        gridPane.setHgap(20);
+        gridPane.setVgap(20);
+        gridPane.setAlignment(Pos.CENTER);
+        gridPane.setPadding(new Insets(20));
+
+        stackPane = new StackPane(gridPane);
+    }
+
+    private void loadRecommendations(String type, String additionalParam) {
+        loadingSpinner.show(stackPane);
+
+        new Thread(() -> {
+            RecommendationContext context = new RecommendationContext();
+            context.setRecommendationStrategy(RecommendationFactory.createStrategy(type, additionalParam));
+            recommendations = context.getRecommendationsWithDetails();
+
+            Platform.runLater(() -> {
+                displayMovies(recommendations);
+                loadingSpinner.hide(stackPane);
+            });
+        }).start();
+    }
+
+    private void loadRecommendationsWithFilters(String genreIds, String minRating, String maxRating, String language, String minRuntime, String maxRuntime, String year, String releaseDateLte, String certification) {
+        loadingSpinner.show(stackPane);
+
+        new Thread(() -> {
+            TMDBService tmdbService = new TMDBService();
+            try {
+                recommendations = tmdbService.fetchMoviesWithFilters(genreIds, minRating, maxRating, language, minRuntime, maxRuntime, year, releaseDateLte, certification);
+                Platform.runLater(() -> {
+                    displayMovies(recommendations);
+                    loadingSpinner.hide(stackPane);
+                });
+            } catch (IOException | InterruptedException e) {
+                e.printStackTrace();
+                Platform.runLater(() -> loadingSpinner.hide(stackPane));
+            }
+        }).start();
     }
 
     public void sortMovies(String criteria) {
@@ -74,22 +108,13 @@ public class RecommendationGrid {
         }
 
         sortOrder.put(criteria, !ascending);
-
         displayMovies(recommendations);
-    }
-
-    private void initializeGrid() {
-        this.gridPane = new GridPane();
-        gridPane.setHgap(20);
-        gridPane.setVgap(20);
-        gridPane.setAlignment(Pos.CENTER);
-        gridPane.setPadding(new Insets(20));
     }
 
     private void displayMovies(List<Movie> recommendations) {
         gridPane.getChildren().clear();
 
-        if (recommendations.isEmpty()) {
+        if (recommendations == null || recommendations.isEmpty()) {
             Label noResultsLabel = new Label("No movies match your filters. Please try different criteria.");
             gridPane.getChildren().add(noResultsLabel);
             return;
