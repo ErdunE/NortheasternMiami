@@ -3,6 +3,7 @@ package ui;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -24,7 +25,25 @@ public class MenuBarComponent {
         ratingButton.setOnAction(e -> switchTab(primaryStage, "rating", null));
         filterButton.setOnAction(e -> showFilterDialog(primaryStage));
 
-        menuBar = new HBox(15, popularButton, genreButton, ratingButton, filterButton);
+        TextField searchField = new TextField();
+        searchField.setPromptText("Search movies...");
+        searchField.setPrefWidth(200);
+        Button searchButton = new Button("🔍");
+
+        Runnable searchAction = () -> {
+            String query = searchField.getText().trim();
+            if (!query.isEmpty()) {
+                mainLayout.performSearch(query);
+            }
+        };
+
+        searchButton.setOnAction(e -> searchAction.run());
+        searchField.setOnAction(e -> searchAction.run());
+
+        HBox searchBox = new HBox(5, searchField, searchButton);
+        searchBox.setAlignment(Pos.CENTER);
+
+        menuBar = new HBox(15, popularButton, genreButton, ratingButton, filterButton, searchBox);
         menuBar.setAlignment(Pos.CENTER);
         menuBar.getStyleClass().add("menu-bar");
         menuBar.setPadding(new Insets(10, 20, 10, 20));

@@ -12,14 +12,14 @@ import javafx.scene.text.Text;
 public class TitleComponent {
 
     public static Text createGradientTitle() {
-        Text titleText = new Text("Entertainment Recommendation System");
+        Text titleText = new Text("Movie Hub");
         titleText.setFont(Font.font("Bebas Neue", FontWeight.BOLD, 40));
 
         // Linear gradient for title color
         LinearGradient gradient = new LinearGradient(
                 0, 0, 1, 0, true, CycleMethod.NO_CYCLE,
-                new Stop(0, Color.rgb(229, 9, 20)), // Start color
-                new Stop(1, Color.rgb(184, 29, 36)) // End color
+                new Stop(0, Color.rgb(229, 9, 20)),
+                new Stop(1, Color.rgb(184, 29, 36))
         );
         titleText.setFill(gradient);
 
