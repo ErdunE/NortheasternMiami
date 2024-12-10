@@ -7,6 +7,11 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.Movie;
+import service.TMDBService;
+
+import java.io.IOException;
+import java.util.List;
 
 public class MainLayout {
 
@@ -58,5 +63,17 @@ public class MainLayout {
     public void updateRecommendationGrid(RecommendationGrid newGrid) {
         this.recommendationGrid = newGrid;
         recommendationScrollPane.setContent(newGrid.getGrid());
+    }
+
+    public void performSearch(String query) {
+        try {
+            TMDBService tmdbService = new TMDBService();
+            List<Movie> searchResults = tmdbService.searchMovies(query);
+            RecommendationGrid searchGrid = new RecommendationGrid(searchResults);
+            updateRecommendationGrid(searchGrid);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+            System.out.println("Search failed: " + e.getMessage());
+        }
     }
 }
