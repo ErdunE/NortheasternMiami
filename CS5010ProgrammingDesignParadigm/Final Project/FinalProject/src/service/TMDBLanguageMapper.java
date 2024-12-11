@@ -1,8 +1,10 @@
 package service;
 
 import log.LogHelper;
+
 import java.util.Map;
 import java.util.logging.Logger;
+
 
 public class TMDBLanguageMapper {
 
@@ -18,7 +20,12 @@ public class TMDBLanguageMapper {
             Map.entry("French", "fr"),
             Map.entry("German", "de"),
             Map.entry("Italian", "it"),
-            Map.entry("Other", "")
+            Map.entry("Portuguese", "pt"),
+            Map.entry("Russian", "ru"),
+            Map.entry("Hindi", "hi"),
+            Map.entry("Arabic", "ar"),
+            Map.entry("Turkish", "tr"),
+            Map.entry("Thai", "th")
     );
 
     public String getCodeByLanguageName(String languageName) {
