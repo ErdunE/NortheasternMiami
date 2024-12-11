@@ -1,8 +1,6 @@
 package log;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.util.logging.*;
 import java.time.Instant;
 import java.time.ZoneId;
@@ -11,6 +9,16 @@ import java.time.format.DateTimeFormatter;
 public class LogHelper {
 
     private static final String LOG_FILE = "./src/log/system_log.txt";
+
+    static {
+        try {
+            PrintStream fileOut = new PrintStream(new FileOutputStream(LOG_FILE, true));
+            System.setOut(new PrintStream(fileOut, true));
+            System.setErr(new PrintStream(fileOut, true));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static Logger getLogger(Class<?> clazz) {
         Logger logger = Logger.getLogger(clazz.getName());
@@ -21,11 +29,11 @@ public class LogHelper {
         }
 
         try {
-            PrintStream fileOut = new PrintStream(new FileOutputStream(LOG_FILE, false));
+            FileHandler fileHandler = new FileHandler(LOG_FILE, true);
+            fileHandler.setFormatter(new CustomFormatter());
+            logger.addHandler(fileHandler);
 
-            StreamHandler streamHandler = new StreamHandler(fileOut, new CustomFormatter());
-            logger.addHandler(streamHandler);
-
+            // Console Handler for logging to console
             ConsoleHandler consoleHandler = new ConsoleHandler();
             consoleHandler.setFormatter(new CustomFormatter());
             logger.addHandler(consoleHandler);
@@ -38,7 +46,6 @@ public class LogHelper {
 
         return logger;
     }
-
 
     private static class CustomFormatter extends Formatter {
         private static final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
@@ -65,5 +72,15 @@ public class LogHelper {
 
     public static void logSevere(Logger logger, String message, Throwable throwable) {
         logger.log(Level.SEVERE, message, throwable);
+    }
+
+    public static void clearLogFile() {
+        try {
+            FileWriter writer = new FileWriter(new File("./src/log/system_log.txt"), false);
+            writer.write("");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

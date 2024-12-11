@@ -1,0 +1,124 @@
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Logger initialized for class: service.TMDBGenreMapper
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '12' to name: Adventure
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '16' to name: Animation
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '12' to name: Adventure
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '10751' to name: Family
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '35' to name: Comedy
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '80' to name: Crime
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '16' to name: Animation
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '9648' to name: Mystery
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '80' to name: Crime
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '35' to name: Comedy
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '10749' to name: Romance
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '10770' to name: TV Movie
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '12' to name: Adventure
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '36' to name: History
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '16' to name: Animation
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '12' to name: Adventure
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '14' to name: Fantasy
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '16' to name: Animation
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '10751' to name: Family
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '18' to name: Drama
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '10749' to name: Romance
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '14' to name: Fantasy
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '27' to name: Horror
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '9648' to name: Mystery
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '18' to name: Drama
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '27' to name: Horror
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '27' to name: Horror
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '27' to name: Horror
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '27' to name: Horror
+[2024-12-11 00:03:40] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '35' to name: Comedy
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '14' to name: Fantasy
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '80' to name: Crime
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '9648' to name: Mystery
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '35' to name: Comedy
+[2024-12-11 00:03:41] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:03:59] [INFO] [service.TMDBGenreMapper] Logger initialized for class: service.TMDBGenreMapper
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '12' to name: Adventure
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '16' to name: Animation
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '12' to name: Adventure
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '10751' to name: Family
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '35' to name: Comedy
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '80' to name: Crime
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '16' to name: Animation
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '9648' to name: Mystery
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '80' to name: Crime
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '35' to name: Comedy
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '10749' to name: Romance
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '10770' to name: TV Movie
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '12' to name: Adventure
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '36' to name: History
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '16' to name: Animation
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '12' to name: Adventure
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '14' to name: Fantasy
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '16' to name: Animation
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '10751' to name: Family
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '18' to name: Drama
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '10749' to name: Romance
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '14' to name: Fantasy
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '27' to name: Horror
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '9648' to name: Mystery
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '18' to name: Drama
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '27' to name: Horror
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '27' to name: Horror
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '27' to name: Horror
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '27' to name: Horror
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '35' to name: Comedy
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '14' to name: Fantasy
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '80' to name: Crime
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '9648' to name: Mystery
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '53' to name: Thriller
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '28' to name: Action
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '35' to name: Comedy
+[2024-12-11 00:04:00] [INFO] [service.TMDBGenreMapper] Mapping genre ID '878' to name: Science Fiction
