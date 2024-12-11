@@ -88,8 +88,8 @@ public class MainLayout {
         try {
             TMDBService tmdbService = new TMDBService();
             List<Movie> searchResults = tmdbService.searchMovies(query);
-            RecommendationGrid searchGrid = new RecommendationGrid(searchResults);
-            updateRecommendationGrid(searchGrid);
+            RecommendationGrid newGrid = new RecommendationGrid(searchResults);
+            updateRecommendationGrid(newGrid);
             logger.info("Search completed successfully.");
         } catch (IOException | InterruptedException e) {
             logger.severe("Search failed: " + e.getMessage());
