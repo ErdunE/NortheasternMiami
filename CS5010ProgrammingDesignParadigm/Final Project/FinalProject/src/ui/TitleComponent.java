@@ -11,20 +11,24 @@ import javafx.scene.text.Text;
 
 public class TitleComponent {
 
-    public static Text createGradientTitle() {
-        Text titleText = new Text("Movie Hub");
-        titleText.setFont(Font.font("Bebas Neue", FontWeight.BOLD, 40));
+    private static final String DEFAULT_FONT_FAMILY = "Bebas Neue";
+    private static final int DEFAULT_FONT_SIZE = 40;
+    private static final Stop[] DEFAULT_GRADIENT_STOPS = {
+            new Stop(0, Color.rgb(229, 9, 20)),
+            new Stop(1, Color.rgb(184, 29, 36))
+    };
+    private static final DropShadow DEFAULT_DROP_SHADOW = new DropShadow(4, Color.BLACK);
 
-        // Linear gradient for title color
+    public static Text createGradientTitle() {
+        String title = "Movie Hub";
+        Text titleText = new Text(title);
+        titleText.setFont(Font.font(DEFAULT_FONT_FAMILY, FontWeight.BOLD, DEFAULT_FONT_SIZE));
+
         LinearGradient gradient = new LinearGradient(
-                0, 0, 1, 0, true, CycleMethod.NO_CYCLE,
-                new Stop(0, Color.rgb(229, 9, 20)),
-                new Stop(1, Color.rgb(184, 29, 36))
+                0, 0, 1, 0, true, CycleMethod.NO_CYCLE, DEFAULT_GRADIENT_STOPS
         );
         titleText.setFill(gradient);
-
-        // Drop shadow for better visibility
-        titleText.setEffect(new DropShadow(4, Color.BLACK));
+        titleText.setEffect(DEFAULT_DROP_SHADOW);
 
         return titleText;
     }
