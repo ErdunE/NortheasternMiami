@@ -3,16 +3,17 @@ package ui;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import log.LogHelper;
+
+import java.util.logging.Logger;
 
 public class EntertainmentGUI extends Application {
 
-    private static EntertainmentGUI instance;
-    private Stage primaryStage;
+    private static final Logger logger = LogHelper.getLogger(EntertainmentGUI.class);
 
     @Override
     public void start(Stage primaryStage) {
-        this.primaryStage = primaryStage;
-        instance = this;
+        logger.info("Initializing Entertainment Recommendation System GUI...");
 
         primaryStage.setTitle("Entertainment Recommendation System");
         primaryStage.setMaximized(true);
@@ -24,17 +25,7 @@ public class EntertainmentGUI extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
 
-    public static EntertainmentGUI getInstance() {
-        return instance;
-    }
-
-    public static javafx.application.HostServices getHostServicesInstance() {
-        return getInstance().getHostServices();
-    }
-
-    public Stage getPrimaryStage() {
-        return primaryStage;
+        logger.info("Entertainment Recommendation System launched successfully.");
     }
 }
