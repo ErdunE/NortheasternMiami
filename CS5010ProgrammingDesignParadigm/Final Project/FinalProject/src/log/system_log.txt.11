@@ -1,0 +1,442 @@
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Logger initialized for class: service.TMDBMovieDetailsFetcher
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-22
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 912649
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 468513700
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: PG-13
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 912649
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Kelly Marcel
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=FKBN1qAzW3s
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-21
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1241982
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 600055655
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: PG
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1241982
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: David G. Derrick Jr.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=9IisFuMUz44
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-07
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1035048
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1035048
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: George Nolfi
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=kt0V2rpEouE
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-31
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 974453
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 974453
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Hans Petter Moland
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=m0zbtMTXZog
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-25
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1299652
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1299652
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Brandon Vietti
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=VEX3fJMNxwc
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-30
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1182387
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1182387
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Justin Routt
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=tzQsSmDc8gw
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-29
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 957119
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 957119
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Justin Wu
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=S0gjQQepXRQ
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-05
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 558449
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 368092895
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 558449
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Ridley Scott
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=TQwSz88ITAE
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-14
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1147416
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: PG
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: French
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1147416
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Thomas Astruc
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=iFN9DouWuYY
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-09-08
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1184918
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 321836235
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1184918
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Chris Sanders
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=VUCNBAmse04
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-20
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 402431
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 455551000
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 402431
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Jon M. Chu
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=pqi45Qhq3CI
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-16
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1100782
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 138038364
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1100782
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Parker Finn
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=FU_bAopCcSE
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-04
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1118031
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: Arabic, English, French, Galician, German, Portuguese, Russian, Spanish
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1118031
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Carles Torrens
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=zeQXjn3JJ-A
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-09
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1034541
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 89012340
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1034541
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Damien Leone
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=0EDDtgWnSeY
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-08-13
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 945961
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 350861031
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 945961
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Fede Álvarez
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=x0XDEhP4MQs
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-09-07
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 933260
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 54130377
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 933260
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Coralie Fargeat
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=lR5nlovVgvQ
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-31
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:40] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 845781
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 164592186
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: PG-13
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 845781
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Jake Kasdan
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=7l3hfD74X-4
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-29
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1252470
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: Hindi
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1252470
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Neeraj Pandey
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=sqoBgJiLQck
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-01
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 791042
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 791042
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Adam Stern
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=cCggBmznfTA
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-07-24
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 533535
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 1338071348
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 533535
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Shawn Levy
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:03:41] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=Idh8n5XuYIA
+[2024-12-11 00:03:59] [INFO] [service.TMDBMovieDetailsFetcher] Logger initialized for class: service.TMDBMovieDetailsFetcher
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-22
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 912649
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 468513700
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: PG-13
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 912649
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Kelly Marcel
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=FKBN1qAzW3s
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-21
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1241982
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 600055655
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: PG
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1241982
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: David G. Derrick Jr.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=9IisFuMUz44
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-07
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1035048
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1035048
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: George Nolfi
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=kt0V2rpEouE
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-31
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 974453
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 974453
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Hans Petter Moland
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=m0zbtMTXZog
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-25
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1299652
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1299652
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Brandon Vietti
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=VEX3fJMNxwc
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-30
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1182387
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1182387
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Justin Routt
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=tzQsSmDc8gw
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-29
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 957119
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 957119
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Justin Wu
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=S0gjQQepXRQ
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-05
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 558449
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 368092895
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 558449
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Ridley Scott
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=TQwSz88ITAE
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-14
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1147416
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: PG
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: French
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1147416
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Thomas Astruc
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=iFN9DouWuYY
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-09-08
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1184918
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 321836235
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1184918
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Chris Sanders
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=VUCNBAmse04
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-20
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 402431
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 455551000
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 402431
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Jon M. Chu
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=pqi45Qhq3CI
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-16
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1100782
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 138038364
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1100782
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Parker Finn
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=FU_bAopCcSE
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-04
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1118031
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: Arabic, English, French, Galician, German, Portuguese, Russian, Spanish
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1118031
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Carles Torrens
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=zeQXjn3JJ-A
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-09
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1034541
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 89012340
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1034541
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Damien Leone
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=0EDDtgWnSeY
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-08-13
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 945961
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 350861031
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 945961
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Fede Álvarez
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=x0XDEhP4MQs
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-09-07
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 933260
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 54130377
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 933260
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Coralie Fargeat
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=lR5nlovVgvQ
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-10-31
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 845781
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 164592186
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: PG-13
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 845781
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Jake Kasdan
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=7l3hfD74X-4
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-29
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 1252470
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level not found, returning 'Unknown'.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: Hindi
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 1252470
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Neeraj Pandey
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=sqoBgJiLQck
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-11-01
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 791042
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 0
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 791042
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Adam Stern
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=cCggBmznfTA
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release date: 2024-07-24
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched release year: 2024
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching movie details for movie ID: 533535
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched revenue: 1338071348
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching rating level from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Rating level found: R
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetched languages: English
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching director for movie ID: 533535
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Director found: Shawn Levy
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Fetching trailer URL from movie details.
+[2024-12-11 00:04:00] [INFO] [service.TMDBMovieDetailsFetcher] Trailer URL found: https://www.youtube.com/watch?v=Idh8n5XuYIA

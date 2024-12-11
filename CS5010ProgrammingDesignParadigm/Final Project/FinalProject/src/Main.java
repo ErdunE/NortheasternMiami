@@ -9,6 +9,7 @@ public class Main {
     private static final Logger logger = LogHelper.getLogger(Main.class);
 
     public static void main(String[] args) {
+        LogHelper.clearLogFile();
         logger.info("Entertainment Recommendation System is starting...");
         try {
             Application.launch(EntertainmentGUI.class, args);
