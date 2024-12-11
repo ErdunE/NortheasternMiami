@@ -19,6 +19,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
+/**
+ * Represents a grid layout for displaying movie recommendations.
+ * Supports loading recommendations by type, filters, or a predefined list of movies.
+ *
+ * @author Erdun E
+ * @version 1.35
+ * @since 2024-12-10
+ * Course: CS5010 Program Design Paradigm
+ * Program: Final Project
+ */
 public class RecommendationGrid {
 
     private static final Logger logger = LogHelper.getLogger(RecommendationGrid.class);
@@ -29,12 +39,31 @@ public class RecommendationGrid {
     private final Map<String, Boolean> sortOrder = new HashMap<>();
     private final LoadingSpinner loadingSpinner = new LoadingSpinner();
 
+    /**
+     * Initializes the grid with recommendations based on a specified type.
+     *
+     * @param type            The type of recommendations (e.g., "popular", "rating").
+     * @param additionalParam Additional parameter for the strategy, if needed.
+     */
     public RecommendationGrid(String type, String additionalParam) {
         gridPane = createGridPane();
         stackPane = new StackPane(gridPane);
         loadRecommendations(type, additionalParam);
     }
 
+    /**
+     * Initializes the grid with recommendations based on provided filters.
+     *
+     * @param genreIds       The genre IDs for filtering.
+     * @param minRating      The minimum rating for filtering.
+     * @param maxRating      The maximum rating for filtering.
+     * @param language       The language for filtering.
+     * @param minRuntime     The minimum runtime for filtering.
+     * @param maxRuntime     The maximum runtime for filtering.
+     * @param year           The year for filtering.
+     * @param releaseDateLte The latest release date for filtering.
+     * @param certification  The certification level for filtering.
+     */
     public RecommendationGrid(String genreIds, String minRating, String maxRating, String language, String minRuntime,
                               String maxRuntime, String year, String releaseDateLte, String certification) {
         gridPane = createGridPane();
@@ -42,6 +71,11 @@ public class RecommendationGrid {
         loadRecommendationsWithFilters(genreIds, minRating, maxRating, language, minRuntime, maxRuntime, year, releaseDateLte, certification);
     }
 
+    /**
+     * Initializes the grid with a predefined list of movies.
+     *
+     * @param movies The list of {@link Movie} objects to display.
+     */
     public RecommendationGrid(List<Movie> movies) {
         gridPane = createGridPane();
         stackPane = new StackPane(gridPane);
@@ -54,10 +88,20 @@ public class RecommendationGrid {
         });
     }
 
+    /**
+     * Returns the stack pane containing the grid layout.
+     *
+     * @return A {@link StackPane} containing the grid of movie recommendations.
+     */
     public StackPane getGrid() {
         return stackPane;
     }
 
+    /**
+     * Creates a new grid pane with default properties.
+     *
+     * @return A {@link GridPane} configured for displaying movie cards.
+     */
     private GridPane createGridPane() {
         GridPane grid = new GridPane();
         grid.setHgap(20);
@@ -67,6 +111,12 @@ public class RecommendationGrid {
         return grid;
     }
 
+    /**
+     * Loads movie recommendations based on a strategy type.
+     *
+     * @param type            The type of recommendation strategy.
+     * @param additionalParam Additional parameter for the strategy.
+     */
     private void loadRecommendations(String type, String additionalParam) {
         logger.info("Loading recommendations of type: " + type);
         loadingSpinner.showSpinner(stackPane);
@@ -90,6 +140,19 @@ public class RecommendationGrid {
         }).start();
     }
 
+    /**
+     * Loads movie recommendations based on filter criteria.
+     *
+     * @param genreIds       Genre IDs for filtering.
+     * @param minRating      Minimum rating for filtering.
+     * @param maxRating      Maximum rating for filtering.
+     * @param language       Language for filtering.
+     * @param minRuntime     Minimum runtime for filtering.
+     * @param maxRuntime     Maximum runtime for filtering.
+     * @param year           Year for filtering.
+     * @param releaseDateLte Latest release date for filtering.
+     * @param certification  Certification level for filtering.
+     */
     private void loadRecommendationsWithFilters(String genreIds, String minRating, String maxRating, String language,
                                                 String minRuntime, String maxRuntime, String year, String releaseDateLte,
                                                 String certification) {
@@ -114,6 +177,11 @@ public class RecommendationGrid {
         }).start();
     }
 
+    /**
+     * Displays a list of movies on the grid.
+     *
+     * @param recommendations The list of {@link Movie} objects to display.
+     */
     private void displayMovies(List<Movie> recommendations) {
         gridPane.getChildren().clear();
 
@@ -137,6 +205,11 @@ public class RecommendationGrid {
         logger.info("Displayed " + recommendations.size() + " movies.");
     }
 
+    /**
+     * Sorts the displayed movies based on the specified criteria.
+     *
+     * @param criteria The sorting criteria (e.g., "date", "rating", "popularity").
+     */
     public void sortMovies(String criteria) {
         if (recommendations == null) {
             logger.warning("No recommendations available to sort.");
@@ -172,6 +245,12 @@ public class RecommendationGrid {
         displayMovies(recommendations);
     }
 
+    /**
+     * Parses a revenue string to a long value.
+     *
+     * @param revenue The revenue string.
+     * @return The parsed revenue as a long value.
+     */
     private long parseRevenue(String revenue) {
         try {
             return Long.parseLong(revenue.replaceAll("[^0-9]", ""));
@@ -181,6 +260,11 @@ public class RecommendationGrid {
         }
     }
 
+    /**
+     * Displays an error message on the grid.
+     *
+     * @param message The error message to display.
+     */
     private void showError(String message) {
         Label errorLabel = new Label(message);
         gridPane.getChildren().clear();

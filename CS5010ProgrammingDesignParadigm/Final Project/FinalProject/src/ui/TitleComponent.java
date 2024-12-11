@@ -9,6 +9,16 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
+/**
+ * Utility class for creating a stylized title with gradient and shadow effects.
+ * The title is designed for use in the Movie Hub application.
+ *
+ * @author Erdun E
+ * @version 1.35
+ * @since 2024-12-10
+ * Course: CS5010 Program Design Paradigm
+ * Program: Final Project
+ */
 public class TitleComponent {
 
     private static final String DEFAULT_FONT_FAMILY = "Bebas Neue";
@@ -19,6 +29,11 @@ public class TitleComponent {
     };
     private static final DropShadow DEFAULT_DROP_SHADOW = new DropShadow(4, Color.BLACK);
 
+    /**
+     * Creates a gradient-styled title with a drop shadow effect.
+     *
+     * @return A {@link Text} object representing the stylized title "Movie Hub".
+     */
     public static Text createGradientTitle() {
         String title = "Movie Hub";
         Text titleText = new Text(title);

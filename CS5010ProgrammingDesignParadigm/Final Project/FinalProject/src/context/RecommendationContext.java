@@ -12,10 +12,10 @@ import java.util.logging.Logger;
  * Allows switching between strategies dynamically.
  *
  * @author Erdun E
- * @version 1.1
- * @since 2024-10-18
+ * @version 1.35
+ * @since 2024-12-10
  * Course: CS5010 Program Design Paradigm
- * Program: Mid-Semester Assignment
+ * Program: Final Project
  */
 public class RecommendationContext {
 
@@ -23,6 +23,12 @@ public class RecommendationContext {
 
     private RecommendationStrategy currentStrategy;
 
+    /**
+     * Sets the current recommendation strategy.
+     *
+     * @param strategy The recommendation strategy to be used.
+     * @throws IllegalArgumentException if the strategy is null.
+     */
     public void setRecommendationStrategy(RecommendationStrategy strategy) {
         if (strategy == null) {
             throw new IllegalArgumentException("Recommendation strategy cannot be null");
@@ -31,6 +37,12 @@ public class RecommendationContext {
         logger.info("Recommendation strategy set to: " + strategy.getClass().getSimpleName());
     }
 
+    /**
+     * Provides a list of detailed movie recommendations using the current strategy.
+     *
+     * @return List of detailed Movie objects.
+     * @throws IllegalStateException if no recommendation strategy is set.
+     */
     public List<Movie> getRecommendationsWithDetails() {
         if (currentStrategy == null) {
             logger.warning("No recommendation strategy set. Throwing IllegalStateException.");

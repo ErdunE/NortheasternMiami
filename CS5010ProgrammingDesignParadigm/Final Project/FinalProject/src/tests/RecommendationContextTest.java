@@ -8,13 +8,31 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test class for RecommendationContext.
+ * Verifies the behavior of setting and getting different recommendation strategies.
+ * Also tests exception handling for invalid use cases.
+ *
+ * @author Erdun E
+ * @version 1.35
+ * @since 2024-12-10
+ * Course: CS5010 Program Design Paradigm
+ * Program: Final Project
+ */
 public class RecommendationContextTest {
 
+    /**
+     * Disables logging before running the tests.
+     */
     @BeforeAll
     public static void disableLogging() {
         System.setProperty("disableLogging", "true");
     }
 
+    /**
+     * Tests setting and getting a valid recommendation strategy.
+     * Verifies that recommendations are returned successfully.
+     */
     @Test
     public void testSetAndGetRecommendationStrategy() {
         RecommendationContext context = new RecommendationContext();
@@ -29,6 +47,10 @@ public class RecommendationContextTest {
         assertFalse(context.getRecommendationsWithDetails().isEmpty(), "Recommendations list should not be empty");
     }
 
+    /**
+     * Tests switching between different recommendation strategies.
+     * Verifies that recommendations are fetched correctly for each strategy.
+     */
     @Test
     public void testSetAndGetDifferentRecommendationStrategy() {
         RecommendationContext context = new RecommendationContext();
@@ -45,6 +67,10 @@ public class RecommendationContextTest {
         assertNotNull(context.getRecommendationsWithDetails(), "Recent recommendations should not be null");
     }
 
+    /**
+     * Tests getting recommendations without setting a strategy.
+     * Verifies that an IllegalStateException is thrown.
+     */
     @Test
     public void testGetRecommendationsWithoutSettingStrategy() {
         RecommendationContext context = new RecommendationContext();
@@ -56,6 +82,10 @@ public class RecommendationContextTest {
         assertEquals("Recommendation strategy is not set", exception.getMessage());
     }
 
+    /**
+     * Tests setting a null recommendation strategy.
+     * Verifies that an IllegalArgumentException is thrown.
+     */
     @Test
     public void testSetNullRecommendationStrategy() {
         RecommendationContext context = new RecommendationContext();

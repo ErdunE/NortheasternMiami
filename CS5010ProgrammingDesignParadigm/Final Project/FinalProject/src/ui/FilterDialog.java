@@ -15,6 +15,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+/**
+ * The FilterDialog class provides a dialog for users to filter movies based on genres, ratings,
+ * languages, release years, durations, and rating levels.
+ *
+ * Users can apply filters and update the movie recommendations accordingly.
+ *
+ * @author Erdun E
+ * @version 1.35
+ * @since 2024-12-10
+ * Course: CS5010 Program Design Paradigm
+ * Program: Final Project
+ */
 public class FilterDialog {
 
     private static final Logger logger = LogHelper.getLogger(FilterDialog.class);
@@ -28,6 +40,12 @@ public class FilterDialog {
 
     private List<ToggleButton> allButtons = new ArrayList<>();
 
+    /**
+     * Displays the filter dialog for the user to select filters.
+     *
+     * @param parentStage The parent stage that owns this dialog.
+     * @param mainLayout  The main layout to update with filtered recommendations.
+     */
     public void show(Stage parentStage, MainLayout mainLayout) {
         Stage filterStage = initializeStage();
 
@@ -46,6 +64,11 @@ public class FilterDialog {
         filterStage.showAndWait();
     }
 
+    /**
+     * Initializes the filter stage with modal properties and title.
+     *
+     * @return The initialized Stage object.
+     */
     private Stage initializeStage() {
         Stage filterStage = new Stage();
         filterStage.initModality(Modality.APPLICATION_MODAL);
@@ -53,6 +76,13 @@ public class FilterDialog {
         return filterStage;
     }
 
+    /**
+     * Creates the layout for the filter dialog, including filter sections and buttons.
+     *
+     * @param mainLayout  The main layout to update with filtered results.
+     * @param filterStage The stage containing the filter dialog.
+     * @return A VBox containing all filter sections and buttons.
+     */
     private VBox createFilterLayout(MainLayout mainLayout, Stage filterStage) {
         VBox root = new VBox(20);
         root.setPadding(new Insets(20));
@@ -86,6 +116,13 @@ public class FilterDialog {
         return root;
     }
 
+    /**
+     * Creates a section with a label and a group of toggle buttons.
+     *
+     * @param labelText   The text for the section label.
+     * @param buttonGroup The group of toggle buttons.
+     * @return A VBox containing the label and button group.
+     */
     private VBox createSection(String labelText, FlowPane buttonGroup) {
         VBox section = new VBox(10);
         Label label = new Label(labelText);
@@ -93,6 +130,13 @@ public class FilterDialog {
         return section;
     }
 
+    /**
+     * Creates a horizontal box containing the search and reset buttons.
+     *
+     * @param mainLayout  The main layout to update with filtered results.
+     * @param filterStage The stage containing the filter dialog.
+     * @return An HBox containing the buttons.
+     */
     private HBox createButtonBox(MainLayout mainLayout, Stage filterStage) {
         Button searchButton = new Button("Search");
         searchButton.setOnAction(e -> {
@@ -108,6 +152,13 @@ public class FilterDialog {
         return buttonBox;
     }
 
+    /**
+     * Creates a group of toggle buttons for the specified options.
+     *
+     * @param options       The array of options for the buttons.
+     * @param selectedItems The list to store selected items.
+     * @return A FlowPane containing the toggle buttons.
+     */
     private FlowPane createButtonGroup(String[] options, List<String> selectedItems) {
         FlowPane box = new FlowPane(10, 10);
         box.setPadding(new Insets(5));
@@ -120,6 +171,13 @@ public class FilterDialog {
         return box;
     }
 
+    /**
+     * Creates a toggle button for a specific option.
+     *
+     * @param option        The option label for the button.
+     * @param selectedItems The list to store selected items.
+     * @return The created ToggleButton.
+     */
     private ToggleButton createToggleButton(String option, List<String> selectedItems) {
         ToggleButton button = new ToggleButton(option);
         button.setOnAction(e -> {
@@ -132,7 +190,9 @@ public class FilterDialog {
         return button;
     }
 
-    // Method to reset all selected filters
+    /**
+     * Resets all selected filters and clears button selections.
+     */
     private void resetFilters() {
         selectedGenres.clear();
         selectedRatings.clear();
@@ -148,7 +208,11 @@ public class FilterDialog {
         logger.info("All filters have been reset.");
     }
 
-    // Apply filters and update the RecommendationGrid in MainLayout
+    /**
+     * Applies the selected filters and updates the recommendation grid in the main layout.
+     *
+     * @param mainLayout The main layout to update with filtered results.
+     */
     private void applyFilters(MainLayout mainLayout) {
         logger.info("Applying filters with the following selections:");
         logger.info("Genres: " + selectedGenres);
@@ -190,6 +254,13 @@ public class FilterDialog {
         mainLayout.updateRecommendationGrid(newGrid);
     }
 
+    /**
+     * Retrieves the language code for the selected language.
+     *
+     * @param selectedLanguages The list of selected languages.
+     * @param languageMapper    The language mapper to get the language code.
+     * @return The language code or null if no valid selection.
+     */
     private String getLanguageFilter(List<String> selectedLanguages, TMDBLanguageMapper languageMapper) {
         if (selectedLanguages.isEmpty()) return null;
 
@@ -197,7 +268,12 @@ public class FilterDialog {
         return "Unknown".equals(languageCode) ? null : languageCode;
     }
 
-    // Helper methods to convert duration strings to runtime ranges
+    /**
+     * Converts the selected duration to the minimum runtime in minutes.
+     *
+     * @param duration The selected duration range.
+     * @return The minimum runtime as a string or null if not applicable.
+     */
     private String getMinRuntime(String duration) {
         switch (duration) {
             case "0-90 mins":
@@ -211,6 +287,12 @@ public class FilterDialog {
         }
     }
 
+    /**
+     * Converts the selected duration to the maximum runtime in minutes.
+     *
+     * @param duration The selected duration range.
+     * @return The maximum runtime as a string or null if not applicable.
+     */
     private String getMaxRuntime(String duration) {
         switch (duration) {
             case "0-90 mins":
@@ -224,7 +306,12 @@ public class FilterDialog {
         }
     }
 
-    // Helper method to map year selection to specific year
+    /**
+     * Maps the selected year option to a specific year.
+     *
+     * @param selection The selected year option.
+     * @return The year as a string or null if not applicable.
+     */
     private String getYearFromSelection(String selection) {
         if (selection == null) return null;
         int currentYear = java.time.Year.now().getValue();

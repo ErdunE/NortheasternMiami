@@ -9,3 +9,18 @@
 [2024-12-11 00:39:30] [INFO] [strategy.RatingBasedRecommendation] RatingBasedRecommendation initialized.
 [2024-12-11 00:39:30] [INFO] [strategy.RatingBasedRecommendation] Fetching high-rated movies for RatingBasedRecommendation strategy.
 [2024-12-11 00:39:30] [INFO] [strategy.RatingBasedRecommendation] Successfully fetched and sorted high-rated movies.
+[2024-12-11 00:56:56] [INFO] [strategy.RatingBasedRecommendation] Logger initialized for class: strategy.RatingBasedRecommendation
+[2024-12-11 00:56:56] [INFO] [strategy.RatingBasedRecommendation] RatingBasedRecommendation initialized.
+[2024-12-11 00:56:56] [INFO] [strategy.RatingBasedRecommendation] Fetching high-rated movies for RatingBasedRecommendation strategy.
+[2024-12-11 00:56:57] [INFO] [strategy.RatingBasedRecommendation] Successfully fetched and sorted high-rated movies.
+[2024-12-11 00:57:03] [INFO] [strategy.RatingBasedRecommendation] RatingBasedRecommendation initialized.
+[2024-12-11 00:57:03] [INFO] [strategy.RatingBasedRecommendation] Fetching high-rated movies for RatingBasedRecommendation strategy.
+[2024-12-11 00:57:04] [INFO] [strategy.RatingBasedRecommendation] Successfully fetched and sorted high-rated movies.
+[2024-12-11 02:54:16] [INFO] [ui.FilterDialog] Logger initialized for class: ui.FilterDialog
+[2024-12-11 02:54:18] [INFO] [ui.FilterDialog] Applying filters with the following selections:
+[2024-12-11 02:54:18] [INFO] [ui.FilterDialog] Genres: [Comedy]
+[2024-12-11 02:54:18] [INFO] [ui.FilterDialog] Ratings: []
+[2024-12-11 02:54:18] [INFO] [ui.FilterDialog] Years: []
+[2024-12-11 02:54:18] [INFO] [ui.FilterDialog] Languages: []
+[2024-12-11 02:54:18] [INFO] [ui.FilterDialog] Durations: []
+[2024-12-11 02:54:18] [INFO] [ui.FilterDialog] Rating Levels: []

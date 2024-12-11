@@ -7,10 +7,25 @@ import log.LogHelper;
 
 import java.util.logging.Logger;
 
+/**
+ * The main GUI class for the Entertainment Recommendation System.
+ * Initializes and displays the primary application window.
+ *
+ * @author Erdun E
+ * @version 1.35
+ * @since 2024-12-10
+ * Course: CS5010 Program Design Paradigm
+ * Program: Final Project
+ */
 public class EntertainmentGUI extends Application {
 
     private static final Logger logger = LogHelper.getLogger(EntertainmentGUI.class);
 
+    /**
+     * Starts the JavaFX application by setting up the primary stage.
+     *
+     * @param primaryStage The primary window of the application.
+     */
     @Override
     public void start(Stage primaryStage) {
         logger.info("Initializing Entertainment Recommendation System GUI...");

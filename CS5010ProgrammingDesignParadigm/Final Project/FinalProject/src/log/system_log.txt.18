@@ -7,3 +7,12 @@
 [2024-12-11 00:39:24] [INFO] [ui.FilterDialog] Languages: [Mandarin]
 [2024-12-11 00:39:24] [INFO] [ui.FilterDialog] Durations: []
 [2024-12-11 00:39:24] [INFO] [ui.FilterDialog] Rating Levels: []
+[2024-12-11 00:57:04] [INFO] [ui.FilterDialog] Logger initialized for class: ui.FilterDialog
+[2024-12-11 00:57:06] [INFO] [ui.FilterDialog] Applying filters with the following selections:
+[2024-12-11 00:57:06] [INFO] [ui.FilterDialog] Genres: [Comedy]
+[2024-12-11 00:57:06] [INFO] [ui.FilterDialog] Ratings: []
+[2024-12-11 00:57:06] [INFO] [ui.FilterDialog] Years: []
+[2024-12-11 00:57:06] [INFO] [ui.FilterDialog] Languages: []
+[2024-12-11 00:57:06] [INFO] [ui.FilterDialog] Durations: []
+[2024-12-11 00:57:06] [INFO] [ui.FilterDialog] Rating Levels: []
+[2024-12-11 02:54:18] [INFO] [service.TMDBLanguageMapper] Logger initialized for class: service.TMDBLanguageMapper
