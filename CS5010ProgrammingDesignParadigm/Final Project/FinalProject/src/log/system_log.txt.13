@@ -1,2 +1,9 @@
 [2024-12-11 00:03:40] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper
 [2024-12-11 00:03:59] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper
+[2024-12-11 00:05:59] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper
+[2024-12-11 00:06:14] [INFO] [service.TMDBFilterHelper] Built filter URL: /discover/movie?with_genres=35
+[2024-12-11 00:06:16] [INFO] [service.TMDBFilterHelper] Filtering movies by runtime
+[2024-12-11 00:06:16] [WARNING] [service.TMDBFilterHelper] Invalid runtime format for movie: Moana
+[2024-12-11 00:06:16] [INFO] [service.TMDBFilterHelper] Filtering movies by certification
+[2024-12-11 00:20:07] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper
+[2024-12-11 00:27:54] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper

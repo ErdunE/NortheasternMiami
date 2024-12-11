@@ -1,0 +1,4 @@
+[2024-12-11 00:06:07] [INFO] [strategy.RatingBasedRecommendation] Logger initialized for class: strategy.RatingBasedRecommendation
+[2024-12-11 00:06:07] [INFO] [strategy.RatingBasedRecommendation] RatingBasedRecommendation initialized.
+[2024-12-11 00:06:07] [INFO] [strategy.RatingBasedRecommendation] Fetching high-rated movies for RatingBasedRecommendation strategy.
+[2024-12-11 00:06:08] [INFO] [strategy.RatingBasedRecommendation] Successfully fetched and sorted high-rated movies.

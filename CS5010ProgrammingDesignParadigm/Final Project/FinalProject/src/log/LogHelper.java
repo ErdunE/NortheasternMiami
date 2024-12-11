@@ -8,15 +8,17 @@ import java.time.format.DateTimeFormatter;
 
 public class LogHelper {
 
-    private static final String LOG_FILE = "./src/log/system_log.txt";
+    private static final String LOG_FILE = System.getProperty("logFilePath", "./src/log/system_log.txt");
 
     static {
-        try {
-            PrintStream fileOut = new PrintStream(new FileOutputStream(LOG_FILE, true));
-            System.setOut(new PrintStream(fileOut, true));
-            System.setErr(new PrintStream(fileOut, true));
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (!Boolean.getBoolean("disableLogging")) {
+            try {
+                PrintStream fileOut = new PrintStream(new FileOutputStream(LOG_FILE, true));
+                System.setOut(new PrintStream(fileOut, true));
+                System.setErr(new PrintStream(fileOut, true));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -28,20 +30,21 @@ public class LogHelper {
             logger.removeHandler(handler);
         }
 
-        try {
-            FileHandler fileHandler = new FileHandler(LOG_FILE, true);
-            fileHandler.setFormatter(new CustomFormatter());
-            logger.addHandler(fileHandler);
+        if (!Boolean.getBoolean("disableLogging")) {
+            try {
+                FileHandler fileHandler = new FileHandler(LOG_FILE, true);
+                fileHandler.setFormatter(new CustomFormatter());
+                logger.addHandler(fileHandler);
 
-            // Console Handler for logging to console
-            ConsoleHandler consoleHandler = new ConsoleHandler();
-            consoleHandler.setFormatter(new CustomFormatter());
-            logger.addHandler(consoleHandler);
+                ConsoleHandler consoleHandler = new ConsoleHandler();
+                consoleHandler.setFormatter(new CustomFormatter());
+                logger.addHandler(consoleHandler);
 
-            logger.info("Logger initialized for class: " + clazz.getName());
+                logger.info("Logger initialized for class: " + clazz.getName());
 
-        } catch (IOException e) {
-            e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
         return logger;
