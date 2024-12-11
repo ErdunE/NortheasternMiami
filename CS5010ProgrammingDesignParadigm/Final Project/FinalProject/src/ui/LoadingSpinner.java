@@ -14,20 +14,20 @@ public class LoadingSpinner {
         spinner.setVisible(false);
     }
 
-    public void show(StackPane root) {
-        spinner.setVisible(true);
-        if (!root.getChildren().contains(spinner)) {
-            root.getChildren().add(spinner);
+    public void showSpinner(StackPane root) {
+        if (!spinner.isVisible()) {
+            spinner.setVisible(true);
+            if (!root.getChildren().contains(spinner)) {
+                root.getChildren().add(spinner);
+            }
+            StackPane.setAlignment(spinner, Pos.CENTER);
         }
-        StackPane.setAlignment(spinner, Pos.CENTER);
     }
 
-    public void hide(StackPane root) {
-        spinner.setVisible(false);
-        root.getChildren().remove(spinner);
-    }
-
-    public ProgressIndicator getSpinner() {
-        return spinner;
+    public void hideSpinner(StackPane root) {
+        if (spinner.isVisible()) {
+            spinner.setVisible(false);
+            root.getChildren().remove(spinner);
+        }
     }
 }
