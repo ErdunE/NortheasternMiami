@@ -9,11 +9,15 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import service.TMDBGenreMapper;
 import service.TMDBLanguageMapper;
+import log.LogHelper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class FilterDialog {
+
+    private static final Logger logger = LogHelper.getLogger(FilterDialog.class);
 
     private final List<String> selectedGenres = new ArrayList<>();
     private final List<String> selectedRatings = new ArrayList<>();
@@ -25,51 +29,9 @@ public class FilterDialog {
     private List<ToggleButton> allButtons = new ArrayList<>();
 
     public void show(Stage parentStage, MainLayout mainLayout) {
-        Stage filterStage = new Stage();
-        filterStage.initModality(Modality.APPLICATION_MODAL);
-        filterStage.setTitle("Filter Movies");
+        Stage filterStage = initializeStage();
 
-        VBox root = new VBox(20);
-        root.setPadding(new Insets(20));
-
-        // Genre Filter
-        Label genreLabel = new Label("Genre:");
-        FlowPane genreBox = createButtonGroup(new String[]{
-                "Action", "Adventure", "Animation", "Biography", "Comedy", "Crime",
-                "Documentary", "Drama", "Family", "Fantasy", "History", "Horror",
-                "Mystery", "Romance", "Sci-Fi", "Short", "Sport", "War", "Western"
-        }, selectedGenres);
-
-        // Rating Range Filter
-        Label ratingLabel = new Label("Rating Range:");
-        FlowPane ratingBox = createButtonGroup(new String[]{
-                "6+", "6.5+", "7+", "7.5+", "8+", "8.5+", "9+"
-        }, selectedRatings);
-
-        // Release Year Filter
-        Label yearLabel = new Label("Release Year:");
-        FlowPane yearBox = createButtonGroup(new String[]{
-                "This Year", "Last Year", "Earlier"
-        }, selectedYears);
-
-        // Language Filter
-        Label languageLabel = new Label("Language:");
-        FlowPane languageBox = createButtonGroup(new String[]{
-                "English", "Mandarin", "Cantonese", "Korean", "Japanese",
-                "Spanish", "French", "German", "Italian", "Other"
-        }, selectedLanguages);
-
-        // Duration Filter
-        Label durationLabel = new Label("Duration:");
-        FlowPane durationBox = createButtonGroup(new String[]{
-                "0-90 mins", "90-120 mins", "120+ mins"
-        }, selectedDurations);
-
-        // Rating Level Filter
-        Label ratingLevelLabel = new Label("Rating Level:");
-        FlowPane ratingLevelBox = createButtonGroup(new String[]{
-                "G", "PG", "PG-13", "R", "NC-17"
-        }, selectedRatingLevels);
+        VBox root = createFilterLayout(mainLayout, filterStage);
 
         // Search Button
         Button searchButton = new Button("Search");
@@ -78,51 +40,95 @@ public class FilterDialog {
             applyFilters(mainLayout);
         });
 
-        // Reset Button
-        Button resetButton = new Button("Reset");
-        resetButton.setOnAction(e -> resetFilters());
-
-        // Button Box
-        HBox buttonBox = new HBox(20, searchButton, resetButton);
-        buttonBox.setAlignment(Pos.CENTER);
-
-        // Adding all filters to the layout
-        root.getChildren().addAll(
-                genreLabel, genreBox,
-                ratingLabel, ratingBox,
-                yearLabel, yearBox,
-                languageLabel, languageBox,
-                durationLabel, durationBox,
-                ratingLevelLabel, ratingLevelBox,
-                buttonBox
-        );
-
         // Create and show the scene
         Scene scene = new Scene(root, 800, 800);
         filterStage.setScene(scene);
         filterStage.showAndWait();
     }
 
-    // Helper method to create button groups for each filter category
+    private Stage initializeStage() {
+        Stage filterStage = new Stage();
+        filterStage.initModality(Modality.APPLICATION_MODAL);
+        filterStage.setTitle("Filter Movies");
+        return filterStage;
+    }
+
+    private VBox createFilterLayout(MainLayout mainLayout, Stage filterStage) {
+        VBox root = new VBox(20);
+        root.setPadding(new Insets(20));
+
+        root.getChildren().addAll(
+                createSection("Genre:", createButtonGroup(new String[]{
+                        "Action", "Adventure", "Animation", "Biography", "Comedy", "Crime",
+                        "Documentary", "Drama", "Family", "Fantasy", "History", "Horror",
+                        "Mystery", "Romance", "Sci-Fi", "Short", "Sport", "War", "Western"
+                }, selectedGenres)),
+                createSection("Rating Range:", createButtonGroup(new String[]{
+                        "6+", "6.5+", "7+", "7.5+", "8+", "8.5+", "9+"
+                }, selectedRatings)),
+                createSection("Release Year:", createButtonGroup(new String[]{
+                        "This Year", "Last Year", "Earlier"
+                }, selectedYears)),
+                createSection("Language:", createButtonGroup(new String[]{
+                        "English", "Mandarin", "Cantonese", "Korean", "Japanese",
+                        "Spanish", "French", "German", "Italian", "Other"
+                }, selectedLanguages)),
+                createSection("Duration:", createButtonGroup(new String[]{
+                        "0-90 mins", "90-120 mins", "120+ mins"
+                }, selectedDurations)),
+                createSection("Rating Level:", createButtonGroup(new String[]{
+                        "G", "PG", "PG-13", "R", "NC-17"
+                }, selectedRatingLevels)),
+                createButtonBox(mainLayout, filterStage)
+        );
+
+        return root;
+    }
+
+    private VBox createSection(String labelText, FlowPane buttonGroup) {
+        VBox section = new VBox(10);
+        Label label = new Label(labelText);
+        section.getChildren().addAll(label, buttonGroup);
+        return section;
+    }
+
+    private HBox createButtonBox(MainLayout mainLayout, Stage filterStage) {
+        Button searchButton = new Button("Search");
+        searchButton.setOnAction(e -> {
+            filterStage.close();
+            applyFilters(mainLayout);
+        });
+
+        Button resetButton = new Button("Reset");
+        resetButton.setOnAction(e -> resetFilters());
+
+        HBox buttonBox = new HBox(20, searchButton, resetButton);
+        buttonBox.setAlignment(Pos.CENTER);
+        return buttonBox;
+    }
+
     private FlowPane createButtonGroup(String[] options, List<String> selectedItems) {
-        FlowPane box = new FlowPane();
-        box.setHgap(10);
-        box.setVgap(10);
+        FlowPane box = new FlowPane(10, 10);
         box.setPadding(new Insets(5));
 
         for (String option : options) {
-            ToggleButton button = new ToggleButton(option);
-            button.setOnAction(e -> {
-                if (button.isSelected()) {
-                    selectedItems.add(option);
-                } else {
-                    selectedItems.remove(option);
-                }
-            });
+            ToggleButton button = createToggleButton(option, selectedItems);
             allButtons.add(button);
             box.getChildren().add(button);
         }
         return box;
+    }
+
+    private ToggleButton createToggleButton(String option, List<String> selectedItems) {
+        ToggleButton button = new ToggleButton(option);
+        button.setOnAction(e -> {
+            if (button.isSelected()) {
+                selectedItems.add(option);
+            } else {
+                selectedItems.remove(option);
+            }
+        });
+        return button;
     }
 
     // Method to reset all selected filters
@@ -138,18 +144,18 @@ public class FilterDialog {
             button.setSelected(false);
         }
 
-        System.out.println("All filters have been reset.");
+        logger.info("All filters have been reset.");
     }
 
     // Apply filters and update the RecommendationGrid in MainLayout
     private void applyFilters(MainLayout mainLayout) {
-        System.out.println("Filters applied:");
-        System.out.println("Genres: " + selectedGenres);
-        System.out.println("Ratings: " + selectedRatings);
-        System.out.println("Years: " + selectedYears);
-        System.out.println("Languages: " + selectedLanguages);
-        System.out.println("Durations: " + selectedDurations);
-        System.out.println("Rating Levels: " + selectedRatingLevels);
+        logger.info("Applying filters with the following selections:");
+        logger.info("Genres: " + selectedGenres);
+        logger.info("Ratings: " + selectedRatings);
+        logger.info("Years: " + selectedYears);
+        logger.info("Languages: " + selectedLanguages);
+        logger.info("Durations: " + selectedDurations);
+        logger.info("Rating Levels: " + selectedRatingLevels);
 
         TMDBGenreMapper genreMapper = new TMDBGenreMapper();
         TMDBLanguageMapper languageMapper = new TMDBLanguageMapper();
@@ -179,7 +185,6 @@ public class FilterDialog {
         String maxRuntime = selectedDurations.isEmpty() ? null : getMaxRuntime(selectedDurations.get(0));
         String certification = selectedRatingLevels.isEmpty() ? null : selectedRatingLevels.get(0);
 
-        // Create a new RecommendationGrid based on the filters
         RecommendationGrid newGrid = new RecommendationGrid(genreIdsParam, minRating, null, language, minRuntime, maxRuntime, year, releaseDateLte, certification);
         mainLayout.updateRecommendationGrid(newGrid);
     }
