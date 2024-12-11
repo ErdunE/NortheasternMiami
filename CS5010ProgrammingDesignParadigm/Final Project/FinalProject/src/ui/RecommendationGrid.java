@@ -13,6 +13,7 @@ import model.Movie;
 import service.TMDBService;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -137,18 +138,31 @@ public class RecommendationGrid {
     }
 
     public void sortMovies(String criteria) {
+        if (recommendations == null) {
+            logger.warning("No recommendations available to sort.");
+            return;
+        }
+
+        recommendations = new ArrayList<>(recommendations);
+
         boolean ascending = sortOrder.getOrDefault(criteria, false);
         logger.info("Sorting movies by: " + criteria + " in " + (ascending ? "ascending" : "descending") + " order.");
 
         switch (criteria) {
             case "date":
-                recommendations.sort((m1, m2) -> ascending ? m1.getReleaseDate().compareTo(m2.getReleaseDate()) : m2.getReleaseDate().compareTo(m1.getReleaseDate()));
+                recommendations.sort((m1, m2) -> ascending ?
+                        m1.getReleaseDate().compareTo(m2.getReleaseDate()) :
+                        m2.getReleaseDate().compareTo(m1.getReleaseDate()));
                 break;
             case "rating":
-                recommendations.sort((m1, m2) -> ascending ? Double.compare(m1.getRating(), m2.getRating()) : Double.compare(m2.getRating(), m1.getRating()));
+                recommendations.sort((m1, m2) -> ascending ?
+                        Double.compare(m1.getRating(), m2.getRating()) :
+                        Double.compare(m2.getRating(), m1.getRating()));
                 break;
             case "popularity":
-                recommendations.sort((m1, m2) -> ascending ? Long.compare(parseRevenue(m1.getRevenue()), parseRevenue(m2.getRevenue())) : Long.compare(parseRevenue(m2.getRevenue()), parseRevenue(m1.getRevenue())));
+                recommendations.sort((m1, m2) -> ascending ?
+                        Long.compare(parseRevenue(m1.getRevenue()), parseRevenue(m2.getRevenue())) :
+                        Long.compare(parseRevenue(m2.getRevenue()), parseRevenue(m1.getRevenue())));
                 break;
             default:
                 logger.warning("Unknown sorting criteria: " + criteria);
