@@ -63,7 +63,7 @@ public class RecommendationGrid {
 
     private void loadRecommendations(String type, String additionalParam) {
         logger.info("Loading recommendations of type: " + type);
-        loadingSpinner.show(stackPane);
+        loadingSpinner.showSpinner(stackPane);
 
         new Thread(() -> {
             try {
@@ -72,12 +72,12 @@ public class RecommendationGrid {
                 recommendations = context.getRecommendationsWithDetails();
                 Platform.runLater(() -> {
                     displayMovies(recommendations);
-                    loadingSpinner.hide(stackPane);
+                    loadingSpinner.hideSpinner(stackPane);
                 });
             } catch (Exception e) {
                 logger.severe("Failed to load recommendations: " + e.getMessage());
                 Platform.runLater(() -> {
-                    loadingSpinner.hide(stackPane);
+                    loadingSpinner.hideSpinner(stackPane);
                     showError("Failed to load recommendations.");
                 });
             }
@@ -88,7 +88,7 @@ public class RecommendationGrid {
                                                 String minRuntime, String maxRuntime, String year, String releaseDateLte,
                                                 String certification) {
         logger.info("Loading recommendations with filters.");
-        loadingSpinner.show(stackPane);
+        loadingSpinner.showSpinner(stackPane);
 
         new Thread(() -> {
             try {
@@ -96,12 +96,12 @@ public class RecommendationGrid {
                 recommendations = tmdbService.fetchMoviesWithFilters(genreIds, minRating, maxRating, language, minRuntime, maxRuntime, year, releaseDateLte, certification);
                 Platform.runLater(() -> {
                     displayMovies(recommendations);
-                    loadingSpinner.hide(stackPane);
+                    loadingSpinner.hideSpinner(stackPane);
                 });
             } catch (IOException | InterruptedException e) {
                 logger.severe("Failed to load recommendations with filters: " + e.getMessage());
                 Platform.runLater(() -> {
-                    loadingSpinner.hide(stackPane);
+                    loadingSpinner.hideSpinner(stackPane);
                     showError("Failed to load filtered recommendations.");
                 });
             }
