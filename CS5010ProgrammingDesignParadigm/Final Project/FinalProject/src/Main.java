@@ -10,13 +10,8 @@ public class Main {
 
     public static void main(String[] args) {
         logger.info("Entertainment Recommendation System is starting...");
-        startApplication(args);
-    }
-
-    private static void startApplication(String[] args) {
         try {
             Application.launch(EntertainmentGUI.class, args);
-            logger.info("Entertainment Recommendation System launched successfully.");
         } catch (Exception e) {
             logger.severe("Entertainment Recommendation System failed to launch: " + e.getMessage());
             e.printStackTrace();
