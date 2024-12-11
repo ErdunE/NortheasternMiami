@@ -8,3 +8,4 @@
 [2024-12-11 00:06:14] [INFO] [ui.FilterDialog] Rating Levels: []
 [2024-12-11 00:39:24] [INFO] [service.TMDBLanguageMapper] Logger initialized for class: service.TMDBLanguageMapper
 [2024-12-11 00:39:24] [INFO] [service.TMDBLanguageMapper] Mapping language name 'Mandarin' to code: zh
+[2024-12-11 00:57:06] [INFO] [service.TMDBLanguageMapper] Logger initialized for class: service.TMDBLanguageMapper

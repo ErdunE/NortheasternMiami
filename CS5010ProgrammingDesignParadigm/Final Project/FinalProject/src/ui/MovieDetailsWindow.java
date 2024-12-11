@@ -20,10 +20,26 @@ import model.Movie;
 
 import java.util.logging.Logger;
 
+/**
+ * Displays a detailed window for a specific movie.
+ * Shows movie details such as the poster, title, rating, genres, director, overview, and a trailer.
+ * The window includes fade-in and fade-out animations for a smooth user experience.
+ *
+ * @author Erdun E
+ * @version 1.35
+ * @since 2024-12-10
+ * Course: CS5010 Program Design Paradigm
+ * Program: Final Project
+ */
 public class MovieDetailsWindow {
 
     private static final Logger logger = LogHelper.getLogger(MovieDetailsWindow.class);
 
+    /**
+     * Displays the movie details window for the given movie.
+     *
+     * @param movie The movie object containing details to display.
+     */
     public static void display(Movie movie) {
         logger.info("Displaying details for movie: " + movie.getTitle());
 
@@ -52,6 +68,12 @@ public class MovieDetailsWindow {
         stage.showAndWait();
     }
 
+    /**
+     * Initializes and sets up the movie details window stage.
+     *
+     * @param movie The movie object containing the title.
+     * @return The initialized Stage object.
+     */
     private static Stage initializeStage(Movie movie) {
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -61,6 +83,11 @@ public class MovieDetailsWindow {
         return stage;
     }
 
+    /**
+     * Creates the root layout for the window.
+     *
+     * @return A BorderPane serving as the root layout.
+     */
     private static BorderPane createRootLayout() {
         BorderPane root = new BorderPane();
         root.setPadding(new Insets(20));
@@ -68,6 +95,12 @@ public class MovieDetailsWindow {
         return root;
     }
 
+    /**
+     * Creates a VBox containing the movie poster.
+     *
+     * @param movie The movie object containing the poster URL.
+     * @return A VBox displaying the movie poster.
+     */
     private static VBox createPosterBox(Movie movie) {
         VBox posterBox = new VBox();
         posterBox.setAlignment(Pos.CENTER);
@@ -83,6 +116,12 @@ public class MovieDetailsWindow {
         return posterBox;
     }
 
+    /**
+     * Creates a VBox displaying detailed information about the movie.
+     *
+     * @param movie The movie object containing details.
+     * @return A VBox displaying the movie details.
+     */
     private static VBox createMovieDetailsBox(Movie movie) {
         VBox movieDetailsBox = new VBox(10);
         movieDetailsBox.setAlignment(Pos.TOP_LEFT);
@@ -109,6 +148,12 @@ public class MovieDetailsWindow {
         return movieDetailsBox;
     }
 
+    /**
+     * Creates a VBox for displaying the movie overview.
+     *
+     * @param movie The movie object containing the overview.
+     * @return A VBox displaying the overview.
+     */
     private static VBox createOverviewBox(Movie movie) {
         VBox overviewBox = new VBox(10);
         overviewBox.setStyle("-fx-background-color: #ffffff; -fx-border-color: #ccc; -fx-padding: 10px; -fx-border-radius: 15px;");
@@ -129,16 +174,31 @@ public class MovieDetailsWindow {
         return overviewBox;
     }
 
+    /**
+     * A helper class that holds the trailer box and its associated WebView.
+     */
     private static class TrailerBox {
         VBox box;
         WebView webView;
 
+        /**
+         * Initializes the TrailerBox with a VBox and a WebView.
+         *
+         * @param box     The {@link VBox} containing the trailer.
+         * @param webView The {@link WebView} to play the trailer.
+         */
         public TrailerBox(VBox box, WebView webView) {
             this.box = box;
             this.webView = webView;
         }
     }
 
+    /**
+     * Creates a VBox for displaying the movie trailer.
+     *
+     * @param movie The {@link Movie} object containing the trailer URL.
+     * @return A {@link TrailerBox} containing the trailer VBox and WebView.
+     */
     private static TrailerBox createTrailerBox(Movie movie) {
         VBox trailerBox = new VBox(10);
         trailerBox.setPadding(new Insets(10));
@@ -154,12 +214,26 @@ public class MovieDetailsWindow {
         return new TrailerBox(trailerBox, trailerView);
     }
 
+    /**
+     * Creates an HBox containing the poster and movie details sections.
+     *
+     * @param posterBox       The {@link VBox} containing the movie poster.
+     * @param movieDetailsBox The {@link VBox} containing the movie details.
+     * @return An {@link HBox} with the poster and movie details.
+     */
     private static HBox createTopSection(VBox posterBox, VBox movieDetailsBox) {
         HBox topSection = new HBox(20, posterBox, movieDetailsBox);
         topSection.setAlignment(Pos.TOP_CENTER);
         return topSection;
     }
 
+    /**
+     * Creates a VBox containing the overview and trailer sections.
+     *
+     * @param overviewBox The {@link VBox} containing the movie overview.
+     * @param trailerBox  The {@link VBox} containing the movie trailer.
+     * @return A {@link VBox} with the overview and trailer.
+     */
     private static VBox createBottomSection(VBox overviewBox, VBox trailerBox) {
         VBox bottomSection = new VBox(20, overviewBox, trailerBox);
         bottomSection.setAlignment(Pos.CENTER_LEFT);
@@ -167,6 +241,11 @@ public class MovieDetailsWindow {
         return bottomSection;
     }
 
+    /**
+     * Applies a fade-in transition effect when the stage is shown.
+     *
+     * @param stage The {@link Stage} to apply the fade-in effect.
+     */
     private static void applyFadeInTransition(Stage stage) {
         FadeTransition fadeTransition = new FadeTransition(Duration.millis(300), stage.getScene().getRoot());
         fadeTransition.setFromValue(0);
@@ -174,6 +253,12 @@ public class MovieDetailsWindow {
         fadeTransition.play();
     }
 
+    /**
+     * Applies a fade-out transition effect and closes the stage when finished.
+     *
+     * @param stage       The {@link Stage} to close after the fade-out effect.
+     * @param trailerView The {@link WebView} displaying the trailer.
+     */
     private static void applyFadeOutTransition(Stage stage, WebView trailerView) {
         FadeTransition fadeTransition = new FadeTransition(Duration.millis(300), stage.getScene().getRoot());
         fadeTransition.setFromValue(1);
@@ -187,6 +272,13 @@ public class MovieDetailsWindow {
         fadeTransition.play();
     }
 
+    /**
+     * Creates a label for displaying a detail with a specified label text and content.
+     *
+     * @param labelText The text for the label.
+     * @param content   The content to display.
+     * @return A {@link Label} containing the label text and content.
+     */
     private static Label createDetailLabel(String labelText, String content) {
         return new Label(labelText + (content != null && !content.isEmpty() ? content : "Unknown"));
     }

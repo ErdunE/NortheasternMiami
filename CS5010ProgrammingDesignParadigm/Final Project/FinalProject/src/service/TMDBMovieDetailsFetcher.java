@@ -9,15 +9,34 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+/**
+ * Provides methods for fetching detailed movie information from the TMDB API.
+ * This includes details like directors, ratings, languages, release dates, and trailers.
+ *
+ * @author Erdun E
+ * @version 1.35
+ * @since 2024-12-10
+ * Course: CS5010 Program Design Paradigm
+ * Program: Final Project
+ */
 public class TMDBMovieDetailsFetcher {
 
     private static final Logger logger = LogHelper.getLogger(TMDBMovieDetailsFetcher.class);
     private final TMDBHttpRequest tmdbHttpRequest;
 
+    /**
+     * Initializes the TMDBMovieDetailsFetcher with a TMDBHttpRequest instance.
+     */
     public TMDBMovieDetailsFetcher() {
         this.tmdbHttpRequest = new TMDBHttpRequest();
     }
 
+    /**
+     * Fetches detailed information about a movie by its ID.
+     *
+     * @param movieId The unique ID of the movie.
+     * @return A JSONObject containing movie details.
+     */
     public JSONObject fetchMovieDetailsById(int movieId) {
         String endpoint = "/movie/" + movieId + "?append_to_response=videos,keywords,credits,release_dates";
         logger.info("Fetching movie details for movie ID: " + movieId);
@@ -30,6 +49,12 @@ public class TMDBMovieDetailsFetcher {
         }
     }
 
+    /**
+     * Fetches the director's name for a given movie ID.
+     *
+     * @param movieId The unique ID of the movie.
+     * @return The director's name, or "Unknown" if not found.
+     */
     public String fetchDirectorByMovieId(int movieId) {
         String endpoint = "/movie/" + movieId + "/credits";
         logger.info("Fetching director for movie ID: " + movieId);
@@ -54,6 +79,12 @@ public class TMDBMovieDetailsFetcher {
         return "Unknown";
     }
 
+    /**
+     * Fetches the rating level for a movie from its details.
+     *
+     * @param movieDetails The JSONObject containing movie details.
+     * @return The rating level, or "Unknown" if not found.
+     */
     public String fetchRatingLevel(JSONObject movieDetails) {
         logger.info("Fetching rating level from movie details.");
         JSONObject releaseDates = movieDetails.optJSONObject("release_dates");
@@ -79,6 +110,12 @@ public class TMDBMovieDetailsFetcher {
         return "Unknown";
     }
 
+    /**
+     * Fetches the languages associated with a movie.
+     *
+     * @param languagesArray A JSONArray of language information.
+     * @return A comma-separated string of language names, or "Unknown" if none found.
+     */
     public String fetchLanguages(JSONArray languagesArray) {
         if (languagesArray == null) {
             logger.warning("Languages array is null.");
@@ -96,12 +133,24 @@ public class TMDBMovieDetailsFetcher {
         return result;
     }
 
+    /**
+     * Fetches the release date from the movie details.
+     *
+     * @param movieJson The JSONObject containing movie details.
+     * @return The release date as a string, or "Unknown" if not found.
+     */
     public String fetchReleaseDate(JSONObject movieJson) {
         String releaseDate = movieJson.optString("release_date", "Unknown");
         logger.info("Fetched release date: " + releaseDate);
         return releaseDate;
     }
 
+    /**
+     * Extracts the release year from the release date string.
+     *
+     * @param releaseDate The release date string in the format "YYYY-MM-DD".
+     * @return The release year as an integer, or 0 if parsing fails.
+     */
     public int fetchReleaseYear(String releaseDate) {
         if (releaseDate != null && !releaseDate.isEmpty() && releaseDate.contains("-")) {
             try {
@@ -117,12 +166,24 @@ public class TMDBMovieDetailsFetcher {
         return 0; // Default year if extraction fails
     }
 
+    /**
+     * Fetches the revenue from the movie details.
+     *
+     * @param movieDetails The JSONObject containing movie details.
+     * @return The revenue as a long value, or 0 if not available.
+     */
     public long fetchRevenue(JSONObject movieDetails) {
         long revenue = movieDetails.optLong("revenue", 0);
         logger.info("Fetched revenue: " + revenue);
         return revenue > 0 ? revenue : 0;
     }
 
+    /**
+     * Fetches the trailer URL from the movie details.
+     *
+     * @param movieDetails The JSONObject containing movie details.
+     * @return The trailer URL as a string, or "No Trailer Available" if not found.
+     */
     public String fetchTrailerUrl(JSONObject movieDetails) {
         logger.info("Fetching trailer URL from movie details.");
         JSONObject videos = movieDetails.optJSONObject("videos");

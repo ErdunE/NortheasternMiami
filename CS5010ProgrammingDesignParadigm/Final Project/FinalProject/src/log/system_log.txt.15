@@ -401,3 +401,587 @@
 [2024-12-11 00:39:39] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Porcupine Tree: Closure / Continuation. Live. Amsterdam 07/11/22
 [2024-12-11 00:39:39] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: 11 Minutes
 [2024-12-11 00:39:39] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Posted Grudge Spirit Footage Vol.110: Outburst Chapter
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Logger initialized for class: ui.HoverOverlay
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 00:56:49] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 00:56:54] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 00:56:55] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: TOGEFILM - Mei Mei
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Godfather
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Flow
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Interstellar
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Fight Club
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Pídeme lo que quieras
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Coco
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Count of Monte-Cristo
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Avengers: Infinity War
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Top Gun: Maverick
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dune: Part Two
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Joker
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Transformers One
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Zack Snyder's Justice League
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Pídeme lo que quieras
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Transformers One
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Flow
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Count of Monte-Cristo
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dune: Part Two
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: TOGEFILM - Mei Mei
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Top Gun: Maverick
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Zack Snyder's Justice League
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Joker
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Avengers: Infinity War
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Coco
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Interstellar
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Fight Club
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien
+[2024-12-11 00:56:57] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Godfather
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Godfather
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Fight Club
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Interstellar
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Coco
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Avengers: Infinity War
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Joker
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Zack Snyder's Justice League
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Top Gun: Maverick
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: TOGEFILM - Mei Mei
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dune: Part Two
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Count of Monte-Cristo
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Flow
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Transformers One
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:56:58] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Pídeme lo que quieras
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Pídeme lo que quieras
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Transformers One
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Flow
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Count of Monte-Cristo
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dune: Part Two
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: TOGEFILM - Mei Mei
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Top Gun: Maverick
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Zack Snyder's Justice League
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Joker
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Avengers: Infinity War
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Coco
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Interstellar
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Fight Club
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Godfather
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Godfather
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Fight Club
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Interstellar
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Coco
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Avengers: Infinity War
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Joker
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Zack Snyder's Justice League
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Top Gun: Maverick
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: TOGEFILM - Mei Mei
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dune: Part Two
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Count of Monte-Cristo
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Flow
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Transformers One
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:56:59] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Pídeme lo que quieras
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: TOGEFILM - Mei Mei
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Godfather
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Flow
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Interstellar
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Fight Club
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Pídeme lo que quieras
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Coco
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Avengers: Infinity War
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Count of Monte-Cristo
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Top Gun: Maverick
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dune: Part Two
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Joker
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Zack Snyder's Justice League
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Transformers One
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Zack Snyder's Justice League
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Transformers One
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Joker
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dune: Part Two
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Top Gun: Maverick
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Avengers: Infinity War
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Count of Monte-Cristo
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Coco
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Pídeme lo que quieras
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Fight Club
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Interstellar
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Flow
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Godfather
+[2024-12-11 00:57:00] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: TOGEFILM - Mei Mei
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Avengers: Infinity War
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Top Gun: Maverick
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Joker
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Coco
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dune: Part Two
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Interstellar
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Godfather
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Transformers One
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Fight Club
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Count of Monte-Cristo
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Flow
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Zack Snyder's Justice League
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Pídeme lo que quieras
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: TOGEFILM - Mei Mei
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Zack Snyder's Justice League
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Pídeme lo que quieras
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: TOGEFILM - Mei Mei
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Flow
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Count of Monte-Cristo
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Fight Club
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Transformers One
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Godfather
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Interstellar
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dune: Part Two
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Coco
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Joker
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Top Gun: Maverick
+[2024-12-11 00:57:02] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Avengers: Infinity War
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: TOGEFILM - Mei Mei
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Godfather
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Flow
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Interstellar
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Fight Club
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Pídeme lo que quieras
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Coco
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Count of Monte-Cristo
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Avengers: Infinity War
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Top Gun: Maverick
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dune: Part Two
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Joker
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Transformers One
+[2024-12-11 00:57:04] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Zack Snyder's Justice League
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Despicable Me 4
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Arena Wars
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Inside Out 2
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dear Santa
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spellbound
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Grinch
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: That Christmas
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: How the Grinch Stole Christmas
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Bad Boys: Ride or Die
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Borderlands
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Home Alone 2: Lost in New York
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: IF
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sonic the Hedgehog 3
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wonka
+[2024-12-11 00:57:07] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sing: Thriller
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sonic the Hedgehog 3
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: That Christmas
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dear Santa
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spellbound
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sing: Thriller
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Borderlands
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Arena Wars
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Despicable Me 4
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Inside Out 2
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Bad Boys: Ride or Die
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: IF
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wonka
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Grinch
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: How the Grinch Stole Christmas
+[2024-12-11 00:57:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Home Alone 2: Lost in New York
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Logger initialized for class: ui.HoverOverlay
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 02:54:10] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 02:54:14] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 02:54:15] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 02:54:16] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Despicable Me 4
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Arena Wars
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Inside Out 2
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Dear Santa
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Spellbound
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Grinch
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: That Christmas
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: How the Grinch Stole Christmas
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Bad Boys: Ride or Die
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Borderlands
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Home Alone 2: Lost in New York
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: IF
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sonic the Hedgehog 3
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wonka
+[2024-12-11 02:54:19] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sing: Thriller
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Logger initialized for class: ui.HoverOverlay
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 02:54:36] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Logger initialized for class: ui.HoverOverlay
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 03:20:47] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Logger initialized for class: ui.HoverOverlay
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 03:21:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Logger initialized for class: ui.HoverOverlay
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 03:22:12] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Logger initialized for class: ui.HoverOverlay
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Venom: The Last Dance
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Moana 2
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Elevation
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Absolution
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Watchmen: Chapter II
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Armor
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sidelined: The QB and Me
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Gladiator II
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Wild Robot
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Wicked
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Smile 2
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Terrifier 3
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Alien: Romulus
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: The Substance
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Red One
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Sikandar Ka Muqaddar
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Levels
+[2024-12-11 03:22:30] [INFO] [ui.HoverOverlay] Creating hover overlay for movie: Deadpool & Wolverine

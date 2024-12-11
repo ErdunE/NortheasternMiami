@@ -10,6 +10,17 @@ import log.LogHelper;
 
 import java.util.logging.Logger;
 
+/**
+ * Represents the menu bar component of the Entertainment Recommendation System.
+ * The menu bar includes buttons for navigating between different movie categories,
+ * applying filters, and a search box for searching movies.
+ *
+ * @author Erdun E
+ * @version 1.35
+ * @since 2024-12-10
+ * Course: CS5010 Program Design Paradigm
+ * Program: Final Project
+ */
 public class MenuBarComponent {
 
     private static final Logger logger = LogHelper.getLogger(MenuBarComponent.class);
@@ -17,6 +28,12 @@ public class MenuBarComponent {
     private final HBox menuBar;
     private final MainLayout mainLayout;
 
+    /**
+     * Initializes the MenuBarComponent with navigation buttons and a search box.
+     *
+     * @param primaryStage The primary stage of the application.
+     * @param mainLayout   The main layout to update based on user interactions.
+     */
     public MenuBarComponent(Stage primaryStage, MainLayout mainLayout) {
         this.mainLayout = mainLayout;
 
@@ -33,6 +50,13 @@ public class MenuBarComponent {
         menuBar.setPadding(new Insets(10, 20, 10, 20));
     }
 
+    /**
+     * Creates a button with specified text and an action to execute when clicked.
+     *
+     * @param text   The text displayed on the button.
+     * @param action The action to execute when the button is clicked.
+     * @return The created Button instance.
+     */
     private Button createButton(String text, Runnable action) {
         Button button = new Button(text);
         button.setOnAction(e -> {
@@ -42,6 +66,11 @@ public class MenuBarComponent {
         return button;
     }
 
+    /**
+     * Creates the search box containing a text field and a search button.
+     *
+     * @return The HBox containing the search components.
+     */
     private HBox createSearchBox() {
         TextField searchField = new TextField();
         searchField.setPromptText("Search movies...");
@@ -64,18 +93,34 @@ public class MenuBarComponent {
         return searchBox;
     }
 
+    /**
+     * Switches the current recommendation grid based on the specified type.
+     *
+     * @param type            The type of movies to display (e.g., "popular", "rating").
+     * @param additionalParam Additional parameter for the recommendation type, if any.
+     */
     private void switchTab(String type, String additionalParam) {
         logger.info("Switching tab to: " + type);
         RecommendationGrid newGrid = new RecommendationGrid(type, additionalParam);
         mainLayout.updateRecommendationGrid(newGrid);
     }
 
+    /**
+     * Displays the filter dialog for applying filters to movie recommendations.
+     *
+     * @param primaryStage The primary stage used to display the dialog.
+     */
     private void showFilterDialog(Stage primaryStage) {
         logger.info("Opening Filter Dialog");
         FilterDialog filterDialog = new FilterDialog();
         filterDialog.show(primaryStage, mainLayout);
     }
 
+    /**
+     * Gets the menu bar containing all the buttons and search box.
+     *
+     * @return The HBox representing the menu bar.
+     */
     public HBox getMenuBar() {
         return menuBar;
     }

@@ -9,6 +9,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+/**
+ * Parses movie data from TMDB API responses and creates Movie objects.
+ * It handles parsing of movie details such as genres, duration, rating, and more.
+ *
+ * @author Erdun E
+ * @version 1.35
+ * @since 2024-12-10
+ * Course: CS5010 Program Design Paradigm
+ * Program: Final Project
+ */
 public class TMDBMovieParser {
 
     private static final Logger logger = LogHelper.getLogger(TMDBMovieParser.class);
@@ -16,11 +26,20 @@ public class TMDBMovieParser {
     private final TMDBMovieDetailsFetcher tmdbMovieDetailsFetcher;
     private final TMDBGenreMapper tmdbGenreMapper;
 
+    /**
+     * Initializes the TMDBMovieParser with required fetcher and mapper.
+     */
     public TMDBMovieParser() {
         this.tmdbMovieDetailsFetcher = new TMDBMovieDetailsFetcher();
         this.tmdbGenreMapper = new TMDBGenreMapper();
     }
 
+    /**
+     * Parses a list of movies from the API response body.
+     *
+     * @param responseBody The JSON response body from the TMDB API.
+     * @return A list of Movie objects parsed from the response.
+     */
     public List<Movie> parseMoviesFromResponse(String responseBody) {
         logger.info("Starting to parse movies from response.");
 
@@ -66,6 +85,12 @@ public class TMDBMovieParser {
         return movies;
     }
 
+    /**
+     * Parses genre names from a movie JSON object.
+     *
+     * @param movieJson The JSON object containing movie data.
+     * @return A list of genre names.
+     */
     private List<String> parseGenres(JSONObject movieJson) {
         List<String> genres = new ArrayList<>();
         JSONArray genreIds = movieJson.optJSONArray("genre_ids");
@@ -78,6 +103,12 @@ public class TMDBMovieParser {
         return genres;
     }
 
+    /**
+     * Parses the duration of a movie from its details.
+     *
+     * @param movieDetails The JSON object containing detailed movie information.
+     * @return The duration of the movie as a string.
+     */
     private String parseDuration(JSONObject movieDetails) {
         int runtime = movieDetails.optInt("runtime", 0);
         String duration = runtime > 0 ? runtime + " mins" : "Unknown";
@@ -85,6 +116,12 @@ public class TMDBMovieParser {
         return duration;
     }
 
+    /**
+     * Parses the rating level of a movie from its details.
+     *
+     * @param movieDetails The JSON object containing detailed movie information.
+     * @return The rating level as a string.
+     */
     private String parseRatingLevel(JSONObject movieDetails) {
         String ratingLevel = tmdbMovieDetailsFetcher.fetchRatingLevel(movieDetails);
         if (ratingLevel == null || ratingLevel.isEmpty()) {
@@ -94,6 +131,12 @@ public class TMDBMovieParser {
         return ratingLevel;
     }
 
+    /**
+     * Parses keywords from the movie details.
+     *
+     * @param movieDetails The JSON object containing detailed movie information.
+     * @return A list of keywords.
+     */
     private List<String> parseKeywords(JSONObject movieDetails) {
         List<String> keywords = new ArrayList<>();
         JSONObject keywordsObject = movieDetails.optJSONObject("keywords");
@@ -109,6 +152,12 @@ public class TMDBMovieParser {
         return keywords;
     }
 
+    /**
+     * Parses cast members from the movie details.
+     *
+     * @param movieDetails The JSON object containing detailed movie information.
+     * @return A list of cast member names.
+     */
     private List<String> parseCast(JSONObject movieDetails) {
         List<String> cast = new ArrayList<>();
         JSONObject credits = movieDetails.optJSONObject("credits");
@@ -124,10 +173,22 @@ public class TMDBMovieParser {
         return cast;
     }
 
+    /**
+     * Fetches the director's name for a given movie ID.
+     *
+     * @param movieId The unique ID of the movie.
+     * @return The director's name as a string.
+     */
     private String fetchDirector(int movieId) {
         return tmdbMovieDetailsFetcher.fetchDirectorByMovieId(movieId);
     }
 
+    /**
+     * Fetches the trailer URL from the movie details.
+     *
+     * @param movieDetails The JSON object containing detailed movie information.
+     * @return The trailer URL as a string.
+     */
     private String fetchTrailerUrl(JSONObject movieDetails) {
         return tmdbMovieDetailsFetcher.fetchTrailerUrl(movieDetails);
     }

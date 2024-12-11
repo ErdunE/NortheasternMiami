@@ -10,13 +10,16 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
- * GenreRecommendation class provides genre-specific movie recommendations.
+ * Genre is deprecated because filter function can cover its feature.
+ *
+ * Strategy for recommending movies based on a specific genre.
+ * Uses the TMDB API to fetch movies of the specified genre.
  *
  * @author Erdun E
- * @version 1.3
- * @since 2024-12-07
+ * @version 1.35
+ * @since 2024-12-10
  * Course: CS5010 Program Design Paradigm
- * Program: Mid-Semester Assignment
+ * Program: Final Project
  */
 public class GenreRecommendation implements RecommendationStrategy {
 
@@ -24,6 +27,12 @@ public class GenreRecommendation implements RecommendationStrategy {
     private final TMDBService tmdbService;
     private final int genreId;
 
+    /**
+     * Initializes the GenreRecommendation with a genre name.
+     * The genre name is mapped to its corresponding ID.
+     *
+     * @param genreName The name of the genre.
+     */
     public GenreRecommendation(String genreName) {
         this.tmdbService = new TMDBService();
         TMDBGenreMapper tmdbGenreMapper = new TMDBGenreMapper();
@@ -31,6 +40,11 @@ public class GenreRecommendation implements RecommendationStrategy {
         logger.info("GenreRecommendation initialized with genre ID: " + genreId);
     }
 
+    /**
+     * Provides a list of detailed movie recommendations based on the genre.
+     *
+     * @return List of Movie objects belonging to the specified genre.
+     */
     @Override
     public List<Movie> getDetailedRecommendations() {
         logger.info("Fetching movies for genre ID: " + genreId);

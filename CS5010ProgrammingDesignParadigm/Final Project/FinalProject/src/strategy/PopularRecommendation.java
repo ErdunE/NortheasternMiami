@@ -9,13 +9,25 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
- * PopularRecommendation class provides popular movie recommendations.
+ * Strategy for recommending popular movies.
+ * Uses the TMDB API to fetch a list of popular movies.
+ *
+ * @author Erdun E
+ * @version 1.35
+ * @since 2024-12-10
+ * Course: CS5010 Program Design Paradigm
+ * Program: Final Project
  */
 public class PopularRecommendation implements RecommendationStrategy {
 
     private static final Logger logger = LogHelper.getLogger(PopularRecommendation.class);
     private final TMDBService tmdbService = new TMDBService();
 
+    /**
+     * Provides a list of detailed movie recommendations based on popularity.
+     *
+     * @return List of popular Movie objects.
+     */
     @Override
     public List<Movie> getDetailedRecommendations() {
         logger.info("Fetching popular movies.");
