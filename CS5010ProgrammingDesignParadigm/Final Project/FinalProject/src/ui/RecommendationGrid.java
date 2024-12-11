@@ -44,8 +44,13 @@ public class RecommendationGrid {
     public RecommendationGrid(List<Movie> movies) {
         gridPane = createGridPane();
         stackPane = new StackPane(gridPane);
-        this.recommendations = movies;
-        displayMovies(recommendations);
+        loadingSpinner.showSpinner(stackPane); // 显示 Spinner
+
+        Platform.runLater(() -> {
+            this.recommendations = movies;
+            displayMovies(recommendations);
+            loadingSpinner.hideSpinner(stackPane); // 隐藏 Spinner
+        });
     }
 
     public StackPane getGrid() {

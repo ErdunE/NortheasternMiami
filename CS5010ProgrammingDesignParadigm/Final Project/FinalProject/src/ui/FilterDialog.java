@@ -59,9 +59,9 @@ public class FilterDialog {
 
         root.getChildren().addAll(
                 createSection("Genre:", createButtonGroup(new String[]{
-                        "Action", "Adventure", "Animation", "Biography", "Comedy", "Crime",
+                        "Action", "Adventure", "Animation", "Comedy", "Crime",
                         "Documentary", "Drama", "Family", "Fantasy", "History", "Horror",
-                        "Mystery", "Romance", "Sci-Fi", "Short", "Sport", "War", "Western"
+                        "Mystery", "Romance", "Science Fiction", "War", "Western"
                 }, selectedGenres)),
                 createSection("Rating Range:", createButtonGroup(new String[]{
                         "6+", "6.5+", "7+", "7.5+", "8+", "8.5+", "9+"
@@ -71,7 +71,8 @@ public class FilterDialog {
                 }, selectedYears)),
                 createSection("Language:", createButtonGroup(new String[]{
                         "English", "Mandarin", "Cantonese", "Korean", "Japanese",
-                        "Spanish", "French", "German", "Italian", "Other"
+                        "Spanish", "French", "German", "Italian", "Portuguese",
+                        "Russian", "Hindi", "Arabic", "Turkish", "Thai"
                 }, selectedLanguages)),
                 createSection("Duration:", createButtonGroup(new String[]{
                         "0-90 mins", "90-120 mins", "120+ mins"
@@ -180,13 +181,20 @@ public class FilterDialog {
             releaseDateLte = (java.time.Year.now().getValue() - 2) + "-12-31";
         }
 
-        String language = selectedLanguages.isEmpty() ? null : languageMapper.getCodeByLanguageName(selectedLanguages.get(0));
+        String language = getLanguageFilter(selectedLanguages, languageMapper);
         String minRuntime = selectedDurations.isEmpty() ? null : getMinRuntime(selectedDurations.get(0));
         String maxRuntime = selectedDurations.isEmpty() ? null : getMaxRuntime(selectedDurations.get(0));
         String certification = selectedRatingLevels.isEmpty() ? null : selectedRatingLevels.get(0);
 
         RecommendationGrid newGrid = new RecommendationGrid(genreIdsParam, minRating, null, language, minRuntime, maxRuntime, year, releaseDateLte, certification);
         mainLayout.updateRecommendationGrid(newGrid);
+    }
+
+    private String getLanguageFilter(List<String> selectedLanguages, TMDBLanguageMapper languageMapper) {
+        if (selectedLanguages.isEmpty()) return null;
+
+        String languageCode = languageMapper.getCodeByLanguageName(selectedLanguages.get(0));
+        return "Unknown".equals(languageCode) ? null : languageCode;
     }
 
     // Helper methods to convert duration strings to runtime ranges
