@@ -16,6 +16,11 @@ public class RecommendationFactory {
     private static final Logger logger = LogHelper.getLogger(RecommendationFactory.class);
 
     public static RecommendationStrategy createStrategy(String type, String additionalParam) {
+        if (type == null || type.trim().isEmpty()) {
+            logger.severe("Recommendation type cannot be null or empty");
+            throw new IllegalArgumentException("Recommendation type cannot be null or empty");
+        }
+
         switch (type.toLowerCase()) {
             case "popular":
                 logger.info("Creating PopularRecommendation strategy.");
