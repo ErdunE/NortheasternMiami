@@ -16,3 +16,8 @@
 [2024-12-11 00:57:06] [INFO] [ui.FilterDialog] Durations: []
 [2024-12-11 00:57:06] [INFO] [ui.FilterDialog] Rating Levels: []
 [2024-12-11 02:54:18] [INFO] [service.TMDBLanguageMapper] Logger initialized for class: service.TMDBLanguageMapper
+[2024-12-11 08:28:07] [INFO] [strategy.GenreRecommendation] Logger initialized for class: strategy.GenreRecommendation
+[2024-12-11 09:33:59] [INFO] [strategy.RatingBasedRecommendation] Logger initialized for class: strategy.RatingBasedRecommendation
+[2024-12-11 09:33:59] [INFO] [strategy.RatingBasedRecommendation] RatingBasedRecommendation initialized.
+[2024-12-11 09:33:59] [INFO] [strategy.RatingBasedRecommendation] Fetching high-rated movies for RatingBasedRecommendation strategy.
+[2024-12-11 09:34:00] [INFO] [strategy.RatingBasedRecommendation] Successfully fetched and sorted high-rated movies.
