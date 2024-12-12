@@ -28,3 +28,9 @@
 [2024-12-11 03:21:10] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper
 [2024-12-11 03:22:11] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper
 [2024-12-11 03:22:29] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper
+[2024-12-11 03:28:03] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper
+[2024-12-11 08:26:00] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper
+[2024-12-11 09:28:51] [INFO] [service.TMDBFilterHelper] Logger initialized for class: service.TMDBFilterHelper
+[2024-12-11 09:35:57] [INFO] [service.TMDBFilterHelper] Built filter URL: /discover/movie?with_genres=28&vote_average.gte=6&with_original_language=zh&primary_release_date.lte=2022-12-31
+[2024-12-11 09:36:00] [INFO] [service.TMDBFilterHelper] Filtering movies by runtime
+[2024-12-11 09:36:00] [INFO] [service.TMDBFilterHelper] Filtering movies by certification

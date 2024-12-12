@@ -24,3 +24,15 @@
 [2024-12-11 02:54:18] [INFO] [ui.FilterDialog] Languages: []
 [2024-12-11 02:54:18] [INFO] [ui.FilterDialog] Durations: []
 [2024-12-11 02:54:18] [INFO] [ui.FilterDialog] Rating Levels: []
+[2024-12-11 08:27:18] [INFO] [strategy.RatingBasedRecommendation] Logger initialized for class: strategy.RatingBasedRecommendation
+[2024-12-11 08:27:18] [INFO] [strategy.RatingBasedRecommendation] RatingBasedRecommendation initialized.
+[2024-12-11 08:27:18] [INFO] [strategy.RatingBasedRecommendation] Fetching high-rated movies for RatingBasedRecommendation strategy.
+[2024-12-11 08:27:20] [INFO] [strategy.RatingBasedRecommendation] Successfully fetched and sorted high-rated movies.
+[2024-12-11 09:33:38] [INFO] [ui.FilterDialog] Logger initialized for class: ui.FilterDialog
+[2024-12-11 09:35:57] [INFO] [ui.FilterDialog] Applying filters with the following selections:
+[2024-12-11 09:35:57] [INFO] [ui.FilterDialog] Genres: [Action]
+[2024-12-11 09:35:57] [INFO] [ui.FilterDialog] Ratings: [6+]
+[2024-12-11 09:35:57] [INFO] [ui.FilterDialog] Years: [Earlier]
+[2024-12-11 09:35:57] [INFO] [ui.FilterDialog] Languages: [Mandarin]
+[2024-12-11 09:35:57] [INFO] [ui.FilterDialog] Durations: []
+[2024-12-11 09:35:57] [INFO] [ui.FilterDialog] Rating Levels: []
