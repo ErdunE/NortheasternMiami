@@ -55,3 +55,12 @@
 [2024-12-11 08:27:43] [INFO] [ui.MovieCard] Movie card clicked: Pídeme lo que quieras
 [2024-12-11 08:27:55] [INFO] [ui.MovieCard] Movie card clicked: Interstellar
 [2024-12-11 08:27:58] [INFO] [ui.MovieCard] Movie card clicked: Dune: Part Two
+[2024-12-11 09:28:52] [INFO] [ui.MovieCard] Logger initialized for class: ui.MovieCard
+[2024-12-11 09:30:44] [INFO] [ui.MovieCard] Movie card clicked: Venom: The Last Dance
+[2024-12-11 09:31:41] [INFO] [ui.MovieCard] Movie card clicked: Venom: The Last Dance
+[2024-12-11 09:31:54] [INFO] [ui.MovieCard] Movie card clicked: Kraven the Hunter
+[2024-12-11 09:32:08] [INFO] [ui.MovieCard] Movie card clicked: Deadpool & Wolverine
+[2024-12-11 09:32:22] [INFO] [ui.MovieCard] Movie card clicked: Alien: Romulus
+[2024-12-11 09:32:52] [INFO] [ui.MovieCard] Movie card clicked: Deadpool & Wolverine
+[2024-12-11 09:33:01] [INFO] [ui.MovieCard] Movie card clicked: Armor
+[2024-12-11 09:36:14] [INFO] [ui.MovieCard] Movie card clicked: Lust, Caution

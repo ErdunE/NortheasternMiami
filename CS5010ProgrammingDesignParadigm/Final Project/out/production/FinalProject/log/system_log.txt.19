@@ -10,3 +10,5 @@
 [2024-12-11 00:39:24] [INFO] [service.TMDBLanguageMapper] Mapping language name 'Mandarin' to code: zh
 [2024-12-11 00:57:06] [INFO] [service.TMDBLanguageMapper] Logger initialized for class: service.TMDBLanguageMapper
 [2024-12-11 08:28:08] [INFO] [ui.FilterDialog] Logger initialized for class: ui.FilterDialog
+[2024-12-11 09:35:57] [INFO] [service.TMDBLanguageMapper] Logger initialized for class: service.TMDBLanguageMapper
+[2024-12-11 09:35:57] [INFO] [service.TMDBLanguageMapper] Mapping language name 'Mandarin' to code: zh

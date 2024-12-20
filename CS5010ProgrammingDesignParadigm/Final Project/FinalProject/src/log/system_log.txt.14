@@ -64,3 +64,6 @@
 [2024-12-11 09:32:52] [INFO] [ui.MovieCard] Movie card clicked: Deadpool & Wolverine
 [2024-12-11 09:33:01] [INFO] [ui.MovieCard] Movie card clicked: Armor
 [2024-12-11 09:36:14] [INFO] [ui.MovieCard] Movie card clicked: Lust, Caution
+[2024-12-19 18:47:31] [INFO] [ui.MovieCard] Logger initialized for class: ui.MovieCard
+[2024-12-19 18:47:39] [INFO] [ui.MovieCard] Movie card clicked: Red One
+[2024-12-19 18:47:48] [INFO] [ui.MovieCard] Movie card clicked: Venom: The Last Dance

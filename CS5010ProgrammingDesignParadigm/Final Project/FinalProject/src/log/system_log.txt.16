@@ -57,3 +57,6 @@
 [2024-12-11 09:32:52] [INFO] [ui.MovieDetailsWindow] Displaying details for movie: Deadpool & Wolverine
 [2024-12-11 09:33:01] [INFO] [ui.MovieDetailsWindow] Displaying details for movie: Armor
 [2024-12-11 09:36:14] [INFO] [ui.MovieDetailsWindow] Displaying details for movie: Lust, Caution
+[2024-12-19 18:47:39] [INFO] [ui.MovieDetailsWindow] Logger initialized for class: ui.MovieDetailsWindow
+[2024-12-19 18:47:39] [INFO] [ui.MovieDetailsWindow] Displaying details for movie: Red One
+[2024-12-19 18:47:48] [INFO] [ui.MovieDetailsWindow] Displaying details for movie: Venom: The Last Dance

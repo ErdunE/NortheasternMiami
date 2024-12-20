@@ -4549,3 +4549,814 @@
 [2024-12-11 08:28:12] [INFO] [service.TMDBMovieParser] Parsed cast: [Ryan Reynolds, Hugh Jackman, Emma Corrin, Matthew Macfadyen, Dafne Keen]
 [2024-12-11 08:28:12] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Deadpool & Wolverine
 [2024-12-11 08:28:12] [INFO] [service.TMDBMovieParser] Completed parsing all movies.
+[2024-12-11 09:28:51] [INFO] [service.TMDBMovieParser] Logger initialized for class: service.TMDBMovieParser
+[2024-12-11 09:28:51] [INFO] [service.TMDBMovieParser] Starting to parse movies from response.
+[2024-12-11 09:28:51] [INFO] [service.TMDBMovieParser] Parsing movie at index: 0
+[2024-12-11 09:28:51] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 912649
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Science Fiction, Adventure]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 109 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [hero, superhero, anti hero, villain, alien life-form]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Tom Hardy, Chiwetel Ejiofor, Juno Temple, Clark Backo, Rhys Ifans]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Venom: The Last Dance
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 1
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1241982
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Adventure, Family, Comedy]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 100 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [sea, ocean, villain, musical, sequel]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Auliʻi Cravalho, Dwayne Johnson, Hualālai Chung, Rose Matafeo, David Fane]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Moana 2
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 2
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1035048
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Science Fiction, Thriller]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 91 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [mine, colorado, hospital, alien invasion, ski lift]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Anthony Mackie, Morena Baccarin, Maddie Hasson, Danny Boyd Jr., Rachel Nicks]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Elevation
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 3
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 974453
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Crime, Thriller]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 112 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [gangster]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Liam Neeson, Ron Perlman, Yolonda Ross, Frankie Shaw, Daniel Diemer]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Absolution
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 4
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1182387
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Crime, Thriller]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 89 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [armored truck]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Sylvester Stallone, Jason Patric, Josh Wiggins, Dash Mihok, Erin Ownbey]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Armor
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 5
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 957119
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Comedy, Romance, TV Movie]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 99 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [high school, based on novel or book, american football player]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Noah Beck, Siena Agudong, Drew Ray Tanner, James Van Der Beek, Deborah Cox]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Sidelined: The QB and Me
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 6
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 558449
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Adventure, History]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 148 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [epic, gladiator, roman empire, ancient rome, sequel]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Paul Mescal, Denzel Washington, Pedro Pascal, Connie Nielsen, Joseph Quinn]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Gladiator II
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 7
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1299652
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Mystery, Science Fiction, Action]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 89 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [nuclear war, secret identity, retirement, based on comic, conspiracy]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Troy Baker, Adrienne Barbeau, Michael Cerveris, Zehra Fazal, Phil Fondacaro]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Watchmen: Chapter II
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 8
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1147416
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Adventure, Action, Fantasy]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 50 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [london, england, superhero, kids, لندن, السفر عبر الزمن]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Annouck Hautbois, Benjamin Bollen, Marie Nonnenmacher, Thierry Kazazian, Adeline Chetail]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 9
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1184918
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Action, Science Fiction, Family]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 102 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [robot, based on children's book, adopted son, kids, traditional parenting]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Lupita Nyong'o, Pedro Pascal, Kit Connor, Bill Nighy, Stephanie Hsu]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Wild Robot
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 10
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 402431
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama, Romance, Fantasy]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 160 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [witch, dancing, based on novel or book, college, wish]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Cynthia Erivo, Ariana Grande, Jonathan Bailey, Michelle Yeoh, Jeff Goldblum]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Wicked
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 11
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1100782
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Horror, Mystery]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 127 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [drug dealer, new york city, suicide, concert, delusion]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Naomi Scott, Rosemarie DeWitt, Lukas Gage, Miles Gutierrez-Riley, Peter Jacobson]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Smile 2
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 12
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1118031
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama, Action, Horror]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 119 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [based on novel or book, cat, human animal relationship, galicia, spain, contagion spread]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Francisco Ortiz, José María Yázpik, Berta Vázquez, Iria del Río, Marta Poveda]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 13
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1034541
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Horror, Thriller]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 125 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [monster, post-traumatic stress disorder (ptsd), angel, shower, child murder]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Lauren LaVera, David Howard Thornton, Samantha Scaffidi, Elliott Fullam, Margaret Anne Florence]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Terrifier 3
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 14
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 945961
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Horror, Science Fiction]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 119 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [alien life-form, alien, space, alien contact, alien monster]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Cailee Spaeny, David Jonsson, Archie Renaux, Isabela Merced, Spike Fearn]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Alien: Romulus
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 15
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 845781
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Comedy, Fantasy]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 124 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [bounty hunter, holiday, kidnapping, santa claus, polar bear]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Dwayne Johnson, Chris Evans, J.K. Simmons, Lucy Liu, Kiernan Shipka]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Red One
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 16
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 539972
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Adventure, Thriller]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 127 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [hunter, villain, based on comic, supervillain]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Aaron Taylor-Johnson, Ariana DeBose, Fred Hechinger, Russell Crowe, Alessandro Nivola]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Kraven the Hunter
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 17
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 933260
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Horror, Science Fiction]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 141 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [new year's eve, capitalism, black market, identity, beauty]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Demi Moore, Margaret Qualley, Dennis Quaid, Edward Hamilton-Clark, Gore Abrams]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Substance
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 18
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 791042
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Science Fiction, Thriller]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 92 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: []
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Cara Gee, Peter Mooney, Aaron Abrams, David Hewlett, Amanda Tapping]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Levels
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsing movie at index: 19
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 533535
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Comedy, Science Fiction]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed duration: 128 mins
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed keywords: [hero, superhero, anti hero, mutant, breaking the fourth wall]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Parsed cast: [Ryan Reynolds, Hugh Jackman, Emma Corrin, Matthew Macfadyen, Dafne Keen]
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Deadpool & Wolverine
+[2024-12-11 09:28:52] [INFO] [service.TMDBMovieParser] Completed parsing all movies.
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Starting to parse movies from response.
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 0
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 912649
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Science Fiction, Adventure]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 109 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [hero, superhero, anti hero, villain, alien life-form]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Tom Hardy, Chiwetel Ejiofor, Juno Temple, Clark Backo, Rhys Ifans]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Venom: The Last Dance
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 1
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1241982
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Adventure, Family, Comedy]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 100 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [sea, ocean, villain, musical, sequel]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Auliʻi Cravalho, Dwayne Johnson, Hualālai Chung, Rose Matafeo, David Fane]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Moana 2
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 2
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1035048
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Science Fiction, Thriller]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 91 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [mine, colorado, hospital, alien invasion, ski lift]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Anthony Mackie, Morena Baccarin, Maddie Hasson, Danny Boyd Jr., Rachel Nicks]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Elevation
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 3
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 974453
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Crime, Thriller]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 112 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [gangster]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Liam Neeson, Ron Perlman, Yolonda Ross, Frankie Shaw, Daniel Diemer]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Absolution
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 4
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1182387
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Crime, Thriller]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 89 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [armored truck]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Sylvester Stallone, Jason Patric, Josh Wiggins, Dash Mihok, Erin Ownbey]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Armor
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 5
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 957119
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Comedy, Romance, TV Movie]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 99 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [high school, based on novel or book, american football player]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Noah Beck, Siena Agudong, Drew Ray Tanner, James Van Der Beek, Deborah Cox]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Sidelined: The QB and Me
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 6
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 558449
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Adventure, History]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 148 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [epic, gladiator, roman empire, ancient rome, sequel]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Paul Mescal, Denzel Washington, Pedro Pascal, Connie Nielsen, Joseph Quinn]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Gladiator II
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 7
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1299652
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Mystery, Science Fiction, Action]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 89 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [nuclear war, secret identity, retirement, based on comic, conspiracy]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Troy Baker, Adrienne Barbeau, Michael Cerveris, Zehra Fazal, Phil Fondacaro]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Watchmen: Chapter II
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 8
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1147416
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Adventure, Action, Fantasy]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 50 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [london, england, superhero, kids, لندن, السفر عبر الزمن]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Annouck Hautbois, Benjamin Bollen, Marie Nonnenmacher, Thierry Kazazian, Adeline Chetail]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 9
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1184918
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Action, Science Fiction, Family]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 102 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [robot, based on children's book, adopted son, kids, traditional parenting]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Lupita Nyong'o, Pedro Pascal, Kit Connor, Bill Nighy, Stephanie Hsu]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Wild Robot
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 10
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 402431
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama, Romance, Fantasy]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 160 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [witch, dancing, based on novel or book, college, wish]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Cynthia Erivo, Ariana Grande, Jonathan Bailey, Michelle Yeoh, Jeff Goldblum]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Wicked
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 11
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1100782
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Horror, Mystery]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 127 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [drug dealer, new york city, suicide, concert, delusion]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Naomi Scott, Rosemarie DeWitt, Lukas Gage, Miles Gutierrez-Riley, Peter Jacobson]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Smile 2
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 12
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1118031
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama, Action, Horror]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 119 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [based on novel or book, cat, human animal relationship, galicia, spain, contagion spread]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Francisco Ortiz, José María Yázpik, Berta Vázquez, Iria del Río, Marta Poveda]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Apocalypse Z: The Beginning of the End
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 13
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1034541
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Horror, Thriller]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 125 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [monster, post-traumatic stress disorder (ptsd), angel, shower, child murder]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Lauren LaVera, David Howard Thornton, Samantha Scaffidi, Elliott Fullam, Margaret Anne Florence]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Terrifier 3
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 14
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 945961
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Horror, Science Fiction]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 119 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [alien life-form, alien, space, alien contact, alien monster]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Cailee Spaeny, David Jonsson, Archie Renaux, Isabela Merced, Spike Fearn]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Alien: Romulus
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 15
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 845781
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Comedy, Fantasy]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 124 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [bounty hunter, holiday, kidnapping, santa claus, polar bear]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Dwayne Johnson, Chris Evans, J.K. Simmons, Lucy Liu, Kiernan Shipka]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Red One
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 16
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 539972
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Adventure, Thriller]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed duration: 127 mins
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed keywords: [hunter, villain, based on comic, supervillain]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsed cast: [Aaron Taylor-Johnson, Ariana DeBose, Fred Hechinger, Russell Crowe, Alessandro Nivola]
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Kraven the Hunter
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Parsing movie at index: 17
+[2024-12-11 09:29:56] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 933260
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed genres: [Horror, Science Fiction]
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed duration: 141 mins
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed keywords: [new year's eve, capitalism, black market, identity, beauty]
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed cast: [Demi Moore, Margaret Qualley, Dennis Quaid, Edward Hamilton-Clark, Gore Abrams]
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Substance
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsing movie at index: 18
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 791042
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Science Fiction, Thriller]
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed duration: 92 mins
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed keywords: []
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed cast: [Cara Gee, Peter Mooney, Aaron Abrams, David Hewlett, Amanda Tapping]
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Levels
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsing movie at index: 19
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 533535
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Comedy, Science Fiction]
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed duration: 128 mins
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed keywords: [hero, superhero, anti hero, mutant, breaking the fourth wall]
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Parsed cast: [Ryan Reynolds, Hugh Jackman, Emma Corrin, Matthew Macfadyen, Dafne Keen]
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Deadpool & Wolverine
+[2024-12-11 09:29:57] [INFO] [service.TMDBMovieParser] Completed parsing all movies.
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Starting to parse movies from response.
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 0
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1147416
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Adventure, Action, Fantasy]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed duration: 50 mins
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [london, england, superhero, kids, لندن, السفر عبر الزمن]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Annouck Hautbois, Benjamin Bollen, Marie Nonnenmacher, Thierry Kazazian, Adeline Chetail]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Miraculous World, London: At the Edge of Time
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 1
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1184918
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Action, Science Fiction, Family]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed duration: 102 mins
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [robot, based on children's book, adopted son, kids, traditional parenting]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Lupita Nyong'o, Pedro Pascal, Kit Connor, Bill Nighy, Stephanie Hsu]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Wild Robot
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 2
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 698687
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Science Fiction, Adventure, Family]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed duration: 104 mins
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [based on toy, giant robot, aftercreditsstinger, duringcreditsstinger, buddy movie]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Chris Hemsworth, Brian Tyree Henry, Scarlett Johansson, Keegan-Michael Key, Jon Hamm]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Transformers One
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 3
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1252309
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Romance, Drama]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed duration: Unknown
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [spain, based on novel or book, woman director, erotic romance]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Gabriela Andrada, Mario Ermito, Celia Freijeiro, David Solans, Alba Ribas]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Pídeme lo que quieras
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 4
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1084736
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Adventure, Drama, History, Romance, Thriller]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed duration: 178 mins
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [based on novel or book, count, revenge, wrongful conviction, angry]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Pierre Niney, Bastien Bouillon, Anaïs Demoustier, Anamaria Vartolomei, Laurent Lafitte]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Count of Monte-Cristo
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 5
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 823219
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Fantasy, Adventure]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed duration: 85 mins
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [ocean, cat, boat, dystopia, dog]
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsed cast: []
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Flow
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 6
+[2024-12-11 09:33:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 299536
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Action, Science Fiction]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 149 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [sacrifice, magic, superhero, based on comic, space]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Robert Downey Jr., Chris Evans, Chris Hemsworth, Josh Brolin, Mark Ruffalo]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Avengers: Infinity War
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 7
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 354912
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Family, Animation, Music, Adventure]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 105 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [skeleton, mexico, guitar, afterlife, musician]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Anthony Gonzalez, Gael García Bernal, Benjamin Bratt, Alanna Ubach, Renee Victor]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Coco
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 8
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 569094
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Action, Adventure, Science Fiction]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 140 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [new york city, hero, sacrifice, superhero, villain]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Shameik Moore, Hailee Steinfeld, Brian Tyree Henry, Luna Lauren Velez, Jake Johnson]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Spider-Man: Across the Spider-Verse
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 9
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1149913
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama, Romance]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: Unknown
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [amused]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: []
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: TOGEFILM - Mei Mei
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 10
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 98
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Drama, Adventure]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 155 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [epic, gladiator, rome, italy, arena, senate]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed, Richard Harris]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Gladiator
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 11
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 348
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Horror, Science Fiction]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 117 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [android, spacecraft, space marine, biology, dystopia]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Tom Skerritt, Sigourney Weaver, Veronica Cartwright, Harry Dean Stanton, John Hurt]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Alien
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 12
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 157336
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Drama, Science Fiction]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 169 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [rescue, future, spacecraft, race against time, artificial intelligence (a.i.)]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Matthew McConaughey, Anne Hathaway, Michael Caine, Jessica Chastain, Casey Affleck]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Interstellar
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 13
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 693134
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Science Fiction, Adventure]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 167 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [epic, based on novel or book, fight, politics, sandstorm]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Timothée Chalamet, Zendaya, Rebecca Ferguson, Javier Bardem, Josh Brolin]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Dune: Part Two
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 14
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 361743
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Drama]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 131 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [fighter pilot, u.s. navy, sequel, nuclear weapons, military]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Tom Cruise, Miles Teller, Monica Barbaro, Lewis Pullman, Jay Ellis]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Top Gun: Maverick
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 15
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 550
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 139 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [dual identity, rage and hate, based on novel or book, nihilism, fight]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Edward Norton, Brad Pitt, Helena Bonham Carter, Meat Loaf, Jared Leto]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Fight Club
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 16
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 475557
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Crime, Thriller, Drama]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 122 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [dream, street gang, society, psychopath, clown]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy, Brett Cullen]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Joker
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 17
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 238
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama, Crime]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 175 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [based on novel or book, loss of loved one, love at first sight, italy, symbolism]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Marlon Brando, Al Pacino, James Caan, Robert Duvall, Richard S. Castellano]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Godfather
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 18
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 791373
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Adventure, Fantasy]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 242 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [saving the world, superhero, resurrection, based on comic, superhero team]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Ben Affleck, Henry Cavill, Gal Gadot, Ray Fisher, Jason Momoa]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Zack Snyder's Justice League
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 19
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 120
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Fantasy, Action]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed duration: 179 mins
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [based on novel or book, orcs, elves, dwarf, magic]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Elijah Wood, Ian McKellen, Viggo Mortensen, Sean Astin, Ian Holm]
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Lord of the Rings: The Fellowship of the Ring
+[2024-12-11 09:34:00] [INFO] [service.TMDBMovieParser] Completed parsing all movies.
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Starting to parse movies from response.
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsing movie at index: 0
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 4588
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Drama, Romance, Thriller]
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed duration: 158 mins
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed rating level: NC-17
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed keywords: [secret love, china, sexual obsession, shanghai, china, cheating]
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed cast: [Tony Leung Chiu-Wai, Tang Wei, Joan Chen, Leehom Wang, Tou Tsung-Hua]
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Lust, Caution
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsing movie at index: 1
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 518896
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama, Action, Science Fiction]
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed duration: 101 mins
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed keywords: [alien life-form, meteorite]
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed cast: [Louis Koo, Sean Lau Ching-Wan, Carina Lau Kar-Ling, Philip Keung Ho-Man, Tse Kwan-Ho]
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Warriors of Future
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsing movie at index: 2
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 11713
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama, Action, Thriller]
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed duration: 108 mins
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed keywords: [martial arts, kung fu, teacher, revenge, honor]
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsed cast: [Bruce Lee, Nora Miao, Maria Yi, James Tien Chuen, Tien Feng]
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Fist of Fury
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Parsing movie at index: 3
+[2024-12-11 09:35:57] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 931405
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Adventure, Comedy, Action, Family]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed duration: 90 mins
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed keywords: []
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed cast: [Nianci Shen, Liang Dawei, Liang Zou, Jianru Zhang, Lü Qi]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Run, Tiger Run!
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsing movie at index: 4
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 811634
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Action, Fantasy, Family]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed duration: 95 mins
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed keywords: [kung fu, animation]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed cast: [Jiang Bian, Haiting Cai, Su Shangqing, Zhang Lei, Zhang He]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Monkey King: Reborn
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsing movie at index: 5
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 50146
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed genres: [Romance, Action, Drama]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed duration: 111 mins
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed keywords: []
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed cast: [Peter Yang Kwan, Hu Chin, Chen Ping, Tanny Tien-Ni, Chiang Nan]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Golden Lotus
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsing movie at index: 6
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 367206
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed genres: [Action]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed duration: 108 mins
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed keywords: [china, swordsman]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed cast: [Lin Gengxin, Jiang Mengjie, Jiang Yiyan, Peter Ho, Norman Tsui Siu-Keung]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Sword Master
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsing movie at index: 7
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 663558
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed genres: [Animation, Action, Fantasy]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed duration: 116 mins
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed keywords: [based on novel or book, reincarnation, dragon, xianxia, feng shen yanyi]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsed cast: [Yang Tianxiang, Zhang He, Xuan Xiaoming, Li Shimeng, Keer Zhu]
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Successfully parsed movie: New Gods: Nezha Reborn
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Parsing movie at index: 8
+[2024-12-11 09:35:58] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 146
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Drama, Action, Romance]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed duration: 120 mins
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [martial arts, kung fu, based on novel or book, flying, taskmaster]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Chow Yun-Fat, Michelle Yeoh, Zhang Ziyi, Chang Chen, Lung Sihung]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Crouching Tiger, Hidden Dragon
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 9
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 870096
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Science Fiction, Horror, Action]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed duration: 89 mins
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [dangerous mission, environmental disaster, plants, ecological disaster, global catastrophe]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed cast: [He Shengming, Mi Luo, Michelle Ye Xuan, Yu Rongguang, Li Ning]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Restart the Earth
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 10
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 865921
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Action]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed duration: 97 mins
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed keywords: []
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Fu Chengpeng, Zhao Xun, Sun Anqi, Yang Tongshu, Emile Amro]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Return of Special Forces 5
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 11
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 460555
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Thriller, War, Adventure]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed duration: 138 mins
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [red sea, historical fiction, desert, hostage situation, tank battle]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Zhang Yi, Johnny Huang, Hai Qing, Du Jiang, Zhang Hanyu]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Operation Red Sea
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 12
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 457837
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Romance, Action, Drama, History]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed duration: 120 mins
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed rating level: NR
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed keywords: []
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Chang Chen, Yang Mi, Zhang Yi, Lei Jiayin, Xin Zhilei]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Brotherhood of Blades II: The Infernal Battlefield
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 13
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1729
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Adventure, Fantasy]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed duration: 104 mins
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [martial arts, based on novel or book, temple, legend, villainess]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Jackie Chan, Jet Li, Michael Angarano, Liu Yifei, Li Bingbing]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Forbidden Kingdom
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 14
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 535167
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Science Fiction, Action, Drama]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed duration: 126 mins
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [jupiter, based on novel or book, space station, mankind forced underground, insecure]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Qu Chuxiao, Li Guangjie, Zhao Jinmai, Wu Jing, Richard Ng Man-Tat]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Wandering Earth
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 15
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 79
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama, Adventure, Action, History]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed duration: 99 mins
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed keywords: [martial arts, kung fu, right and justice, countryside, loss of loved one]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsed cast: [Jet Li, Tony Leung Chiu-Wai, Maggie Cheung Man-Yuk, Donnie Yen Chi-Tan, Zhang Ziyi]
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Hero
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Parsing movie at index: 16
+[2024-12-11 09:35:59] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 875104
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Adventure, History, Drama]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed duration: 76 mins
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [martial arts, kung fu, hong kong, wing chun]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Xie Miao, Chen Guanying, Sergio De Ieso, Hou Tongjiang, Gu Lei]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Ip Man: The Awakening
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 17
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 364324
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Action, Thriller]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed duration: 115 mins
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [based on novel or book]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Yao Chen, Mark Chao, Rhydian Vaughan, Jerry Lee, Tang Yan]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Chronicles of the Ghostly Tribe
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 18
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 37034
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Fantasy]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed duration: 115 mins
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed keywords: [martial arts, hero, army, fight, sword]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Vincent Zhao Wenzhuo, Zhou Xun, Andy On Chi-Kit, Guo Xiaodong, Jay Chou]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: True Legend
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsing movie at index: 19
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 611698
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed genres: [Fantasy, Action, Adventure, Drama]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed duration: 130 mins
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed keywords: []
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Parsed cast: [Lei Jiayin, Yang Mi, Dong Zijian, Wang Shengdi, Yu Hewei]
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Successfully parsed movie: A Writer's Odyssey
+[2024-12-11 09:36:00] [INFO] [service.TMDBMovieParser] Completed parsing all movies.
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Starting to parse movies from response.
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Parsing movie at index: 0
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1339252
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Parsed genres: []
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Parsed duration: 2 mins
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Parsed keywords: []
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Parsed cast: [Roy Boucher]
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Parsing movie at index: 1
+[2024-12-11 09:37:44] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 671
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Fantasy]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed duration: 152 mins
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed keywords: [witch, school friend, friendship, london, england, based on novel or book]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed cast: [Daniel Radcliffe, Rupert Grint, Emma Watson, Richard Harris, Tom Felton]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Potter and the Philosopher's Stone
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsing movie at index: 2
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 672
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Fantasy]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed duration: 161 mins
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed keywords: [witch, flying car, elves, magic, sword]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed cast: [Daniel Radcliffe, Rupert Grint, Emma Watson, Kenneth Branagh, Toby Jones]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Potter and the Chamber of Secrets
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsing movie at index: 3
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 673
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Fantasy]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed duration: 141 mins
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed keywords: [witch, school friend, friendship, flying, magic]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed cast: [Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, Michael Gambon]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Potter and the Prisoner of Azkaban
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsing movie at index: 4
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 674
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Fantasy]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed duration: 157 mins
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed keywords: [witch, dying and death, based on novel or book, magic, boarding school]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed cast: [Daniel Radcliffe, Rupert Grint, Emma Watson, Brendan Gleeson, Michael Gambon]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Potter and the Goblet of Fire
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsing movie at index: 5
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 767
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Fantasy]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed duration: 153 mins
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed rating level: PG
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed keywords: [witch, dying and death, london, england, magic, school of witchcraft]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed cast: [Daniel Radcliffe, Rupert Grint, Emma Watson, Jim Broadbent, Michael Gambon]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Potter and the Half-Blood Prince
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsing movie at index: 6
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 675
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Fantasy]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed duration: 138 mins
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed keywords: [witch, dying and death, court, magic, prophecy]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed cast: [Daniel Radcliffe, Rupert Grint, Emma Watson, Imelda Staunton, Helena Bonham Carter]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Potter and the Order of the Phoenix
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsing movie at index: 7
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 12444
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed genres: [Adventure, Fantasy]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed duration: 146 mins
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed keywords: [witch, friendship, london, england, corruption, escape]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsed cast: [Daniel Radcliffe, Emma Watson, Rupert Grint, Toby Jones, Helena Bonham Carter]
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Potter and the Deathly Hallows: Part 1
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Parsing movie at index: 8
+[2024-12-11 09:37:45] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 12445
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed genres: [Fantasy, Adventure]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed duration: 130 mins
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed keywords: [witch, dying and death, saving the world, self sacrifice, magic]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed cast: [Daniel Radcliffe, Emma Watson, Rupert Grint, Ralph Fiennes, Alan Rickman]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Potter and the Deathly Hallows: Part 2
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsing movie at index: 9
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 25941
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed genres: [Thriller, Crime, Drama, Action]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed duration: 103 mins
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed keywords: [investigation, self-defense, riot, murder, vigilante]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed cast: [Michael Caine, Emily Mortimer, Iain Glen, Lee Oakes, Liam Cunningham]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Brown
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsing movie at index: 10
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 24666
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed genres: [Comedy, Crime]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed duration: 100 mins
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed keywords: [heist, criminal trio]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed cast: [Arve Opsahl, Sverre Holm, Carsten Byhring, Harald Heide-Steen Jr., Kari Simonsen]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Olsen Gang and Dynamite-Harry
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsing movie at index: 11
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 1321735
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed duration: 3 mins
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed keywords: [dream, surrealism, school, neo-surrealism, short film]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed cast: [Felix Jenkins, Tristan Kolio, Alicia Green, Eamon Langton, Madi Austen]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Newman Made a Film, Did You Know?
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsing movie at index: 12
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 47943
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed genres: [Drama, Comedy, Mystery]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed duration: 117 mins
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed keywords: [friendship, countryside, psychopath, psychology, auvergne]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed cast: [Laurent Lucas, Sergi López, Mathilde Seigner, Sophie Guillemin, Liliane Rovère]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Successfully parsed movie: With a Friend Like Harry...
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsing movie at index: 13
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 639
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed genres: [Comedy, Romance, Drama]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed duration: 96 mins
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed keywords: [new york city, friendship, husband wife relationship, orgasm, restaurant]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed cast: [Meg Ryan, Billy Crystal, Bruno Kirby, Carrie Fisher, Steven Ford]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Successfully parsed movie: When Harry Met Sally...
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsing movie at index: 14
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 899082
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed genres: [Documentary]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed duration: 103 mins
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed keywords: [reunion, fantasy world, social gathering, college reunion, film history]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed cast: [Daniel Radcliffe, Rupert Grint, Emma Watson, Bonnie Wright, Matthew Lewis]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Harry Potter 20th Anniversary: Return to Hogwarts
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsing movie at index: 15
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 441906
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed genres: [Comedy, Drama, Romance]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed duration: 144 mins
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed keywords: [challa]
+[2024-12-11 09:37:46] [INFO] [service.TMDBMovieParser] Parsed cast: [Shah Rukh Khan, Anushka Sharma, Aru Krishansh Verma, Chandan Roy Sanyal, Evelyn Sharma]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Jab Harry Met Sejal
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsing movie at index: 16
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 984
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed genres: [Action, Crime, Thriller]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed duration: 102 mins
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed rating level: R
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed keywords: [sniper, police, ambush, chase, ransom]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed cast: [Clint Eastwood, Harry Guardino, Reni Santoni, John Vernon, Andrew Robinson]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Dirty Harry
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsing movie at index: 17
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 10152
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed genres: [Comedy]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed duration: 85 mins
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed rating level: PG-13
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed keywords: [friendship, skateboarding, adoption, fate]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed cast: [Derek Richardson, Eric Christian Olsen, Mimi Rogers, Luis Guzmán, Rachel Nichols]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Successfully parsed movie: Dumb and Dumberer: When Harry Met Lloyd
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsing movie at index: 18
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 24670
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed genres: [Comedy, Crime]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed duration: 102 mins
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed keywords: [heist, criminal trio]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed cast: [Arve Opsahl, Carsten Byhring, Sverre Holm, Harald Heide-Steen Jr., Aud Schønemann]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Olsen Gang and Dynamite-Harry Goes Wild
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsing movie at index: 19
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Fetching details for movie ID: 29224
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed genres: [Comedy, Crime]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed duration: 106 mins
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed rating level: Unknown
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed keywords: []
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Parsed cast: [Gösta Ekman, Ulf Brunnberg, Björn Gustafson, Nils Brandt, Carl Billquist]
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Successfully parsed movie: The Jönsson Gang & Dynamite Harry
+[2024-12-11 09:37:47] [INFO] [service.TMDBMovieParser] Completed parsing all movies.
