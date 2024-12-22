@@ -1,5 +1,5 @@
 # NortheasternMiami
-Assignment, homework, and everything in Northeastern University Miami
+Assignment, homework, and everything in Northeastern University Miami :)
 ## Course
 ### 2024 Fall
 [CS 5010 Programming Design Paradigm](https://github.com/ErdunE/NortheasternMiami/tree/main/CS5010ProgrammingDesignParadigm)  
