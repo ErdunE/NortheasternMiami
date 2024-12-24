@@ -7,10 +7,8 @@ Assignment, homework, and everything in Northeastern University Miami :)
 ### 2025 Spring
 [CS 5200 Database Management Systems]()  
 [CS 5520 Mobile Application Development]()
-### 2024 Fall
-### 2025 Spring
-### 2024 Fall
-### 2025 Spring
+### 2025 Fall
+### 2026 Spring
 ## Other Course
 ### 2024 Fall
 [Cohort H: Graduate Leadership Institute (Fall 2024)](https://github.com/ErdunE/NortheasternMiami/tree/main/GLI)  
