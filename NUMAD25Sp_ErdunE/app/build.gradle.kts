@@ -16,8 +16,18 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("/Users/erdune/Desktop/a1-ErdunE/KeyStore/ClassKey")
+            storePassword = "950128"
+            keyAlias = "Key1"
+            keyPassword = "950128"
+        }
+    }
+
     buildTypes {
-        release {
+        getByName("release") {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
