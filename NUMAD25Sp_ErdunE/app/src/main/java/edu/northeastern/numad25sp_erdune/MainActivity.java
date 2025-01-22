@@ -1,5 +1,6 @@
 package edu.northeastern.numad25sp_erdune;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // About Me Button
         Button aboutMeButton = findViewById(R.id.aboutMeButton);
-
         aboutMeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +35,17 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast toast = Toast.makeText(MainActivity.this, text, duration);
                 toast.show();
+            }
+        });
+
+        // Quic Calc Button
+        Button quicCalcButton = findViewById(R.id.quicCalcButton); // Reference the Quic Calc Button
+        quicCalcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to start QuicCalcActivity
+                Intent intent = new Intent(MainActivity.this, QuicCalcActivity.class);
+                startActivity(intent); // Start the activity
             }
         });
     }
