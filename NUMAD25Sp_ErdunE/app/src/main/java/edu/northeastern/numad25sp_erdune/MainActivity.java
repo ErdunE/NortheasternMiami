@@ -39,13 +39,24 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Quic Calc Button
-        Button quicCalcButton = findViewById(R.id.quicCalcButton); // Reference the Quic Calc Button
+        Button quicCalcButton = findViewById(R.id.quicCalcButton);
         quicCalcButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Create an Intent to start QuicCalcActivity
                 Intent intent = new Intent(MainActivity.this, QuicCalcActivity.class);
-                startActivity(intent); // Start the activity
+                startActivity(intent);
+            }
+        });
+
+        // Link Collector Button
+        Button linkCollectorButton = findViewById(R.id.linkCollectorButton);
+        linkCollectorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent to start LinkCollectorActivity
+                Intent intent = new Intent(MainActivity.this, LinkCollectorActivity.class);
+                startActivity(intent);
             }
         });
     }
