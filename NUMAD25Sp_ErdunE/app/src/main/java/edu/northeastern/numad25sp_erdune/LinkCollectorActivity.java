@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ public class LinkCollectorActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private LinkAdapter adapter;
     private List<String> links;
+    private String lastAddedLink;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -57,9 +59,17 @@ public class LinkCollectorActivity extends AppCompatActivity {
             String url = urlInput.getText().toString().trim();
 
             if(!name.isEmpty() && !url.isEmpty()){
-                links.add(name + ": " + url);
-                adapter.notifyDataSetChanged();
-                Toast.makeText(LinkCollectorActivity.this, "Link added successfully!", Toast.LENGTH_SHORT).show();
+                lastAddedLink = name + ": " + url;
+                links.add(lastAddedLink);
+                adapter.notifyItemInserted(links.size() - 1);
+
+                Snackbar.make(recyclerView, "Link added successfully!", Snackbar.LENGTH_LONG).setAction("Undo", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        links.remove(links.size() - 1);
+                        adapter.notifyItemRemoved(links.size());
+                    }
+                }).show();
             } else {
                 Toast.makeText(LinkCollectorActivity.this, "Both fields are required.", Toast.LENGTH_SHORT).show();
             }
