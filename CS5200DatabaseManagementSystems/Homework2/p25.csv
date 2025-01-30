@@ -1,0 +1,9 @@
+empId,empFirst,empLast,empTitle,numInvoices,invoiceTotal
+5,Steve,Johnson,Sales Support Agent,126,$720.16
+3,Jane,Peacock,Sales Support Agent,146,$833.04
+4,Margaret,Park,Sales Support Agent,140,$775.40
+1,Andrew,Adams,General Manager,0,$0.00
+8,Laura,Callahan,IT Staff,0,$0.00
+2,Nancy,Edwards,Sales Manager,0,$0.00
+7,Robert,King,IT Staff,0,$0.00
+6,Michael,Mitchell,IT Manager,0,$0.00
