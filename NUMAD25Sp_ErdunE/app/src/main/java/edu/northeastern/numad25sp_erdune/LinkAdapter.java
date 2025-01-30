@@ -13,9 +13,11 @@ import java.util.List;
 public class LinkAdapter extends RecyclerView.Adapter<LinkAdapter.ViewHolder> {
 
     private final List<String> linkList;
+    private final OnLinkLongClickListener longClickListener;
 
-    public LinkAdapter(List<String> linkList) {
+    public LinkAdapter(List<String> linkList, OnLinkLongClickListener longClickListener) {
         this.linkList = linkList;
+        this.longClickListener = longClickListener;
     }
 
     @NonNull
@@ -29,6 +31,11 @@ public class LinkAdapter extends RecyclerView.Adapter<LinkAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String link = linkList.get(position);
         holder.linkTextView.setText(link);
+
+        holder.itemView.setOnLongClickListener(v -> {
+            longClickListener.onLinkLongClick(position, link);
+            return true;
+        });
     }
 
     @Override
@@ -43,5 +50,9 @@ public class LinkAdapter extends RecyclerView.Adapter<LinkAdapter.ViewHolder> {
             super(itemView);
             linkTextView = itemView.findViewById(android.R.id.text1);
         }
+    }
+
+    public interface OnLinkLongClickListener {
+        void onLinkLongClick(int position, String link);
     }
 }
