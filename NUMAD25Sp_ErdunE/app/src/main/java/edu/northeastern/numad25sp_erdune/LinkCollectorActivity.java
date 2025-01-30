@@ -1,10 +1,13 @@
 package edu.northeastern.numad25sp_erdune;
 
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,7 +29,7 @@ public class LinkCollectorActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private LinkAdapter adapter;
-    private List<String> links;
+    private List<String[]> links;
     private String lastAddedLink;
 
     private Drawable deleteIcon;
@@ -41,23 +44,13 @@ public class LinkCollectorActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         links = new ArrayList<>();
-        adapter = new LinkAdapter(links, new LinkAdapter.OnLinkLongClickListener() {
-            @Override
-            public void onLinkLongClick(int position, String link) {
-                showEditLinkDialog(position, link);
-            }
-        });
+        adapter = new LinkAdapter(links, this::handleLinkClick, this::showEditLinkDialog);
         recyclerView.setAdapter(adapter);
 
         deleteIcon = ContextCompat.getDrawable(this, android.R.drawable.ic_menu_delete);
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showAddLinkDialog();
-            }
-        }));
+        fab.setOnClickListener(v -> showAddLinkDialog());
 
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
             @Override
@@ -71,12 +64,9 @@ public class LinkCollectorActivity extends AppCompatActivity {
                 links.remove(position);
                 adapter.notifyItemRemoved(position);
                 Snackbar.make(recyclerView, "Link deleted", Snackbar.LENGTH_LONG)
-                        .setAction("Undo", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                links.add(position, ((LinkAdapter.ViewHolder) viewHolder).linkTextView.getText().toString());
-                                adapter.notifyItemInserted(position);
-                            }
+                        .setAction("Undo", v -> {
+                            links.add(position, links.get(position));
+                            adapter.notifyItemInserted(position);
                         }).show();
             }
 
@@ -108,7 +98,21 @@ public class LinkCollectorActivity extends AppCompatActivity {
         itemTouchHelper.attachToRecyclerView(recyclerView);
     }
 
-    private void showEditLinkDialog(int position, String link) {
+    private void handleLinkClick(String url) {
+        if (isValidUrl(url)) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Invalid URL", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private boolean isValidUrl(String url) {
+        return Patterns.WEB_URL.matcher(url).matches();
+    }
+
+
+    private void showEditLinkDialog(int position, String name, String url) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Edit Link");
 
@@ -118,20 +122,19 @@ public class LinkCollectorActivity extends AppCompatActivity {
         EditText nameInput = dialogView.findViewById(R.id.linkNameInput);
         EditText urlInput = dialogView.findViewById(R.id.linkUrlInput);
 
-        String[] parts = link.split(": ", 2);
-        nameInput.setText(parts[0]);
-        urlInput.setText(parts.length > 1 ? parts[1] : "");
+        nameInput.setText(name);
+        urlInput.setText(url);
 
         builder.setPositiveButton("Save", (dialog, which) -> {
-            String name = nameInput.getText().toString().trim();
-            String url = urlInput.getText().toString().trim();
+            String newName = nameInput.getText().toString().trim();
+            String newUrl = urlInput.getText().toString().trim();
 
-            if (!name.isEmpty() && !url.isEmpty()) {
-                links.set(position, name + ": " + url);
+            if (!newName.isEmpty() && !newUrl.isEmpty()) {
+                links.set(position, new String[]{newName, newUrl});
                 adapter.notifyItemChanged(position);
                 Snackbar.make(recyclerView, "Link updated successfully!", Snackbar.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(LinkCollectorActivity.this, "Both fields are required.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Both fields are required.", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -139,7 +142,7 @@ public class LinkCollectorActivity extends AppCompatActivity {
 
         builder.create().show();
     }
-    private void showAddLinkDialog(){
+    private void showAddLinkDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Add New Link");
 
@@ -153,20 +156,12 @@ public class LinkCollectorActivity extends AppCompatActivity {
             String name = nameInput.getText().toString().trim();
             String url = urlInput.getText().toString().trim();
 
-            if(!name.isEmpty() && !url.isEmpty()){
-                lastAddedLink = name + ": " + url;
-                links.add(lastAddedLink);
+            if (!name.isEmpty() && !url.isEmpty()) {
+                links.add(new String[]{name, url});
                 adapter.notifyItemInserted(links.size() - 1);
-
-                Snackbar.make(recyclerView, "Link added successfully!", Snackbar.LENGTH_LONG).setAction("Undo", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        links.remove(links.size() - 1);
-                        adapter.notifyItemRemoved(links.size());
-                    }
-                }).show();
+                Snackbar.make(recyclerView, "Link added successfully!", Snackbar.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(LinkCollectorActivity.this, "Both fields are required.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Both fields are required.", Toast.LENGTH_SHORT).show();
             }
         });
 

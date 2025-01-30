@@ -12,11 +12,13 @@ import java.util.List;
 
 public class LinkAdapter extends RecyclerView.Adapter<LinkAdapter.ViewHolder> {
 
-    private final List<String> linkList;
+    private final List<String[]> linkList;
+    private final OnLinkClickListener clickListener;
     private final OnLinkLongClickListener longClickListener;
 
-    public LinkAdapter(List<String> linkList, OnLinkLongClickListener longClickListener) {
+    public LinkAdapter(List<String[]> linkList, OnLinkClickListener clickListener, OnLinkLongClickListener longClickListener) {
         this.linkList = linkList;
+        this.clickListener = clickListener;
         this.longClickListener = longClickListener;
     }
 
@@ -29,11 +31,13 @@ public class LinkAdapter extends RecyclerView.Adapter<LinkAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String link = linkList.get(position);
-        holder.linkTextView.setText(link);
+        String name = linkList.get(position)[0];
+        String url = linkList.get(position)[1];
+        holder.linkTextView.setText(name + ": " + url);
 
+        holder.itemView.setOnClickListener(v -> clickListener.onLinkClick(url));
         holder.itemView.setOnLongClickListener(v -> {
-            longClickListener.onLinkLongClick(position, link);
+            longClickListener.onLinkLongClick(position, name, url);
             return true;
         });
     }
@@ -52,7 +56,11 @@ public class LinkAdapter extends RecyclerView.Adapter<LinkAdapter.ViewHolder> {
         }
     }
 
+    public interface OnLinkClickListener {
+        void onLinkClick(String url);
+    }
+
     public interface OnLinkLongClickListener {
-        void onLinkLongClick(int position, String link);
+        void onLinkLongClick(int position, String name, String url);
     }
 }
