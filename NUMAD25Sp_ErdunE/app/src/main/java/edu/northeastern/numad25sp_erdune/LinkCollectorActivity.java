@@ -110,10 +110,14 @@ public class LinkCollectorActivity extends AppCompatActivity {
 
     private void handleLinkClick(String url) {
         if (isValidUrl(url)) {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-            startActivity(intent);
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(intent);
+            } catch (Exception e) {
+                Toast.makeText(this, "ERROR, Check Your URL", Toast.LENGTH_SHORT).show();
+            }
         } else {
-            Toast.makeText(this, "Invalid URL", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ERROR, Invalid URL", Toast.LENGTH_SHORT).show();
         }
     }
 
