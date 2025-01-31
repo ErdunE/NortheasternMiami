@@ -30,11 +30,8 @@ public class MainActivity extends AppCompatActivity {
         aboutMeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CharSequence text = "Hello, I’m Erdun! You can reach me at e.e@northeastern.edu";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(MainActivity.this, text, duration);
-                toast.show();
+                Intent intent = new Intent(MainActivity.this, AboutMeActivity.class);
+                startActivity(intent);
             }
         });
 
