@@ -1,6 +1,8 @@
 package edu.northeastern.numad25sp_erdune;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -23,9 +25,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class LinkCollectorActivity extends AppCompatActivity {
+
+    private static final String PREFS_NAME = "LinkCollectorPrefs";
+    private static final String LINKS_KEY = "SavedLinks";
 
     private RecyclerView recyclerView;
     private LinkAdapter adapter;
@@ -43,7 +50,7 @@ public class LinkCollectorActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        links = new ArrayList<>();
+        links = loadLinksFromPreferences();
         adapter = new LinkAdapter(links, this::handleLinkClick, this::showEditLinkDialog);
         recyclerView.setAdapter(adapter);
 
@@ -61,12 +68,15 @@ public class LinkCollectorActivity extends AppCompatActivity {
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAdapterPosition();
-                links.remove(position);
+                String[] removedLink = links.remove(position);
                 adapter.notifyItemRemoved(position);
+                saveLinksToPreferences();
+
                 Snackbar.make(recyclerView, "Link deleted", Snackbar.LENGTH_LONG)
                         .setAction("Undo", v -> {
-                            links.add(position, links.get(position));
+                            links.add(position, removedLink);
                             adapter.notifyItemInserted(position);
+                            saveLinksToPreferences();
                         }).show();
             }
 
@@ -132,6 +142,7 @@ public class LinkCollectorActivity extends AppCompatActivity {
             if (!newName.isEmpty() && !newUrl.isEmpty()) {
                 links.set(position, new String[]{newName, newUrl});
                 adapter.notifyItemChanged(position);
+                saveLinksToPreferences();
                 Snackbar.make(recyclerView, "Link updated successfully!", Snackbar.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Both fields are required.", Toast.LENGTH_SHORT).show();
@@ -159,6 +170,7 @@ public class LinkCollectorActivity extends AppCompatActivity {
             if (!name.isEmpty() && !url.isEmpty()) {
                 links.add(new String[]{name, url});
                 adapter.notifyItemInserted(links.size() - 1);
+                saveLinksToPreferences();
                 Snackbar.make(recyclerView, "Link added successfully!", Snackbar.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Both fields are required.", Toast.LENGTH_SHORT).show();
@@ -168,5 +180,30 @@ public class LinkCollectorActivity extends AppCompatActivity {
         builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
 
         builder.create().show();
+    }
+
+    private void saveLinksToPreferences() {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        Set<String> linkSet = new HashSet<>();
+        for (String[] link : links) {
+            linkSet.add(link[0] + "::::" + link[1]);
+        }
+
+        editor.putStringSet(LINKS_KEY, linkSet);
+        editor.apply();
+    }
+
+    private List<String[]> loadLinksFromPreferences() {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        Set<String> linkSet = sharedPreferences.getStringSet(LINKS_KEY, new HashSet<>());
+
+        List<String[]> loadedLinks = new ArrayList<>();
+        for (String link : linkSet) {
+            String[] parts = link.split("::::");
+            loadedLinks.add(new String[]{parts[0], parts[1]});
+        }
+        return loadedLinks;
     }
 }
