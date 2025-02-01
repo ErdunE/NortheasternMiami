@@ -30,22 +30,30 @@ public class MainActivity extends AppCompatActivity {
         aboutMeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CharSequence text = "Hello, I’m Erdun! You can reach me at e.e@northeastern.edu";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(MainActivity.this, text, duration);
-                toast.show();
+                Intent intent = new Intent(MainActivity.this, AboutMeActivity.class);
+                startActivity(intent);
             }
         });
 
         // Quic Calc Button
-        Button quicCalcButton = findViewById(R.id.quicCalcButton); // Reference the Quic Calc Button
+        Button quicCalcButton = findViewById(R.id.quicCalcButton);
         quicCalcButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Create an Intent to start QuicCalcActivity
                 Intent intent = new Intent(MainActivity.this, QuicCalcActivity.class);
-                startActivity(intent); // Start the activity
+                startActivity(intent);
+            }
+        });
+
+        // Link Collector Button
+        Button linkCollectorButton = findViewById(R.id.linkCollectorButton);
+        linkCollectorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent to start LinkCollectorActivity
+                Intent intent = new Intent(MainActivity.this, LinkCollectorActivity.class);
+                startActivity(intent);
             }
         });
     }
