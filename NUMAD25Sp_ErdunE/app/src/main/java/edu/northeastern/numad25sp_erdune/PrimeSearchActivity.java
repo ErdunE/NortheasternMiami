@@ -1,6 +1,8 @@
 package edu.northeastern.numad25sp_erdune;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -12,14 +14,15 @@ import androidx.appcompat.app.AppCompatActivity;
 public class PrimeSearchActivity extends AppCompatActivity {
 
     private boolean isSearching = false;
-    private Thread primeThread = null;
     private int currentNumber = 3;
     private int latestPrime = 2;
+    private Handler handler;
     private Button findPrimesButton;
     private Button terminateSearchButton;
     private CheckBox pacifierSwitch;
     private TextView currentNumberTextView;
     private TextView latestPrimeTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,8 @@ public class PrimeSearchActivity extends AppCompatActivity {
         currentNumberTextView = findViewById(R.id.currentNumberTextView);
         latestPrimeTextView = findViewById(R.id.latestPrimeTextView);
 
+        handler = new Handler(Looper.getMainLooper());
+
         if (savedInstanceState != null) {
             isSearching = savedInstanceState.getBoolean("IS_SEARCHING", false);
             currentNumber = savedInstanceState.getInt("CURRENT_NUMBER", 3);
@@ -39,48 +44,24 @@ public class PrimeSearchActivity extends AppCompatActivity {
             boolean pacifierState = savedInstanceState.getBoolean("PACIFIER_STATE", false);
 
             pacifierSwitch.setChecked(pacifierState);
-            currentNumberTextView.setText("Current Number: " + currentNumber);
-            latestPrimeTextView.setText("Latest Prime: " + latestPrime);
+            updateUI("currentNumber");
+            updateUI("latestPrime");
 
             if (isSearching) {
-                primeThread = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        searchForPrimes();
-                    }
-                });
-                primeThread.start();
+                startSearchInChunks();
             }
         }
 
-        findPrimesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!isSearching) {
-                    isSearching = true;
-                    currentNumber = 3;
-                    latestPrime = 2;
-
-                    primeThread = new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            searchForPrimes();
-                        }
-                    });
-
-                    primeThread.start();
-                }
+        findPrimesButton.setOnClickListener(v -> {
+            if (!isSearching) {
+                isSearching = true;
+                currentNumber = 3;
+                latestPrime = 2;
+                startSearchInChunks();
             }
         });
 
-        terminateSearchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isSearching) {
-                    isSearching = false;
-                }
-            }
-        });
+        terminateSearchButton.setOnClickListener(v -> isSearching = false);
 
         pacifierSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
         });
@@ -113,28 +94,38 @@ public class PrimeSearchActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-    private void searchForPrimes() {
-        while (isSearching) {
+    private void startSearchInChunks() {
+        if (!isSearching) return;
+
+        int chunkSize = 5_432;
+        while (isSearching && chunkSize > 0) {
             if (isPrime(currentNumber)) {
                 latestPrime = currentNumber;
                 updateUI("latestPrime");
             }
-
-            updateUI("currentNumber");
-
             currentNumber += 2;
+            chunkSize--;
+
+            if (chunkSize % 100 == 0) {
+                updateUI("currentNumber");
+            }
+        }
+
+        updateUI("currentNumber");
+
+        if (isSearching) {
+            handler.postDelayed(this::startSearchInChunks, 50);
         }
     }
 
+
     private void updateUI(final String flag) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if ("latestPrime".equals(flag)) {
-                    latestPrimeTextView.setText("Latest Prime: " + latestPrime);
-                } else if ("currentNumber".equals(flag)) {
-                    currentNumberTextView.setText("Current Number: " + currentNumber);
-                }
+        handler.post(() -> {
+            if ("latestPrime".equals(flag)) {
+                latestPrimeTextView.setText("Latest Prime: " + latestPrime);
+            } else if ("currentNumber".equals(flag)) {
+                String formattedNumber = String.valueOf(currentNumber);
+                currentNumberTextView.setText("Current Number: " + formattedNumber);
             }
         });
     }
