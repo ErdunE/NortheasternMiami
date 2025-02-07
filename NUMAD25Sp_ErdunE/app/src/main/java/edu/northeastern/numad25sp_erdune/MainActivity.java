@@ -56,5 +56,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Prime Directive Button
+        Button primeDirectiveButton = findViewById(R.id.primeDirectiveButton);
+        primeDirectiveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PrimeSearchActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
