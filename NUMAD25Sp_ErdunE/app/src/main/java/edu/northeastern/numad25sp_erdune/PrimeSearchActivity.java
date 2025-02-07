@@ -31,6 +31,27 @@ public class PrimeSearchActivity extends AppCompatActivity {
         currentNumberTextView = findViewById(R.id.currentNumberTextView);
         latestPrimeTextView = findViewById(R.id.latestPrimeTextView);
 
+        if (savedInstanceState != null) {
+            isSearching = savedInstanceState.getBoolean("IS_SEARCHING", false);
+            currentNumber = savedInstanceState.getInt("CURRENT_NUMBER", 3);
+            latestPrime = savedInstanceState.getInt("LATEST_PRIME", 2);
+            boolean pacifierState = savedInstanceState.getBoolean("PACIFIER_STATE", false);
+
+            pacifierSwitch.setChecked(pacifierState);
+            currentNumberTextView.setText("Current Number: " + currentNumber);
+            latestPrimeTextView.setText("Latest Prime: " + latestPrime);
+
+            if (isSearching) {
+                primeThread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        searchForPrimes();
+                    }
+                });
+                primeThread.start();
+            }
+        }
+
         findPrimesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +83,16 @@ public class PrimeSearchActivity extends AppCompatActivity {
 
         pacifierSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
         });
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putBoolean("IS_SEARCHING", isSearching);
+        outState.putInt("CURRENT_NUMBER", currentNumber);
+        outState.putInt("LATEST_PRIME", latestPrime);
+        outState.putBoolean("PACIFIER_STATE", pacifierSwitch.isChecked());
     }
     private void searchForPrimes() {
         while (isSearching) {
