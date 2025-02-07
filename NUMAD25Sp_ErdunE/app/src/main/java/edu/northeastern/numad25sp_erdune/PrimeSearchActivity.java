@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PrimeSearchActivity extends AppCompatActivity {
@@ -93,6 +94,24 @@ public class PrimeSearchActivity extends AppCompatActivity {
         outState.putInt("CURRENT_NUMBER", currentNumber);
         outState.putInt("LATEST_PRIME", latestPrime);
         outState.putBoolean("PACIFIER_STATE", pacifierSwitch.isChecked());
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (isSearching) {
+            new AlertDialog.Builder(this)
+                    .setTitle("Search in progress")
+                    .setMessage("Are you sure you want to end the search and exit?")
+                    .setPositiveButton("Yes", (dialog, which) -> {
+                        isSearching = false;
+                        finish();
+                    })
+                    .setNegativeButton("No", (dialog, which) -> {
+                    })
+                    .show();
+        } else {
+            super.onBackPressed();
+        }
     }
     private void searchForPrimes() {
         while (isSearching) {
