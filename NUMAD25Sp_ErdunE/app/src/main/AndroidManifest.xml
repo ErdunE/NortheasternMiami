@@ -16,6 +16,9 @@
             android:name=".AboutMeActivity"
             android:exported="false" />
         <activity
+            android:name=".PrimeSearchActivity"
+            android:exported="false" />
+        <activity
             android:name=".LinkCollectorActivity" />
         <activity
             android:name=".QuicCalcActivity"
