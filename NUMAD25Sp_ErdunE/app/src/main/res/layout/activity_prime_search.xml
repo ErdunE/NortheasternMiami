@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prime_search_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrimeSearchActivity">
+
+    <!-- Display Current Number -->
+    <TextView
+        android:id="@+id/currentNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Number: ???"
+        app:layout_constraintBottom_toTopOf="@+id/findPrimesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Display Latest Prime -->
+    <TextView
+        android:id="@+id/latestPrimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latest Prime: ???"
+        app:layout_constraintBottom_toTopOf="@id/currentNumberTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Find Primes Button -->
+    <Button
+        android:id="@+id/findPrimesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Primes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Terminate Search Button -->
+    <Button
+        android:id="@+id/terminateSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terminate Search"
+        app:layout_constraintTop_toBottomOf="@id/findPrimesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Pacifier Switch Checkbox -->
+    <CheckBox
+        android:id="@+id/pacifierSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pacifier Switch"
+        app:layout_constraintTop_toBottomOf="@id/terminateSearchButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
