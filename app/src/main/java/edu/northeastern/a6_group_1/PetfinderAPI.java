@@ -3,6 +3,8 @@ package edu.northeastern.a6_group_1;
 import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -22,12 +24,16 @@ public class PetfinderAPI {
             conn.setRequestProperty("Authorization", "Bearer " + token);
             conn.setRequestProperty("Accept", "application/json");
 
-            int responseCode = conn.getResponseCode();
-            Log.d(TAG, "Response Code: " + responseCode);
+            try {
+                int responseCode = conn.getResponseCode();
+                Log.d(TAG, "Response Code: " + responseCode);
 
-            if (responseCode != 200) {
-                Log.e(TAG, "Error: API request failed with response code " + responseCode);
-                return petList;
+                if (responseCode != 200) {
+                    Log.e(TAG, "Error: API request failed with response code " + responseCode);
+                    return petList;
+                }
+            } catch (IOException e){
+                Log.e(TAG, "IO Exception thrown");
             }
 
             // Read entire response
@@ -51,7 +57,7 @@ public class PetfinderAPI {
                 String name = petJson.optString("name", "Unknown");
                 String type = petJson.optString("type", "Unknown");
                 String breed = petJson.getJSONObject("breeds").optString("primary", "Unknown");
-                String photoUrl = "https://via.placeholder.com/150"; // Default placeholder
+                String photoUrl = "https://placedog.net/300/300"; // Default placeholder
 
                 JSONArray photos = petJson.optJSONArray("photos");
                 if (photos != null && photos.length() > 0) {
