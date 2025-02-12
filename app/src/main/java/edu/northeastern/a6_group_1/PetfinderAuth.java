@@ -2,6 +2,8 @@ package edu.northeastern.a6_group_1;
 
 import android.util.Log;
 import org.json.JSONObject;
+
+import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -34,15 +36,19 @@ public class PetfinderAuth {
             }
 
             // Check HTTP response code
-            int responseCode = conn.getResponseCode();
-            Log.d(TAG, "Response Code: " + responseCode);
+            try {
+                int responseCode = conn.getResponseCode();
+                Log.d(TAG, "Response Code: " + responseCode);
 
-            if (responseCode != 200) {
-                Log.e(TAG, "Error: API request failed with response code " + responseCode);
-                Scanner errorScanner = new Scanner(conn.getErrorStream()).useDelimiter("\\A");
-                String errorResponse = errorScanner.hasNext() ? errorScanner.next() : "No error response";
-                Log.e(TAG, "Error Response: " + errorResponse);
-                return null;
+                if (responseCode != 200) {
+                    Log.e(TAG, "Error: API request failed with response code " + responseCode);
+                    Scanner errorScanner = new Scanner(conn.getErrorStream()).useDelimiter("\\A");
+                    String errorResponse = errorScanner.hasNext() ? errorScanner.next() : "No error response";
+                    Log.e(TAG, "Error Response: " + errorResponse);
+                    return null;
+                }
+            } catch (IOException e){
+                Log.d(TAG, "IO Exception Thrown");
             }
 
             // Read the response
