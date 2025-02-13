@@ -4,10 +4,13 @@ import android.os.Bundle;
 import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PetFinderActivity extends AppCompatActivity {
     private static final String TAG = "PetFinderActivity";
+
+    private List<String> types;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +22,22 @@ public class PetFinderActivity extends AppCompatActivity {
             String token = PetfinderAuth.getAccessToken();
 
             if (token != null){
+                //initialize possible types from API
+                types = new ArrayList<>();
+                types = PetfinderAPI.getTypes(token);
+                for (String t:types) {
+                    Log.d(TAG, t);
+                }
+
                 List<Pet> pets = PetfinderAPI.getPets(token);
 
-                for (Pet pet : pets){
+                /*for (Pet pet : pets){
                     Log.d(TAG, "Pet Name: " + pet.getName());
                     Log.d(TAG, "Pet Type: " + pet.getType());
                     Log.d(TAG, "Pet Breed: " + pet.getBreed());
                     Log.d(TAG, "Pet Image URL: " + pet.getImageUrl());
                     Log.d(TAG, "-----------------------------------");
-                }
+                }*/
             } else {
                 Log.e(TAG, "Failed to receive access token");
             }
