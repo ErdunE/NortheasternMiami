@@ -81,9 +81,10 @@ public class PetfinderAPI {
      */
     public static List<Pet> filterPets(String token, String selectedType) {
         List<Pet> petList = new ArrayList<>();
+        String filterUrl = API_URL + "?type="+ selectedType;
         try {
-            URL url = new URL(API_URL);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            URL queryUrl = new URL(filterUrl);
+            HttpURLConnection conn = (HttpURLConnection) queryUrl.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Authorization", "Bearer " + token);
             conn.setRequestProperty("Accept", "application/json");
@@ -132,7 +133,7 @@ public class PetfinderAPI {
             }
 
         } catch (Exception e) {
-            Log.e(TAG, "Error fetching pet data", e);
+            Log.e(TAG, "Error fetching filtered pet data", e);
         }
         return petList;
     }
