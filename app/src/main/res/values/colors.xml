@@ -2,5 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="beige">#FFEDDF</color>
+    <color name="navy">#629ED1FF</color>
+    <color name="lavender">#BBA7DE</color>
 </resources>

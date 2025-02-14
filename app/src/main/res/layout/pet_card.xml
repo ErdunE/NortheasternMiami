@@ -8,37 +8,42 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="#BBA7DE"
+        app:cardBackgroundColor="@color/lavender"
+        app:cardCornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:cardBackgroundColor="@color/beige"
-        app:cardCornerRadius="40dp"
-        app:cardElevation="8dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#FFFFFF"
+            android:padding="5dp">
 
             <ImageView
                 android:id="@+id/photo_url"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="4dp"
-                android:padding="5dp"
+                android:layout_width="124dp"
+                android:layout_height="103dp"
+                android:layout_marginStart="16dp"
+                android:contentDescription="Pet Image Place holder"
+                android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/homescreen" />
+                app:layout_constraintVertical_bias="0.484" />
 
             <TextView
                 android:id="@+id/pet_name"
                 android:layout_width="118dp"
                 android:layout_height="29dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
                 android:text="Pet name"
+                android:textColor="#FAF7F7"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/photo_url"
@@ -48,23 +53,29 @@
                 android:id="@+id/pet_breed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:text="Pet Breed"
-                android:layout_marginStart="15dp"
+                android:textColor="#FAF7F7"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/photo_url"
-                app:layout_constraintTop_toBottomOf="@id/pet_name" />
+                app:layout_constraintTop_toBottomOf="@id/pet_name"
+                app:layout_constraintVertical_bias="0.133" />
 
             <TextView
                 android:id="@+id/pet_type"
                 android:layout_width="96dp"
                 android:layout_height="21dp"
+                android:layout_marginStart="24dp"
                 android:text="Pet Type"
-                android:layout_marginStart="120dp"
+                android:textColor="#FAF7F7"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/photo_url"
-                app:layout_constraintTop_toBottomOf="@id/pet_name" />
+                app:layout_constraintTop_toBottomOf="@id/pet_name"
+                app:layout_constraintVertical_bias="0.73" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
