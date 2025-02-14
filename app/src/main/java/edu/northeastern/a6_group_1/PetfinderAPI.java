@@ -15,6 +15,11 @@ public class PetfinderAPI {
     private static final String API_URL = "https://api.petfinder.com/v2/animals";
     private static final String TAG = "PetfinderAPI";
 
+    /**
+     * Default API call that returns a page of animals.
+     * @param token auth token
+     * @return list of pets
+     */
     public static List<Pet> getPets(String token) {
         List<Pet> petList = new ArrayList<>();
         try {
@@ -74,14 +79,17 @@ public class PetfinderAPI {
     }
 
     /**
-     * Takes a type filter to pass to the API, returns a filtered list of pets
+     * Takes a type filter to pass to the API, returns a filtered list of pets.
      * @param token auth token
      * @param selectedType pet type to filter on
      * @return list of Pet objects to display to user
      */
     public static List<Pet> filterPets(String token, String selectedType) {
         List<Pet> petList = new ArrayList<>();
-        String filterUrl = API_URL + "?type="+ selectedType;
+        //handle spaces and ampersands in types
+        String urlFriendlyType = selectedType.replace("&","%26");
+        urlFriendlyType = urlFriendlyType.replace(" ", "%20");
+        String filterUrl = API_URL + "?type="+ urlFriendlyType;
         try {
             URL queryUrl = new URL(filterUrl);
             HttpURLConnection conn = (HttpURLConnection) queryUrl.openConnection();
@@ -95,6 +103,7 @@ public class PetfinderAPI {
 
                 if (responseCode != 200) {
                     Log.e(TAG, "Error: API request failed with response code " + responseCode);
+                    Log.e(TAG, conn.getResponseMessage());
                     return petList;
                 }
             } catch (IOException e){
@@ -139,7 +148,9 @@ public class PetfinderAPI {
     }
 
     /**
-     * Gets the possible values for the "type" parameter from the API.
+     * Method to call getAnimalTypes API call.
+     * @param token auth token
+     * @return list of animal types returned from API
      */
     public static List<String> getTypes(String token) {
         String GET_TYPE_URL = "https://api.petfinder.com/v2/types";
@@ -185,7 +196,6 @@ public class PetfinderAPI {
 
                 typeList.add(type);
             }
-
 
         } catch (Exception e) {
             Log.e(TAG, "Error fetching pet types", e);
