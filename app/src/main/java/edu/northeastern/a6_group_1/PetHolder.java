@@ -14,7 +14,7 @@ public class PetHolder extends RecyclerView.ViewHolder {
     public TextView pet_type;
     public ImageView photo_url;
 
-    public PetHolder(@NonNull View itemView, final ClickListener listener) {
+    public PetHolder(@NonNull View itemView) {
         super(itemView);
         pet_name = itemView.findViewById(R.id.pet_name);
         pet_breed = itemView.findViewById(R.id.pet_breed);
