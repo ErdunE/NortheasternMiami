@@ -2,6 +2,7 @@ package edu.northeastern.a6_group_1;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,13 +15,14 @@ public class PetFinderActivity extends AppCompatActivity {
     private static final String TAG = "PetFinderActivity";
     private RecyclerView petRecyclerView;
     private PetAdapter adapter;
+    private EditText searchBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_finder);
 
-
+        searchBar = findViewById(R.id.searchBar);
         petRecyclerView = findViewById(R.id.petRecyclerView);
         petRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -40,7 +42,6 @@ public class PetFinderActivity extends AppCompatActivity {
                         Toast.makeText(PetFinderActivity.this, "No pets found", Toast.LENGTH_SHORT).show();
                     }
                 });
-
 
                 for (Pet pet : pets){
                     Log.d(TAG, "Pet Name: " + pet.getName());

@@ -36,12 +36,10 @@ public class PetAdapter extends RecyclerView.Adapter<PetHolder> {
     public void onBindViewHolder(@NonNull PetHolder holder, int position) {
         Pet pet = petList.get(position);
 
-        // Set pet data into the views
         holder.pet_name.setText(pet.getName());
         holder.pet_breed.setText(pet.getBreed());
         holder.pet_type.setText(pet.getType());
-        // Load the pet image
-       loadImage(holder.photo_url, pet.getImageUrl());
+        loadImage(holder.photo_url, pet.getImageUrl());
 
     }
 
