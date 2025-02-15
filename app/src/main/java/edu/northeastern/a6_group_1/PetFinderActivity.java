@@ -3,18 +3,26 @@ package edu.northeastern.a6_group_1;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.widget.EditText;
+import android.widget.Toast;
+
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class PetFinderActivity extends AppCompatActivity {
     private static final String TAG = "PetFinderActivity";
+    private RecyclerView petRecyclerView;
+    private PetAdapter adapter;
+    private EditText searchBar;
     private List<String> types;
     private Spinner typeSpinner;
     private final Handler textHandler;
@@ -26,6 +34,10 @@ public class PetFinderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_finder);
+
+        searchBar = findViewById(R.id.searchBar);
+        petRecyclerView = findViewById(R.id.petRecyclerView);
+        petRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         typeSpinner = findViewById(R.id.typeSpinner);
 
@@ -76,13 +88,23 @@ public class PetFinderActivity extends AppCompatActivity {
                 setSpinnerAdapter(textHandler);
                 List<Pet> pets = PetfinderAPI.getPets(token);
 
-                /*for (Pet pet : pets){
+                runOnUiThread(() -> {
+                    if (pets != null && !pets.isEmpty()) {
+                        // Only set the adapter after fetching the data
+                        adapter = new PetAdapter(pets);
+                        petRecyclerView.setAdapter(adapter);
+                    } else {
+                        Toast.makeText(PetFinderActivity.this, "No pets found", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                for (Pet pet : pets){
                     Log.d(TAG, "Pet Name: " + pet.getName());
                     Log.d(TAG, "Pet Type: " + pet.getType());
                     Log.d(TAG, "Pet Breed: " + pet.getBreed());
                     Log.d(TAG, "Pet Image URL: " + pet.getImageUrl());
                     Log.d(TAG, "-----------------------------------");
-                }*/
+                }
             } else {
                 Log.e(TAG, "Failed to receive access token");
             }
