@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <!-- Placeholder, please delete once start work on this activity -->
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tv_group_name"
-        android:layout_width="172dp"
-        android:layout_height="59dp"
+        android:layout_width="202dp"
+        android:layout_height="32dp"
         android:text="Pet Finder"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -23,16 +21,40 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/petRecyclerView"
-        android:layout_width="412dp"
-        android:layout_height="640dp"
+        android:layout_width="417dp"
+        android:layout_height="685dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="206dp"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_group_name"
+        app:layout_constraintVertical_bias="0.031">
 
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/search" />
 
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            android:textAlignment="center" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
