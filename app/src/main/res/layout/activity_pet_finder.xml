@@ -34,6 +34,7 @@
         android:layout_height="68dp"
         android:orientation="horizontal"
         android:padding="10dp"
+        android:background="#BBA7DE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.165"
@@ -41,19 +42,14 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_group_name"
         app:layout_constraintVertical_bias="0.031">
 
-        <ImageView
-            android:id="@+id/search"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center_vertical"
-            app:srcCompat="@drawable/search" />
+        <Spinner
+            android:id="@+id/typeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/searchBar"
-            android:layout_width="175dp"
-            android:layout_height="wrap_content"
-            android:hint="Search"
-            android:textAlignment="center" />
     </LinearLayout>
 
     <ProgressBar
@@ -67,6 +63,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/petRecyclerView"
         app:layout_constraintVertical_bias="0.477" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
