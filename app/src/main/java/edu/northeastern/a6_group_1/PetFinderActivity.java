@@ -99,6 +99,10 @@ public class PetFinderActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 Log.d(TAG, "Selected: "+ types.get(i));
+                runOnUiThread(() -> {
+                    progressBar.setVisibility(View.VISIBLE);
+                    petRecyclerView.setVisibility(View.GONE);
+                });
 
                 new Thread(() -> {
                     String token = PetfinderAuth.getAccessToken();
@@ -108,6 +112,9 @@ public class PetFinderActivity extends AppCompatActivity {
                         List<Pet> pets = PetfinderAPI.filterPets(token, types.get(i));
 
                         runOnUiThread(() -> {
+                            progressBar.setVisibility(View.GONE);
+                            petRecyclerView.setVisibility(View.VISIBLE);
+
                             if (pets != null && !pets.isEmpty()) {
                                 // Reset the adapter as the list of pets has been replaced
                                 adapter = new PetAdapter(pets);
@@ -115,6 +122,7 @@ public class PetFinderActivity extends AppCompatActivity {
 
                             } else {
                                 Toast.makeText(PetFinderActivity.this, "No pets of this type found", Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
                             }
                         });
 
