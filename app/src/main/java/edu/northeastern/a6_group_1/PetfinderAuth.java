@@ -2,7 +2,6 @@ package edu.northeastern.a6_group_1;
 
 import android.util.Log;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
