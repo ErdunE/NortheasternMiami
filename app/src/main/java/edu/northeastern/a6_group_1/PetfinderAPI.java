@@ -3,7 +3,6 @@ package edu.northeastern.a6_group_1;
 import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;

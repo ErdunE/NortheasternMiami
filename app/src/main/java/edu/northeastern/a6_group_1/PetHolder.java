@@ -3,7 +3,6 @@ package edu.northeastern.a6_group_1;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,6 +19,5 @@ public class PetHolder extends RecyclerView.ViewHolder {
         pet_breed = itemView.findViewById(R.id.pet_breed);
         pet_type = itemView.findViewById(R.id.pet_type);
         photo_url = itemView.findViewById(R.id.photo_url);
-
     }
 }

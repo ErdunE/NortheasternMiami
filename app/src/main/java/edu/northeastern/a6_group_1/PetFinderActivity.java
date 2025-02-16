@@ -2,22 +2,16 @@ package edu.northeastern.a6_group_1;
 
 import android.os.Bundle;
 import android.util.Log;
-
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-
 import android.widget.Toast;
-
-import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,12 +37,10 @@ public class PetFinderActivity extends AppCompatActivity {
 
         petRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
         typeSpinner = findViewById(R.id.typeSpinner);
 
         progressBar.setVisibility(View.VISIBLE);
         petRecyclerView.setVisibility(View.GONE);
-
 
         // Run network request in a background thread
         new Thread(() -> {
@@ -126,7 +118,6 @@ public class PetFinderActivity extends AppCompatActivity {
                             }
                         });
 
-
                         for (Pet pet : pets){
                             Log.d(TAG, "Pet Name: " + pet.getName());
                             Log.d(TAG, "Pet Type: " + pet.getType());
@@ -138,7 +129,6 @@ public class PetFinderActivity extends AppCompatActivity {
                         Log.e(TAG, "Failed to receive access token");
                     }
                 }).start();
-
             }
 
             @Override
@@ -147,5 +137,4 @@ public class PetFinderActivity extends AppCompatActivity {
             }
         });
     }
-
 }
