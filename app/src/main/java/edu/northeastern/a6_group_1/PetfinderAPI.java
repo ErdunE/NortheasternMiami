@@ -13,10 +13,11 @@ import java.util.Scanner;
 
 public class PetfinderAPI {
     private static final String API_URL = "https://api.petfinder.com/v2/animals";
+    private static final String GET_TYPE_URL = "https://api.petfinder.com/v2/types";
     private static final String TAG = "PetfinderAPI";
 
     /**
-     * Default API call that returns a page of animals.
+     * Default API call that returns an unfiltered page of animals.
      * @param token auth token
      * @return list of pets
      */
@@ -153,7 +154,7 @@ public class PetfinderAPI {
      * @return list of animal types returned from API
      */
     public static List<String> getTypes(String token) {
-        String GET_TYPE_URL = "https://api.petfinder.com/v2/types";
+
         List<String> typeList = new ArrayList<>();
         try {
             URL url = new URL(GET_TYPE_URL);
