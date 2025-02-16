@@ -65,8 +65,8 @@
 
             <TextView
                 android:id="@+id/pet_type"
-                android:layout_width="96dp"
-                android:layout_height="21dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:text="Pet Type"
                 android:textColor="#FAF7F7"
