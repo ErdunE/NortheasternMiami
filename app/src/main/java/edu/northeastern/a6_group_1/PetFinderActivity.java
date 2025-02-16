@@ -2,6 +2,11 @@ package edu.northeastern.a6_group_1;
 
 import android.os.Bundle;
 import android.util.Log;
+
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+
 import android.widget.Toast;
 
 import android.view.View;
@@ -20,8 +25,13 @@ public class PetFinderActivity extends AppCompatActivity {
     private static final String TAG = "PetFinderActivity";
     private RecyclerView petRecyclerView;
     private PetAdapter adapter;
+
     private List<String> types;
     private Spinner typeSpinner;
+
+    private EditText searchBar;
+    private ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +39,15 @@ public class PetFinderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pet_finder);
 
         petRecyclerView = findViewById(R.id.petRecyclerView);
+        progressBar = findViewById(R.id.progressBar);
+
         petRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
         typeSpinner = findViewById(R.id.typeSpinner);
+
+        progressBar.setVisibility(View.VISIBLE);
+        petRecyclerView.setVisibility(View.GONE);
 
 
         // Run network request in a background thread
@@ -51,6 +67,9 @@ public class PetFinderActivity extends AppCompatActivity {
                 List<Pet> pets = PetfinderAPI.filterPets(token, types.get(0));
 
                 runOnUiThread(() -> {
+                    progressBar.setVisibility(View.GONE);
+                    petRecyclerView.setVisibility(View.VISIBLE);
+
                     if (pets != null && !pets.isEmpty()) {
                         // Only set the adapter after fetching the data
                         adapter = new PetAdapter(pets);
@@ -72,6 +91,7 @@ public class PetFinderActivity extends AppCompatActivity {
                 }
             } else {
                 Log.e(TAG, "Failed to receive access token");
+                runOnUiThread(() -> progressBar.setVisibility(View.GONE));
             }
         }).start();
 
