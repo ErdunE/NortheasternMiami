@@ -1,0 +1,4 @@
+Name: Erdun E
+Email: e.e@northeastern.edu
+
+Repo Link: https://github.khoury.northeastern.edu/dbms/cs5200sp25s12-erdun
