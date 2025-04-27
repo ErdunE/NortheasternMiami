@@ -1,0 +1,1 @@
+product = ?, sort = rating, order = desc, limit = 2

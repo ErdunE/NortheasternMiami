@@ -1,0 +1,3 @@
+roaster= $ROASTER NAME, log = ?, start=$YYYY-MM-DD, end=$YYYY-MM-DD
+
+roaster=De Fer Coffee & Tea, log = ?, start=2024-01-01, end=2025-04-14

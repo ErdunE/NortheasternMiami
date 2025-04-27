@@ -1,0 +1,6 @@
+product = ?, tastingnote = $NOTE A & $NOTE B & xxx, process_method = $PROCESS METHOD
+
+
+product = ?, tastingnote = chocolate & apple & brown sugar & grape & grapefruit
+product = ?, tastingnote = chocolate & apple & brown sugar & grape & grapefruit, process_method = washed
+
