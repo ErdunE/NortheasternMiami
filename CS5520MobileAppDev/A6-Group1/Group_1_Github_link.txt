@@ -1,0 +1,4 @@
+NEU CS5200 25 Spring Group 1
+Members: Jenny Nguyen, Erdun E, Alp Yalcinkaya, Megan Heinhold
+GitHub Username: jennyncodes, ErdunE, alpyalcinkaya, mjheinhold
+GitHub Repo Link: https://github.com/CS5520Spring2025Feinberg/a6-group-1
