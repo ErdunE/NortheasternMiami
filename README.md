@@ -17,8 +17,10 @@ Assignment, homework, and everything in Northeastern University Miami :)
 [AI in Action Self-Paced Course 2024](https://github.com/ErdunE/NortheasternMiami/tree/main/AI%20in%20Action%20Self-Paced%20Course%202024)
 ### 2025 Spring
 [2025SpringShowcase](https://github.com/ErdunE/NortheasternMiami/tree/main/2025SpringShowcase)
-## Coop
+## Coop/Campus Job
 ### Coop Preparation Course
 [Khoury Graduate Career Preparation course](https://github.com/ErdunE/NortheasternMiami/tree/main/Coop)
+### NEU Miami Student Ambassador
+[NEU Miami Student Ambassador](https://github.com/ErdunE/NortheasternMiami/tree/main/NEU%20Miami%20Student%20Ambassador)
 ## NEU Miami Khoury Discord
 [NEU Miami Khoury Discord](https://github.com/ErdunE/NortheasternMiami/tree/main/NEU%20Miami%20Khoury%20Discord)
