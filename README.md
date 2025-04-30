@@ -22,5 +22,8 @@ Assignment, homework, and everything in Northeastern University Miami :)
 [Khoury Graduate Career Preparation course](https://github.com/ErdunE/NortheasternMiami/tree/main/Coop)
 ### NEU Miami Student Ambassador
 [NEU Miami Student Ambassador](https://github.com/ErdunE/NortheasternMiami/tree/main/NEU%20Miami%20Student%20Ambassador)
+### TA
+#### 2025 Summer
+[NEU TA/2025 Summer](https://github.com/ErdunE/NortheasternMiami/tree/main/NEU%20TA/2025%20Summer)
 ## NEU Miami Khoury Discord
 [NEU Miami Khoury Discord](https://github.com/ErdunE/NortheasternMiami/tree/main/NEU%20Miami%20Khoury%20Discord)
