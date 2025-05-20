@@ -8,6 +8,7 @@ Assignment, homework, and everything in Northeastern University Miami :)
 [CS 5200 Database Management Systems](https://github.com/ErdunE/NortheasternMiami/tree/main/CS5200DatabaseManagementSystems)  
 [CS 5520 Mobile Application Development](https://github.com/ErdunE/NortheasternMiami/tree/main/CS5520MobileAppDev)
 ### 2025 Summer
+[CS 5100 Foundations of Artificial Intelligence](https://github.com/ErdunE/NortheasternMiami/tree/main/CS5100FoundationsOfAI)
 ### 2025 Fall
 ### 2026 Spring
 ## Other Course/Items
