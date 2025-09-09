@@ -1,0 +1,55 @@
+Assignment 1: Creating a Text Adventure
+Assignment 1: Creating a Text Adventure With Model, View, Control Design
+
+Scenario
+
+This assignment asks you to design a modular text parsing system using a MVC design pattern (model, view, controller). This system should be designed to manage input commands for a text-based adventure game of some kind. That means that your program should be able to:
+
+Detect a verb and noun from a single input string
+Return an output that appropriately mirrors that command
+States what is wrong with the command if it is invalid
+Triggers additional outputs if the command satisfies a specific condition
+Because this assignment requires you to leverage MVC design patterns, you will need to design a model class that handles tasks related to setting specific values and fetching those values. You will also have to design a view class that manages what a user sees as output. Finally, you will have to design a controller class that manages both the model and view objects when the program is started up.
+
+Details
+
+Your text adventure can engage with any scenario you feel is appropriate. You don’t need to have a classic “adventure” where an explorer searches a cave or fights monsters. You could write an “adventure” about getting ready for school, or successfully navigating a public transit system. In terms of hard requirements, your adventure needs to satisfy the following:
+
+You must have at least five unique verbs that a user can input and use in some way to navigate your story. Examples of verbs include walk, run, jump, grab, sniff, pet, touch, climb, talk… Essentially, verbs are going to be commands that indicate an action.
+You must have at least seven unique nouns that a user can identify throughout the narrative and interact with using corresponding verbs. Examples of nouns include field, box, torch, phone, coin, road, backpack… Nouns are the items that you are enacting a verb upon.
+You may NOT use any Java libraries to identify the verbs and nouns.  Rather, you need to personally implement the algorithm for determining if the word is one of the key words.
+
+Your code has a lot of room for flexibility, but needs to adhere to MVC design principles. While we will be reviewing this design paradigm closely in lecture and recitation, the following components should be recognizable:
+
+A model class in charge of storing and fetching specific data values core to the adventure’s functionality
+A view class that updates the output that a user sees based on their inputs
+A controller class that manages the model and view (as objects) and pushes different commands and values to each one
+A main driver that instantiates an instance of the controller class on start-up.
+Timeline
+
+Your assignments will always be turned in through canvas. Each canvas assignment will have a listed due date and the required deliverables. Below are the general deadlines for this project and what will be expected during those deadlines. If a deadline or deliverable changes, it will be in your favor.
+
+September 20: Turn in to canvas (here) the rough draft of your program. There should be a model, view, and control file and there should be minimal functionality. That is, your program should process a few simple commands and have a “quit” command.
+
+October 4: Turn in to canvas (here) the final version of your program. It should satisfy all of the requirements listed in the “details” section of this assignment sheet. Your code will be required to contain comments that provide clear instruction for operating each part of the program as well as an explanation for what each method and class in your code is responsible for.
+
+Note: When you look up programming resources online and implement a solution from that resource, please mention in your code comments where you found the solution, how it helped you solve the problem you were working on, and how you modified it to suit your program.
+Rubric
+
+Rough Draft:
+
+Model file - 10 pts
+View file - 10 pts
+Control file - 10 pts
+Simple commands - 10 pts
+Final:
+
+Detect a noun from a string - 5 pts
+Detect a verb from a string - 5 pts
+Model class fully implemented - 5 pts
+View class fully implemented - 5 pts
+Control class fully implemented - 5 pts
+Driver class properly implemented - 10 pts
+Program works as expected - 15 pts
+Comments - 10 pts
+Best of luck!
