@@ -1,0 +1,95 @@
+[DEBUG OOM] [App Started]
+Java Heap: 8 MB / 256 MB (3.1%)
+Native Heap: 20 MB
+Rss Total: 360 MB
+
+[DEBUG OOM] [[Before UploadRecordScreen]]
+Java Heap: 52 MB / 256 MB (20.3%)
+Native Heap: 47 MB
+Rss Total: 531 MB
+
+[DEBUG OOM] [UploadRecordScreen Loaded]
+Java Heap: 58 MB / 256 MB (22.7%)
+Native Heap: 49 MB
+Rss Total: 543 MB
+
+[DEBUG OOM] [After Picking Video from Gallery]
+Java Heap: 79 MB / 256 MB (30.9%)
+Native Heap: 44 MB
+Rss Total: 557 MB
+
+[DEBUG OOM] [[CreateStoryVideoPlayer Init Player]]
+Java Heap: 80 MB / 256 MB (31.3%)
+Native Heap: 44 MB
+Rss Total: 558 MB
+
+[DEBUG OOM] [[Video Started Playing]]
+Java Heap: 85 MB / 256 MB (33.2%)
+Native Heap: 62 MB
+Rss Total: 580 MB
+
+[DEBUG OOM] [[Before EditStoryScreen]]
+Java Heap: 95 MB / 256 MB (37.1%)
+Native Heap: 61 MB
+Rss Total: 683 MB
+
+[DEBUG OOM] [[CreateStoryVideoPlayer Init Player]]
+Java Heap: 95 MB / 256 MB (37.1%)
+Native Heap: 62 MB
+Rss Total: 670 MB
+
+[DEBUG OOM] [EditStoryScreen Loaded]
+Java Heap: 96 MB / 256 MB (37.5%)
+Native Heap: 64 MB
+Rss Total: 673 MB
+
+[DEBUG OOM] [[Video Started Playing]]
+Java Heap: 98 MB / 256 MB (38.3%)
+Native Heap: 71 MB
+Rss Total: 684 MB
+
+[DEBUG OOM] [[Next from Edit to Description]]
+Java Heap: 109 MB / 256 MB (42.6%)
+Native Heap: 78 MB
+Rss Total: 774 MB
+
+[DEBUG OOM] [[CreateStoryVideoPlayer Init Player]]
+Java Heap: 109 MB / 256 MB (42.6%)
+Native Heap: 78 MB
+Rss Total: 798 MB
+
+[DEBUG OOM] [DescriptionScreen Loaded]
+Java Heap: 109 MB / 256 MB (42.6%)
+Native Heap: 80 MB
+Rss Total: 800 MB
+
+[DEBUG OOM] [DescriptionHeaderSection Loaded]
+Java Heap: 109 MB / 256 MB (42.6%)
+Native Heap: 80 MB
+Rss Total: 800 MB
+
+[DEBUG OOM] [[Video Started Playing]]
+Java Heap: 112 MB / 256 MB (43.8%)
+Native Heap: 90 MB
+Rss Total: 787 MB
+
+[DEBUG OOM] [Before Navigating to Preview]
+Java Heap: 85 MB / 256 MB (33.2%)
+Native Heap: 96 MB
+Rss Total: 856 MB
+
+[DEBUG OOM] [[CreateStoryVideoPlayer Init Player]]
+Java Heap: 85 MB / 256 MB (33.2%)
+Native Heap: 97 MB
+Rss Total: 861 MB
+
+[DEBUG OOM] [PreviewNewStoryScreen Loaded]
+Java Heap: 85 MB / 256 MB (33.2%)
+Native Heap: 101 MB
+Rss Total: 864 MB
+
+[DEBUG OOM] [[Video Started Playing]]
+Java Heap: 88 MB / 256 MB (34.4%)
+Native Heap: 108 MB
+Rss Total: 875 MB
+
